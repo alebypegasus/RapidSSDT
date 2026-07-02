@@ -20,8 +20,10 @@ class PatchViewModel extends ChangeNotifier {
   ValueNotifier<PatchState> get state => _state;
   Map<String, PatchConfig> get patchConfigs => _patchConfigs;
   String get desktopDirectory => _desktopDirectory;
+  bool get isRunningPatches => _isRunningPatches;
 
   bool _isDumping = false;
+  bool _isRunningPatches = false;
   final ACPIToolManager manager;
   // 补丁分类常量
   final List<Map<String, dynamic>> patchCategories =
@@ -306,12 +308,33 @@ class PatchViewModel extends ChangeNotifier {
     }
 
     try {
-      final newContext = _state.value.patchContext.copyWith(prebuilt: prebuilt);
+      final newContext = _basePatchContext(prebuilt);
       _updateState(patchContext: newContext);
       _runPatch(action, newContext, onError);
     } catch (e) {
       onError?.call('执行补丁失败: $e');
     }
+  }
+
+  PatchContext _basePatchContext(bool prebuilt) {
+    final current = _state.value.patchContext;
+    return PatchContext(
+      devs: current.devs,
+      targetIrqs: current.targetIrqs,
+      prebuilt: prebuilt,
+    );
+  }
+
+  PatchContext _contextForAction(
+    Map<String, dynamic> action,
+    PatchContext baseContext,
+  ) {
+    return PatchContext(
+      data: _patchConfigs[action.name]?.data.value,
+      devs: baseContext.devs,
+      targetIrqs: baseContext.targetIrqs,
+      prebuilt: baseContext.prebuilt,
+    );
   }
 
   /// 执行单个补丁（内部实现）
@@ -321,9 +344,11 @@ class PatchViewModel extends ChangeNotifier {
     Function(String)? onError,
   ) {
     try {
-      final cfg = _patchConfigs[action.name];
-      if (cfg != null) context.data = cfg.data.value;
-      manager.runPatch(action, context: context, onError: onError);
+      manager.runPatch(
+        action,
+        context: _contextForAction(action, context),
+        onError: onError,
+      );
     } catch (e) {
       onError?.call('执行补丁[$action]失败: $e');
     }
@@ -336,33 +361,46 @@ class PatchViewModel extends ChangeNotifier {
     String? outputFolder,
     Function(String)? onError,
   }) async {
+    if (_isRunningPatches) {
+      onError?.call('正在生成SSDT，请勿重复操作!');
+      return;
+    }
+
     if (actions.isEmpty) {
       onError?.call('补丁列表为空!');
       return;
     }
-    final context = _state.value.patchContext.copyWith(prebuilt: prebuilt);
-    if (prebuilt) {
-      await manager.runPatches(
-        actions,
-        context: context,
-        outputFolder: outputFolder,
-        onError: onError,
-      );
-      return;
-    }
 
-    await manager.runPatchBatch(() async {
-      await manager.runPatches(
-        actions,
-        context: context,
-        outputFolder: outputFolder,
-        onError: onError,
-        copyToResults: false,
-      );
-    });
+    _isRunningPatches = true;
+    try {
+      final context = _basePatchContext(prebuilt);
+      if (prebuilt) {
+        await manager.runPatches(
+          actions,
+          context: context,
+          contextForAction: _contextForAction,
+          outputFolder: outputFolder,
+          onError: onError,
+        );
+        return;
+      }
 
-    if (outputFolder != null) {
-      await manager.copyPatchOutputToResults(outputFolder);
+      await manager.runPatchBatch(() async {
+        await manager.runPatches(
+          actions,
+          context: context,
+          contextForAction: _contextForAction,
+          outputFolder: outputFolder,
+          onError: onError,
+          copyToResults: false,
+        );
+      });
+
+      if (outputFolder != null) {
+        await manager.copyPatchOutputToResults(outputFolder);
+      }
+    } finally {
+      _isRunningPatches = false;
     }
   }
 

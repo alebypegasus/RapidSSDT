@@ -13,6 +13,10 @@ import 'prebuilt.dart';
 import 'run.dart';
 import 'package:path/path.dart' as path;
 
+typedef _NativePnlfDevice =
+    ({String tableName, Map<String, dynamic> table, List<dynamic> path});
+typedef _IgpuPathResult = ({String path, bool guessed, bool manual});
+
 class SSDT {
   final Run run = Run();
   final DSDT d;
@@ -2253,6 +2257,186 @@ DefinitionBlock ("", "SSDT", 2, "RAPID", "HPET", 0x00000000)
           manualIGPUPath: manualIGPUPath,
         );
 
+  bool _isExactPnlfDevicePath(List<dynamic> pathInfo) {
+    if (pathInfo.length < 3 || pathInfo[2] != "Device") return false;
+
+    final lastSegment = pathInfo[0]
+        .toString()
+        .split(".")
+        .last
+        .replaceAll(RegExp(r"_+$"), "")
+        .toUpperCase();
+    return lastSegment == "PNLF";
+  }
+
+  List<_NativePnlfDevice> _findNativePnlfDevices() {
+    final matches = <_NativePnlfDevice>[];
+    final sortedTableNames = sortedNicely(d.acpiTables.keys.toList());
+
+    for (final tableName in sortedTableNames) {
+      final rawTable = d.acpiTables[tableName];
+      if (rawTable is! Map<String, dynamic>) continue;
+
+      final paths = d.getPathOfType(
+        objType: "Device",
+        obj: "PNLF",
+        table: rawTable,
+      );
+      for (final pathInfo in paths) {
+        if (!_isExactPnlfDevicePath(pathInfo)) continue;
+        matches.add((tableName: tableName, table: rawTable, path: pathInfo));
+      }
+    }
+
+    return matches;
+  }
+
+  String _externalAcpiPath(String acpiPath) {
+    final cleanPath = acpiPath.replaceFirst("\\", "");
+    return cleanPath
+        .split(".")
+        .map((part) => part == "_SB" ? "_SB_" : part)
+        .join(".");
+  }
+
+  String _normalizeManualIgpuPath(String manualIGPUPath) {
+    List<String> parts = manualIGPUPath
+        .replaceFirst("\\", "")
+        .toUpperCase()
+        .split(".");
+    String valid = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
+    String noStart = "0123456789";
+
+    if (parts.any(
+      (p) =>
+          p.isEmpty ||
+          p.length > 4 ||
+          noStart.contains(p[0]) ||
+          p.split("").any((x) => !valid.contains(x)),
+    )) {
+      Log("无效的 iGPU 路径：$manualIGPUPath");
+    }
+
+    parts = parts.map((p) => p.replaceAll(RegExp(r"_+$"), "")).toList();
+    return "\\${parts.join(".")}";
+  }
+
+  _IgpuPathResult _findIgpuPath({
+    String? manualIGPUPath,
+    bool allowManual = false,
+  }) {
+    String igpu = "";
+    bool guessed = false;
+
+    Log("正在寻找位于 0x00020000 的 iGPU 设备…");
+    final tableNameList = d.acpiTables.keys.toList();
+    final sortedTableNames = sortedNicely(tableNameList, first: "DSDT");
+
+    for (final tableName in sortedTableNames) {
+      final table = d.acpiTables[tableName];
+      Log("正在检查 $tableName…");
+      final paths = d.getPathOfType(objType: "Name", obj: "_ADR", table: table);
+
+      for (final path in paths) {
+        final adr = getAddressFromLine(path[1], table: table);
+        if (adr == 0x00020000) {
+          igpu = path[0].substring(0, path[0].length - 5);
+          Log("=> 在 $igpu 处找到 iGPU 设备!");
+          return (path: igpu, guessed: false, manual: false);
+        }
+      }
+    }
+
+    Log("未通过地址找到 iGPU 设备!");
+    Log("正在搜索常见的 iGPU 名称…");
+
+    for (final tableName in sortedTableNames) {
+      final rawTable = d.acpiTables[tableName];
+      if (rawTable is! Map<String, dynamic>) continue;
+      Log("正在检查 $tableName…");
+
+      final pciRoots = [
+        d.getDevicePathsWithHid(hid: "PNP0A08", table: rawTable),
+        d.getDevicePathsWithHid(hid: "PNP0A03", table: rawTable),
+        d.getDevicePathsWithHid(hid: "ACPI0016", table: rawTable),
+      ];
+
+      final external = <String>[];
+      rawTable["lines"]?.forEach((line) {
+        final trimmedLine = line.toString().trim();
+        if (!trimmedLine.startsWith("External (")) return;
+        try {
+          final pathPart = trimmedLine.split('(')[1].split(', ')[0];
+          final processedPath = pathPart
+              .split('.')
+              .map(
+                (segment) => segment
+                    .replaceAll('\\', '')
+                    .replaceAll(RegExp(r'_+$'), ''),
+              )
+              .join('.');
+          external.add('\\$processedPath');
+        } catch (_) {
+          debugPrint("Error processing line: $trimmedLine");
+        }
+      });
+
+      for (final rootList in pciRoots) {
+        if (rootList.isEmpty) continue;
+        final rootPath = rootList[0][0].toString();
+        for (final name in [
+          "IGPU",
+          "_VID",
+          "VID0",
+          "VID1",
+          "GFX0",
+          "VGA",
+          "_VGA",
+        ]) {
+          final testPath = "$rootPath.$name";
+          final devicePaths = d.getDevicePaths(obj: testPath, table: rawTable);
+          String? device;
+          if (devicePaths.isNotEmpty) {
+            device = devicePaths[0][0];
+          } else {
+            device = external.firstWhere(
+              (x) => testPath == x,
+              orElse: () => "",
+            );
+            if (device.isEmpty) device = null;
+          }
+
+          if (device == null) continue;
+          if (d
+              .getPathOfType(
+                objType: "Name",
+                obj: "$device._ADR",
+                table: rawTable,
+              )
+              .isNotEmpty) {
+            continue;
+          }
+
+          igpu = device;
+          guessed = true;
+          Log("=> 在 $igpu 处发现了可能的 iGPU 设备");
+          return (path: igpu, guessed: guessed, manual: false);
+        }
+      }
+    }
+
+    if (allowManual && manualIGPUPath != null && manualIGPUPath.isNotEmpty) {
+      Log("已按照给定iGPU路径,手动设置为 $manualIGPUPath \n");
+      return (
+        path: _normalizeManualIgpuPath(manualIGPUPath),
+        guessed: false,
+        manual: true,
+      );
+    }
+
+    return (path: "", guessed: false, manual: false);
+  }
+
   /// 背光修复
   /// [uid] UID
   /// [getIgpu] UID=14时,是否包含GPU寄存器代码
@@ -2274,9 +2458,6 @@ DefinitionBlock ("", "SSDT", 2, "RAPID", "HPET", 0x00000000)
       Log.warning("$uid 是一个自定义的 UID，可能需要手动定制设置，或者可能根本不受支持!");
     }
 
-    String igpu = "";
-    bool guessed = false;
-    bool manual = false;
     bool getIGpuInfo = false;
     if (uid == 14) {
       Log("");
@@ -2296,163 +2477,32 @@ DefinitionBlock ("", "SSDT", 2, "RAPID", "HPET", 0x00000000)
         break;
       }
     }
-    // 检查是否构建 UID 为 14 的 SSDT
-    if (getIGpuInfo) {
-      if (uid == 14 && (manualIGPUPath == null || manualIGPUPath.isEmpty)) {
-        Log("未提供有效 iGPU 路径，尝试自动查找...");
-      }
-      Log("正在寻找位于 0x00020000 的 iGPU 设备…");
-      final tableNameList = d.acpiTables.keys.toList();
-      final sortedTableNames = sortedNicely(tableNameList, first: "DSDT.aml");
-      // 第一阶段：通过地址查找 iGPU 设备
-      for (var tableName in sortedTableNames) {
-        var table = d.acpiTables[tableName];
-        Log("正在检查 $tableName…");
-        // 尝试获取 iGPU 设备路径
-        var paths = d.getPathOfType(objType: "Name", obj: "_ADR", table: table);
 
-        for (var path in paths) {
-          var adr = getAddressFromLine(path[1], table: table);
-          if (adr == 0x00020000) {
-            igpu = path[0].substring(0, path[0].length - 5);
-            Log("=> 在 $igpu 处找到 iGPU 设备!");
-            break;
-          }
-        }
-        if (igpu.isNotEmpty) break;
-      }
-      // 如果第一阶段未找到 iGPU
-      if (igpu.isEmpty) {
-        Log("未通过地址找到 iGPU 设备!");
-        Log("正在搜索常见的 iGPU 名称…");
+    final autoIgpu = _findIgpuPath();
+    final pnlfParentPath = autoIgpu.path;
+    String igpu = autoIgpu.path;
+    bool guessed = autoIgpu.guessed;
+    bool manual = false;
 
-        // 第二阶段：通过常见名称查找 iGPU
-        for (var tableName in sortedTableNames) {
-          var table = d.acpiTables[tableName];
-          Log("正在检查 $tableName…");
-          // 获取 PCI 根设备路径
-          var pciRoots = [
-            d.getDevicePathsWithHid(hid: "PNP0A08", table: table),
-            d.getDevicePathsWithHid(hid: "PNP0A03", table: table),
-            d.getDevicePathsWithHid(hid: "ACPI0016", table: table),
-          ];
-
-          List<dynamic> external = [];
-          table["lines"]?.forEach((line) {
-            final trimmedLine = line.toString().trim();
-            if (!trimmedLine.startsWith("External (")) return;
-            try {
-              final pathPart = trimmedLine.split('(')[1].split(', ')[0];
-              final processedPath = pathPart
-                  .split('.')
-                  .map(
-                    (segment) => segment
-                        .replaceAll('\\', '')
-                        .replaceAll(RegExp(r'_+$'), ''),
-                  )
-                  .join('.');
-              external.add('\\$processedPath');
-            } catch (_) {
-              // 忽略异常
-              debugPrint("Error processing line: $trimmedLine");
-            }
-          });
-
-          for (var root in pciRoots) {
-            for (var name in [
-              "IGPU",
-              "_VID",
-              "VID0",
-              "VID1",
-              "GFX0",
-              "VGA",
-              "_VGA",
-            ]) {
-              if (root.isEmpty) {
-                break;
-              }
-              var testPath = "${root[0]}.$name";
-              var devicePaths = d.getDevicePaths(obj: testPath, table: table);
-              String? device;
-              if (devicePaths.isNotEmpty) {
-                /// 找到 iGPU 设备路径
-                device = devicePaths[0][0];
-              } else {
-                /// 遍历外部路径，查找是否有声明
-                device = external.firstWhere(
-                  (x) => testPath == x,
-                  orElse: () => null,
-                );
-              }
-
-              /// 未找到 iGPU 设备路径,继续
-              if (device == null) continue;
-
-              /// 检查是否有 _ADR,如果有,则跳过,因为它在之前的循环中是错误的
-              if (d
-                  .getPathOfType(
-                    objType: "Name",
-                    obj: "$device._ADR",
-                    table: table,
-                  )
-                  .isNotEmpty) {
-                continue;
-              }
-
-              /// 找到 iGPU 设备路径
-              igpu = device;
-              guessed = true;
-              Log("=> 在 $igpu 处发现了可能的 iGPU 设备");
-            }
-          }
-
-          /// 找到 iGPU 设备路径,退出
-          if (igpu.isNotEmpty) break;
-        }
-      }
+    if (pnlfParentPath.isNotEmpty) {
+      Log("=> 已找到核显 ACPI 路径: $pnlfParentPath");
+      Log("=> 将在 $pnlfParentPath 下挂载 Device (PNLF)");
+    } else {
+      Log("=> 未找到合法核显 ACPI 路径");
+      Log("=> 将退回至根级注入 Device (PNLF)");
     }
 
-    if (getIGpuInfo && (igpu.isEmpty || guessed)) {
-      if (igpu.isNotEmpty) {
-        Log("在 $igpu 处发现了可能的 iGPU 设备\n");
-      }
-
-      /// 如果没有找到有效的 iGPU 路径
-      if (igpu.isEmpty) {
-        if (!guessed) {
-          Log.warning("在传递的 ACPI 表中未找到有效的 iGPU 路径!\n");
-        }
-        if (manualIGPUPath == null || manualIGPUPath.isEmpty) {
-          Log.warning(
-            "请输入要使用的 iGPU ACPI 路径。每个路径元素的字符限制为 4 个字母数字字符（以字母或下划线开头），并用空格分隔。例如: SB.PCI0.GFX0\n",
-          );
-        } else {
-          Log("已按照给定iGPU路径,手动设置为 $manualIGPUPath \n");
-        }
-
-        /// 传入的IGPU设备地址
-        if (manualIGPUPath != null && manualIGPUPath.isNotEmpty) {
-          List<String> parts = manualIGPUPath
-              .replaceFirst("\\", "")
-              .toUpperCase()
-              .split(".");
-          String valid = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_";
-          String noStart = "0123456789";
-
-          if (parts.any(
-            (p) =>
-                p.isEmpty ||
-                p.length > 4 ||
-                noStart.contains(p[0]) ||
-                p.split("").any((x) => !valid.contains(x)),
-          )) {
-            Log("无效的 iGPU 路径：$manualIGPUPath");
-          }
-          parts = parts.map((p) => p.replaceAll(RegExp(r"_+$"), "")).toList();
-          igpu = "\\${parts.join(".")}";
-          guessed = false;
-          manual = true;
-        }
+    if (getIGpuInfo && igpu.isEmpty) {
+      if (manualIGPUPath == null || manualIGPUPath.isEmpty) {
+        Log.warning("在传递的 ACPI 表中未找到有效的 iGPU 路径!\n");
+        Log.warning(
+          "请输入要使用的 iGPU ACPI 路径。每个路径元素的字符限制为 4 个字母数字字符（以字母或下划线开头），并用空格分隔。例如: SB.PCI0.GFX0\n",
+        );
+      } else {
+        Log("已按照给定iGPU路径,手动设置为 $manualIGPUPath \n");
+        igpu = _normalizeManualIgpuPath(manualIGPUPath);
+        guessed = false;
+        manual = true;
       }
     }
 
@@ -2461,21 +2511,21 @@ DefinitionBlock ("", "SSDT", 2, "RAPID", "HPET", 0x00000000)
     final tableNameList = d.acpiTables.keys.toList();
     final sortedTableNames = sortedNicely(tableNameList);
 
-    // 检查所有表，寻找包含 "PNLF" 的表，并生成一个重命名
-    for (String tableName in sortedTableNames) {
-      final table = d.acpiTables[tableName]!;
-      if (table["table"] != null &&
-          table["table"].isNotEmpty &&
-          table["table"]!.contains("PNLF")) {
-        Log("=> 在 $tableName 中检测到 PNLF, 正在生成重命名补丁…");
-        patches.add({
-          "Comment": "PNLF to XNLF rename - requires $ssdtName.aml",
-          "Find": "504E4C46",
-          "Replace": "584E4C46",
-        });
-        // 只生成一个重命名后退出循环
-        break;
-      }
+    Log("正在检查 ACPI 表中是否存在原生 PNLF 设备…");
+    final nativePnlfDevices = _findNativePnlfDevices();
+    if (nativePnlfDevices.isNotEmpty) {
+      final nativePnlf = nativePnlfDevices.first;
+      Log("=> 已在 ${nativePnlf.tableName} 找到原生 PNLF 设备: ${nativePnlf.path[0]}");
+      Log("=> 需要将原生 PNLF 重命名为 XNLF, 正在生成重命名补丁…");
+      patches.add({
+        "Comment": "PNLF to XNLF rename - requires $ssdtName.aml",
+        "Find": "504E4C46",
+        "Replace": "584E4C46",
+        "Table": nativePnlf.table,
+      });
+    } else {
+      Log("=> 未找到原生 PNLF 设备!");
+      Log("=> 无需生成 PNLF to XNLF 重命名补丁!");
     }
 
     // NBCF 二进制模式
@@ -2531,12 +2581,16 @@ DefinitionBlock ("", "SSDT", 2, "RAPID", "HPET", 0x00000000)
 //
 DefinitionBlock ("", "SSDT", 2, "RAPID", "PNLF", 0x00000000)
 {""";
-    if (igpu.isNotEmpty) {
+    final externalPaths = <String>{};
+    if (pnlfParentPath.isNotEmpty) externalPaths.add(pnlfParentPath);
+    if (getIGpuInfo && igpu.isNotEmpty) externalPaths.add(igpu);
+
+    for (final externalPath in externalPaths) {
       ssdt += """
-    External ([[igpu_path]], DeviceObj)
+    External (${_externalAcpiPath(externalPath)}, DeviceObj)
 """;
     }
-    ssdt += """
+    String pnlfDevice = """
     Device (PNLF)
     {
         Name (_HID, EisaId ("APP0002"))  // _HID: Hardware ID
@@ -2554,8 +2608,8 @@ DefinitionBlock ("", "SSDT", 2, "RAPID", "PNLF", 0x00000000)
                 Return (Zero)
             }
         }""";
-    if (igpu.isNotEmpty) {
-      ssdt += """
+    if (getIGpuInfo && igpu.isNotEmpty) {
+      pnlfDevice += """
         Method (_INI, 0, Serialized)
         {
             If (LAnd (_OSI ("Darwin"), CondRefOf ([[igpu_path]])))
@@ -2652,15 +2706,32 @@ DefinitionBlock ("", "SSDT", 2, "RAPID", "PNLF", 0x00000000)
             }
         }""";
     }
-    ssdt += """
+    pnlfDevice += """
+    }""";
+
+    if (pnlfParentPath.isNotEmpty) {
+      final scopedPnlfDevice = pnlfDevice
+          .split("\n")
+          .map((line) => line.isEmpty ? line : "    $line")
+          .join("\n");
+      ssdt += """
+    Scope ([[pnlf_parent_path]])
+    {
+$scopedPnlfDevice
     }
 }""";
+    } else {
+      ssdt += """
+$pnlfDevice
+}""";
+    }
 
     // 替换占位符
     ssdt = ssdt
         .replaceAll(r"[[uid_value]]", util.hexy(uid))
         .replaceAll(r"[[uid_dec]]", uid.toString())
-        .replaceAll(r"[[igpu_path]]", igpu);
+        .replaceAll(r"[[igpu_path]]", igpu)
+        .replaceAll(r"[[pnlf_parent_path]]", pnlfParentPath);
     // 写入 SSDT 文件
     writeSSDT(ssdtName, ssdt);
     Map<String, dynamic> acpi = {

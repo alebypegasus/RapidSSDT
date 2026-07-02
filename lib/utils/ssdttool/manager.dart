@@ -4,6 +4,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:path/path.dart' as path;
+import 'package:rapidssdt/utils/log/log.dart';
 import 'package:rapidssdt/utils/ssdttool/merge.dart';
 import 'package:rapidssdt/utils/ssdttool/ssdt.dart';
 import 'package:rapidssdt/utils/ssdttool/config.dart';
@@ -41,6 +42,8 @@ typedef PatchExecutor =
       PatchContext? context,
       Map<String, dynamic>? action,
     });
+typedef PatchContextForAction =
+    PatchContext Function(Map<String, dynamic> action, PatchContext context);
 
 class ACPIToolManager {
   final SSDT ssdt;
@@ -326,6 +329,7 @@ class ACPIToolManager {
   Future<void> runPatches(
     List<Map<String, dynamic>> actions, {
     PatchContext? context,
+    PatchContextForAction? contextForAction,
     String? outputFolder,
     Function(String)? onError,
     bool copyToResults = true,
@@ -340,10 +344,13 @@ class ACPIToolManager {
     // 清空 resultFolder 目录
     await ssdt.util.clearDirectory(ssdt.config.outputDirectory!, resultFolder);
 
-    for (var action in actions) {
+    for (var i = 0; i < actions.length; i++) {
+      if (i > 0) Log("");
+      final action = actions[i];
+      final baseContext = context ?? PatchContext();
       await runPatch(
         action,
-        context: context,
+        context: contextForAction?.call(action, baseContext) ?? context,
         outputFolder: outputFolder,
         onError: onError,
       );

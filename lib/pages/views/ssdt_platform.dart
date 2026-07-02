@@ -81,6 +81,11 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
 
   // 执行 SSDT 补丁
   Future<void> _runSelectedSsdt({required bool prebuilt}) async {
+    if (patchViewModel.isRunningPatches) {
+      Log.error('正在生成SSDT，请勿重复操作!');
+      return;
+    }
+
     if (selectedSsdtNotifier.value.isEmpty) {
       Log('未选择任何 SSDT');
       return;
