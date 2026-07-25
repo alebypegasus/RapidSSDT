@@ -12,6 +12,24 @@ class LanguageProvider extends ChangeNotifier {
 
   Locale get locale => _locale;
 
+  static void init() {
+    final savedCode = SpUtil.getString(_spKey);
+    if (savedCode != null && savedCode.isNotEmpty) {
+      if (savedCode.contains('_')) {
+        currentLangCode = savedCode.split('_')[0];
+      } else {
+        currentLangCode = savedCode;
+      }
+    } else {
+      final sysLocale = ui.PlatformDispatcher.instance.locale;
+      if (['pt', 'en', 'zh', 'ja'].contains(sysLocale.languageCode)) {
+        currentLangCode = sysLocale.languageCode;
+      } else {
+        currentLangCode = 'en';
+      }
+    }
+  }
+
   LanguageProvider() {
     _loadSavedLocale();
   }

@@ -20,6 +20,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Sputil初始化
   await SpUtil.getInstance();
+  LanguageProvider.init();
   await windowManager.ensureInitialized();
 
   ///获取AppVersion
