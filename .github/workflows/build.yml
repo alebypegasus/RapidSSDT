@@ -61,18 +61,26 @@ jobs:
         run: |
           cd build/macos/Build/Products/Release/
           zip -r rapidssdt-macos.zip rapidssdt.app
-        # This zips the .app folder to preserve permissions on macOS
 
-      - name: Upload macOS Artifact
-        if: matrix.target == 'macos'
-        uses: actions/upload-artifact@v5
-        with:
-          name: ${{ matrix.artifact_name }}
-          path: build/macos/Build/Products/Release/rapidssdt-macos.zip
+      - name: Archive Windows App
+        if: matrix.target == 'windows'
+        run: |
+          Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath rapidssdt-windows.zip
 
-      - name: Upload Windows/Linux Artifact
-        if: matrix.target != 'macos'
-        uses: actions/upload-artifact@v5
+      - name: Archive Linux App
+        if: matrix.target == 'linux'
+        run: |
+          cd build/linux/x64/release/bundle/
+          zip -r ../../../../../rapidssdt-linux.zip .
+
+      - name: Publish to GitHub Releases
+        uses: softprops/action-gh-release@v2
         with:
-          name: ${{ matrix.artifact_name }}
-          path: ${{ matrix.output_path }}
+          tag_name: "latest"
+          name: "Latest Build"
+          body: "Automated build of RapidSSDT from the main branch."
+          prerelease: true
+          files: |
+            build/macos/Build/Products/Release/rapidssdt-macos.zip
+            rapidssdt-windows.zip
+            rapidssdt-linux.zip
