@@ -2,9 +2,11 @@
 //  Created by JeoJay127 
 //
 import 'package:flutter/material.dart';
+import 'package:macos_ui/macos_ui.dart';
 import 'package:rapidssdt/utils/ssdttool/config.dart';
 import 'package:rapidssdt/widgets/radio_option_group.dart';
 import 'package:rapidssdt/l10n/app_localizations.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 class OptionItem<T> {
   final T value;
@@ -13,18 +15,18 @@ class OptionItem<T> {
 }
 
 List<OptionItem<bool>> getAcpiOptions(AppLocalizations? l10n) => [
-      OptionItem(true, l10n?.builtin ?? '内置'),
-      OptionItem(false, l10n?.remote ?? '远程'),
+      OptionItem(true, l10n?.builtin ?? l10nGlobal.ssdtMsg551),
+      OptionItem(false, l10n?.remote ?? l10nGlobal.ssdtMsg552),
     ];
 
 List<OptionItem<bool>> getLegacyIaslOptions(AppLocalizations? l10n) => [
-      OptionItem(false, l10n?.newIasl ?? '新版iasl'),
-      OptionItem(true, l10n?.oldIasl ?? '旧版iasl-legacy'),
+      OptionItem(false, l10n?.newIasl ?? l10nGlobal.ssdtMsg553),
+      OptionItem(true, l10n?.oldIasl ?? l10nGlobal.ssdtMsg554),
     ];
 
 List<OptionItem<bool>> getYesNoOptions(AppLocalizations? l10n) => [
-      OptionItem(true, l10n?.yes ?? '是'),
-      OptionItem(false, l10n?.no ?? '否'),
+      OptionItem(true, l10n?.yes ?? l10nGlobal.ssdtMsg555),
+      OptionItem(false, l10n?.no ?? l10nGlobal.ssdtMsg556),
     ];
 
 /// ACPI选项组件
@@ -63,14 +65,15 @@ class _AcpiOptionsState extends State<AcpiOptions> {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           width: double.infinity,
-          color: Colors.black.withAlpha((255.0 * 0.7).round()),
-          child: Text(
-            l10n?.preferences ?? '偏好设置',
-            style: const TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
+          decoration: BoxDecoration(
+            color: MacosTheme.of(context).primaryColor.withOpacity(0.15),
+            border: Border(
+              bottom: BorderSide(color: MacosTheme.of(context).dividerColor ?? MacosColors.systemGrayColor, width: 0.5),
             ),
+          ),
+          child: Text(
+            l10n?.preferences ?? l10nGlobal.ssdtMsg557,
+            style: MacosTheme.of(context).typography.headline,
           ),
         ),
         Expanded(
@@ -81,40 +84,40 @@ class _AcpiOptionsState extends State<AcpiOptions> {
               spacing: 5,
               children: [
                 _buildOptionRow<bool>(
-                  label: l10n?.iaslMode ?? 'iasl模式',
+                  label: l10n?.iaslMode ?? l10nGlobal.ssdtMsg558,
                   groupValue: config.useLocaliAsl,
                   choices: getAcpiOptions(l10n),
                   onChanged: (val) =>
                       _update(config.copyWith(useLocaliAsl: val)),
                 ),
                 _buildOptionRow<bool>(
-                  label: l10n?.iaslCompileType ?? 'iasl编译类型',
+                  label: l10n?.iaslCompileType ?? l10nGlobal.ssdtMsg559,
                   groupValue: config.useLeagcyiAsl,
                   choices: getLegacyIaslOptions(l10n),
                   onChanged: (val) =>
                       _update(config.copyWith(useLeagcyiAsl: val)),
                 ),
                 _buildOptionRow<bool>(
-                  label: l10n?.deleteDsl ?? '删除反编译.dsl文件',
+                  label: l10n?.deleteDsl ?? l10nGlobal.ssdtMsg560,
                   groupValue: config.deleteDsl,
                   choices: yesNoOptions,
                   onChanged: (val) => _update(config.copyWith(deleteDsl: val)),
                 ),
                 _buildOptionRow<bool>(
-                  label: l10n?.forceCompile ?? '强制编译',
+                  label: l10n?.forceCompile ?? l10nGlobal.ssdtMsg561,
                   groupValue: config.force,
                   choices: yesNoOptions,
                   onChanged: (val) => _update(config.copyWith(force: val)),
                 ),
                 _buildOptionRow<bool>(
-                  label: l10n?.overwriteEFI ?? '是否覆盖目标EFI',
+                  label: l10n?.overwriteEFI ?? l10nGlobal.ssdtMsg562,
                   groupValue: config.overwriteEFI,
                   choices: yesNoOptions,
                   onChanged: (val) =>
                       _update(config.copyWith(overwriteEFI: val)),
                 ),
                 _buildOptionRow<ACPIMatchMode>(
-                  label: l10n?.acpiMatchMode ?? 'ACPI匹配模式',
+                  label: l10n?.acpiMatchMode ?? l10nGlobal.ssdtMsg563,
                   groupValue: config.acpiMatchMode,
                   choices: ACPIMatchMode.values
                       .map((m) => OptionItem(m, m.value))
@@ -136,7 +139,7 @@ class _AcpiOptionsState extends State<AcpiOptions> {
     required T groupValue,
     required List<OptionItem<T>> choices,
     required ValueChanged<T> onChanged,
-    RadioGroupDirection direction = RadioGroupDirection.row,
+    RadioGroupDirection direction = RadioGroupDirection.wrap,
   }) {
     final List<Widget> children = [];
     final RadioOptionGroup radioOptionGroup = RadioOptionGroup(
@@ -150,7 +153,7 @@ class _AcpiOptionsState extends State<AcpiOptions> {
           .map((e) => RadioOptionData(value: e.label, label: e.label))
           .toList(),
     );
-    children.add(Text('$label:', style: const TextStyle(fontSize: 11)));
+    children.add(Text('$label:', style: TextStyle(fontSize: 11, color: MacosTheme.of(context).typography.body.color)));
     children.add(const SizedBox(height: 5));
     children.add(radioOptionGroup);
     Widget child;

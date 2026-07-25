@@ -10,6 +10,7 @@ import 'package:rapidssdt/utils/ssdttool/config.dart';
 import 'package:rapidssdt/utils/ssdttool/manager.dart';
 import 'package:path/path.dart' as path;
 import 'package:rapidssdt/utils/ssdttool/table.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 class PatchViewModel extends ChangeNotifier {
   // 状态管理
@@ -59,21 +60,21 @@ class PatchViewModel extends ChangeNotifier {
 
     // 删除dsl
     if (old.deleteDsl != newConfig.deleteDsl) {
-      onLog?.call('是否删除源.dsl文件: ${newConfig.deleteDsl ? "是" : "否"}');
+      onLog?.call(l10nGlobal.ssdtMsg511(newConfig.deleteDsl ? l10nGlobal.ssdtMsg545 : l10nGlobal.ssdtMsg546.toString()));
     }
 
     // 强制编译
     if (old.force != newConfig.force) {
-      onLog?.call('是否强制编译: ${newConfig.force ? "是" : "否"}');
+      onLog?.call(l10nGlobal.ssdtMsg512(newConfig.force ? l10nGlobal.ssdtMsg547 : l10nGlobal.ssdtMsg548.toString()));
     }
     // 覆盖EFI
     if (old.overwriteEFI != newConfig.overwriteEFI) {
-      onLog?.call('是否覆盖目标EFI: ${newConfig.overwriteEFI ? "是" : "否"}');
+      onLog?.call(l10nGlobal.ssdtMsg513(newConfig.overwriteEFI ? l10nGlobal.ssdtMsg549 : l10nGlobal.ssdtMsg550.toString()));
     }
 
     // 匹配模式
     if (old.acpiMatchMode != newConfig.acpiMatchMode) {
-      onLog?.call('匹配模式: ${newConfig.acpiMatchMode.value}');
+      onLog?.call(l10nGlobal.ssdtMsg514(newConfig.acpiMatchMode.value.toString()));
     }
 
     acpiConfig.value = newConfig;
@@ -144,7 +145,7 @@ class PatchViewModel extends ChangeNotifier {
         );
       }
     } catch (e) {
-      debugPrint('加载HPET数据失败: $e');
+      debugPrint(l10nGlobal.ssdtMsg515(e.toString()));
       _updateState(
         patchContext: _state.value.patchContext.copyWith(targetIrqs: {}),
         legacyIrqs: [],
@@ -177,7 +178,7 @@ class PatchViewModel extends ChangeNotifier {
             (currentState.tablePath != null || currentState.dsdtPath != null);
       }
     } catch (e) {
-      debugPrint('初始化HPET数据失败: $e');
+      debugPrint(l10nGlobal.ssdtMsg516(e.toString()));
       _updateState(patchContext: _state.value.patchContext.copyWith(devs: {}));
     }
   }
@@ -197,7 +198,7 @@ class PatchViewModel extends ChangeNotifier {
         _patchConfigs[table]?.data.value = targetPath;
       });
     } catch (e) {
-      debugPrint('初始化ACPI路径失败: $e');
+      debugPrint(l10nGlobal.ssdtMsg517(e.toString()));
     }
   }
 
@@ -211,16 +212,16 @@ class PatchViewModel extends ChangeNotifier {
         orElse: () => <String, Object>{'actions': []},
       );
       final actions = category['actions'] as List;
-      if (actions.isEmpty) return '无补丁说明';
+      if (actions.isEmpty) return l10nGlobal.ssdtMsg518;
 
       final action = actions.firstWhere(
         (a) => a['name'] == currentState.selectedAction.name,
-        orElse: () => {'note': '无补丁说明'},
+        orElse: () => {'note': l10nGlobal.ssdtMsg519},
       );
       return action['note'] as String;
     } catch (e) {
-      debugPrint('获取补丁说明失败: $e');
-      return '获取补丁说明失败';
+      debugPrint(l10nGlobal.ssdtMsg520(e.toString()));
+      return l10nGlobal.ssdtMsg521;
     }
   }
 
@@ -252,13 +253,13 @@ class PatchViewModel extends ChangeNotifier {
     // 路径为空时，仅清空配置，不更新输出目录
     if (newPath == null || newPath.trim().isEmpty) {
       _patchConfigs[action]?.data.value = null;
-      onError?.call('$action 配置路径清空');
+      onError?.call(l10nGlobal.ssdtMsg522(action.toString()));
       return;
     }
 
     // 校验路径是否为文件（避免传入目录导致 dirname 异常）
     if (!FileSystemEntity.isFileSync(newPath)) {
-      onError?.call('$action 选择的不是有效文件: $newPath');
+      onError?.call(l10nGlobal.ssdtMsg523(action.toString(), newPath.toString()));
       _patchConfigs[action]?.data.value = null;
       return;
     }
@@ -269,7 +270,7 @@ class PatchViewModel extends ChangeNotifier {
       final fileDir = path.dirname(newPath);
       _updateOutputDirectory(fileDir, updateAcpiDir: true);
     } else {
-      onError?.call('未找到 $action 的补丁配置');
+      onError?.call(l10nGlobal.ssdtMsg524(action.toString()));
     }
   }
 
@@ -303,7 +304,7 @@ class PatchViewModel extends ChangeNotifier {
     Function(String)? onError,
   }) {
     if (action.isEmpty) {
-      onError?.call('请先选择需要定制的SSDT后再进行操作!');
+      onError?.call(l10nGlobal.ssdtMsg525);
       return;
     }
 
@@ -312,7 +313,7 @@ class PatchViewModel extends ChangeNotifier {
       _updateState(patchContext: newContext);
       _runPatch(action, newContext, onError);
     } catch (e) {
-      onError?.call('执行补丁失败: $e');
+      onError?.call(l10nGlobal.ssdtMsg526(e.toString()));
     }
   }
 
@@ -350,7 +351,7 @@ class PatchViewModel extends ChangeNotifier {
         onError: onError,
       );
     } catch (e) {
-      onError?.call('执行补丁[$action]失败: $e');
+      onError?.call(l10nGlobal.ssdtMsg527(action.toString(), e.toString()));
     }
   }
 
@@ -362,12 +363,12 @@ class PatchViewModel extends ChangeNotifier {
     Function(String)? onError,
   }) async {
     if (_isRunningPatches) {
-      onError?.call('正在生成SSDT，请勿重复操作!');
+      onError?.call(l10nGlobal.ssdtMsg528);
       return;
     }
 
     if (actions.isEmpty) {
-      onError?.call('补丁列表为空!');
+      onError?.call(l10nGlobal.ssdtMsg529);
       return;
     }
 
@@ -419,7 +420,7 @@ class PatchViewModel extends ChangeNotifier {
     Future<String?> Function()? onRequestSudoPassword,
   }) async {
     if (_isDumping) {
-      onError?.call('正在提取中，请勿重复操作!');
+      onError?.call(l10nGlobal.ssdtMsg530);
       return;
     }
 
@@ -429,7 +430,7 @@ class PatchViewModel extends ChangeNotifier {
     try {
       if (Platform.isMacOS) {
         onError?.call(
-          '当前${Platform.operatingSystem}平台提取的ACPI表极有可能被OpenCore等注入的ACPI补丁污染,强烈建议在Windows/Linux平台操作!',
+          l10nGlobal.ssdtMsg531(Platform.operatingSystem.toString()),
         );
       }
       final currentState = _state.value;
@@ -438,21 +439,21 @@ class PatchViewModel extends ChangeNotifier {
         onRequestSudoPassword: onRequestSudoPassword,
       );
       if (dumpPath == null) {
-        onError?.call('提取ACPI失败!');
+        onError?.call(l10nGlobal.ssdtMsg532);
         return;
       }
 
       _updateState(dumpPath: dumpPath);
       final loadResult = await manager.loadTables(dumpPath);
       if (loadResult != null && loadResult.isNotEmpty) {
-        onSuccess?.call('提取ACPI成功!');
+        onSuccess?.call(l10nGlobal.ssdtMsg533);
         _updateOutputDirectory(loadResult, updateAcpiDir: true);
         _updateState(tablePath: dumpPath, dsdtPath: null);
         _initTargetSSDTPath();
         await _initHpetData();
       }
     } catch (e) {
-      onError?.call('准备补丁失败: $e');
+      onError?.call(l10nGlobal.ssdtMsg534(e.toString()));
     } finally {
       _isDumping = false;
     }
@@ -482,7 +483,7 @@ class PatchViewModel extends ChangeNotifier {
         await _initHpetData();
       }
     } catch (e) {
-      onError?.call('加载DSDT/ACPI失败: $e');
+      onError?.call(l10nGlobal.ssdtMsg535(e.toString()));
     }
   }
 
@@ -494,20 +495,20 @@ class PatchViewModel extends ChangeNotifier {
   }) {
     try {
       if (!File(plistPath).existsSync()) {
-        onError?.call('config.plist文件不存在: $plistPath');
+        onError?.call(l10nGlobal.ssdtMsg536(plistPath.toString()));
         return null;
       }
 
       final plistType = manager.getPlistType(plistPath);
       if (plistType == null) {
-        onError?.call('无法识别的plist文件格式');
+        onError?.call(l10nGlobal.ssdtMsg537);
         return null;
       }
 
-      onSuccess?.call('config.plist类型为 "$plistType"');
+      onSuccess?.call(l10nGlobal.ssdtMsg538(plistType.toString()));
       return plistType;
     } catch (e) {
-      onError?.call('解析plist类型失败: $e');
+      onError?.call(l10nGlobal.ssdtMsg539(e.toString()));
       return null;
     }
   }
@@ -519,20 +520,20 @@ class PatchViewModel extends ChangeNotifier {
 
       // 校验必要参数
       if (currentState.tablePath == null) {
-        onError?.call('请先选择ACPIs目录!');
+        onError?.call(l10nGlobal.ssdtMsg540);
         return;
       }
       if (currentState.configPath == null) {
-        onError?.call('请先选择EFI目录下config.plist文件!');
+        onError?.call(l10nGlobal.ssdtMsg541);
         return;
       }
       if (!Directory(currentState.tablePath!).existsSync() &&
           !File(currentState.tablePath!).existsSync()) {
-        onError?.call('ACPI路径无效: ${currentState.tablePath}');
+        onError?.call(l10nGlobal.ssdtMsg542(currentState.tablePath.toString()));
         return;
       }
       if (!File(currentState.configPath!).existsSync()) {
-        onError?.call('config.plist文件不存在: ${currentState.configPath}');
+        onError?.call(l10nGlobal.ssdtMsg543(currentState.configPath.toString()));
         return;
       }
 
@@ -543,7 +544,7 @@ class PatchViewModel extends ChangeNotifier {
         overwrite: config.overwriteEFI,
       );
     } catch (e) {
-      onError?.call('合并plist文件失败: $e');
+      onError?.call(l10nGlobal.ssdtMsg544(e.toString()));
     }
   }
 

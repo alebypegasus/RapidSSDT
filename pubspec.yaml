@@ -48,6 +48,8 @@ dependencies:
   url_launcher: ^6.3.2
   flutter_markdown: ^0.7.7
   crypto: ^3.0.7
+  macos_ui: ^2.2.2
+  macos_window_utils: ^1.9.1
 
 
 dev_dependencies:

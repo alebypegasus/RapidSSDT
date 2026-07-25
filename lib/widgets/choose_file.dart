@@ -2,9 +2,9 @@
 //  Created by JeoJay127 
 //
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide TextField;
+import 'package:macos_ui/macos_ui.dart';
 import 'package:rapidssdt/utils/file_util.dart';
-import 'package:rapidssdt/widgets/inkwell_widget.dart';
 
 enum OpenMode { file, directory }
 
@@ -117,15 +117,12 @@ class _ChooseFileWidgetState extends State<ChooseFileWidget> {
   @override
   Widget build(BuildContext context) {
     final buttonWidgets = widget.buttons.map((btn) {
-      return InkWellWidget.common(
-        height: widget.buttonHeight,
-        width: widget.buttonWidth,
-        radius: widget.radius,
-        onTap: () => onClick(btn),
+      return PushButton(
+        controlSize: ControlSize.regular,
+        onPressed: () => onClick(btn),
         child: Text(
           btn.text,
           style: TextStyle(
-            color: Colors.white,
             fontSize: widget.buttonTextSize,
           ),
         ),
@@ -135,22 +132,20 @@ class _ChooseFileWidgetState extends State<ChooseFileWidget> {
     return Row(
       spacing: widget.spacing,
       children: [
-        if (widget.buttonOnLeft) ...[...buttonWidgets],
+        if (widget.buttonOnLeft) ...buttonWidgets,
         Expanded(
-          child: TextField(
+          child: MacosTextField(
             enabled: false,
             controller: _textController,
             style: const TextStyle(fontSize: 11),
-            decoration: InputDecoration(
-              hintText: widget.hintText,
-              hintStyle: TextStyle(
-                color: Colors.grey,
-                fontSize: widget.buttonTextSize,
-              ),
+            placeholder: widget.hintText,
+            placeholderStyle: TextStyle(
+              color: MacosTheme.of(context).typography.body.color?.withOpacity(0.5) ?? MacosColors.systemGrayColor,
+              fontSize: widget.buttonTextSize,
             ),
           ),
         ),
-        if (!widget.buttonOnLeft) ...[...buttonWidgets],
+        if (!widget.buttonOnLeft) ...buttonWidgets,
       ],
     );
   }

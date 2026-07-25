@@ -222,5 +222,728 @@
   "sleepPatchesRemark": "非必需，用于修复睡眠问题",
   "auxiliaryPatches": "辅助补丁",
   "auxiliaryPatchesRemark": "非必需，但可以补全ACPI结构或增强兼容性",
-  "prebuiltPatches": "预制补丁"
+  "prebuiltPatches": "预制补丁",
+  "ssdtMsg500": "デバイスの ACPI パス:",
+  "ssdtMsg501": "偽造するグラフィックス カード デバイスを選択してください",
+  "ssdtMsg502": "不明なグラフィックス カード モデル",
+  "ssdtMsg503": "偽造グラフィックス カード ID データベース:",
+  "ssdtMsg504": "{arg0}",
+  "@ssdtMsg504": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg505": "例: 73BF",
+  "ssdtMsg506": "4 つの 16 進文字が必要です",
+  "ssdtMsg507": "{arg0}",
+  "@ssdtMsg507": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg508": "オプション、グラフィックス カード名",
+  "ssdtMsg509": "偽造グラフィックス カード ID:",
+  "ssdtMsg510": "偽造グラフィックス カード名:",
+  "ssdtMsg511": "ソース .dsl ファイルを削除するかどうか: {arg0}",
+  "@ssdtMsg511": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg512": "強制的にコンパイルするかどうか: {arg0}",
+  "@ssdtMsg512": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg513": "ターゲット EFI を上書きするかどうか: {arg0}",
+  "@ssdtMsg513": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg514": "一致パターン: {arg0}",
+  "@ssdtMsg514": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg515": "HPET データのロードに失敗しました: {arg0}",
+  "@ssdtMsg515": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg516": "HPET データの初期化に失敗しました: {arg0}",
+  "@ssdtMsg516": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg517": "ACPI パスの初期化に失敗しました: {arg0}",
+  "@ssdtMsg517": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg518": "パッチノートはありません",
+  "ssdtMsg519": "パッチノートはありません",
+  "ssdtMsg520": "パッチノートの取得に失敗しました: {arg0}",
+  "@ssdtMsg520": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg521": "パッチノートの取得に失敗しました",
+  "ssdtMsg522": "{arg0} 構成パスをクリアします",
+  "@ssdtMsg522": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg523": "{arg0} が無効なファイルを選択しました: {arg1}",
+  "@ssdtMsg523": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg524": "{arg0} のパッチ構成が見つかりません",
+  "@ssdtMsg524": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg525": "続行する前に、カスタマイズする必要がある SSDT を選択してください。",
+  "ssdtMsg526": "パッチの実行に失敗しました: {arg0}",
+  "@ssdtMsg526": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg527": "パッチ [{arg0}] の実行に失敗しました: {arg1}",
+  "@ssdtMsg527": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg528": "SSDT が生成されています。操作を繰り返さないでください。",
+  "ssdtMsg529": "パッチリストが空です!",
+  "ssdtMsg530": "抽出が進行中です。操作を繰り返さないでください。",
+  "ssdtMsg531": "現在の {arg0} プラットフォームによって抽出された ACPI テーブルは、OpenCore などによって挿入された ACPI パッチによって汚染されている可能性が非常に高くなります。 Windows/Linux プラットフォームで動作することを強くお勧めします。",
+  "@ssdtMsg531": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg532": "ACPIの抽出に失敗しました!",
+  "ssdtMsg533": "ACPIの抽出に成功しました!",
+  "ssdtMsg534": "パッチの準備に失敗しました: {arg0}",
+  "@ssdtMsg534": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg535": "DSDT/ACPI のロードに失敗しました: {arg0}",
+  "@ssdtMsg535": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg536": "config.plist ファイルが存在しません: {arg0}",
+  "@ssdtMsg536": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg537": "認識できない plist ファイル形式",
+  "ssdtMsg538": "config.plist タイプは「{arg0}」です",
+  "@ssdtMsg538": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg539": "plist タイプの解析に失敗しました: {arg0}",
+  "@ssdtMsg539": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg540": "最初に ACPI ディレクトリを選択してください。",
+  "ssdtMsg541": "まず、EFI ディレクトリ内の config.plist ファイルを選択してください。",
+  "ssdtMsg542": "無効な ACPI パス: {arg0}",
+  "@ssdtMsg542": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg543": "config.plist ファイルが存在しません: {arg0}",
+  "@ssdtMsg543": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg544": "plist ファイルのマージに失敗しました: {arg0}",
+  "@ssdtMsg544": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg545": "はい",
+  "ssdtMsg546": "いいえ",
+  "ssdtMsg547": "はい",
+  "ssdtMsg548": "いいえ",
+  "ssdtMsg549": "はい",
+  "ssdtMsg550": "いいえ",
+  "ssdtMsg551": "内蔵",
+  "ssdtMsg552": "リモート",
+  "ssdtMsg553": "新しいバージョンのiasl",
+  "ssdtMsg554": "古いバージョンの iasl-legacy",
+  "ssdtMsg555": "はい",
+  "ssdtMsg556": "いいえ",
+  "ssdtMsg557": "設定",
+  "ssdtMsg558": "IASLモード",
+  "ssdtMsg559": "IASL コンパイル タイプ",
+  "ssdtMsg560": "逆コンパイルされた .dsl ファイルを削除する",
+  "ssdtMsg561": "強制コンパイル",
+  "ssdtMsg562": "ターゲットEFIを上書きするかどうか",
+  "ssdtMsg563": "ACPIマッチングモード",
+  "ssdtMsg564": "コアパッチ",
+  "ssdtMsg565": "機能パッチ",
+  "ssdtMsg566": "デバイスパッチ",
+  "ssdtMsg567": "専用パッチ",
+  "ssdtMsg568": "スリープパッチ",
+  "ssdtMsg569": "補助パッチ",
+  "ssdtMsg570": "既製のパッチ",
+  "ssdtMsg571": "通常のシステム起動と電源管理に必要な基本パッチ",
+  "ssdtMsg572": "追加機能を提供する、または機能の問題を修正するパッチ",
+  "ssdtMsg573": "グラフィックス カード ハードウェア用のパッチ",
+  "ssdtMsg574": "パッチは特定のマザーボードまたはアーキテクチャでのみ必要です",
+  "ssdtMsg575": "オプション、睡眠の問題を解決するために使用されます",
+  "ssdtMsg576": "必須ではありませんが、ACPI 構造を完成させたり、互換性を強化したりできます",
+  "ssdtMsg577": "DMARを選択します",
+  "ssdtMsg578": "カスタマイズする必要があるDMARテーブルを選択してください",
+  "ssdtMsg579": "APIC を選択します",
+  "ssdtMsg580": "カスタマイズする必要がある APIC テーブルを選択してください",
+  "ssdtMsg581": "FACPを選択します",
+  "ssdtMsg582": "FACP フォームを選択してください",
+  "ssdtMsg583": "FACPを選択します",
+  "ssdtMsg584": "FACP フォームを選択してください",
+  "ssdtMsg585": "ログ",
+  "ssdtMsg586": "ログをクリアする",
+  "ssdtMsg587": "ログのエクスポート",
+  "ssdtMsg588": "既製のパッチ",
+  "ssdtMsg589": "パッチの実行",
+  "ssdtMsg590": "ファイル/ディレクトリを選択してください",
+  "ssdtMsg591": "ACPIの抽出",
+  "ssdtMsg592": "出力ディレクトリ",
+  "ssdtMsg593": "DSDT ファイルまたは ACPI ディレクトリを選択してください",
+  "ssdtMsg594": "ACPIの選択",
+  "ssdtMsg595": "構成をマージする",
+  "ssdtMsg596": "構成を選択します",
+  "ssdtMsg597": "config.plist ファイルを選択してください",
+  "ssdtMsg598": "設定",
+  "ssdtMsg599": "プラットフォームパッチ",
+  "ssdtMsg600": "パッチガイド",
+  "ssdtMsg601": "アプリケーションについて",
+  "ssdtMsg602": "{arg0}: {arg1}",
+  "@ssdtMsg602": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg603": "パッチを選択",
+  "ssdtMsg604": "デスクトップ",
+  "ssdtMsg605": "サーバ",
+  "ssdtMsg606": "SSDT が生成されています。操作を繰り返さないでください。",
+  "ssdtMsg607": "SSDT が選択されていません",
+  "ssdtMsg608": "{arg0} {arg1}",
+  "@ssdtMsg608": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg609": "{arg0} リスト: {arg1}",
+  "@ssdtMsg609": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg610": "プレハブSSDT",
+  "ssdtMsg611": "カスタムSSDT",
+  "ssdtMsg612": "CPUの種類:",
+  "ssdtMsg613": "プラットフォームの種類:",
+  "ssdtMsg614": "デスクトップ",
+  "ssdtMsg615": "デスクトップ",
+  "ssdtMsg616": "ノート",
+  "ssdtMsg617": "ノート",
+  "ssdtMsg618": "ミニホスト",
+  "ssdtMsg619": "ミニホスト",
+  "ssdtMsg620": "サーバ",
+  "ssdtMsg621": "サーバ",
+  "ssdtMsg622": "現在選択されている SSDT リスト: {arg0}",
+  "@ssdtMsg622": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg623": "プラットフォーム情報:",
+  "ssdtMsg624": "すべてチェックしてください",
+  "ssdtMsg625": "コア（公式推奨）",
+  "ssdtMsg626": "推奨（機能修正）",
+  "ssdtMsg627": "オプション（機能を完備）",
+  "ssdtMsg628": "プラットフォーム情報:",
+  "ssdtMsg629": "プレハブSSDT",
+  "ssdtMsg630": "カスタムSSDT",
+  "ssdtMsg631": "カスタムSSDT",
+  "ssdtMsg632": "プレハブSSDT",
+  "ssdtMsg633": "{arg0} {arg1}",
+  "@ssdtMsg633": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg634": "{arg0}{arg1}",
+  "@ssdtMsg634": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg635": "{arg0}{arg1}",
+  "@ssdtMsg635": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg636": "GitHub にアクセス",
+  "ssdtMsg637": "今すぐダウンロード",
+  "ssdtMsg638": "閉鎖",
+  "ssdtMsg639": "新しいバージョンが見つかりました",
+  "ssdtMsg640": "バージョン番号:",
+  "ssdtMsg641": "発売時期：",
+  "ssdtMsg642": "サーバーへの接続がタイムアウトしました",
+  "ssdtMsg643": "サーバーへの接続がタイムアウトしました",
+  "ssdtMsg644": "ダウンロードがキャンセルされました",
+  "ssdtMsg645": "ダウンロードがキャンセルされました",
+  "ssdtMsg646": "読み取り応答タイムアウト",
+  "ssdtMsg647": "読み取り応答タイムアウト",
+  "ssdtMsg648": "サーバー情報の取得中に例外が発生しました。ステータスコード: {arg0}",
+  "@ssdtMsg648": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg649": "リクエストが失敗しました。ステータス コード: {arg0}",
+  "@ssdtMsg649": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg650": "ダウンロードがタイムアウトしました。{arg0} 秒間進捗がありません。タスクはキャンセルされました。",
+  "@ssdtMsg650": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg651": "ログ チャネルが存在しません: {arg0}",
+  "@ssdtMsg651": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg652": "エクスポートが成功しました。ファイルパス: {arg0}{arg1}{arg2}",
+  "@ssdtMsg652": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg653": "エクスポートに失敗しました!エラーメッセージ: {arg0}",
+  "@ssdtMsg653": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg654": "ファイルが存在しません!エクスポートに失敗しました!ファイルパス: {arg0}",
+  "@ssdtMsg654": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg655": "ログ ファイルの初期化に失敗しました: {arg0}",
+  "@ssdtMsg655": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg656": "未知",
+  "ssdtMsg657": "最も緩い",
+  "ssdtMsg658": "長さのみ",
+  "ssdtMsg659": "テーブル ID と長さ、正規化されたヘッダーを無効にする",
+  "ssdtMsg660": "テーブル ID と長さ、正規化されたヘッダーを有効にする",
+  "ssdtMsg661": "Intel 第 1 世代 Arrandale、第 2 世代 Sandy Bridge、第 3 世代 Ivy Bridge",
+  "ssdtMsg662": "Intel第4世代Haswell、第5世代Broadwell",
+  "ssdtMsg663": "Intel 第 6 世代 Skylake、第 7 世代 Kaby Lake、第 4 世代 Haswell の一部",
+  "ssdtMsg664": "カスタムの明るさ。通常、一部の非標準機器または特別なニーズの設定に使用されます。",
+  "ssdtMsg665": "カスタムの明るさ。通常、一部の非標準機器または特別なニーズの設定に使用されます。",
+  "ssdtMsg666": "Intel 第 8 世代 CoffeeLake ～ 第 10 世代、および AMD ノートブック",
+  "ssdtMsg667": "その他 (カスタム applbkl-name / applbkl-data デバイス プロパティが必要) はサポートされていない可能性があります",
+  "ssdtMsg668": "テーブルが存在しません: {arg0}",
+  "@ssdtMsg668": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg669": "受信データの長さが 4 バイト未満です: {arg0}",
+  "@ssdtMsg669": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg670": "ファイルの内容は 4 バイト未満です: {arg0}",
+  "@ssdtMsg670": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg671": "署名の読み取りエラー: {arg0}、ファイル パス: {arg1}",
+  "@ssdtMsg671": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg672": "一時ディレクトリが次の場所に作成されました: {arg0}",
+  "@ssdtMsg672": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg673": "一時ディレクトリはすでに次の場所に存在します: {arg0}",
+  "@ssdtMsg673": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg674": "{arg0} ファイルを逆コンパイルしています...",
+  "@ssdtMsg674": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg675": "正在批量反编译 SSDT.aml 文件...",
+  "ssdtMsg676": "DSDT.aml および SSDT.aml ファイルをバッチで逆コンパイルしています...",
+  "ssdtMsg677": "=> {arg0} の逆コンパイルに失敗しました。",
+  "@ssdtMsg677": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg678": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg678": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg679": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg679": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg680": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg680": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg681": "失敗した .aml ファイルを個別に逆コンパイルしています...",
+  "ssdtMsg682": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg682": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg683": "=> {arg0} の逆コンパイルに失敗しました。",
+  "@ssdtMsg683": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg684": "他の .aml ファイルを逆コンパイルしています...",
+  "ssdtMsg685": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg685": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg686": "注: パスまたはファイル名に中国語または特殊文字を含めないように注意してください。含めると、予期しない問題が発生する可能性があります。",
+  "ssdtMsg687": "エラーが発生しました: {arg0}",
+  "@ssdtMsg687": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg688": "getDevicePathsWithId メソッド {arg0} でパスを処理中にエラーが発生しました: {arg1}",
+  "@ssdtMsg688": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg689": "スキップ: {arg0}。これは以前に正しく逆コンパイルされています。",
+  "@ssdtMsg689": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg690": "ターゲット ファイルは除外リストにあります: {arg0}",
+  "@ssdtMsg690": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg691": "無効なパス: {arg0}",
+  "@ssdtMsg691": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg692": "無効なパス",
+  "ssdtMsg693": "{arg0} に有効な .aml または .dat ファイルが見つかりません!",
+  "@ssdtMsg693": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg694": "有効な .aml または .dat ファイルが見つかりません",
+  "ssdtMsg695": "逆コンパイルに失敗しました: {arg0}",
+  "@ssdtMsg695": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg696": "acpidump ツールの準備ができていません。作戦終了！",
+  "ssdtMsg697": "ACPI テーブルをエクスポートしています...",
+  "ssdtMsg698": "現在のプラットフォームではサポートされていません。",
+  "ssdtMsg699": "sudo パスワード認証を待っています...",
+  "platformName1000": "ジェネレーション 0-Penryn-775 プラットフォーム",
+  "platformName1001": "ジェネレーション 0-ペンリン-ノートブック",
+  "platformName1002": "世代 0-Penryn-mini ホスト",
+  "platformName1003": "第 10 世代 - Cascade Lake - X&W-X599 プラットフォーム",
+  "platformName1004": "第 10 世代 - Comet Lake - 1200 プラットフォーム",
+  "platformName1005": "第 10 世代 - Comet Lake - ラップトップ",
+  "platformName1006": "10代目-Comet Lake-ミニホスト",
+  "platformName1007": "第 10 世代 - Ice Lake - ラップトップ",
+  "platformName1008": "第10世代 - Ice Lake - ミニホスト",
+  "platformName1009": "第 11 世代 - Rocket Lake - 1200 プラットフォーム",
+  "platformName1010": "第 11 世代 - Rocket Lake - ラップトップ",
+  "platformName1011": "11代目 - Tiger Lake - ミニホスト",
+  "platformName1012": "第12世代-Alder Lake-1700プラットフォーム",
+  "platformName1013": "12代目-アルダーレイク-ノート",
+  "platformName1014": "12代目-Alder Lake-ミニホスト",
+  "platformName1015": "第 13 世代 - Raptor Lake-1700 プラットフォーム",
+  "platformName1016": "13代目-Raptor Lake-ノート",
+  "platformName1017": "13代目-Raptor Lake-ミニホスト",
+  "platformName1018": "第 14 世代 - Raptor Lake-1700 プラットフォーム",
+  "platformName1019": "14代目-Raptor Lake-ノートブック",
+  "platformName1020": "第14世代 - Raptor Lake - ミニホスト",
+  "platformName1021": "第 15 世代 - Arrow Lake - 1851 プラットフォーム",
+  "platformName1022": "15代目-アローレイク-手帳",
+  "platformName1023": "15代目 - Arrow Lake - ミニホスト",
+  "platformName1024": "第 1 世代 - アランデール - ノートブック",
+  "platformName1025": "第 1 世代 - アランデール - ミニ ホスト",
+  "platformName1026": "第 1 世代 - Lynnfield-1156 プラットフォーム",
+  "platformName1027": "第 1 世代 - Nehalem&Westmere - X58 プラットフォーム",
+  "platformName1028": "第 2 世代 - Sandy Bridge - 1155 プラットフォーム",
+  "platformName1029": "第2世代-Sandy Bridge-E-X79プラットフォーム",
+  "platformName1030": "2代目-Sandy Bridge-ノート",
+  "platformName1031": "2代目-Sandy Bridge-ミニホスト",
+  "platformName1032": "第 3 世代 - Ivy Bridge - 1155 プラットフォーム",
+  "platformName1033": "第 3 世代 - Ivy Bridge - E-X79 プラットフォーム",
+  "platformName1034": "3代目-Ivy Bridge-ノートブック",
+  "platformName1035": "第 3 世代 - Ivy Bridge - ミニホスト",
+  "platformName1036": "第4世代Haswell-1150プラットフォーム",
+  "platformName1037": "第4世代Haswell-E-X99プラットフォーム",
+  "platformName1038": "第 4 世代 - Haswell - ラップトップ",
+  "platformName1039": "第4世代-Haswell-miniホスト",
+  "platformName1040": "第 5 世代 - Broadwell-1150 プラットフォーム",
+  "platformName1041": "第 5 世代 - Broadwell-E-X99 プラットフォーム",
+  "platformName1042": "第5世代-Broadwell-ノートブック",
+  "platformName1043": "第 5 世代 - Broadwell - ミニ ホスト",
+  "platformName1044": "第6世代-Skylake-1151プラットフォーム",
+  "platformName1045": "第6世代-Skylake-X&W-X299プラットフォーム",
+  "platformName1046": "第6世代-Skylake-ノートブック",
+  "platformName1047": "第6世代-Skylake-miniホスト",
+  "platformName1048": "第 7 世代 - Kaby Lake - 1151 プラットフォーム",
+  "platformName1049": "第 7 世代 - Kaby Lake - ノートブック",
+  "platformName1050": "第7世代 - Kaby Lake - ミニホスト",
+  "platformName1051": "第8世代-Coffee Lake-1151プラットフォーム",
+  "platformName1052": "第 8 世代-Coffee Lake-ノートブック",
+  "platformName1053": "8代目-Coffee Lake-ミニホスト",
+  "platformName1054": "第9世代-Coffee Lake-1151プラットフォーム",
+  "platformName1055": "第9世代-Coffee Lake-ノートブック",
+  "platformName1056": "9代目-Coffee Lake-ミニホスト",
+  "platformName1057": "ブルドーザー(15時間)とジャガー(16時間)",
+  "platformName1058": "ブルドーザー (15 時間) およびジャガー (16 時間) - ノートブック",
+  "platformName1059": "ブルドーザー (15 時間) およびジャガー (16 時間) - ミニ ホスト",
+  "platformName1060": "Ryzen と Threadripper (17 時間と 19 時間)",
+  "platformName1061": "Ryzen および Threadripper (17 時間および 19 時間) - ハイエンド サーバー",
+  "platformName1062": "Ryzen ノートブック",
+  "platformName1063": "Ryzen-miniホスト",
+  "platformName1064": "サーバ",
+  "platformName1065": "ノート",
+  "platformName1066": "ミニホスト"
 }

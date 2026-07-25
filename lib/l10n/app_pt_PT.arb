@@ -222,5 +222,728 @@
   "sleepPatchesRemark": "Opcional, usado para corrigir problemas de repouso/despertar",
   "auxiliaryPatches": "Patches Auxiliares",
   "auxiliaryPatchesRemark": "Opcional, completa a estrutura ACPI ou melhora a compatibilidade",
-  "prebuiltPatches": "Patches Pré-construídos"
+  "prebuiltPatches": "Patches Pré-construídos",
+  "ssdtMsg500": "Caminho ACPI do dispositivo:",
+  "ssdtMsg501": "Selecione o dispositivo de placa gráfica a ser falsificado",
+  "ssdtMsg502": "Modelo de placa gráfica desconhecido",
+  "ssdtMsg503": "Banco de dados de ID de placa gráfica falsificada:",
+  "ssdtMsg504": "{arg0}",
+  "@ssdtMsg504": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg505": "Por exemplo: 73BF",
+  "ssdtMsg506": "Requer 4 caracteres hexadecimais",
+  "ssdtMsg507": "{arg0}",
+  "@ssdtMsg507": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg508": "Opcional, nome da placa gráfica",
+  "ssdtMsg509": "ID da placa gráfica falsificada:",
+  "ssdtMsg510": "Nome da placa gráfica falsificada:",
+  "ssdtMsg511": "Se deseja excluir o arquivo .dsl de origem: {arg0}",
+  "@ssdtMsg511": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg512": "Se deve forçar a compilação: {arg0}",
+  "@ssdtMsg512": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg513": "Se deve substituir o EFI de destino: {arg0}",
+  "@ssdtMsg513": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg514": "Padrão de correspondência: {arg0}",
+  "@ssdtMsg514": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg515": "Falha ao carregar dados HPET: {arg0}",
+  "@ssdtMsg515": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg516": "Falha ao inicializar dados HPET: {arg0}",
+  "@ssdtMsg516": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg517": "Falha ao inicializar o caminho ACPI: {arg0}",
+  "@ssdtMsg517": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg518": "Sem notas de patch",
+  "ssdtMsg519": "Sem notas de patch",
+  "ssdtMsg520": "Falha ao obter notas do patch: {arg0}",
+  "@ssdtMsg520": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg521": "Falha ao obter notas do patch",
+  "ssdtMsg522": "{arg0} Limpar caminho de configuração",
+  "@ssdtMsg522": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg523": "{arg0} selecionou um arquivo inválido: {arg1}",
+  "@ssdtMsg523": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg524": "Nenhuma configuração de patch encontrada para {arg0}",
+  "@ssdtMsg524": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg525": "Selecione o SSDT que precisa ser personalizado antes de continuar!",
+  "ssdtMsg526": "Falha ao executar o patch: {arg0}",
+  "@ssdtMsg526": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg527": "Falha ao executar o patch [{arg0}]: {arg1}",
+  "@ssdtMsg527": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg528": "SSDT está sendo gerado, não repita a operação!",
+  "ssdtMsg529": "A lista de patches está vazia!",
+  "ssdtMsg530": "A extração está em andamento, não repita a operação!",
+  "ssdtMsg531": "É muito provável que a tabela ACPI extraída pela plataforma {arg0} atual esteja contaminada por patches ACPI injetados por OpenCore e outros. É altamente recomendável operar na plataforma Windows/Linux!",
+  "@ssdtMsg531": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg532": "Falha ao extrair ACPI!",
+  "ssdtMsg533": "Extração de ACPI bem-sucedida!",
+  "ssdtMsg534": "Falha ao preparar o patch: {arg0}",
+  "@ssdtMsg534": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg535": "Falha ao carregar DSDT/ACPI: {arg0}",
+  "@ssdtMsg535": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg536": "O arquivo config.plist não existe: {arg0}",
+  "@ssdtMsg536": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg537": "Formato de arquivo plist não reconhecido",
+  "ssdtMsg538": "O tipo config.plist é \"{arg0}\"",
+  "@ssdtMsg538": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg539": "Falha ao analisar o tipo plist: {arg0}",
+  "@ssdtMsg539": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg540": "Selecione o diretório ACPIs primeiro!",
+  "ssdtMsg541": "Selecione primeiro o arquivo config.plist no diretório EFI!",
+  "ssdtMsg542": "Caminho ACPI inválido: {arg0}",
+  "@ssdtMsg542": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg543": "O arquivo config.plist não existe: {arg0}",
+  "@ssdtMsg543": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg544": "Falha ao mesclar arquivos plist: {arg0}",
+  "@ssdtMsg544": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg545": "sim",
+  "ssdtMsg546": "não",
+  "ssdtMsg547": "sim",
+  "ssdtMsg548": "não",
+  "ssdtMsg549": "sim",
+  "ssdtMsg550": "não",
+  "ssdtMsg551": "embutido",
+  "ssdtMsg552": "remoto",
+  "ssdtMsg553": "Nova versão do iasl",
+  "ssdtMsg554": "Versão antiga iasl-legacy",
+  "ssdtMsg555": "sim",
+  "ssdtMsg556": "não",
+  "ssdtMsg557": "Preferências",
+  "ssdtMsg558": "modo iasl",
+  "ssdtMsg559": "tipo de compilação iasl",
+  "ssdtMsg560": "Exclua arquivos .dsl descompilados",
+  "ssdtMsg561": "Forçar compilação",
+  "ssdtMsg562": "Se deve substituir o EFI de destino",
+  "ssdtMsg563": "Modo de correspondência ACPI",
+  "ssdtMsg564": "patch principal",
+  "ssdtMsg565": "Patches de recursos",
+  "ssdtMsg566": "Patches de dispositivos",
+  "ssdtMsg567": "patch dedicado",
+  "ssdtMsg568": "adesivo para dormir",
+  "ssdtMsg569": "Patches auxiliares",
+  "ssdtMsg570": "Patches pré-fabricados",
+  "ssdtMsg571": "Patches básicos necessários para inicialização normal do sistema e gerenciamento de energia",
+  "ssdtMsg572": "Patches que fornecem funcionalidades adicionais ou corrigem problemas de recursos",
+  "ssdtMsg573": "Patches para hardware de placa gráfica",
+  "ssdtMsg574": "Patches necessários apenas em placas-mãe ou arquiteturas específicas",
+  "ssdtMsg575": "Opcional, usado para corrigir problemas de sono",
+  "ssdtMsg576": "Não é obrigatório, mas pode completar a estrutura ACPI ou melhorar a compatibilidade",
+  "ssdtMsg577": "Selecione DMAR",
+  "ssdtMsg578": "Selecione a tabela DMAR que precisa ser personalizada",
+  "ssdtMsg579": "Selecione APIC",
+  "ssdtMsg580": "Selecione a tabela APIC que precisa ser personalizada",
+  "ssdtMsg581": "Selecione FACP",
+  "ssdtMsg582": "Selecione o formulário FACP",
+  "ssdtMsg583": "Selecione FACP",
+  "ssdtMsg584": "Selecione o formulário FACP",
+  "ssdtMsg585": "registro",
+  "ssdtMsg586": "limpar registro",
+  "ssdtMsg587": "Exportar registro",
+  "ssdtMsg588": "Patches pré-fabricados",
+  "ssdtMsg589": "Executar correção",
+  "ssdtMsg590": "Selecione um arquivo/diretório",
+  "ssdtMsg591": "Extrair ACPI",
+  "ssdtMsg592": "diretório de saída",
+  "ssdtMsg593": "Selecione o arquivo DSDT ou o diretório ACPIs",
+  "ssdtMsg594": "Selecione ACPIs",
+  "ssdtMsg595": "configuração de mesclagem",
+  "ssdtMsg596": "Selecione a configuração",
+  "ssdtMsg597": "Selecione o arquivo config.plist",
+  "ssdtMsg598": "Preferências",
+  "ssdtMsg599": "Patches de plataforma",
+  "ssdtMsg600": "Guia de patches",
+  "ssdtMsg601": "Sobre o aplicativo",
+  "ssdtMsg602": "{arg0}: {arg1}",
+  "@ssdtMsg602": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg603": "Selecione o patch",
+  "ssdtMsg604": "Área de trabalho",
+  "ssdtMsg605": "servidor",
+  "ssdtMsg606": "SSDT está sendo gerado, não repita a operação!",
+  "ssdtMsg607": "Nenhum SSDT selecionado",
+  "ssdtMsg608": "{arg0} {arg1}",
+  "@ssdtMsg608": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg609": "lista {arg0}: {arg1}",
+  "@ssdtMsg609": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg610": "SSDT pré-fabricado",
+  "ssdtMsg611": "SSDT personalizado",
+  "ssdtMsg612": "Tipo de CPU:",
+  "ssdtMsg613": "Tipo de plataforma:",
+  "ssdtMsg614": "Área de trabalho",
+  "ssdtMsg615": "Área de trabalho",
+  "ssdtMsg616": "caderno",
+  "ssdtMsg617": "caderno",
+  "ssdtMsg618": "Mini-anfitrião",
+  "ssdtMsg619": "Mini-anfitrião",
+  "ssdtMsg620": "servidor",
+  "ssdtMsg621": "servidor",
+  "ssdtMsg622": "Lista SSDT atualmente selecionada: {arg0}",
+  "@ssdtMsg622": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg623": "Informações da plataforma:",
+  "ssdtMsg624": "Verifique tudo",
+  "ssdtMsg625": "Núcleo (recomendação oficial)",
+  "ssdtMsg626": "Recomendar (correção de função)",
+  "ssdtMsg627": "Opcional (completo com funções)",
+  "ssdtMsg628": "Informações da plataforma:",
+  "ssdtMsg629": "SSDT pré-fabricado",
+  "ssdtMsg630": "SSDT personalizado",
+  "ssdtMsg631": "SSDT personalizado",
+  "ssdtMsg632": "SSDT pré-fabricado",
+  "ssdtMsg633": "{arg0} {arg1}",
+  "@ssdtMsg633": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg634": "{arg0}{arg1}",
+  "@ssdtMsg634": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg635": "{arg0}{arg1}",
+  "@ssdtMsg635": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg636": "Visite GitHub",
+  "ssdtMsg637": "Baixe agora",
+  "ssdtMsg638": "encerramento",
+  "ssdtMsg639": "nova versão encontrada",
+  "ssdtMsg640": "Número da versão:",
+  "ssdtMsg641": "Tempo de lançamento:",
+  "ssdtMsg642": "A conexão com o servidor expirou",
+  "ssdtMsg643": "A conexão com o servidor expirou",
+  "ssdtMsg644": "Download cancelado",
+  "ssdtMsg645": "Download cancelado",
+  "ssdtMsg646": "Tempo limite de resposta de leitura",
+  "ssdtMsg647": "Tempo limite de resposta de leitura",
+  "ssdtMsg648": "Ocorreu uma exceção ao obter informações do servidor! Código de status: {arg0}",
+  "@ssdtMsg648": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg649": "Falha na solicitação, código de status: {arg0}",
+  "@ssdtMsg649": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg650": "Tempo limite de download esgotado, sem progresso por {arg0} segundos, tarefa cancelada",
+  "@ssdtMsg650": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg651": "O canal de registro não existe: {arg0}",
+  "@ssdtMsg651": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg652": "Exportação bem-sucedida! Caminho do arquivo: {arg0}{arg1}{arg2}",
+  "@ssdtMsg652": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg653": "Falha na exportação! Mensagem de erro: {arg0}",
+  "@ssdtMsg653": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg654": "O arquivo não existe! Falha na exportação! Caminho do arquivo: {arg0}",
+  "@ssdtMsg654": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg655": "Falha na inicialização do arquivo de log: {arg0}",
+  "@ssdtMsg655": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg656": "desconhecido",
+  "ssdtMsg657": "mais solto",
+  "ssdtMsg658": "comprimento apenas",
+  "ssdtMsg659": "ID e comprimento da tabela, desabilitar cabeçalhos normalizados",
+  "ssdtMsg660": "ID e comprimento da tabela, habilite cabeçalhos normalizados",
+  "ssdtMsg661": "Intel Arrandale de 1ª geração, Sandy Bridge de 2ª geração, Ivy Bridge de 3ª geração",
+  "ssdtMsg662": "Intel Haswell de 4ª geração, Broadwell de 5ª geração",
+  "ssdtMsg663": "Intel Skylake de 6ª geração, Kaby Lake de 7ª geração, alguns Haswell de 4ª geração",
+  "ssdtMsg664": "Brilho personalizado, geralmente usado para alguns equipamentos não padrão ou configurações de necessidades especiais",
+  "ssdtMsg665": "Brilho personalizado, geralmente usado para alguns equipamentos não padrão ou configurações de necessidades especiais",
+  "ssdtMsg666": "Intel CoffeeLake de 8ª geração ~ 10ª geração e notebooks AMD",
+  "ssdtMsg667": "Outros (requer propriedades personalizadas do dispositivo applbkl-name / applbkl-data), podem não ser suportados",
+  "ssdtMsg668": "A tabela não existe: {arg0}",
+  "@ssdtMsg668": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg669": "O comprimento dos dados recebidos é inferior a 4 bytes: {arg0}",
+  "@ssdtMsg669": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg670": "O conteúdo do arquivo tem menos de 4 bytes: {arg0}",
+  "@ssdtMsg670": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg671": "Erro ao ler assinatura: {arg0}, caminho do arquivo: {arg1}",
+  "@ssdtMsg671": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg672": "O diretório temporário foi criado em: {arg0}",
+  "@ssdtMsg672": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg673": "O diretório temporário já existe em: {arg0}",
+  "@ssdtMsg673": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg674": "Descompilando arquivo {arg0}...",
+  "@ssdtMsg674": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg675": "Descompilando arquivos SSDT.aml em lotes...",
+  "ssdtMsg676": "Descompilando arquivos DSDT.aml e SSDT.aml em lotes...",
+  "ssdtMsg677": "=> {arg0} descompilação falhou!",
+  "@ssdtMsg677": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg678": "=> {arg0} descompilado com sucesso!",
+  "@ssdtMsg678": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg679": "=> {arg0} descompilado com sucesso!",
+  "@ssdtMsg679": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg680": "=> {arg0} descompilado com sucesso!",
+  "@ssdtMsg680": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg681": "Descompilando arquivos .aml com falha individualmente...",
+  "ssdtMsg682": "=> {arg0} descompilado com sucesso!",
+  "@ssdtMsg682": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg683": "=> {arg0} descompilação falhou!",
+  "@ssdtMsg683": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg684": "Descompilando outros arquivos .aml...",
+  "ssdtMsg685": "=> {arg0} descompilado com sucesso!",
+  "@ssdtMsg685": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg686": "Nota: Tente não incluir caracteres chineses ou especiais no caminho ou nome do arquivo, caso contrário, poderá causar problemas inesperados!",
+  "ssdtMsg687": "Ocorreu um erro: {arg0}",
+  "@ssdtMsg687": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg688": "Ocorreu um erro ao processar caminhos no método getDevicePathsWithId {arg0}: {arg1}",
+  "@ssdtMsg688": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg689": "Skip: {arg0}, que foi descompilado corretamente antes!",
+  "@ssdtMsg689": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg690": "O arquivo de destino está na lista de exclusão: {arg0}",
+  "@ssdtMsg690": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg691": "Caminho inválido: {arg0}",
+  "@ssdtMsg691": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg692": "Caminho inválido",
+  "ssdtMsg693": "Nenhum arquivo .aml ou .dat válido encontrado em {arg0}!",
+  "@ssdtMsg693": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg694": "Nenhum arquivo .aml ou .dat válido encontrado",
+  "ssdtMsg695": "Falha na descompilação: {arg0}",
+  "@ssdtMsg695": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg696": "A ferramenta acpidump não está pronta! Operação encerrada!",
+  "ssdtMsg697": "Exportando tabelas ACPI...",
+  "ssdtMsg698": "A plataforma atual não suporta isso!",
+  "ssdtMsg699": "Aguardando autorização de senha do sudo...",
+  "platformName1000": "Plataforma Geração 0-Penryn-775",
+  "platformName1001": "Geração 0-Penryn-Notebook",
+  "platformName1002": "Host Geração 0-Penryn-mini",
+  "platformName1003": "Plataforma Cascade Lake-X&W-X599 de 10ª Geração",
+  "platformName1004": "Plataforma Comet Lake-1200 de 10ª Geração",
+  "platformName1005": "10ª Geração-Comet Lake-Laptop",
+  "platformName1006": "Mini hospedeiro Comet Lake de 10ª geração",
+  "platformName1007": "10ª Geração-Ice Lake-Laptop",
+  "platformName1008": "Mini hospedeiro Ice Lake de 10ª geração",
+  "platformName1009": "Plataforma Rocket Lake-1200 de 11ª geração",
+  "platformName1010": "11ª Geração-Rocket Lake-Laptop",
+  "platformName1011": "Mini hospedeiro Tiger Lake de 11ª geração",
+  "platformName1012": "Plataforma Alder Lake-1700 de 12ª geração",
+  "platformName1013": "Caderno Alder Lake de 12ª geração",
+  "platformName1014": "Mini hospedeiro Alder Lake de 12ª geração",
+  "platformName1015": "Plataforma Raptor Lake-1700 de 13ª geração",
+  "platformName1016": "Caderno Raptor Lake de 13ª geração",
+  "platformName1017": "Anfitrião mini-Raptor Lake de 13ª geração",
+  "platformName1018": "Plataforma Raptor Lake-1700 de 14ª geração",
+  "platformName1019": "Caderno Raptor Lake de 14ª geração",
+  "platformName1020": "Anfitrião mini-Raptor Lake de 14ª geração",
+  "platformName1021": "Plataforma Arrow Lake-1851 de 15ª Geração",
+  "platformName1022": "Notebook Arrow Lake de 15ª geração",
+  "platformName1023": "Host Arrow Lake-mini de 15ª geração",
+  "platformName1024": "Geração 1-Arrandale-Notebook",
+  "platformName1025": "Host Geração 1-Arrandale-mini",
+  "platformName1026": "Plataforma Geração 1-Lynnfield-1156",
+  "platformName1027": "Plataforma Geração 1-Nehalem&Westmere-X58",
+  "platformName1028": "Plataforma Sandy Bridge-1155 de 2ª geração",
+  "platformName1029": "Plataforma Sandy Bridge-E-X79 de 2ª geração",
+  "platformName1030": "Notebook Sandy Bridge de 2ª geração",
+  "platformName1031": "Mini host Sandy Bridge de 2ª geração",
+  "platformName1032": "Plataforma Ivy Bridge-1155 de 3ª geração",
+  "platformName1033": "Plataforma Ivy Bridge-E-X79 de 3ª geração",
+  "platformName1034": "Notebook Ivy Bridge de 3ª geração",
+  "platformName1035": "Mini host Ivy Bridge de 3ª geração",
+  "platformName1036": "Plataforma Haswell-1150 de 4ª geração",
+  "platformName1037": "Plataforma Haswell-E-X99 de 4ª geração",
+  "platformName1038": "4ª Geração-Haswell-Laptop",
+  "platformName1039": "Host Haswell-mini de 4ª geração",
+  "platformName1040": "Plataforma Broadwell-1150 de 5ª geração",
+  "platformName1041": "Plataforma Broadwell-E-X99 de 5ª geração",
+  "platformName1042": "Notebook Broadwell de 5ª geração",
+  "platformName1043": "Host Broadwell-mini de 5ª geração",
+  "platformName1044": "Plataforma Skylake-1151 de 6ª geração",
+  "platformName1045": "Plataforma Skylake-X&W-X299 de 6ª geração",
+  "platformName1046": "Notebook Skylake de 6ª geração",
+  "platformName1047": "Host Skylake-mini de 6ª geração",
+  "platformName1048": "Plataforma Kaby Lake-1151 de 7ª Geração",
+  "platformName1049": "7ª Geração-Kaby Lake-Notebook",
+  "platformName1050": "7ª geração-Kaby Lake-mini host",
+  "platformName1051": "Plataforma Coffee Lake-1151 de 8ª geração",
+  "platformName1052": "8ª Geração-Lago Café-Caderno",
+  "platformName1053": "Mini anfitrião Coffee Lake de 8ª geração",
+  "platformName1054": "Plataforma Coffee Lake-1151 de 9ª geração",
+  "platformName1055": "9ª Geração-Café Lago-Caderno",
+  "platformName1056": "Mini-anfitrião Coffee Lake de 9ª geração",
+  "platformName1057": "Bulldozer(15h) e Jaguar(16h)",
+  "platformName1058": "Bulldozer(15h) e Jaguar(16h)-Notebook",
+  "platformName1059": "Bulldozer(15h) e Jaguar(16h)-mini anfitrião",
+  "platformName1060": "Ryzen e Threadripper(17h e 19h)",
+  "platformName1061": "Ryzen e Threadripper(17h e 19h)-servidores topo de linha",
+  "platformName1062": "Notebook Ryzen",
+  "platformName1063": "Host Ryzen-mini",
+  "platformName1064": "servidor",
+  "platformName1065": "caderno",
+  "platformName1066": "Mini-anfitrião"
 }

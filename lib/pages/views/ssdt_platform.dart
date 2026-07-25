@@ -97,9 +97,9 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
       e.prebuilt = prebuilt;
       return e.toMap();
     }).toList();
-    Log('${l10n?.platformInfo ?? "平台信息:"} ${selectedComboBoxValue.value}');
+    Log('${l10n?.platformInfo ?? ":"} ${selectedComboBoxValue.value}');
     Log(
-      '${prebuilt ? (l10n?.prebuiltSsdt ?? "预制SSDT") : (l10n?.customSsdt ?? "定制SSDT")} 列表: ${ssdts.map((e) => e.name).toList()}',
+      '${prebuilt ? (l10n?.prebuiltSsdt ?? "SSDT") : (l10n?.customSsdt ?? "定制SSDT")} 列表: ${ssdts.map((e) => e.name).toList()}',
     );
     Log("");
     String outputFolder =
@@ -372,5 +372,15 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
     selectedComboBoxValue.dispose();
     selectedSsdtNotifier.dispose();
     super.dispose();
+  }
+
+  String _translatePlatform(String platform) {
+    if (platform.contains('-')) {
+      final parts = platform.split('-');
+      if (parts.length >= 2) {
+        return parts.sublist(0, parts.length - 1).join('-') + ' Platform';
+      }
+    }
+    return platform;
   }
 }

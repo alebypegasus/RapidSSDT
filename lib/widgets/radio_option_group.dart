@@ -1,7 +1,7 @@
 //  radio_option_group.dart 
 //  Created by JeoJay127 
 //
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide RadioGroup;
 import 'package:rapidssdt/widgets/radio_option_item.dart';
 
 enum RadioGroupDirection { row, column, wrap }
@@ -40,15 +40,7 @@ class RadioOptionGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RadioGroup<String>(
-      groupValue: groupValue,
-      onChanged: (value) {
-        if (value != null) {
-          onChanged(value);
-        }
-      },
-      child: _buildBody(),
-    );
+    return _buildBody();
   }
 
   Widget _buildBody() {
@@ -56,6 +48,7 @@ class RadioOptionGroup extends StatelessWidget {
       return RadioOptionItem(
         radioScale: radioScale,
         value: option.value,
+        groupValue: groupValue,
         label: option.label,
         onChanged: onChanged,
       );

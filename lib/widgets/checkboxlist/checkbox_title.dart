@@ -1,7 +1,8 @@
 //  checkbox_title.dart 
 //  Created by JeoJay127 
 //
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Checkbox;
+import 'package:macos_ui/macos_ui.dart';
 
 class CheckboxTile extends StatelessWidget {
   final String label;
@@ -33,11 +34,10 @@ class CheckboxTile extends StatelessWidget {
         ? selectedColor
         : Theme.of(context).textTheme.bodyLarge!.color;
 
-    return Tooltip(
+    return MacosTooltip(
       message: tooltip,
-      child: InkWell(
+      child: GestureDetector(
         onTap: () => onChanged(!selected),
-        borderRadius: BorderRadius.circular(6.0),
         child: Container(
           decoration: showBorder
               ? BoxDecoration(
@@ -59,11 +59,10 @@ class CheckboxTile extends StatelessWidget {
             children: [
               Transform.scale(
                 scale: 0.8,
-                child: Checkbox(
+                child: MacosCheckbox(
                   value: selected,
-                  onChanged: (value) => onChanged(value!),
-                  activeColor: selectedColor,
-                  checkColor: Colors.white,
+                  onChanged: (value) => onChanged(value),
+                  activeColor: MacosColor(selectedColor.value),
                 ),
               ),
 

@@ -2,7 +2,8 @@
 //  Created by JeoJay127 
 //
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Checkbox;
+import 'package:macos_ui/macos_ui.dart';
 import 'package:rapidssdt/widgets/checkboxlist/checkbox_title.dart';
 
 class SmartCheckBoxList extends StatefulWidget {
@@ -203,15 +204,13 @@ class _SmartCheckBoxListState extends State<SmartCheckBoxList> {
     final textColor = _isAllSelected
         ? selectedColor
         : Theme.of(context).textTheme.bodyLarge!.color;
-    return InkWell(
+    return GestureDetector(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Checkbox(
-              tristate: true,
-              checkColor: Colors.white,
+            MacosCheckbox(
               value: _isAllSelected
                   ? true
                   : _isNoneSelected

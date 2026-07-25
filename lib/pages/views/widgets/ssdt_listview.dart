@@ -1,7 +1,8 @@
 //  ssdt_listview.dart 
 //  Created by JeoJay127 
 //
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Checkbox;
+import 'package:macos_ui/macos_ui.dart';
 import 'package:rapidssdt/pages/model/ssdt_item.dart';
 import 'package:rapidssdt/utils/constant.dart';
 
@@ -89,12 +90,12 @@ class _SsdtListViewState extends State<SsdtListView> {
         final item = widget.items[index];
         final selected = _selectedMap[item.name] ?? item.isBasic;
     
-        return InkWell(
-          borderRadius: BorderRadius.circular(6),
+        return GestureDetector(
           onTap: () {
             _toggleByName(item.name);
           },
-          child: Padding(
+          child: Container(
+            color: Colors.transparent, // Ensures tap events are captured
             padding: const EdgeInsets.symmetric(vertical: 6.0, horizontal: 4.0),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -121,13 +122,12 @@ class _SsdtListViewState extends State<SsdtListView> {
                 ),
                 Transform.scale(
                   scale: 0.8,
-                  child: Checkbox(
+                  child: MacosCheckbox(
                     value: selected,
                     onChanged: (val) {
                       _toggleByName(item.name);
                     },
-                    activeColor: Theme.of(context).colorScheme.primary,
-                    checkColor: Colors.white,
+                    activeColor: MacosTheme.of(context).primaryColor,
                   ),
                 ),
                 Expanded(

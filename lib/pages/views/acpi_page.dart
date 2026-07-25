@@ -1,7 +1,10 @@
 //  acpi_page.dart
 //  Created by JeoJay127
 //
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Checkbox, CheckboxListTile;
+import 'package:flutter/cupertino.dart';
+import 'package:macos_ui/macos_ui.dart';
+import 'package:rapidssdt/utils/constant.dart';
 import 'package:rapidssdt/pages/model/patch_state.dart';
 import 'package:rapidssdt/pages/provider/patch_viewmodel_provider.dart';
 import 'package:rapidssdt/pages/views/about_page.dart';
@@ -28,6 +31,7 @@ import 'package:rapidssdt/pages/viewmodel/patch_viewmodel.dart';
 
 import 'package:rapidssdt/l10n/language_provider.dart';
 import 'package:rapidssdt/l10n/app_localizations.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 class AcpiPage extends StatefulWidget {
   final LanguageProvider? languageProvider;
@@ -39,25 +43,25 @@ class AcpiPage extends StatefulWidget {
 class _AcpiPageState extends State<AcpiPage> {
   String _getCategoryName(String key, AppLocalizations? l10n) {
     switch (key) {
-      case 'corePatches': return l10n?.corePatches ?? '核心补丁';
-      case 'functionPatches': return l10n?.functionPatches ?? '功能补丁';
-      case 'devicePatches': return l10n?.devicePatches ?? '设备补丁';
-      case 'specialPatches': return l10n?.specialPatches ?? '专用补丁';
-      case 'sleepPatches': return l10n?.sleepPatches ?? '睡眠补丁';
-      case 'auxiliaryPatches': return l10n?.auxiliaryPatches ?? '辅助补丁';
-      case 'prebuiltPatches': return l10n?.prebuiltPatches ?? '预制补丁';
+      case 'corePatches': return l10n?.corePatches ?? l10nGlobal.ssdtMsg564;
+      case 'functionPatches': return l10n?.functionPatches ?? l10nGlobal.ssdtMsg565;
+      case 'devicePatches': return l10n?.devicePatches ?? l10nGlobal.ssdtMsg566;
+      case 'specialPatches': return l10n?.specialPatches ?? l10nGlobal.ssdtMsg567;
+      case 'sleepPatches': return l10n?.sleepPatches ?? l10nGlobal.ssdtMsg568;
+      case 'auxiliaryPatches': return l10n?.auxiliaryPatches ?? l10nGlobal.ssdtMsg569;
+      case 'prebuiltPatches': return l10n?.prebuiltPatches ?? l10nGlobal.ssdtMsg570;
       default: return key;
     }
   }
 
   String _getCategoryRemark(String key, AppLocalizations? l10n) {
     switch (key) {
-      case 'corePatches': return l10n?.corePatchesRemark ?? '系统正常启动和电源管理必需的基础补丁';
-      case 'functionPatches': return l10n?.functionPatchesRemark ?? '提供额外功能或修复特性问题的补丁';
-      case 'devicePatches': return l10n?.devicePatchesRemark ?? '针对显卡硬件的补丁';
-      case 'specialPatches': return l10n?.specialPatchesRemark ?? '仅在特定主板或架构需要的补丁';
-      case 'sleepPatches': return l10n?.sleepPatchesRemark ?? '非必需，用于修复睡眠问题';
-      case 'auxiliaryPatches': return l10n?.auxiliaryPatchesRemark ?? '非必需，但可以补全ACPI结构或增强兼容性';
+      case 'corePatches': return l10n?.corePatchesRemark ?? l10nGlobal.ssdtMsg571;
+      case 'functionPatches': return l10n?.functionPatchesRemark ?? l10nGlobal.ssdtMsg572;
+      case 'devicePatches': return l10n?.devicePatchesRemark ?? l10nGlobal.ssdtMsg573;
+      case 'specialPatches': return l10n?.specialPatchesRemark ?? l10nGlobal.ssdtMsg574;
+      case 'sleepPatches': return l10n?.sleepPatchesRemark ?? l10nGlobal.ssdtMsg575;
+      case 'auxiliaryPatches': return l10n?.auxiliaryPatchesRemark ?? l10nGlobal.ssdtMsg576;
       default: return key;
     }
   }
@@ -219,8 +223,8 @@ class _AcpiPageState extends State<AcpiPage> {
 
       ACPITable.ssdtDMAR.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: l10n?.selectDmar ?? '选择DMAR',
-          hintText: l10n?.hintDmar ?? '请选择需要定制的DMAR表',
+          buttonText: l10n?.selectDmar ?? l10nGlobal.ssdtMsg577,
+          hintText: l10n?.hintDmar ?? l10nGlobal.ssdtMsg578,
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -232,8 +236,8 @@ class _AcpiPageState extends State<AcpiPage> {
 
       ACPITable.ssdtAPIC.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: l10n?.selectApic ?? '选择APIC',
-          hintText: l10n?.hintApic ?? '请选择需要定制的APIC表',
+          buttonText: l10n?.selectApic ?? l10nGlobal.ssdtMsg579,
+          hintText: l10n?.hintApic ?? l10nGlobal.ssdtMsg580,
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -248,8 +252,8 @@ class _AcpiPageState extends State<AcpiPage> {
       ),
       ACPITable.checkAOAC.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: l10n?.selectFacp ?? '选择FACP',
-          hintText: l10n?.hintFacp ?? '请选择FACP表',
+          buttonText: l10n?.selectFacp ?? l10nGlobal.ssdtMsg581,
+          hintText: l10n?.hintFacp ?? l10nGlobal.ssdtMsg582,
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -260,8 +264,8 @@ class _AcpiPageState extends State<AcpiPage> {
       ),
       ACPITable.ssdtFACP.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: l10n?.selectFacp ?? '选择FACP',
-          hintText: l10n?.hintFacp ?? '请选择FACP表',
+          buttonText: l10n?.selectFacp ?? l10nGlobal.ssdtMsg583,
+          hintText: l10n?.hintFacp ?? l10nGlobal.ssdtMsg584,
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -311,7 +315,7 @@ class _AcpiPageState extends State<AcpiPage> {
       child: Column(
         spacing: 10,
         children: [
-          Text(l10n?.log ?? '日志', style: const TextStyle(fontSize: 11)),
+          Text(l10n?.log ?? l10nGlobal.ssdtMsg585, style: const TextStyle(fontSize: 11)),
           Flexible(
             flex: 2,
             child: LogWidget(showChannelTag: false, allChannel: true),
@@ -319,14 +323,15 @@ class _AcpiPageState extends State<AcpiPage> {
           ValueListenableBuilder<PatchState>(
             valueListenable: patchViewModel.state,
             builder: (context, state, _) {
-              return Row(
-                mainAxisSize: MainAxisSize.min,
+              return Wrap(
                 spacing: 15,
+                runSpacing: 10,
+                alignment: WrapAlignment.center,
                 children: [
                   InkWellWidget.common(
                     onTap: Log.clearAll,
                     child: Text(
-                      l10n?.clearLog ?? '清除日志',
+                      l10n?.clearLog ?? l10nGlobal.ssdtMsg586,
                       style: const TextStyle(fontSize: 11, color: Colors.white),
                     ),
                   ),
@@ -339,18 +344,18 @@ class _AcpiPageState extends State<AcpiPage> {
                       );
                     },
                     child: Text(
-                      l10n?.exportLog ?? '导出日志',
+                      l10n?.exportLog ?? l10nGlobal.ssdtMsg587,
                       style: const TextStyle(fontSize: 11, color: Colors.white),
                     ),
                   ),
                   InkWellWidget.common(
                     onTap: () => patchViewModel.runPatch(
                       state.selectedAction,
-                      prebuilt: state.selectedCategory == '预制补丁',
+                      prebuilt: state.selectedCategory == l10nGlobal.ssdtMsg588,
                       onError: (error) => Log.warning(error),
                     ),
                     child: Text(
-                      l10n?.executePatch ?? '执行补丁',
+                      l10n?.executePatch ?? l10nGlobal.ssdtMsg589,
                       style: const TextStyle(fontSize: 11, color: Colors.white),
                     ),
                   ),
@@ -422,10 +427,11 @@ class _AcpiPageState extends State<AcpiPage> {
     required OpenMode mode,
     required String? Function() getPath,
     required void Function(String?) setPath,
-    String hint = '请选择文件/目录',
+    String? hint,
     List<String>? extensions,
     Function(String)? onChanged,
   }) {
+    hint ??= l10nGlobal.ssdtMsg590;
     return ValueListenableBuilder<PatchState>(
       valueListenable: patchViewModel.state,
       builder: (context, state, _) {
@@ -549,7 +555,7 @@ class _AcpiPageState extends State<AcpiPage> {
         // 提取ACPI按钮
         InkWellWidget.common(
           child: Text(
-            l10n?.dumpAcpi ?? '提取ACPI',
+            l10n?.dumpAcpi ?? l10nGlobal.ssdtMsg591,
             style: const TextStyle(color: Colors.white, fontSize: 11),
           ),
           onTap: () async {
@@ -561,26 +567,21 @@ class _AcpiPageState extends State<AcpiPage> {
                   context: context,
                   builder: (context) {
                     String password = '';
-                    return AlertDialog(
+                    return MacosAlertDialog(
+                      appIcon: const MacosIcon(CupertinoIcons.lock),
                       title: const Text('Admin Privileges Required'),
-                      content: TextField(
-                        obscureText: true,
-                        decoration: const InputDecoration(
-                          labelText: 'Enter system password',
-                        ),
-                        onChanged: (v) => password = v,
-                        onSubmitted: (value) => Navigator.pop(context, value),
+                      message: const Text('Please enter your system password to continue.'),
+                      primaryButton: PushButton(
+                        controlSize: ControlSize.large,
+                        onPressed: () => Navigator.pop(context, password),
+                        child: const Text('OK'),
                       ),
-                      actions: [
-                        TextButton(
-                          onPressed: () => Navigator.pop(context, null),
-                          child: const Text('Cancel'),
-                        ),
-                        TextButton(
-                          onPressed: () => Navigator.pop(context, password),
-                          child: const Text('OK'),
-                        ),
-                      ],
+                      secondaryButton: PushButton(
+                        controlSize: ControlSize.large,
+                        secondary: true,
+                        onPressed: () => Navigator.pop(context, null),
+                        child: const Text('Cancel'),
+                      ),
                     );
                   },
                 );
@@ -600,7 +601,7 @@ class _AcpiPageState extends State<AcpiPage> {
                 initialPath: state.outputDir,
                 hintText: state.outputDir,
                 buttons: [
-                  ChooseFileButton(text: l10n?.selectOutputPath ?? '输出目录', mode: OpenMode.directory),
+                  ChooseFileButton(text: l10n?.selectOutputPath ?? l10nGlobal.ssdtMsg592, mode: OpenMode.directory),
                 ],
               );
             },
@@ -622,14 +623,14 @@ class _AcpiPageState extends State<AcpiPage> {
             onError: (msg) => Log.error(msg),
           ),
           initialPath: state.tablePath,
-          hintText: l10n?.selectAcpisFolder ?? '请选择DSDT文件或ACPIs目录',
+          hintText: l10n?.selectAcpisFolder ?? l10nGlobal.ssdtMsg593,
           buttons: [
             ChooseFileButton(
               text: 'DSDT',
               mode: OpenMode.file,
               allowedExtensions: ['aml', 'dat'],
             ),
-            ChooseFileButton(text: l10n?.selectAcpisFolder ?? '选择ACPIs', mode: OpenMode.directory),
+            ChooseFileButton(text: l10n?.selectAcpisFolder ?? l10nGlobal.ssdtMsg594, mode: OpenMode.directory),
           ],
         );
       },
@@ -638,24 +639,27 @@ class _AcpiPageState extends State<AcpiPage> {
 
   Widget _buildConfigSection() {
     final l10n = AppLocalizations.of(context);
-    return Row(
+    return Wrap(
       spacing: 10,
+      runSpacing: 10,
+      crossAxisAlignment: WrapCrossAlignment.center,
       children: [
         InkWellWidget.common(
           child: Text(
-            l10n?.mergeConfig ?? '合并config',
+            l10n?.mergeConfig ?? l10nGlobal.ssdtMsg595,
             style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
           onTap: () async =>
               await patchViewModel.mergePlist(onError: (msg) => Log.error(msg)),
         ),
-        Flexible(
+        SizedBox(
+          width: 300,
           child: _buildFilePicker(
-            buttonText: l10n?.selectConfig ?? '选择config',
+            buttonText: l10n?.selectConfig ?? l10nGlobal.ssdtMsg596,
             mode: OpenMode.file,
             getPath: () => patchViewModel.state.value.configPath,
             setPath: (newPath) => patchViewModel.updateConfigPath(newPath),
-            hint: l10n?.hintConfig ?? '请选择config.plist文件',
+            hint: l10n?.hintConfig ?? l10nGlobal.ssdtMsg597,
             extensions: ['plist'],
             onChanged: (newPath) {
               patchViewModel.getPlistType(
@@ -740,15 +744,15 @@ class _AcpiPageState extends State<AcpiPage> {
   // 选项面板
   Widget _buildOptionPanel() {
     final l10n = AppLocalizations.of(context);
-    return Row(
-      mainAxisSize: MainAxisSize.min,
+    return Wrap(
       spacing: 15,
+      runSpacing: 10,
       children: [
         InkWellWidget.common(
           backgroundColor: Colors.brown,
           onTap: () => showOptionsDialog(child: _buildHeaderOptions()),
           child: Text(
-            l10n?.customAcpiOptions ?? '偏好设置',
+            l10n?.customAcpiOptions ?? l10nGlobal.ssdtMsg598,
             style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
@@ -756,7 +760,7 @@ class _AcpiPageState extends State<AcpiPage> {
           backgroundColor: Colors.pink,
           onTap: () => showOptionsDialog(child: const SsdtPlatformWidget()),
           child: Text(
-            l10n?.platformPreset ?? '平台补丁',
+            l10n?.platformPreset ?? l10nGlobal.ssdtMsg599,
             style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
@@ -766,7 +770,7 @@ class _AcpiPageState extends State<AcpiPage> {
             child: const MarkdownPage(mdPath: 'assets/guide/guide.md'),
           ),
           child: Text(
-            l10n?.guide ?? '补丁指南',
+            l10n?.guide ?? l10nGlobal.ssdtMsg600,
             style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
@@ -777,7 +781,7 @@ class _AcpiPageState extends State<AcpiPage> {
             child: AboutPage(languageProvider: widget.languageProvider),
           ),
           child: Text(
-            l10n?.about ?? '关于应用',
+            l10n?.about ?? l10nGlobal.ssdtMsg601,
             style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
@@ -809,7 +813,7 @@ class _AcpiPageState extends State<AcpiPage> {
       builder: (context, state, _) {
         if (state.selectedAction.isEmpty) return const SizedBox.shrink();
         return Text(
-          '${l10n?.selectPatch ?? "选择补丁"}: ${state.selectedAction.name}',
+          l10nGlobal.ssdtMsg602(l10n?.selectPatch ?? l10nGlobal.ssdtMsg603.toString(), state.selectedAction.name.toString()),
           style: const TextStyle(fontSize: 11),
         );
       },
@@ -853,13 +857,71 @@ class _AcpiPageState extends State<AcpiPage> {
     super.dispose();
   }
 
+  int _pageIndex = 0;
+
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(15),
-        child: _buildMainContent(isDark),
+    final isDark = MacosTheme.brightnessOf(context) == Brightness.dark;
+    
+    return MacosWindow(
+      sidebar: Sidebar(
+        minWidth: 200,
+        builder: (context, scrollController) {
+          return SidebarItems(
+            currentIndex: _pageIndex,
+            onChanged: (index) {
+              setState(() => _pageIndex = index);
+            },
+            items: [
+              SidebarItem(
+                leading: MacosIcon(CupertinoIcons.square_stack_3d_up),
+                label: Text(l10nGlobal.ssdtMsg598),
+              ),
+              SidebarItem(
+                leading: MacosIcon(CupertinoIcons.doc_text_search),
+                label: Text(l10nGlobal.ssdtMsg585),
+              ),
+            ],
+          );
+        },
+      ),
+      child: MacosScaffold(
+        toolBar: ToolBar(
+          title: Text(Constant.appName),
+          titleWidth: 150.0,
+        ),
+        children: [
+          ContentArea(
+            builder: (context, scrollController) {
+              if (_pageIndex == 0) {
+                return Material(
+                  color: MacosColors.transparent,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: SizedBox.expand(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          _buildLeftColumn(isDark),
+                          const SizedBox(width: 16),
+                          _buildRightColumn(isDark), // Includes log panel inside it
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              } else {
+                return Material(
+                  color: MacosColors.transparent,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: _buildLogPanel(),
+                  ),
+                );
+              }
+            },
+          ),
+        ],
       ),
     );
   }

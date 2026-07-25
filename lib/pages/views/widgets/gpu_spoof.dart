@@ -8,6 +8,7 @@ import 'package:rapidssdt/utils/dataset/pci_data.dart';
 import 'package:rapidssdt/widgets/custom_dropdown_button.dart';
 import 'package:rapidssdt/widgets/custom_textfield.dart';
 import 'package:rapidssdt/l10n/app_localizations.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 class GpuSpoof extends StatefulWidget {
   const GpuSpoof({super.key, this.onChanged});
@@ -60,7 +61,7 @@ class _GpuSpoofState extends State<GpuSpoof> {
       spacing: 15,
       children: [
         Text(
-          l10n?.deviceAcpiPath ?? '设备ACPI路径:',
+          l10n?.deviceAcpiPath ?? l10nGlobal.ssdtMsg500,
           style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
         ),
         Flexible(
@@ -79,11 +80,11 @@ class _GpuSpoofState extends State<GpuSpoof> {
 
   // 构建仿冒显卡 ID 数据库下拉框
   Widget _buildFakeIDDatabaseDropdown(bool isDarkMode, AppLocalizations? l10n) {
-    final placeholder = l10n?.selectGpuToSpoof ?? '选择需要仿冒的显卡设备';
+    final placeholder = l10n?.selectGpuToSpoof ?? l10nGlobal.ssdtMsg501;
     final gpuOptions = PciData.gpuInfoMap.keys.toList().reversed.map((
       originalId,
     ) {
-      final gpuName = PciData.getGpuNameWithOriginId(originalId) ?? l10n?.unknownGpuModel ?? '未知显卡型号';
+      final gpuName = PciData.getGpuNameWithOriginId(originalId) ?? l10n?.unknownGpuModel ?? l10nGlobal.ssdtMsg502;
       final label = '$gpuName  :  [$originalId]';
       return DropdownOption(value: label, label: label);
     }).toList();
@@ -95,7 +96,7 @@ class _GpuSpoofState extends State<GpuSpoof> {
         spacing: 5,
         children: [
           Text(
-            l10n?.fakeGpuIdDatabase ?? '仿冒显卡ID数据库:',
+            l10n?.fakeGpuIdDatabase ?? l10nGlobal.ssdtMsg503,
             style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
           ),
           CustomDropdownButton(
@@ -137,7 +138,7 @@ class _GpuSpoofState extends State<GpuSpoof> {
       spacing: 12,
       children: [
         Text(
-          ' ${l10n?.fakeGpuId ?? "仿冒显卡ID:"}',
+          l10nGlobal.ssdtMsg504(l10n?.fakeGpuId ?? l10nGlobal.ssdtMsg509.toString()),
           style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
         ),
         CustomTextField(
@@ -149,8 +150,8 @@ class _GpuSpoofState extends State<GpuSpoof> {
             FilteringTextInputFormatter.allow(RegExp(r'[0-9a-fA-F]')),
             LengthLimitingTextInputFormatter(4),
           ],
-          hintText: l10n?.example73BF ?? '例如: 73BF',
-          errorText: l10n?.require4HexChars ?? '需要4位十六进制字符',
+          hintText: l10n?.example73BF ?? l10nGlobal.ssdtMsg505,
+          errorText: l10n?.require4HexChars ?? l10nGlobal.ssdtMsg506,
           validator: (value) {
             return value.length == 4 || value.isEmpty;
           },
@@ -170,14 +171,14 @@ class _GpuSpoofState extends State<GpuSpoof> {
       spacing: 6,
       children: [
         Text(
-          ' ${l10n?.fakeGpuName ?? "仿冒显卡名称:"}',
+          l10nGlobal.ssdtMsg507(l10n?.fakeGpuName ?? l10nGlobal.ssdtMsg510.toString()),
           style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
         ),
         Flexible(
           child: CustomTextField(
             controller: _controllerFakeModel,
             focusNode: _focusNodeFakeModel,
-            hintText: l10n?.optionalGpuName ?? '选填项,显卡名称',
+            hintText: l10n?.optionalGpuName ?? l10nGlobal.ssdtMsg508,
             inputFormatters: [
               FilteringTextInputFormatter.deny(RegExp(r'[\u4e00-\u9fa5]')),
             ],

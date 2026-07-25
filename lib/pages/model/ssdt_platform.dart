@@ -6,17 +6,17 @@ import 'package:rapidssdt/utils/ssdttool/table.dart';
 
 class SsdtPlatform {
   static Map<String, Map<String, dynamic>> platform_intel_desktop = {
-    '0代-Penryn-775平台': {
+    '0 Gen - Penryn (775)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [ACPITable.ssdtHPET],
       'optional': optional_sstds_intel_desktop,
     },
-    '1代-Lynnfield-1156平台': {
+    '1 Gen - Lynnfield (1156)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [ACPITable.ssdtHPET],
       'optional': optional_sstds_intel_desktop,
     },
-    '2代-Sandy Bridge-1155平台': {
+    '2 Gen - Sandy Bridge (1155)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [
         ACPITable.ssdtHPET,
@@ -24,7 +24,7 @@ class SsdtPlatform {
       ],
       'optional': optional_sstds_intel_desktop,
     },
-    '3代-Ivy Bridge-1155平台': {
+    '3 Gen - Ivy Bridge (1155)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [
         ACPITable.ssdtHPET,
@@ -33,27 +33,27 @@ class SsdtPlatform {
       ],
       'optional': optional_sstds_intel_desktop,
     },
-    '4代-Haswell-1150平台': {
+    '4 Gen - Haswell (1150)': {
       'basic': [ACPITable.ssdtECDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_desktop, ACPITable.ssdtMEM2],
     },
-    '5代-Broadwell-1150平台': {
+    '5 Gen - Broadwell (1150)': {
       'basic': [ACPITable.ssdtECDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_desktop, ACPITable.ssdtMEM2],
     },
-    '6代-Skylake-1151平台': {
+    '6 Gen - Skylake (1151)': {
       'basic': [ACPITable.ssdtECUSBXDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_desktop, ACPITable.ssdtMEM2],
     },
-    '7代-Kaby Lake-1151平台': {
+    '7 Gen - Kaby Lake (1151)': {
       'basic': [ACPITable.ssdtECUSBXDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_desktop, ACPITable.ssdtMEM2],
     },
-    '8代-Coffee Lake-1151平台': {
+    '8 Gen - Coffee Lake (1151)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -63,7 +63,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_desktop,
     },
-    '9代-Coffee Lake-1151平台': {
+    '9 Gen - Coffee Lake (1151)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -73,7 +73,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_desktop,
     },
-    '10代-Comet Lake-1200平台': {
+    '10 Gen - Comet Lake (1200)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -83,7 +83,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_desktop,
     },
-    '11代-Rocket Lake-1200平台': {
+    '11 Gen - Rocket Lake (1200)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -93,7 +93,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_desktop,
     },
-    '12代-Alder Lake-1700平台': {
+    '12 Gen - Alder Lake (1700)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -107,7 +107,7 @@ class SsdtPlatform {
       ],
       'optional': optional_sstds_intel_desktop,
     },
-    '13代-Raptor Lake-1700平台': {
+    '13 Gen - Raptor Lake (1700)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -118,7 +118,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtPMC],
       'optional': optional_sstds_intel_desktop,
     },
-    '14代-Raptor Lake-1700平台': {
+    '14 Gen - Raptor Lake (1700)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -129,7 +129,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtPMC],
       'optional': optional_sstds_intel_desktop,
     },
-    '15代-Arrow Lake-1851平台': {
+    '15 Gen - Arrow Lake (1851)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -143,7 +143,7 @@ class SsdtPlatform {
   };
 
   static Map<String, Map<String, dynamic>> platform_intel_laptop = {
-    '0代-Penryn-笔记本': {
+    '0 Gen - Penryn (Laptop)': {
       'basic': [
         ACPITable.ssdtECLaptop,
         {...ACPITable.ssdtPNLF, 'extra': 14},
@@ -151,7 +151,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET],
       'optional': optional_sstds_intel_laptop,
     },
-    '1代-Arrandale-笔记本': {
+    '1 Gen - Arrandale (Laptop)': {
       'basic': [
         ACPITable.ssdtECLaptop,
         {...ACPITable.ssdtPNLF, 'extra': 14},
@@ -159,7 +159,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET],
       'optional': optional_sstds_intel_laptop,
     },
-    '2代-Sandy Bridge-笔记本': {
+    '2 Gen - Sandy Bridge (Laptop)': {
       'basic': [
         ACPITable.ssdtECLaptop,
         {...ACPITable.ssdtPNLF, 'extra': 14},
@@ -170,7 +170,7 @@ class SsdtPlatform {
       ],
       'optional': optional_sstds_intel_laptop,
     },
-    '3代-Ivy Bridge-笔记本': {
+    '3 Gen - Ivy Bridge (Laptop)': {
       'basic': [
         ACPITable.ssdtECLaptop,
         {...ACPITable.ssdtPNLF, 'extra': 14},
@@ -183,7 +183,7 @@ class SsdtPlatform {
       ],
       'optional': optional_sstds_intel_laptop,
     },
-    '4代-Haswell-笔记本': {
+    '4 Gen - Haswell (Laptop)': {
       'basic': [
         ACPITable.ssdtECLaptop,
         ACPITable.ssdtPLUG,
@@ -197,7 +197,7 @@ class SsdtPlatform {
         ACPITable.ssdtMEM2,
       ],
     },
-    '5代-Broadwell-笔记本': {
+    '5 Gen - Broadwell (Laptop)': {
       'basic': [
         ACPITable.ssdtECLaptop,
         ACPITable.ssdtPLUG,
@@ -211,7 +211,7 @@ class SsdtPlatform {
         ACPITable.ssdtMEM2,
       ],
     },
-    '6代-Skylake-笔记本': {
+    '6 Gen - Skylake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -225,7 +225,7 @@ class SsdtPlatform {
         ACPITable.ssdtMEM2,
       ],
     },
-    '7代-Kaby Lake-笔记本': {
+    '7 Gen - Kaby Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -239,7 +239,7 @@ class SsdtPlatform {
         ACPITable.ssdtMEM2,
       ],
     },
-    '8代-Coffee Lake-笔记本': {
+    '8 Gen - Coffee Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -255,7 +255,7 @@ class SsdtPlatform {
       ],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '9代-Coffee Lake-笔记本': {
+    '9 Gen - Coffee Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -267,7 +267,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtALS0, ACPITable.ssdtDMAR],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '10代-Comet Lake-笔记本': {
+    '10 Gen - Comet Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -283,7 +283,7 @@ class SsdtPlatform {
       ],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '10代-Ice Lake-笔记本': {
+    '10 Gen - Ice Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -300,7 +300,7 @@ class SsdtPlatform {
       ],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '11代-Rocket Lake-笔记本': {
+    '11 Gen - Rocket Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -317,7 +317,7 @@ class SsdtPlatform {
       ],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '12代-Alder Lake-笔记本': {
+    '12 Gen - Alder Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUGALT,
@@ -334,7 +334,7 @@ class SsdtPlatform {
       ],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '13代-Raptor Lake-笔记本': {
+    '13 Gen - Raptor Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUGALT,
@@ -351,7 +351,7 @@ class SsdtPlatform {
       ],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '14代-Raptor Lake-笔记本': {
+    '14 Gen - Raptor Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUGALT,
@@ -368,7 +368,7 @@ class SsdtPlatform {
       ],
       'optional': [ACPITable.ssdtGPI0, ...optional_sstds_intel_laptop],
     },
-    '15代-Arrow Lake-笔记本': {
+    '15 Gen - Arrow Lake (Laptop)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUGALT,
@@ -388,17 +388,17 @@ class SsdtPlatform {
   };
 
   static Map<String, Map<String, dynamic>> platform_intel_nuc = {
-    '0代-Penryn-迷你主机': {
+    '0 Gen - Penryn (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [ACPITable.ssdtHPET],
       'optional': optional_sstds_intel_nuc,
     },
-    '1代-Arrandale-迷你主机': {
+    '1 Gen - Arrandale (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [ACPITable.ssdtHPET],
       'optional': optional_sstds_intel_nuc,
     },
-    '2代-Sandy Bridge-迷你主机': {
+    '2 Gen - Sandy Bridge (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [
         ACPITable.ssdtHPET,
@@ -406,7 +406,7 @@ class SsdtPlatform {
       ],
       'optional': optional_sstds_intel_nuc,
     },
-    '3代-Ivy Bridge-迷你主机': {
+    '3 Gen - Ivy Bridge (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [
         ACPITable.ssdtHPET,
@@ -415,27 +415,27 @@ class SsdtPlatform {
       ],
       'optional': optional_sstds_intel_nuc,
     },
-    '4代-Haswell-迷你主机': {
+    '4 Gen - Haswell (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_nuc, ACPITable.ssdtMEM2],
     },
-    '5代-Broadwell-迷你主机': {
+    '5 Gen - Broadwell (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_nuc, ACPITable.ssdtMEM2],
     },
-    '6代-Skylake-迷你主机': {
+    '6 Gen - Skylake (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECUSBXDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_nuc, ACPITable.ssdtMEM2],
     },
-    '7代-Kaby Lake-迷你主机': {
+    '7 Gen - Kaby Lake (NUC/Mini PC)': {
       'basic': [ACPITable.ssdtECUSBXDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': [...optional_sstds_intel_nuc, ACPITable.ssdtMEM2],
     },
-    '8代-Coffee Lake-迷你主机': {
+    '8 Gen - Coffee Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -446,7 +446,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '9代-Coffee Lake-迷你主机': {
+    '9 Gen - Coffee Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -457,7 +457,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '10代-Comet Lake-迷你主机': {
+    '10 Gen - Comet Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -467,7 +467,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '10代-Ice Lake-迷你主机': {
+    '10 Gen - Ice Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -477,7 +477,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '11代-Tiger Lake-迷你主机': {
+    '11 Gen - Tiger Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUG,
@@ -486,7 +486,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtRHUB, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '12代-Alder Lake-迷你主机': {
+    '12 Gen - Alder Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -495,7 +495,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtRHUB, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '13代-Raptor Lake-迷你主机': {
+    '13 Gen - Raptor Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -504,7 +504,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtRHUB, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '14代-Raptor Lake-迷你主机': {
+    '14 Gen - Raptor Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -513,7 +513,7 @@ class SsdtPlatform {
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtRHUB, ACPITable.ssdtDMAR],
       'optional': optional_sstds_intel_nuc,
     },
-    '15代-Arrow Lake-迷你主机': {
+    '15 Gen - Arrow Lake (NUC/Mini PC)': {
       'basic': [
         ACPITable.ssdtECUSBXDesktop,
         ACPITable.ssdtPLUGALT,
@@ -525,7 +525,7 @@ class SsdtPlatform {
   };
 
   static Map<String, Map<String, dynamic>> platform_intel_hedt = {
-    '1代-Nehalem&Westmere-X58平台': {
+    '1 Gen - Nehalem&Westmere (X58)': {
       'basic': [ACPITable.ssdtECDesktop],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtAPIC],
       'optional': optional_sstds_intel_hedt,
@@ -594,12 +594,12 @@ class SsdtPlatform {
   };
 
   static Map<String, Map<String, dynamic>> platform_amd_laptop = {
-    'Bulldozer(15h) and Jaguar(16h)-笔记本': {
+    'Bulldozer(15h) and Jaguar(16h) - Laptop': {
       'basic': [ACPITable.ssdtECUSBXLaptop],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_amd_laptop,
     },
-    'Ryzen-笔记本': {
+    'Ryzen - Laptop': {
       'basic': [
         ACPITable.ssdtECUSBXLaptop,
         ACPITable.ssdtPLUG,
@@ -612,12 +612,12 @@ class SsdtPlatform {
   };
 
   static Map<String, Map<String, dynamic>> platform_amd_nuc = {
-    'Bulldozer(15h) and Jaguar(16h)-迷你主机': {
+    'Bulldozer(15h) and Jaguar(16h)-NUC/Mini PC': {
       'basic': [ACPITable.ssdtECUSBXDesktop],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_amd_nuc,
     },
-    'Ryzen-迷你主机': {
+    'Ryzen-NUC/Mini PC': {
       'basic': [ACPITable.ssdtECUSBXDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtCPUR, ACPITable.ssdtHPET, ACPITable.ssdtDMAR],
       'optional': optional_sstds_amd_nuc,
@@ -625,7 +625,7 @@ class SsdtPlatform {
   };
 
   static Map<String, Map<String, dynamic>> platform_amd_hedt = {
-    'Ryzen and Threadripper(17h and 19h)-高端服务器': {
+    'Ryzen and Threadripper(17h and 19h) - High-End Server': {
       'basic': [ACPITable.ssdtECUSBXDesktop, ACPITable.ssdtPLUG],
       'recommend': [ACPITable.ssdtHPET, ACPITable.ssdtDMAR, ACPITable.ssdtCPUR],
       'optional': optional_sstds_amd_hedt,
@@ -636,13 +636,13 @@ class SsdtPlatform {
     'Intel': {
       '台式机': {'platform': platform_intel_desktop, 'index': 4},
       '笔记本': {'platform': platform_intel_laptop, 'index': 4},
-      '迷你主机': {'platform': platform_intel_nuc, 'index': 4},
+      'NUC/Mini PC': {'platform': platform_intel_nuc, 'index': 4},
       '服务器': {'platform': platform_intel_hedt, 'index': 3},
     },
     'AMD': {
       '台式机': {'platform': platform_amd_desktop, 'index': 1},
       '笔记本': {'platform': platform_amd_laptop, 'index': 1},
-      '迷你主机': {'platform': platform_amd_nuc, 'index': 1},
+      'NUC/Mini PC': {'platform': platform_amd_nuc, 'index': 1},
       '服务器': {'platform': platform_amd_hedt, 'index': 0},
     },
   };
@@ -670,7 +670,7 @@ class SsdtPlatform {
     ACPITable.ssdtPWRB,
   ];
 
-  /// ======= 可选的SSDT表-Intel迷你主机 =======
+  /// ======= 可选的SSDT表-IntelNUC/Mini PC =======
   static const optional_sstds_intel_nuc = [
     ACPITable.ssdtSBUSMCHC,
     ACPITable.ssdtGPRW,
@@ -715,7 +715,7 @@ class SsdtPlatform {
     ACPITable.ssdtPWRB,
   ];
 
-  /// ======= 可选的SSDT表-AMD迷你主机 =======
+  /// ======= 可选的SSDT表-AMDNUC/Mini PC =======
   static const optional_sstds_amd_nuc = [
     ACPITable.ssdtSBUSMCHC,
     ACPITable.ssdtGPRW,

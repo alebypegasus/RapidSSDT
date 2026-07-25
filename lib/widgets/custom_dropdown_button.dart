@@ -1,7 +1,8 @@
 //  custom_dropdown_button.dart 
 //  Created by JeoJay127 
 //
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide DropdownButton, DropdownMenuItem;
+import 'package:macos_ui/macos_ui.dart';
 
 class DropdownOption {
   final String value;
@@ -31,10 +32,10 @@ class CustomDropdownButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final uniqueOptions = _getUniqueOptions(options);
     final FocusNode focusNode = FocusNode();
-    final items = <DropdownMenuItem<String>>[];
+    final items = <MacosPopupMenuItem<String>>[];
     if (showPlaceholder) {
       items.add(
-        DropdownMenuItem(
+        MacosPopupMenuItem(
           value: placeholder,
           child: Text(placeholder, style: TextStyle(fontSize: fontSize)),
         ),
@@ -42,7 +43,7 @@ class CustomDropdownButton extends StatelessWidget {
     }
     items.addAll(
       uniqueOptions.map(
-        (opt) => DropdownMenuItem(
+        (opt) => MacosPopupMenuItem(
           value: opt.value,
           child: Text(opt.label, style: TextStyle(fontSize: fontSize)),
         ),
@@ -51,14 +52,9 @@ class CustomDropdownButton extends StatelessWidget {
 
     final validValue = _getValidValue(value, items);
 
-    return DropdownButton<String>(
-      isExpanded: false,
-      isDense: true,
-      focusNode: focusNode,
+    return MacosPopupButton<String>(
       value: validValue,
       items: items,
-      borderRadius: const BorderRadius.all(Radius.circular(6.0)),
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       hint: showPlaceholder
           ? Text(placeholder, style: TextStyle(fontSize: fontSize))
           : null,
@@ -69,9 +65,6 @@ class CustomDropdownButton extends StatelessWidget {
         } else {
           onChanged?.call(val);
         }
-      },
-      onTap: () {
-        focusNode.unfocus();
       },
     );
   }
@@ -86,7 +79,7 @@ class CustomDropdownButton extends StatelessWidget {
   }
 
   // 处理占位符显示
-  String? _getValidValue(String? value, List<DropdownMenuItem<String>> items) {
+  String? _getValidValue(String? value, List<MacosPopupMenuItem<String>> items) {
 
     if (!showPlaceholder) {
       if (value == null) return null;

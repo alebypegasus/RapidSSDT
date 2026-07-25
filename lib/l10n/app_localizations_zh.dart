@@ -722,4 +722,949 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get languagePortuguese => '葡萄牙语';
+
+  @override
+  String get ssdtMsg500 => 'Device ACPI path:';
+
+  @override
+  String get ssdtMsg501 =>
+      'Select the graphics card device to be counterfeited';
+
+  @override
+  String get ssdtMsg502 => 'Unknown graphics card model';
+
+  @override
+  String get ssdtMsg503 => 'Counterfeit graphics card ID database:';
+
+  @override
+  String ssdtMsg504(String arg0) {
+    return '$arg0';
+  }
+
+  @override
+  String get ssdtMsg505 => 'For example: 73BF';
+
+  @override
+  String get ssdtMsg506 => 'Requires 4 hexadecimal characters';
+
+  @override
+  String ssdtMsg507(String arg0) {
+    return '$arg0';
+  }
+
+  @override
+  String get ssdtMsg508 => 'Optional, graphics card name';
+
+  @override
+  String get ssdtMsg509 => 'Counterfeit graphics card ID:';
+
+  @override
+  String get ssdtMsg510 => 'Counterfeit graphics card name:';
+
+  @override
+  String ssdtMsg511(String arg0) {
+    return 'Whether to delete the source .dsl file: $arg0';
+  }
+
+  @override
+  String ssdtMsg512(String arg0) {
+    return 'Whether to force compilation: $arg0';
+  }
+
+  @override
+  String ssdtMsg513(String arg0) {
+    return 'Whether to overwrite the target EFI: $arg0';
+  }
+
+  @override
+  String ssdtMsg514(String arg0) {
+    return 'Match pattern: $arg0';
+  }
+
+  @override
+  String ssdtMsg515(String arg0) {
+    return 'Failed to load HPET data: $arg0';
+  }
+
+  @override
+  String ssdtMsg516(String arg0) {
+    return 'Failed to initialize HPET data: $arg0';
+  }
+
+  @override
+  String ssdtMsg517(String arg0) {
+    return 'Failed to initialize ACPI path: $arg0';
+  }
+
+  @override
+  String get ssdtMsg518 => 'No patch notes';
+
+  @override
+  String get ssdtMsg519 => 'No patch notes';
+
+  @override
+  String ssdtMsg520(String arg0) {
+    return 'Failed to get patch notes: $arg0';
+  }
+
+  @override
+  String get ssdtMsg521 => 'Failed to get patch notes';
+
+  @override
+  String ssdtMsg522(String arg0) {
+    return '$arg0 Clear configuration path';
+  }
+
+  @override
+  String ssdtMsg523(String arg0, String arg1) {
+    return '$arg0 selected an invalid file: $arg1';
+  }
+
+  @override
+  String ssdtMsg524(String arg0) {
+    return 'No patch configuration found for $arg0';
+  }
+
+  @override
+  String get ssdtMsg525 =>
+      'Please select the SSDT that needs to be customized before proceeding!';
+
+  @override
+  String ssdtMsg526(String arg0) {
+    return 'Failed to execute patch: $arg0';
+  }
+
+  @override
+  String ssdtMsg527(String arg0, String arg1) {
+    return 'Failed to execute patch [$arg0]: $arg1';
+  }
+
+  @override
+  String get ssdtMsg528 =>
+      'SSDT is being generated, please do not repeat the operation!';
+
+  @override
+  String get ssdtMsg529 => 'The patch list is empty!';
+
+  @override
+  String get ssdtMsg530 =>
+      'Extraction is in progress, please do not repeat the operation!';
+
+  @override
+  String ssdtMsg531(String arg0) {
+    return 'The ACPI table extracted by the current $arg0 platform is very likely to be contaminated by ACPI patches injected by OpenCore and others. It is strongly recommended to operate on the Windows/Linux platform!';
+  }
+
+  @override
+  String get ssdtMsg532 => 'Failed to extract ACPI!';
+
+  @override
+  String get ssdtMsg533 => 'Extraction of ACPI successful!';
+
+  @override
+  String ssdtMsg534(String arg0) {
+    return 'Failed to prepare patch: $arg0';
+  }
+
+  @override
+  String ssdtMsg535(String arg0) {
+    return 'Failed to load DSDT/ACPI: $arg0';
+  }
+
+  @override
+  String ssdtMsg536(String arg0) {
+    return 'The config.plist file does not exist: $arg0';
+  }
+
+  @override
+  String get ssdtMsg537 => 'Unrecognized plist file format';
+
+  @override
+  String ssdtMsg538(String arg0) {
+    return 'The config.plist type is \"$arg0\"';
+  }
+
+  @override
+  String ssdtMsg539(String arg0) {
+    return 'Failed to parse plist type: $arg0';
+  }
+
+  @override
+  String get ssdtMsg540 => 'Please select the ACPIs directory first!';
+
+  @override
+  String get ssdtMsg541 =>
+      'Please select the config.plist file in the EFI directory first!';
+
+  @override
+  String ssdtMsg542(String arg0) {
+    return 'Invalid ACPI path: $arg0';
+  }
+
+  @override
+  String ssdtMsg543(String arg0) {
+    return 'The config.plist file does not exist: $arg0';
+  }
+
+  @override
+  String ssdtMsg544(String arg0) {
+    return 'Failed to merge plist files: $arg0';
+  }
+
+  @override
+  String get ssdtMsg545 => 'yes';
+
+  @override
+  String get ssdtMsg546 => 'no';
+
+  @override
+  String get ssdtMsg547 => 'yes';
+
+  @override
+  String get ssdtMsg548 => 'no';
+
+  @override
+  String get ssdtMsg549 => 'yes';
+
+  @override
+  String get ssdtMsg550 => 'no';
+
+  @override
+  String get ssdtMsg551 => 'built-in';
+
+  @override
+  String get ssdtMsg552 => 'remote';
+
+  @override
+  String get ssdtMsg553 => 'New version of iasl';
+
+  @override
+  String get ssdtMsg554 => 'Old version iasl-legacy';
+
+  @override
+  String get ssdtMsg555 => 'yes';
+
+  @override
+  String get ssdtMsg556 => 'no';
+
+  @override
+  String get ssdtMsg557 => 'Preferences';
+
+  @override
+  String get ssdtMsg558 => 'iasl mode';
+
+  @override
+  String get ssdtMsg559 => 'iasl compilation type';
+
+  @override
+  String get ssdtMsg560 => 'Delete decompiled .dsl files';
+
+  @override
+  String get ssdtMsg561 => 'Force compilation';
+
+  @override
+  String get ssdtMsg562 => 'Whether to overwrite the target EFI';
+
+  @override
+  String get ssdtMsg563 => 'ACPI matching mode';
+
+  @override
+  String get ssdtMsg564 => 'core patch';
+
+  @override
+  String get ssdtMsg565 => 'Feature patches';
+
+  @override
+  String get ssdtMsg566 => 'Device patches';
+
+  @override
+  String get ssdtMsg567 => 'dedicated patch';
+
+  @override
+  String get ssdtMsg568 => 'sleep patch';
+
+  @override
+  String get ssdtMsg569 => 'Auxiliary patches';
+
+  @override
+  String get ssdtMsg570 => 'Pre-made patches';
+
+  @override
+  String get ssdtMsg571 =>
+      'Basic patches necessary for normal system startup and power management';
+
+  @override
+  String get ssdtMsg572 =>
+      'Patches that provide additional functionality or fix feature issues';
+
+  @override
+  String get ssdtMsg573 => 'Patches for graphics card hardware';
+
+  @override
+  String get ssdtMsg574 =>
+      'Patches only required on specific motherboards or architectures';
+
+  @override
+  String get ssdtMsg575 => 'Optional, used to fix sleep problems';
+
+  @override
+  String get ssdtMsg576 =>
+      'Not required, but can complete the ACPI structure or enhance compatibility';
+
+  @override
+  String get ssdtMsg577 => 'Select DMAR';
+
+  @override
+  String get ssdtMsg578 =>
+      'Please select the DMAR table that needs to be customized';
+
+  @override
+  String get ssdtMsg579 => 'Select APIC';
+
+  @override
+  String get ssdtMsg580 =>
+      'Please select the APIC table that needs to be customized';
+
+  @override
+  String get ssdtMsg581 => 'Select FACP';
+
+  @override
+  String get ssdtMsg582 => 'Please select FACP form';
+
+  @override
+  String get ssdtMsg583 => 'Select FACP';
+
+  @override
+  String get ssdtMsg584 => 'Please select FACP form';
+
+  @override
+  String get ssdtMsg585 => 'log';
+
+  @override
+  String get ssdtMsg586 => 'clear log';
+
+  @override
+  String get ssdtMsg587 => 'Export log';
+
+  @override
+  String get ssdtMsg588 => 'Pre-made patches';
+
+  @override
+  String get ssdtMsg589 => 'Execute patch';
+
+  @override
+  String get ssdtMsg590 => 'Please select a file/directory';
+
+  @override
+  String get ssdtMsg591 => 'Extract ACPI';
+
+  @override
+  String get ssdtMsg592 => 'output directory';
+
+  @override
+  String get ssdtMsg593 => 'Please select DSDT file or ACPIs directory';
+
+  @override
+  String get ssdtMsg594 => 'Select ACPIs';
+
+  @override
+  String get ssdtMsg595 => 'Merge config';
+
+  @override
+  String get ssdtMsg596 => 'Select config';
+
+  @override
+  String get ssdtMsg597 => 'Please select the config.plist file';
+
+  @override
+  String get ssdtMsg598 => 'Preferences';
+
+  @override
+  String get ssdtMsg599 => 'Platform patches';
+
+  @override
+  String get ssdtMsg600 => 'Patch guide';
+
+  @override
+  String get ssdtMsg601 => 'About the application';
+
+  @override
+  String ssdtMsg602(String arg0, String arg1) {
+    return '$arg0: $arg1';
+  }
+
+  @override
+  String get ssdtMsg603 => 'Select patch';
+
+  @override
+  String get ssdtMsg604 => 'Desktop';
+
+  @override
+  String get ssdtMsg605 => 'server';
+
+  @override
+  String get ssdtMsg606 =>
+      'SSDT is being generated, please do not repeat the operation!';
+
+  @override
+  String get ssdtMsg607 => 'No SSDT selected';
+
+  @override
+  String ssdtMsg608(String arg0, String arg1) {
+    return '$arg0 $arg1';
+  }
+
+  @override
+  String ssdtMsg609(String arg0, String arg1) {
+    return '$arg0 list: $arg1';
+  }
+
+  @override
+  String get ssdtMsg610 => 'Prefabricated SSDT';
+
+  @override
+  String get ssdtMsg611 => 'Custom SSDT';
+
+  @override
+  String get ssdtMsg612 => 'CPU type:';
+
+  @override
+  String get ssdtMsg613 => 'Platform type:';
+
+  @override
+  String get ssdtMsg614 => 'Desktop';
+
+  @override
+  String get ssdtMsg615 => 'Desktop';
+
+  @override
+  String get ssdtMsg616 => 'notebook';
+
+  @override
+  String get ssdtMsg617 => 'notebook';
+
+  @override
+  String get ssdtMsg618 => 'Mini host';
+
+  @override
+  String get ssdtMsg619 => 'Mini host';
+
+  @override
+  String get ssdtMsg620 => 'server';
+
+  @override
+  String get ssdtMsg621 => 'server';
+
+  @override
+  String ssdtMsg622(String arg0) {
+    return 'Currently selected SSDT list: $arg0';
+  }
+
+  @override
+  String get ssdtMsg623 => 'Platform information:';
+
+  @override
+  String get ssdtMsg624 => 'Check all';
+
+  @override
+  String get ssdtMsg625 => 'Core (official recommendation)';
+
+  @override
+  String get ssdtMsg626 => 'Recommend (function fix)';
+
+  @override
+  String get ssdtMsg627 => 'Optional (complete with functions)';
+
+  @override
+  String get ssdtMsg628 => 'Platform information:';
+
+  @override
+  String get ssdtMsg629 => 'Prefabricated SSDT';
+
+  @override
+  String get ssdtMsg630 => 'Custom SSDT';
+
+  @override
+  String get ssdtMsg631 => 'Custom SSDT';
+
+  @override
+  String get ssdtMsg632 => 'Prefabricated SSDT';
+
+  @override
+  String ssdtMsg633(String arg0, String arg1) {
+    return '$arg0 $arg1';
+  }
+
+  @override
+  String ssdtMsg634(String arg0, String arg1) {
+    return '$arg0$arg1';
+  }
+
+  @override
+  String ssdtMsg635(String arg0, String arg1) {
+    return '$arg0$arg1';
+  }
+
+  @override
+  String get ssdtMsg636 => 'Visit GitHub';
+
+  @override
+  String get ssdtMsg637 => 'Download now';
+
+  @override
+  String get ssdtMsg638 => 'closure';
+
+  @override
+  String get ssdtMsg639 => 'new version found';
+
+  @override
+  String get ssdtMsg640 => 'Version number:';
+
+  @override
+  String get ssdtMsg641 => 'Release time:';
+
+  @override
+  String get ssdtMsg642 => 'Connection to server timed out';
+
+  @override
+  String get ssdtMsg643 => 'Connection to server timed out';
+
+  @override
+  String get ssdtMsg644 => 'Download canceled';
+
+  @override
+  String get ssdtMsg645 => 'Download canceled';
+
+  @override
+  String get ssdtMsg646 => 'Read response timeout';
+
+  @override
+  String get ssdtMsg647 => 'Read response timeout';
+
+  @override
+  String ssdtMsg648(String arg0) {
+    return 'An exception occurred while obtaining server information! Status code: $arg0';
+  }
+
+  @override
+  String ssdtMsg649(String arg0) {
+    return 'Request failed, status code: $arg0';
+  }
+
+  @override
+  String ssdtMsg650(String arg0) {
+    return 'Download timed out, no progress for $arg0 seconds, task canceled';
+  }
+
+  @override
+  String ssdtMsg651(String arg0) {
+    return 'Log channel does not exist: $arg0';
+  }
+
+  @override
+  String ssdtMsg652(String arg0, String arg1, String arg2) {
+    return 'Export successful! File path: $arg0$arg1$arg2';
+  }
+
+  @override
+  String ssdtMsg653(String arg0) {
+    return 'Export failed! Error message: $arg0';
+  }
+
+  @override
+  String ssdtMsg654(String arg0) {
+    return 'File does not exist! Export failed! File path: $arg0';
+  }
+
+  @override
+  String ssdtMsg655(String arg0) {
+    return 'Log file initialization failed: $arg0';
+  }
+
+  @override
+  String get ssdtMsg656 => 'unknown';
+
+  @override
+  String get ssdtMsg657 => 'loosest';
+
+  @override
+  String get ssdtMsg658 => 'length only';
+
+  @override
+  String get ssdtMsg659 => 'Table ID and length, disable normalized headers';
+
+  @override
+  String get ssdtMsg660 => 'Table ID and length, enable normalized headers';
+
+  @override
+  String get ssdtMsg661 =>
+      'Intel 1st generation Arrandale, 2nd generation Sandy Bridge, 3rd generation Ivy Bridge';
+
+  @override
+  String get ssdtMsg662 =>
+      'Intel 4th generation Haswell, 5th generation Broadwell';
+
+  @override
+  String get ssdtMsg663 =>
+      'Intel 6th generation Skylake, 7th generation Kaby Lake, some 4th generation Haswell';
+
+  @override
+  String get ssdtMsg664 =>
+      'Custom brightness, usually used for some non-standard equipment or special needs settings';
+
+  @override
+  String get ssdtMsg665 =>
+      'Custom brightness, usually used for some non-standard equipment or special needs settings';
+
+  @override
+  String get ssdtMsg666 =>
+      'Intel 8th generation CoffeeLake ~ 10th generation, and AMD notebooks';
+
+  @override
+  String get ssdtMsg667 =>
+      'Others (requires custom applbkl-name / applbkl-data device properties), may not be supported';
+
+  @override
+  String ssdtMsg668(String arg0) {
+    return 'Table does not exist: $arg0';
+  }
+
+  @override
+  String ssdtMsg669(String arg0) {
+    return 'Incoming data length is less than 4 bytes: $arg0';
+  }
+
+  @override
+  String ssdtMsg670(String arg0) {
+    return 'File content is less than 4 bytes: $arg0';
+  }
+
+  @override
+  String ssdtMsg671(String arg0, String arg1) {
+    return 'Error reading signature: $arg0, file path: $arg1';
+  }
+
+  @override
+  String ssdtMsg672(String arg0) {
+    return 'Temporary directory has been created at: $arg0';
+  }
+
+  @override
+  String ssdtMsg673(String arg0) {
+    return 'Temporary directory already exists at: $arg0';
+  }
+
+  @override
+  String ssdtMsg674(String arg0) {
+    return 'Decompiling $arg0 file...';
+  }
+
+  @override
+  String get ssdtMsg675 => 'Decompiling SSDT.aml files in batches...';
+
+  @override
+  String get ssdtMsg676 =>
+      'Decompiling DSDT.aml and SSDT.aml files in batches...';
+
+  @override
+  String ssdtMsg677(String arg0) {
+    return '=> $arg0 decompilation failed!';
+  }
+
+  @override
+  String ssdtMsg678(String arg0) {
+    return '=> $arg0 decompiled successfully!';
+  }
+
+  @override
+  String ssdtMsg679(String arg0) {
+    return '=> $arg0 decompiled successfully!';
+  }
+
+  @override
+  String ssdtMsg680(String arg0) {
+    return '=> $arg0 decompiled successfully!';
+  }
+
+  @override
+  String get ssdtMsg681 => 'Decompiling failed .aml files individually...';
+
+  @override
+  String ssdtMsg682(String arg0) {
+    return '=> $arg0 decompiled successfully!';
+  }
+
+  @override
+  String ssdtMsg683(String arg0) {
+    return '=> $arg0 decompilation failed!';
+  }
+
+  @override
+  String get ssdtMsg684 => 'Decompiling other .aml files...';
+
+  @override
+  String ssdtMsg685(String arg0) {
+    return '=> $arg0 decompiled successfully!';
+  }
+
+  @override
+  String get ssdtMsg686 =>
+      'Note: Try not to include Chinese or special characters in the path or file name, otherwise it may cause unexpected problems!';
+
+  @override
+  String ssdtMsg687(String arg0) {
+    return 'An error occurred: $arg0';
+  }
+
+  @override
+  String ssdtMsg688(String arg0, String arg1) {
+    return 'An error occurred when processing paths in the getDevicePathsWithId method $arg0: $arg1';
+  }
+
+  @override
+  String ssdtMsg689(String arg0) {
+    return 'Skip: $arg0, which has been decompiled correctly before!';
+  }
+
+  @override
+  String ssdtMsg690(String arg0) {
+    return 'Target file is in exclude list: $arg0';
+  }
+
+  @override
+  String ssdtMsg691(String arg0) {
+    return 'Invalid path: $arg0';
+  }
+
+  @override
+  String get ssdtMsg692 => 'Invalid path';
+
+  @override
+  String ssdtMsg693(String arg0) {
+    return 'No valid .aml or .dat file found at $arg0!';
+  }
+
+  @override
+  String get ssdtMsg694 => 'No valid .aml or .dat file found';
+
+  @override
+  String ssdtMsg695(String arg0) {
+    return 'Decompilation failed: $arg0';
+  }
+
+  @override
+  String get ssdtMsg696 =>
+      'The acpidump tool is not ready! Operation terminated!';
+
+  @override
+  String get ssdtMsg697 => 'Exporting ACPI tables...';
+
+  @override
+  String get ssdtMsg698 => 'The current platform does not support it!';
+
+  @override
+  String get ssdtMsg699 => 'Waiting for sudo password authorization...';
+
+  @override
+  String get platformName1000 => 'Generation 0-Penryn-775 platform';
+
+  @override
+  String get platformName1001 => 'Generation 0-Penryn-Notebook';
+
+  @override
+  String get platformName1002 => 'Generation 0-Penryn-mini host';
+
+  @override
+  String get platformName1003 =>
+      '10th Generation-Cascade Lake-X&W-X599 Platform';
+
+  @override
+  String get platformName1004 => '10th Generation-Comet Lake-1200 Platform';
+
+  @override
+  String get platformName1005 => '10th Generation-Comet Lake-Laptop';
+
+  @override
+  String get platformName1006 => '10th generation-Comet Lake-mini host';
+
+  @override
+  String get platformName1007 => '10th Generation-Ice Lake-Laptop';
+
+  @override
+  String get platformName1008 => '10th generation-Ice Lake-mini host';
+
+  @override
+  String get platformName1009 => '11th generation-Rocket Lake-1200 platform';
+
+  @override
+  String get platformName1010 => '11th Generation-Rocket Lake-Laptop';
+
+  @override
+  String get platformName1011 => '11th generation-Tiger Lake-mini host';
+
+  @override
+  String get platformName1012 => '12th generation-Alder Lake-1700 platform';
+
+  @override
+  String get platformName1013 => '12th generation-Alder Lake-notebook';
+
+  @override
+  String get platformName1014 => '12th generation-Alder Lake-mini host';
+
+  @override
+  String get platformName1015 => '13th generation-Raptor Lake-1700 platform';
+
+  @override
+  String get platformName1016 => '13th generation-Raptor Lake-notebook';
+
+  @override
+  String get platformName1017 => '13th generation-Raptor Lake-mini host';
+
+  @override
+  String get platformName1018 => '14th generation-Raptor Lake-1700 platform';
+
+  @override
+  String get platformName1019 => '14th generation-Raptor Lake-notebook';
+
+  @override
+  String get platformName1020 => '14th generation-Raptor Lake-mini host';
+
+  @override
+  String get platformName1021 => '15th Generation-Arrow Lake-1851 Platform';
+
+  @override
+  String get platformName1022 => '15th generation-Arrow Lake-notebook';
+
+  @override
+  String get platformName1023 => '15th generation-Arrow Lake-mini host';
+
+  @override
+  String get platformName1024 => 'Generation 1-Arrandale-Notebook';
+
+  @override
+  String get platformName1025 => 'Generation 1-Arrandale-mini host';
+
+  @override
+  String get platformName1026 => 'Generation 1-Lynnfield-1156 Platform';
+
+  @override
+  String get platformName1027 => 'Generation 1-Nehalem&Westmere-X58 platform';
+
+  @override
+  String get platformName1028 => '2nd generation-Sandy Bridge-1155 platform';
+
+  @override
+  String get platformName1029 => '2nd generation-Sandy Bridge-E-X79 platform';
+
+  @override
+  String get platformName1030 => '2nd generation-Sandy Bridge-notebook';
+
+  @override
+  String get platformName1031 => '2nd generation-Sandy Bridge-mini host';
+
+  @override
+  String get platformName1032 => '3rd generation-Ivy Bridge-1155 platform';
+
+  @override
+  String get platformName1033 => '3rd generation-Ivy Bridge-E-X79 platform';
+
+  @override
+  String get platformName1034 => '3rd generation-Ivy Bridge-notebook';
+
+  @override
+  String get platformName1035 => '3rd generation-Ivy Bridge-mini host';
+
+  @override
+  String get platformName1036 => '4th generation-Haswell-1150 platform';
+
+  @override
+  String get platformName1037 => '4th generation-Haswell-E-X99 platform';
+
+  @override
+  String get platformName1038 => '4th Generation-Haswell-Laptop';
+
+  @override
+  String get platformName1039 => '4th generation-Haswell-mini host';
+
+  @override
+  String get platformName1040 => '5th generation-Broadwell-1150 platform';
+
+  @override
+  String get platformName1041 => '5th generation-Broadwell-E-X99 platform';
+
+  @override
+  String get platformName1042 => '5th generation-Broadwell-notebook';
+
+  @override
+  String get platformName1043 => '5th generation-Broadwell-mini host';
+
+  @override
+  String get platformName1044 => '6th generation-Skylake-1151 platform';
+
+  @override
+  String get platformName1045 => '6th generation-Skylake-X&W-X299 platform';
+
+  @override
+  String get platformName1046 => '6th generation-Skylake-notebook';
+
+  @override
+  String get platformName1047 => '6th generation-Skylake-mini host';
+
+  @override
+  String get platformName1048 => '7th Generation-Kaby Lake-1151 Platform';
+
+  @override
+  String get platformName1049 => '7th Generation-Kaby Lake-Notebook';
+
+  @override
+  String get platformName1050 => '7th generation-Kaby Lake-mini host';
+
+  @override
+  String get platformName1051 => '8th generation-Coffee Lake-1151 platform';
+
+  @override
+  String get platformName1052 => '8th Generation-Coffee Lake-Notebook';
+
+  @override
+  String get platformName1053 => '8th generation-Coffee Lake-mini host';
+
+  @override
+  String get platformName1054 => '9th generation-Coffee Lake-1151 platform';
+
+  @override
+  String get platformName1055 => '9th Generation-Coffee Lake-Notebook';
+
+  @override
+  String get platformName1056 => '9th generation-Coffee Lake-mini host';
+
+  @override
+  String get platformName1057 => 'Bulldozer(15h) and Jaguar(16h)';
+
+  @override
+  String get platformName1058 => 'Bulldozer(15h) and Jaguar(16h)-Notebook';
+
+  @override
+  String get platformName1059 => 'Bulldozer(15h) and Jaguar(16h)-mini host';
+
+  @override
+  String get platformName1060 => 'Ryzen and Threadripper(17h and 19h)';
+
+  @override
+  String get platformName1061 =>
+      'Ryzen and Threadripper(17h and 19h)-high-end servers';
+
+  @override
+  String get platformName1062 => 'Ryzen-notebook';
+
+  @override
+  String get platformName1063 => 'Ryzen-mini host';
+
+  @override
+  String get platformName1064 => 'server';
+
+  @override
+  String get platformName1065 => 'notebook';
+
+  @override
+  String get platformName1066 => 'Mini host';
 }

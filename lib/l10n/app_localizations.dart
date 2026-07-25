@@ -1447,6 +1447,1608 @@ abstract class AppLocalizations {
   /// In zh, this message translates to:
   /// **'葡萄牙语'**
   String get languagePortuguese;
+
+  /// No description provided for @ssdtMsg500.
+  ///
+  /// In zh, this message translates to:
+  /// **'Device ACPI path:'**
+  String get ssdtMsg500;
+
+  /// No description provided for @ssdtMsg501.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select the graphics card device to be counterfeited'**
+  String get ssdtMsg501;
+
+  /// No description provided for @ssdtMsg502.
+  ///
+  /// In zh, this message translates to:
+  /// **'Unknown graphics card model'**
+  String get ssdtMsg502;
+
+  /// No description provided for @ssdtMsg503.
+  ///
+  /// In zh, this message translates to:
+  /// **'Counterfeit graphics card ID database:'**
+  String get ssdtMsg503;
+
+  /// No description provided for @ssdtMsg504.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0}'**
+  String ssdtMsg504(String arg0);
+
+  /// No description provided for @ssdtMsg505.
+  ///
+  /// In zh, this message translates to:
+  /// **'For example: 73BF'**
+  String get ssdtMsg505;
+
+  /// No description provided for @ssdtMsg506.
+  ///
+  /// In zh, this message translates to:
+  /// **'Requires 4 hexadecimal characters'**
+  String get ssdtMsg506;
+
+  /// No description provided for @ssdtMsg507.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0}'**
+  String ssdtMsg507(String arg0);
+
+  /// No description provided for @ssdtMsg508.
+  ///
+  /// In zh, this message translates to:
+  /// **'Optional, graphics card name'**
+  String get ssdtMsg508;
+
+  /// No description provided for @ssdtMsg509.
+  ///
+  /// In zh, this message translates to:
+  /// **'Counterfeit graphics card ID:'**
+  String get ssdtMsg509;
+
+  /// No description provided for @ssdtMsg510.
+  ///
+  /// In zh, this message translates to:
+  /// **'Counterfeit graphics card name:'**
+  String get ssdtMsg510;
+
+  /// No description provided for @ssdtMsg511.
+  ///
+  /// In zh, this message translates to:
+  /// **'Whether to delete the source .dsl file: {arg0}'**
+  String ssdtMsg511(String arg0);
+
+  /// No description provided for @ssdtMsg512.
+  ///
+  /// In zh, this message translates to:
+  /// **'Whether to force compilation: {arg0}'**
+  String ssdtMsg512(String arg0);
+
+  /// No description provided for @ssdtMsg513.
+  ///
+  /// In zh, this message translates to:
+  /// **'Whether to overwrite the target EFI: {arg0}'**
+  String ssdtMsg513(String arg0);
+
+  /// No description provided for @ssdtMsg514.
+  ///
+  /// In zh, this message translates to:
+  /// **'Match pattern: {arg0}'**
+  String ssdtMsg514(String arg0);
+
+  /// No description provided for @ssdtMsg515.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to load HPET data: {arg0}'**
+  String ssdtMsg515(String arg0);
+
+  /// No description provided for @ssdtMsg516.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to initialize HPET data: {arg0}'**
+  String ssdtMsg516(String arg0);
+
+  /// No description provided for @ssdtMsg517.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to initialize ACPI path: {arg0}'**
+  String ssdtMsg517(String arg0);
+
+  /// No description provided for @ssdtMsg518.
+  ///
+  /// In zh, this message translates to:
+  /// **'No patch notes'**
+  String get ssdtMsg518;
+
+  /// No description provided for @ssdtMsg519.
+  ///
+  /// In zh, this message translates to:
+  /// **'No patch notes'**
+  String get ssdtMsg519;
+
+  /// No description provided for @ssdtMsg520.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to get patch notes: {arg0}'**
+  String ssdtMsg520(String arg0);
+
+  /// No description provided for @ssdtMsg521.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to get patch notes'**
+  String get ssdtMsg521;
+
+  /// No description provided for @ssdtMsg522.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0} Clear configuration path'**
+  String ssdtMsg522(String arg0);
+
+  /// No description provided for @ssdtMsg523.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0} selected an invalid file: {arg1}'**
+  String ssdtMsg523(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg524.
+  ///
+  /// In zh, this message translates to:
+  /// **'No patch configuration found for {arg0}'**
+  String ssdtMsg524(String arg0);
+
+  /// No description provided for @ssdtMsg525.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select the SSDT that needs to be customized before proceeding!'**
+  String get ssdtMsg525;
+
+  /// No description provided for @ssdtMsg526.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to execute patch: {arg0}'**
+  String ssdtMsg526(String arg0);
+
+  /// No description provided for @ssdtMsg527.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to execute patch [{arg0}]: {arg1}'**
+  String ssdtMsg527(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg528.
+  ///
+  /// In zh, this message translates to:
+  /// **'SSDT is being generated, please do not repeat the operation!'**
+  String get ssdtMsg528;
+
+  /// No description provided for @ssdtMsg529.
+  ///
+  /// In zh, this message translates to:
+  /// **'The patch list is empty!'**
+  String get ssdtMsg529;
+
+  /// No description provided for @ssdtMsg530.
+  ///
+  /// In zh, this message translates to:
+  /// **'Extraction is in progress, please do not repeat the operation!'**
+  String get ssdtMsg530;
+
+  /// No description provided for @ssdtMsg531.
+  ///
+  /// In zh, this message translates to:
+  /// **'The ACPI table extracted by the current {arg0} platform is very likely to be contaminated by ACPI patches injected by OpenCore and others. It is strongly recommended to operate on the Windows/Linux platform!'**
+  String ssdtMsg531(String arg0);
+
+  /// No description provided for @ssdtMsg532.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to extract ACPI!'**
+  String get ssdtMsg532;
+
+  /// No description provided for @ssdtMsg533.
+  ///
+  /// In zh, this message translates to:
+  /// **'Extraction of ACPI successful!'**
+  String get ssdtMsg533;
+
+  /// No description provided for @ssdtMsg534.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to prepare patch: {arg0}'**
+  String ssdtMsg534(String arg0);
+
+  /// No description provided for @ssdtMsg535.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to load DSDT/ACPI: {arg0}'**
+  String ssdtMsg535(String arg0);
+
+  /// No description provided for @ssdtMsg536.
+  ///
+  /// In zh, this message translates to:
+  /// **'The config.plist file does not exist: {arg0}'**
+  String ssdtMsg536(String arg0);
+
+  /// No description provided for @ssdtMsg537.
+  ///
+  /// In zh, this message translates to:
+  /// **'Unrecognized plist file format'**
+  String get ssdtMsg537;
+
+  /// No description provided for @ssdtMsg538.
+  ///
+  /// In zh, this message translates to:
+  /// **'The config.plist type is \"{arg0}\"'**
+  String ssdtMsg538(String arg0);
+
+  /// No description provided for @ssdtMsg539.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to parse plist type: {arg0}'**
+  String ssdtMsg539(String arg0);
+
+  /// No description provided for @ssdtMsg540.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select the ACPIs directory first!'**
+  String get ssdtMsg540;
+
+  /// No description provided for @ssdtMsg541.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select the config.plist file in the EFI directory first!'**
+  String get ssdtMsg541;
+
+  /// No description provided for @ssdtMsg542.
+  ///
+  /// In zh, this message translates to:
+  /// **'Invalid ACPI path: {arg0}'**
+  String ssdtMsg542(String arg0);
+
+  /// No description provided for @ssdtMsg543.
+  ///
+  /// In zh, this message translates to:
+  /// **'The config.plist file does not exist: {arg0}'**
+  String ssdtMsg543(String arg0);
+
+  /// No description provided for @ssdtMsg544.
+  ///
+  /// In zh, this message translates to:
+  /// **'Failed to merge plist files: {arg0}'**
+  String ssdtMsg544(String arg0);
+
+  /// No description provided for @ssdtMsg545.
+  ///
+  /// In zh, this message translates to:
+  /// **'yes'**
+  String get ssdtMsg545;
+
+  /// No description provided for @ssdtMsg546.
+  ///
+  /// In zh, this message translates to:
+  /// **'no'**
+  String get ssdtMsg546;
+
+  /// No description provided for @ssdtMsg547.
+  ///
+  /// In zh, this message translates to:
+  /// **'yes'**
+  String get ssdtMsg547;
+
+  /// No description provided for @ssdtMsg548.
+  ///
+  /// In zh, this message translates to:
+  /// **'no'**
+  String get ssdtMsg548;
+
+  /// No description provided for @ssdtMsg549.
+  ///
+  /// In zh, this message translates to:
+  /// **'yes'**
+  String get ssdtMsg549;
+
+  /// No description provided for @ssdtMsg550.
+  ///
+  /// In zh, this message translates to:
+  /// **'no'**
+  String get ssdtMsg550;
+
+  /// No description provided for @ssdtMsg551.
+  ///
+  /// In zh, this message translates to:
+  /// **'built-in'**
+  String get ssdtMsg551;
+
+  /// No description provided for @ssdtMsg552.
+  ///
+  /// In zh, this message translates to:
+  /// **'remote'**
+  String get ssdtMsg552;
+
+  /// No description provided for @ssdtMsg553.
+  ///
+  /// In zh, this message translates to:
+  /// **'New version of iasl'**
+  String get ssdtMsg553;
+
+  /// No description provided for @ssdtMsg554.
+  ///
+  /// In zh, this message translates to:
+  /// **'Old version iasl-legacy'**
+  String get ssdtMsg554;
+
+  /// No description provided for @ssdtMsg555.
+  ///
+  /// In zh, this message translates to:
+  /// **'yes'**
+  String get ssdtMsg555;
+
+  /// No description provided for @ssdtMsg556.
+  ///
+  /// In zh, this message translates to:
+  /// **'no'**
+  String get ssdtMsg556;
+
+  /// No description provided for @ssdtMsg557.
+  ///
+  /// In zh, this message translates to:
+  /// **'Preferences'**
+  String get ssdtMsg557;
+
+  /// No description provided for @ssdtMsg558.
+  ///
+  /// In zh, this message translates to:
+  /// **'iasl mode'**
+  String get ssdtMsg558;
+
+  /// No description provided for @ssdtMsg559.
+  ///
+  /// In zh, this message translates to:
+  /// **'iasl compilation type'**
+  String get ssdtMsg559;
+
+  /// No description provided for @ssdtMsg560.
+  ///
+  /// In zh, this message translates to:
+  /// **'Delete decompiled .dsl files'**
+  String get ssdtMsg560;
+
+  /// No description provided for @ssdtMsg561.
+  ///
+  /// In zh, this message translates to:
+  /// **'Force compilation'**
+  String get ssdtMsg561;
+
+  /// No description provided for @ssdtMsg562.
+  ///
+  /// In zh, this message translates to:
+  /// **'Whether to overwrite the target EFI'**
+  String get ssdtMsg562;
+
+  /// No description provided for @ssdtMsg563.
+  ///
+  /// In zh, this message translates to:
+  /// **'ACPI matching mode'**
+  String get ssdtMsg563;
+
+  /// No description provided for @ssdtMsg564.
+  ///
+  /// In zh, this message translates to:
+  /// **'core patch'**
+  String get ssdtMsg564;
+
+  /// No description provided for @ssdtMsg565.
+  ///
+  /// In zh, this message translates to:
+  /// **'Feature patches'**
+  String get ssdtMsg565;
+
+  /// No description provided for @ssdtMsg566.
+  ///
+  /// In zh, this message translates to:
+  /// **'Device patches'**
+  String get ssdtMsg566;
+
+  /// No description provided for @ssdtMsg567.
+  ///
+  /// In zh, this message translates to:
+  /// **'dedicated patch'**
+  String get ssdtMsg567;
+
+  /// No description provided for @ssdtMsg568.
+  ///
+  /// In zh, this message translates to:
+  /// **'sleep patch'**
+  String get ssdtMsg568;
+
+  /// No description provided for @ssdtMsg569.
+  ///
+  /// In zh, this message translates to:
+  /// **'Auxiliary patches'**
+  String get ssdtMsg569;
+
+  /// No description provided for @ssdtMsg570.
+  ///
+  /// In zh, this message translates to:
+  /// **'Pre-made patches'**
+  String get ssdtMsg570;
+
+  /// No description provided for @ssdtMsg571.
+  ///
+  /// In zh, this message translates to:
+  /// **'Basic patches necessary for normal system startup and power management'**
+  String get ssdtMsg571;
+
+  /// No description provided for @ssdtMsg572.
+  ///
+  /// In zh, this message translates to:
+  /// **'Patches that provide additional functionality or fix feature issues'**
+  String get ssdtMsg572;
+
+  /// No description provided for @ssdtMsg573.
+  ///
+  /// In zh, this message translates to:
+  /// **'Patches for graphics card hardware'**
+  String get ssdtMsg573;
+
+  /// No description provided for @ssdtMsg574.
+  ///
+  /// In zh, this message translates to:
+  /// **'Patches only required on specific motherboards or architectures'**
+  String get ssdtMsg574;
+
+  /// No description provided for @ssdtMsg575.
+  ///
+  /// In zh, this message translates to:
+  /// **'Optional, used to fix sleep problems'**
+  String get ssdtMsg575;
+
+  /// No description provided for @ssdtMsg576.
+  ///
+  /// In zh, this message translates to:
+  /// **'Not required, but can complete the ACPI structure or enhance compatibility'**
+  String get ssdtMsg576;
+
+  /// No description provided for @ssdtMsg577.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select DMAR'**
+  String get ssdtMsg577;
+
+  /// No description provided for @ssdtMsg578.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select the DMAR table that needs to be customized'**
+  String get ssdtMsg578;
+
+  /// No description provided for @ssdtMsg579.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select APIC'**
+  String get ssdtMsg579;
+
+  /// No description provided for @ssdtMsg580.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select the APIC table that needs to be customized'**
+  String get ssdtMsg580;
+
+  /// No description provided for @ssdtMsg581.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select FACP'**
+  String get ssdtMsg581;
+
+  /// No description provided for @ssdtMsg582.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select FACP form'**
+  String get ssdtMsg582;
+
+  /// No description provided for @ssdtMsg583.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select FACP'**
+  String get ssdtMsg583;
+
+  /// No description provided for @ssdtMsg584.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select FACP form'**
+  String get ssdtMsg584;
+
+  /// No description provided for @ssdtMsg585.
+  ///
+  /// In zh, this message translates to:
+  /// **'log'**
+  String get ssdtMsg585;
+
+  /// No description provided for @ssdtMsg586.
+  ///
+  /// In zh, this message translates to:
+  /// **'clear log'**
+  String get ssdtMsg586;
+
+  /// No description provided for @ssdtMsg587.
+  ///
+  /// In zh, this message translates to:
+  /// **'Export log'**
+  String get ssdtMsg587;
+
+  /// No description provided for @ssdtMsg588.
+  ///
+  /// In zh, this message translates to:
+  /// **'Pre-made patches'**
+  String get ssdtMsg588;
+
+  /// No description provided for @ssdtMsg589.
+  ///
+  /// In zh, this message translates to:
+  /// **'Execute patch'**
+  String get ssdtMsg589;
+
+  /// No description provided for @ssdtMsg590.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select a file/directory'**
+  String get ssdtMsg590;
+
+  /// No description provided for @ssdtMsg591.
+  ///
+  /// In zh, this message translates to:
+  /// **'Extract ACPI'**
+  String get ssdtMsg591;
+
+  /// No description provided for @ssdtMsg592.
+  ///
+  /// In zh, this message translates to:
+  /// **'output directory'**
+  String get ssdtMsg592;
+
+  /// No description provided for @ssdtMsg593.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select DSDT file or ACPIs directory'**
+  String get ssdtMsg593;
+
+  /// No description provided for @ssdtMsg594.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select ACPIs'**
+  String get ssdtMsg594;
+
+  /// No description provided for @ssdtMsg595.
+  ///
+  /// In zh, this message translates to:
+  /// **'Merge config'**
+  String get ssdtMsg595;
+
+  /// No description provided for @ssdtMsg596.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select config'**
+  String get ssdtMsg596;
+
+  /// No description provided for @ssdtMsg597.
+  ///
+  /// In zh, this message translates to:
+  /// **'Please select the config.plist file'**
+  String get ssdtMsg597;
+
+  /// No description provided for @ssdtMsg598.
+  ///
+  /// In zh, this message translates to:
+  /// **'Preferences'**
+  String get ssdtMsg598;
+
+  /// No description provided for @ssdtMsg599.
+  ///
+  /// In zh, this message translates to:
+  /// **'Platform patches'**
+  String get ssdtMsg599;
+
+  /// No description provided for @ssdtMsg600.
+  ///
+  /// In zh, this message translates to:
+  /// **'Patch guide'**
+  String get ssdtMsg600;
+
+  /// No description provided for @ssdtMsg601.
+  ///
+  /// In zh, this message translates to:
+  /// **'About the application'**
+  String get ssdtMsg601;
+
+  /// No description provided for @ssdtMsg602.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0}: {arg1}'**
+  String ssdtMsg602(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg603.
+  ///
+  /// In zh, this message translates to:
+  /// **'Select patch'**
+  String get ssdtMsg603;
+
+  /// No description provided for @ssdtMsg604.
+  ///
+  /// In zh, this message translates to:
+  /// **'Desktop'**
+  String get ssdtMsg604;
+
+  /// No description provided for @ssdtMsg605.
+  ///
+  /// In zh, this message translates to:
+  /// **'server'**
+  String get ssdtMsg605;
+
+  /// No description provided for @ssdtMsg606.
+  ///
+  /// In zh, this message translates to:
+  /// **'SSDT is being generated, please do not repeat the operation!'**
+  String get ssdtMsg606;
+
+  /// No description provided for @ssdtMsg607.
+  ///
+  /// In zh, this message translates to:
+  /// **'No SSDT selected'**
+  String get ssdtMsg607;
+
+  /// No description provided for @ssdtMsg608.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0} {arg1}'**
+  String ssdtMsg608(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg609.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0} list: {arg1}'**
+  String ssdtMsg609(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg610.
+  ///
+  /// In zh, this message translates to:
+  /// **'Prefabricated SSDT'**
+  String get ssdtMsg610;
+
+  /// No description provided for @ssdtMsg611.
+  ///
+  /// In zh, this message translates to:
+  /// **'Custom SSDT'**
+  String get ssdtMsg611;
+
+  /// No description provided for @ssdtMsg612.
+  ///
+  /// In zh, this message translates to:
+  /// **'CPU type:'**
+  String get ssdtMsg612;
+
+  /// No description provided for @ssdtMsg613.
+  ///
+  /// In zh, this message translates to:
+  /// **'Platform type:'**
+  String get ssdtMsg613;
+
+  /// No description provided for @ssdtMsg614.
+  ///
+  /// In zh, this message translates to:
+  /// **'Desktop'**
+  String get ssdtMsg614;
+
+  /// No description provided for @ssdtMsg615.
+  ///
+  /// In zh, this message translates to:
+  /// **'Desktop'**
+  String get ssdtMsg615;
+
+  /// No description provided for @ssdtMsg616.
+  ///
+  /// In zh, this message translates to:
+  /// **'notebook'**
+  String get ssdtMsg616;
+
+  /// No description provided for @ssdtMsg617.
+  ///
+  /// In zh, this message translates to:
+  /// **'notebook'**
+  String get ssdtMsg617;
+
+  /// No description provided for @ssdtMsg618.
+  ///
+  /// In zh, this message translates to:
+  /// **'Mini host'**
+  String get ssdtMsg618;
+
+  /// No description provided for @ssdtMsg619.
+  ///
+  /// In zh, this message translates to:
+  /// **'Mini host'**
+  String get ssdtMsg619;
+
+  /// No description provided for @ssdtMsg620.
+  ///
+  /// In zh, this message translates to:
+  /// **'server'**
+  String get ssdtMsg620;
+
+  /// No description provided for @ssdtMsg621.
+  ///
+  /// In zh, this message translates to:
+  /// **'server'**
+  String get ssdtMsg621;
+
+  /// No description provided for @ssdtMsg622.
+  ///
+  /// In zh, this message translates to:
+  /// **'Currently selected SSDT list: {arg0}'**
+  String ssdtMsg622(String arg0);
+
+  /// No description provided for @ssdtMsg623.
+  ///
+  /// In zh, this message translates to:
+  /// **'Platform information:'**
+  String get ssdtMsg623;
+
+  /// No description provided for @ssdtMsg624.
+  ///
+  /// In zh, this message translates to:
+  /// **'Check all'**
+  String get ssdtMsg624;
+
+  /// No description provided for @ssdtMsg625.
+  ///
+  /// In zh, this message translates to:
+  /// **'Core (official recommendation)'**
+  String get ssdtMsg625;
+
+  /// No description provided for @ssdtMsg626.
+  ///
+  /// In zh, this message translates to:
+  /// **'Recommend (function fix)'**
+  String get ssdtMsg626;
+
+  /// No description provided for @ssdtMsg627.
+  ///
+  /// In zh, this message translates to:
+  /// **'Optional (complete with functions)'**
+  String get ssdtMsg627;
+
+  /// No description provided for @ssdtMsg628.
+  ///
+  /// In zh, this message translates to:
+  /// **'Platform information:'**
+  String get ssdtMsg628;
+
+  /// No description provided for @ssdtMsg629.
+  ///
+  /// In zh, this message translates to:
+  /// **'Prefabricated SSDT'**
+  String get ssdtMsg629;
+
+  /// No description provided for @ssdtMsg630.
+  ///
+  /// In zh, this message translates to:
+  /// **'Custom SSDT'**
+  String get ssdtMsg630;
+
+  /// No description provided for @ssdtMsg631.
+  ///
+  /// In zh, this message translates to:
+  /// **'Custom SSDT'**
+  String get ssdtMsg631;
+
+  /// No description provided for @ssdtMsg632.
+  ///
+  /// In zh, this message translates to:
+  /// **'Prefabricated SSDT'**
+  String get ssdtMsg632;
+
+  /// No description provided for @ssdtMsg633.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0} {arg1}'**
+  String ssdtMsg633(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg634.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0}{arg1}'**
+  String ssdtMsg634(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg635.
+  ///
+  /// In zh, this message translates to:
+  /// **'{arg0}{arg1}'**
+  String ssdtMsg635(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg636.
+  ///
+  /// In zh, this message translates to:
+  /// **'Visit GitHub'**
+  String get ssdtMsg636;
+
+  /// No description provided for @ssdtMsg637.
+  ///
+  /// In zh, this message translates to:
+  /// **'Download now'**
+  String get ssdtMsg637;
+
+  /// No description provided for @ssdtMsg638.
+  ///
+  /// In zh, this message translates to:
+  /// **'closure'**
+  String get ssdtMsg638;
+
+  /// No description provided for @ssdtMsg639.
+  ///
+  /// In zh, this message translates to:
+  /// **'new version found'**
+  String get ssdtMsg639;
+
+  /// No description provided for @ssdtMsg640.
+  ///
+  /// In zh, this message translates to:
+  /// **'Version number:'**
+  String get ssdtMsg640;
+
+  /// No description provided for @ssdtMsg641.
+  ///
+  /// In zh, this message translates to:
+  /// **'Release time:'**
+  String get ssdtMsg641;
+
+  /// No description provided for @ssdtMsg642.
+  ///
+  /// In zh, this message translates to:
+  /// **'Connection to server timed out'**
+  String get ssdtMsg642;
+
+  /// No description provided for @ssdtMsg643.
+  ///
+  /// In zh, this message translates to:
+  /// **'Connection to server timed out'**
+  String get ssdtMsg643;
+
+  /// No description provided for @ssdtMsg644.
+  ///
+  /// In zh, this message translates to:
+  /// **'Download canceled'**
+  String get ssdtMsg644;
+
+  /// No description provided for @ssdtMsg645.
+  ///
+  /// In zh, this message translates to:
+  /// **'Download canceled'**
+  String get ssdtMsg645;
+
+  /// No description provided for @ssdtMsg646.
+  ///
+  /// In zh, this message translates to:
+  /// **'Read response timeout'**
+  String get ssdtMsg646;
+
+  /// No description provided for @ssdtMsg647.
+  ///
+  /// In zh, this message translates to:
+  /// **'Read response timeout'**
+  String get ssdtMsg647;
+
+  /// No description provided for @ssdtMsg648.
+  ///
+  /// In zh, this message translates to:
+  /// **'An exception occurred while obtaining server information! Status code: {arg0}'**
+  String ssdtMsg648(String arg0);
+
+  /// No description provided for @ssdtMsg649.
+  ///
+  /// In zh, this message translates to:
+  /// **'Request failed, status code: {arg0}'**
+  String ssdtMsg649(String arg0);
+
+  /// No description provided for @ssdtMsg650.
+  ///
+  /// In zh, this message translates to:
+  /// **'Download timed out, no progress for {arg0} seconds, task canceled'**
+  String ssdtMsg650(String arg0);
+
+  /// No description provided for @ssdtMsg651.
+  ///
+  /// In zh, this message translates to:
+  /// **'Log channel does not exist: {arg0}'**
+  String ssdtMsg651(String arg0);
+
+  /// No description provided for @ssdtMsg652.
+  ///
+  /// In zh, this message translates to:
+  /// **'Export successful! File path: {arg0}{arg1}{arg2}'**
+  String ssdtMsg652(String arg0, String arg1, String arg2);
+
+  /// No description provided for @ssdtMsg653.
+  ///
+  /// In zh, this message translates to:
+  /// **'Export failed! Error message: {arg0}'**
+  String ssdtMsg653(String arg0);
+
+  /// No description provided for @ssdtMsg654.
+  ///
+  /// In zh, this message translates to:
+  /// **'File does not exist! Export failed! File path: {arg0}'**
+  String ssdtMsg654(String arg0);
+
+  /// No description provided for @ssdtMsg655.
+  ///
+  /// In zh, this message translates to:
+  /// **'Log file initialization failed: {arg0}'**
+  String ssdtMsg655(String arg0);
+
+  /// No description provided for @ssdtMsg656.
+  ///
+  /// In zh, this message translates to:
+  /// **'unknown'**
+  String get ssdtMsg656;
+
+  /// No description provided for @ssdtMsg657.
+  ///
+  /// In zh, this message translates to:
+  /// **'loosest'**
+  String get ssdtMsg657;
+
+  /// No description provided for @ssdtMsg658.
+  ///
+  /// In zh, this message translates to:
+  /// **'length only'**
+  String get ssdtMsg658;
+
+  /// No description provided for @ssdtMsg659.
+  ///
+  /// In zh, this message translates to:
+  /// **'Table ID and length, disable normalized headers'**
+  String get ssdtMsg659;
+
+  /// No description provided for @ssdtMsg660.
+  ///
+  /// In zh, this message translates to:
+  /// **'Table ID and length, enable normalized headers'**
+  String get ssdtMsg660;
+
+  /// No description provided for @ssdtMsg661.
+  ///
+  /// In zh, this message translates to:
+  /// **'Intel 1st generation Arrandale, 2nd generation Sandy Bridge, 3rd generation Ivy Bridge'**
+  String get ssdtMsg661;
+
+  /// No description provided for @ssdtMsg662.
+  ///
+  /// In zh, this message translates to:
+  /// **'Intel 4th generation Haswell, 5th generation Broadwell'**
+  String get ssdtMsg662;
+
+  /// No description provided for @ssdtMsg663.
+  ///
+  /// In zh, this message translates to:
+  /// **'Intel 6th generation Skylake, 7th generation Kaby Lake, some 4th generation Haswell'**
+  String get ssdtMsg663;
+
+  /// No description provided for @ssdtMsg664.
+  ///
+  /// In zh, this message translates to:
+  /// **'Custom brightness, usually used for some non-standard equipment or special needs settings'**
+  String get ssdtMsg664;
+
+  /// No description provided for @ssdtMsg665.
+  ///
+  /// In zh, this message translates to:
+  /// **'Custom brightness, usually used for some non-standard equipment or special needs settings'**
+  String get ssdtMsg665;
+
+  /// No description provided for @ssdtMsg666.
+  ///
+  /// In zh, this message translates to:
+  /// **'Intel 8th generation CoffeeLake ~ 10th generation, and AMD notebooks'**
+  String get ssdtMsg666;
+
+  /// No description provided for @ssdtMsg667.
+  ///
+  /// In zh, this message translates to:
+  /// **'Others (requires custom applbkl-name / applbkl-data device properties), may not be supported'**
+  String get ssdtMsg667;
+
+  /// No description provided for @ssdtMsg668.
+  ///
+  /// In zh, this message translates to:
+  /// **'Table does not exist: {arg0}'**
+  String ssdtMsg668(String arg0);
+
+  /// No description provided for @ssdtMsg669.
+  ///
+  /// In zh, this message translates to:
+  /// **'Incoming data length is less than 4 bytes: {arg0}'**
+  String ssdtMsg669(String arg0);
+
+  /// No description provided for @ssdtMsg670.
+  ///
+  /// In zh, this message translates to:
+  /// **'File content is less than 4 bytes: {arg0}'**
+  String ssdtMsg670(String arg0);
+
+  /// No description provided for @ssdtMsg671.
+  ///
+  /// In zh, this message translates to:
+  /// **'Error reading signature: {arg0}, file path: {arg1}'**
+  String ssdtMsg671(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg672.
+  ///
+  /// In zh, this message translates to:
+  /// **'Temporary directory has been created at: {arg0}'**
+  String ssdtMsg672(String arg0);
+
+  /// No description provided for @ssdtMsg673.
+  ///
+  /// In zh, this message translates to:
+  /// **'Temporary directory already exists at: {arg0}'**
+  String ssdtMsg673(String arg0);
+
+  /// No description provided for @ssdtMsg674.
+  ///
+  /// In zh, this message translates to:
+  /// **'Decompiling {arg0} file...'**
+  String ssdtMsg674(String arg0);
+
+  /// No description provided for @ssdtMsg675.
+  ///
+  /// In zh, this message translates to:
+  /// **'Decompiling SSDT.aml files in batches...'**
+  String get ssdtMsg675;
+
+  /// No description provided for @ssdtMsg676.
+  ///
+  /// In zh, this message translates to:
+  /// **'Decompiling DSDT.aml and SSDT.aml files in batches...'**
+  String get ssdtMsg676;
+
+  /// No description provided for @ssdtMsg677.
+  ///
+  /// In zh, this message translates to:
+  /// **'=> {arg0} decompilation failed!'**
+  String ssdtMsg677(String arg0);
+
+  /// No description provided for @ssdtMsg678.
+  ///
+  /// In zh, this message translates to:
+  /// **'=> {arg0} decompiled successfully!'**
+  String ssdtMsg678(String arg0);
+
+  /// No description provided for @ssdtMsg679.
+  ///
+  /// In zh, this message translates to:
+  /// **'=> {arg0} decompiled successfully!'**
+  String ssdtMsg679(String arg0);
+
+  /// No description provided for @ssdtMsg680.
+  ///
+  /// In zh, this message translates to:
+  /// **'=> {arg0} decompiled successfully!'**
+  String ssdtMsg680(String arg0);
+
+  /// No description provided for @ssdtMsg681.
+  ///
+  /// In zh, this message translates to:
+  /// **'Decompiling failed .aml files individually...'**
+  String get ssdtMsg681;
+
+  /// No description provided for @ssdtMsg682.
+  ///
+  /// In zh, this message translates to:
+  /// **'=> {arg0} decompiled successfully!'**
+  String ssdtMsg682(String arg0);
+
+  /// No description provided for @ssdtMsg683.
+  ///
+  /// In zh, this message translates to:
+  /// **'=> {arg0} decompilation failed!'**
+  String ssdtMsg683(String arg0);
+
+  /// No description provided for @ssdtMsg684.
+  ///
+  /// In zh, this message translates to:
+  /// **'Decompiling other .aml files...'**
+  String get ssdtMsg684;
+
+  /// No description provided for @ssdtMsg685.
+  ///
+  /// In zh, this message translates to:
+  /// **'=> {arg0} decompiled successfully!'**
+  String ssdtMsg685(String arg0);
+
+  /// No description provided for @ssdtMsg686.
+  ///
+  /// In zh, this message translates to:
+  /// **'Note: Try not to include Chinese or special characters in the path or file name, otherwise it may cause unexpected problems!'**
+  String get ssdtMsg686;
+
+  /// No description provided for @ssdtMsg687.
+  ///
+  /// In zh, this message translates to:
+  /// **'An error occurred: {arg0}'**
+  String ssdtMsg687(String arg0);
+
+  /// No description provided for @ssdtMsg688.
+  ///
+  /// In zh, this message translates to:
+  /// **'An error occurred when processing paths in the getDevicePathsWithId method {arg0}: {arg1}'**
+  String ssdtMsg688(String arg0, String arg1);
+
+  /// No description provided for @ssdtMsg689.
+  ///
+  /// In zh, this message translates to:
+  /// **'Skip: {arg0}, which has been decompiled correctly before!'**
+  String ssdtMsg689(String arg0);
+
+  /// No description provided for @ssdtMsg690.
+  ///
+  /// In zh, this message translates to:
+  /// **'Target file is in exclude list: {arg0}'**
+  String ssdtMsg690(String arg0);
+
+  /// No description provided for @ssdtMsg691.
+  ///
+  /// In zh, this message translates to:
+  /// **'Invalid path: {arg0}'**
+  String ssdtMsg691(String arg0);
+
+  /// No description provided for @ssdtMsg692.
+  ///
+  /// In zh, this message translates to:
+  /// **'Invalid path'**
+  String get ssdtMsg692;
+
+  /// No description provided for @ssdtMsg693.
+  ///
+  /// In zh, this message translates to:
+  /// **'No valid .aml or .dat file found at {arg0}!'**
+  String ssdtMsg693(String arg0);
+
+  /// No description provided for @ssdtMsg694.
+  ///
+  /// In zh, this message translates to:
+  /// **'No valid .aml or .dat file found'**
+  String get ssdtMsg694;
+
+  /// No description provided for @ssdtMsg695.
+  ///
+  /// In zh, this message translates to:
+  /// **'Decompilation failed: {arg0}'**
+  String ssdtMsg695(String arg0);
+
+  /// No description provided for @ssdtMsg696.
+  ///
+  /// In zh, this message translates to:
+  /// **'The acpidump tool is not ready! Operation terminated!'**
+  String get ssdtMsg696;
+
+  /// No description provided for @ssdtMsg697.
+  ///
+  /// In zh, this message translates to:
+  /// **'Exporting ACPI tables...'**
+  String get ssdtMsg697;
+
+  /// No description provided for @ssdtMsg698.
+  ///
+  /// In zh, this message translates to:
+  /// **'The current platform does not support it!'**
+  String get ssdtMsg698;
+
+  /// No description provided for @ssdtMsg699.
+  ///
+  /// In zh, this message translates to:
+  /// **'Waiting for sudo password authorization...'**
+  String get ssdtMsg699;
+
+  /// No description provided for @platformName1000.
+  ///
+  /// In zh, this message translates to:
+  /// **'Generation 0-Penryn-775 platform'**
+  String get platformName1000;
+
+  /// No description provided for @platformName1001.
+  ///
+  /// In zh, this message translates to:
+  /// **'Generation 0-Penryn-Notebook'**
+  String get platformName1001;
+
+  /// No description provided for @platformName1002.
+  ///
+  /// In zh, this message translates to:
+  /// **'Generation 0-Penryn-mini host'**
+  String get platformName1002;
+
+  /// No description provided for @platformName1003.
+  ///
+  /// In zh, this message translates to:
+  /// **'10th Generation-Cascade Lake-X&W-X599 Platform'**
+  String get platformName1003;
+
+  /// No description provided for @platformName1004.
+  ///
+  /// In zh, this message translates to:
+  /// **'10th Generation-Comet Lake-1200 Platform'**
+  String get platformName1004;
+
+  /// No description provided for @platformName1005.
+  ///
+  /// In zh, this message translates to:
+  /// **'10th Generation-Comet Lake-Laptop'**
+  String get platformName1005;
+
+  /// No description provided for @platformName1006.
+  ///
+  /// In zh, this message translates to:
+  /// **'10th generation-Comet Lake-mini host'**
+  String get platformName1006;
+
+  /// No description provided for @platformName1007.
+  ///
+  /// In zh, this message translates to:
+  /// **'10th Generation-Ice Lake-Laptop'**
+  String get platformName1007;
+
+  /// No description provided for @platformName1008.
+  ///
+  /// In zh, this message translates to:
+  /// **'10th generation-Ice Lake-mini host'**
+  String get platformName1008;
+
+  /// No description provided for @platformName1009.
+  ///
+  /// In zh, this message translates to:
+  /// **'11th generation-Rocket Lake-1200 platform'**
+  String get platformName1009;
+
+  /// No description provided for @platformName1010.
+  ///
+  /// In zh, this message translates to:
+  /// **'11th Generation-Rocket Lake-Laptop'**
+  String get platformName1010;
+
+  /// No description provided for @platformName1011.
+  ///
+  /// In zh, this message translates to:
+  /// **'11th generation-Tiger Lake-mini host'**
+  String get platformName1011;
+
+  /// No description provided for @platformName1012.
+  ///
+  /// In zh, this message translates to:
+  /// **'12th generation-Alder Lake-1700 platform'**
+  String get platformName1012;
+
+  /// No description provided for @platformName1013.
+  ///
+  /// In zh, this message translates to:
+  /// **'12th generation-Alder Lake-notebook'**
+  String get platformName1013;
+
+  /// No description provided for @platformName1014.
+  ///
+  /// In zh, this message translates to:
+  /// **'12th generation-Alder Lake-mini host'**
+  String get platformName1014;
+
+  /// No description provided for @platformName1015.
+  ///
+  /// In zh, this message translates to:
+  /// **'13th generation-Raptor Lake-1700 platform'**
+  String get platformName1015;
+
+  /// No description provided for @platformName1016.
+  ///
+  /// In zh, this message translates to:
+  /// **'13th generation-Raptor Lake-notebook'**
+  String get platformName1016;
+
+  /// No description provided for @platformName1017.
+  ///
+  /// In zh, this message translates to:
+  /// **'13th generation-Raptor Lake-mini host'**
+  String get platformName1017;
+
+  /// No description provided for @platformName1018.
+  ///
+  /// In zh, this message translates to:
+  /// **'14th generation-Raptor Lake-1700 platform'**
+  String get platformName1018;
+
+  /// No description provided for @platformName1019.
+  ///
+  /// In zh, this message translates to:
+  /// **'14th generation-Raptor Lake-notebook'**
+  String get platformName1019;
+
+  /// No description provided for @platformName1020.
+  ///
+  /// In zh, this message translates to:
+  /// **'14th generation-Raptor Lake-mini host'**
+  String get platformName1020;
+
+  /// No description provided for @platformName1021.
+  ///
+  /// In zh, this message translates to:
+  /// **'15th Generation-Arrow Lake-1851 Platform'**
+  String get platformName1021;
+
+  /// No description provided for @platformName1022.
+  ///
+  /// In zh, this message translates to:
+  /// **'15th generation-Arrow Lake-notebook'**
+  String get platformName1022;
+
+  /// No description provided for @platformName1023.
+  ///
+  /// In zh, this message translates to:
+  /// **'15th generation-Arrow Lake-mini host'**
+  String get platformName1023;
+
+  /// No description provided for @platformName1024.
+  ///
+  /// In zh, this message translates to:
+  /// **'Generation 1-Arrandale-Notebook'**
+  String get platformName1024;
+
+  /// No description provided for @platformName1025.
+  ///
+  /// In zh, this message translates to:
+  /// **'Generation 1-Arrandale-mini host'**
+  String get platformName1025;
+
+  /// No description provided for @platformName1026.
+  ///
+  /// In zh, this message translates to:
+  /// **'Generation 1-Lynnfield-1156 Platform'**
+  String get platformName1026;
+
+  /// No description provided for @platformName1027.
+  ///
+  /// In zh, this message translates to:
+  /// **'Generation 1-Nehalem&Westmere-X58 platform'**
+  String get platformName1027;
+
+  /// No description provided for @platformName1028.
+  ///
+  /// In zh, this message translates to:
+  /// **'2nd generation-Sandy Bridge-1155 platform'**
+  String get platformName1028;
+
+  /// No description provided for @platformName1029.
+  ///
+  /// In zh, this message translates to:
+  /// **'2nd generation-Sandy Bridge-E-X79 platform'**
+  String get platformName1029;
+
+  /// No description provided for @platformName1030.
+  ///
+  /// In zh, this message translates to:
+  /// **'2nd generation-Sandy Bridge-notebook'**
+  String get platformName1030;
+
+  /// No description provided for @platformName1031.
+  ///
+  /// In zh, this message translates to:
+  /// **'2nd generation-Sandy Bridge-mini host'**
+  String get platformName1031;
+
+  /// No description provided for @platformName1032.
+  ///
+  /// In zh, this message translates to:
+  /// **'3rd generation-Ivy Bridge-1155 platform'**
+  String get platformName1032;
+
+  /// No description provided for @platformName1033.
+  ///
+  /// In zh, this message translates to:
+  /// **'3rd generation-Ivy Bridge-E-X79 platform'**
+  String get platformName1033;
+
+  /// No description provided for @platformName1034.
+  ///
+  /// In zh, this message translates to:
+  /// **'3rd generation-Ivy Bridge-notebook'**
+  String get platformName1034;
+
+  /// No description provided for @platformName1035.
+  ///
+  /// In zh, this message translates to:
+  /// **'3rd generation-Ivy Bridge-mini host'**
+  String get platformName1035;
+
+  /// No description provided for @platformName1036.
+  ///
+  /// In zh, this message translates to:
+  /// **'4th generation-Haswell-1150 platform'**
+  String get platformName1036;
+
+  /// No description provided for @platformName1037.
+  ///
+  /// In zh, this message translates to:
+  /// **'4th generation-Haswell-E-X99 platform'**
+  String get platformName1037;
+
+  /// No description provided for @platformName1038.
+  ///
+  /// In zh, this message translates to:
+  /// **'4th Generation-Haswell-Laptop'**
+  String get platformName1038;
+
+  /// No description provided for @platformName1039.
+  ///
+  /// In zh, this message translates to:
+  /// **'4th generation-Haswell-mini host'**
+  String get platformName1039;
+
+  /// No description provided for @platformName1040.
+  ///
+  /// In zh, this message translates to:
+  /// **'5th generation-Broadwell-1150 platform'**
+  String get platformName1040;
+
+  /// No description provided for @platformName1041.
+  ///
+  /// In zh, this message translates to:
+  /// **'5th generation-Broadwell-E-X99 platform'**
+  String get platformName1041;
+
+  /// No description provided for @platformName1042.
+  ///
+  /// In zh, this message translates to:
+  /// **'5th generation-Broadwell-notebook'**
+  String get platformName1042;
+
+  /// No description provided for @platformName1043.
+  ///
+  /// In zh, this message translates to:
+  /// **'5th generation-Broadwell-mini host'**
+  String get platformName1043;
+
+  /// No description provided for @platformName1044.
+  ///
+  /// In zh, this message translates to:
+  /// **'6th generation-Skylake-1151 platform'**
+  String get platformName1044;
+
+  /// No description provided for @platformName1045.
+  ///
+  /// In zh, this message translates to:
+  /// **'6th generation-Skylake-X&W-X299 platform'**
+  String get platformName1045;
+
+  /// No description provided for @platformName1046.
+  ///
+  /// In zh, this message translates to:
+  /// **'6th generation-Skylake-notebook'**
+  String get platformName1046;
+
+  /// No description provided for @platformName1047.
+  ///
+  /// In zh, this message translates to:
+  /// **'6th generation-Skylake-mini host'**
+  String get platformName1047;
+
+  /// No description provided for @platformName1048.
+  ///
+  /// In zh, this message translates to:
+  /// **'7th Generation-Kaby Lake-1151 Platform'**
+  String get platformName1048;
+
+  /// No description provided for @platformName1049.
+  ///
+  /// In zh, this message translates to:
+  /// **'7th Generation-Kaby Lake-Notebook'**
+  String get platformName1049;
+
+  /// No description provided for @platformName1050.
+  ///
+  /// In zh, this message translates to:
+  /// **'7th generation-Kaby Lake-mini host'**
+  String get platformName1050;
+
+  /// No description provided for @platformName1051.
+  ///
+  /// In zh, this message translates to:
+  /// **'8th generation-Coffee Lake-1151 platform'**
+  String get platformName1051;
+
+  /// No description provided for @platformName1052.
+  ///
+  /// In zh, this message translates to:
+  /// **'8th Generation-Coffee Lake-Notebook'**
+  String get platformName1052;
+
+  /// No description provided for @platformName1053.
+  ///
+  /// In zh, this message translates to:
+  /// **'8th generation-Coffee Lake-mini host'**
+  String get platformName1053;
+
+  /// No description provided for @platformName1054.
+  ///
+  /// In zh, this message translates to:
+  /// **'9th generation-Coffee Lake-1151 platform'**
+  String get platformName1054;
+
+  /// No description provided for @platformName1055.
+  ///
+  /// In zh, this message translates to:
+  /// **'9th Generation-Coffee Lake-Notebook'**
+  String get platformName1055;
+
+  /// No description provided for @platformName1056.
+  ///
+  /// In zh, this message translates to:
+  /// **'9th generation-Coffee Lake-mini host'**
+  String get platformName1056;
+
+  /// No description provided for @platformName1057.
+  ///
+  /// In zh, this message translates to:
+  /// **'Bulldozer(15h) and Jaguar(16h)'**
+  String get platformName1057;
+
+  /// No description provided for @platformName1058.
+  ///
+  /// In zh, this message translates to:
+  /// **'Bulldozer(15h) and Jaguar(16h)-Notebook'**
+  String get platformName1058;
+
+  /// No description provided for @platformName1059.
+  ///
+  /// In zh, this message translates to:
+  /// **'Bulldozer(15h) and Jaguar(16h)-mini host'**
+  String get platformName1059;
+
+  /// No description provided for @platformName1060.
+  ///
+  /// In zh, this message translates to:
+  /// **'Ryzen and Threadripper(17h and 19h)'**
+  String get platformName1060;
+
+  /// No description provided for @platformName1061.
+  ///
+  /// In zh, this message translates to:
+  /// **'Ryzen and Threadripper(17h and 19h)-high-end servers'**
+  String get platformName1061;
+
+  /// No description provided for @platformName1062.
+  ///
+  /// In zh, this message translates to:
+  /// **'Ryzen-notebook'**
+  String get platformName1062;
+
+  /// No description provided for @platformName1063.
+  ///
+  /// In zh, this message translates to:
+  /// **'Ryzen-mini host'**
+  String get platformName1063;
+
+  /// No description provided for @platformName1064.
+  ///
+  /// In zh, this message translates to:
+  /// **'server'**
+  String get platformName1064;
+
+  /// No description provided for @platformName1065.
+  ///
+  /// In zh, this message translates to:
+  /// **'notebook'**
+  String get platformName1065;
+
+  /// No description provided for @platformName1066.
+  ///
+  /// In zh, this message translates to:
+  /// **'Mini host'**
+  String get platformName1066;
 }
 
 class _AppLocalizationsDelegate

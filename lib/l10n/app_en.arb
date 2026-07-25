@@ -222,5 +222,728 @@
   "sleepPatchesRemark": "Optional, used to fix sleep/wake issues",
   "auxiliaryPatches": "Auxiliary Patches",
   "auxiliaryPatchesRemark": "Optional, completes ACPI structure or enhances compatibility",
-  "prebuiltPatches": "Prebuilt Patches"
+  "prebuiltPatches": "Prebuilt Patches",
+  "ssdtMsg500": "Device ACPI path:",
+  "ssdtMsg501": "Select the graphics card device to be counterfeited",
+  "ssdtMsg502": "Unknown graphics card model",
+  "ssdtMsg503": "Counterfeit graphics card ID database:",
+  "ssdtMsg504": "{arg0}",
+  "@ssdtMsg504": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg505": "For example: 73BF",
+  "ssdtMsg506": "Requires 4 hexadecimal characters",
+  "ssdtMsg507": "{arg0}",
+  "@ssdtMsg507": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg508": "Optional, graphics card name",
+  "ssdtMsg509": "Counterfeit graphics card ID:",
+  "ssdtMsg510": "Counterfeit graphics card name:",
+  "ssdtMsg511": "Whether to delete the source .dsl file: {arg0}",
+  "@ssdtMsg511": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg512": "Whether to force compilation: {arg0}",
+  "@ssdtMsg512": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg513": "Whether to overwrite the target EFI: {arg0}",
+  "@ssdtMsg513": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg514": "Match pattern: {arg0}",
+  "@ssdtMsg514": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg515": "Failed to load HPET data: {arg0}",
+  "@ssdtMsg515": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg516": "Failed to initialize HPET data: {arg0}",
+  "@ssdtMsg516": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg517": "Failed to initialize ACPI path: {arg0}",
+  "@ssdtMsg517": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg518": "No patch notes",
+  "ssdtMsg519": "No patch notes",
+  "ssdtMsg520": "Failed to get patch notes: {arg0}",
+  "@ssdtMsg520": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg521": "Failed to get patch notes",
+  "ssdtMsg522": "{arg0} Clear configuration path",
+  "@ssdtMsg522": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg523": "{arg0} selected an invalid file: {arg1}",
+  "@ssdtMsg523": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg524": "No patch configuration found for {arg0}",
+  "@ssdtMsg524": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg525": "Please select the SSDT that needs to be customized before proceeding!",
+  "ssdtMsg526": "Failed to execute patch: {arg0}",
+  "@ssdtMsg526": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg527": "Failed to execute patch [{arg0}]: {arg1}",
+  "@ssdtMsg527": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg528": "SSDT is being generated, please do not repeat the operation!",
+  "ssdtMsg529": "The patch list is empty!",
+  "ssdtMsg530": "Extraction is in progress, please do not repeat the operation!",
+  "ssdtMsg531": "The ACPI table extracted by the current {arg0} platform is very likely to be contaminated by ACPI patches injected by OpenCore and others. It is strongly recommended to operate on the Windows/Linux platform!",
+  "@ssdtMsg531": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg532": "Failed to extract ACPI!",
+  "ssdtMsg533": "Extraction of ACPI successful!",
+  "ssdtMsg534": "Failed to prepare patch: {arg0}",
+  "@ssdtMsg534": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg535": "Failed to load DSDT/ACPI: {arg0}",
+  "@ssdtMsg535": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg536": "The config.plist file does not exist: {arg0}",
+  "@ssdtMsg536": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg537": "Unrecognized plist file format",
+  "ssdtMsg538": "The config.plist type is \"{arg0}\"",
+  "@ssdtMsg538": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg539": "Failed to parse plist type: {arg0}",
+  "@ssdtMsg539": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg540": "Please select the ACPIs directory first!",
+  "ssdtMsg541": "Please select the config.plist file in the EFI directory first!",
+  "ssdtMsg542": "Invalid ACPI path: {arg0}",
+  "@ssdtMsg542": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg543": "The config.plist file does not exist: {arg0}",
+  "@ssdtMsg543": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg544": "Failed to merge plist files: {arg0}",
+  "@ssdtMsg544": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg545": "yes",
+  "ssdtMsg546": "no",
+  "ssdtMsg547": "yes",
+  "ssdtMsg548": "no",
+  "ssdtMsg549": "yes",
+  "ssdtMsg550": "no",
+  "ssdtMsg551": "built-in",
+  "ssdtMsg552": "remote",
+  "ssdtMsg553": "New version of iasl",
+  "ssdtMsg554": "Old version iasl-legacy",
+  "ssdtMsg555": "yes",
+  "ssdtMsg556": "no",
+  "ssdtMsg557": "Preferences",
+  "ssdtMsg558": "iasl mode",
+  "ssdtMsg559": "iasl compilation type",
+  "ssdtMsg560": "Delete decompiled .dsl files",
+  "ssdtMsg561": "Force compilation",
+  "ssdtMsg562": "Whether to overwrite the target EFI",
+  "ssdtMsg563": "ACPI matching mode",
+  "ssdtMsg564": "core patch",
+  "ssdtMsg565": "Feature patches",
+  "ssdtMsg566": "Device patches",
+  "ssdtMsg567": "dedicated patch",
+  "ssdtMsg568": "sleep patch",
+  "ssdtMsg569": "Auxiliary patches",
+  "ssdtMsg570": "Pre-made patches",
+  "ssdtMsg571": "Basic patches necessary for normal system startup and power management",
+  "ssdtMsg572": "Patches that provide additional functionality or fix feature issues",
+  "ssdtMsg573": "Patches for graphics card hardware",
+  "ssdtMsg574": "Patches only required on specific motherboards or architectures",
+  "ssdtMsg575": "Optional, used to fix sleep problems",
+  "ssdtMsg576": "Not required, but can complete the ACPI structure or enhance compatibility",
+  "ssdtMsg577": "Select DMAR",
+  "ssdtMsg578": "Please select the DMAR table that needs to be customized",
+  "ssdtMsg579": "Select APIC",
+  "ssdtMsg580": "Please select the APIC table that needs to be customized",
+  "ssdtMsg581": "Select FACP",
+  "ssdtMsg582": "Please select FACP form",
+  "ssdtMsg583": "Select FACP",
+  "ssdtMsg584": "Please select FACP form",
+  "ssdtMsg585": "log",
+  "ssdtMsg586": "clear log",
+  "ssdtMsg587": "Export log",
+  "ssdtMsg588": "Pre-made patches",
+  "ssdtMsg589": "Execute patch",
+  "ssdtMsg590": "Please select a file/directory",
+  "ssdtMsg591": "Extract ACPI",
+  "ssdtMsg592": "output directory",
+  "ssdtMsg593": "Please select DSDT file or ACPIs directory",
+  "ssdtMsg594": "Select ACPIs",
+  "ssdtMsg595": "Merge config",
+  "ssdtMsg596": "Select config",
+  "ssdtMsg597": "Please select the config.plist file",
+  "ssdtMsg598": "Preferences",
+  "ssdtMsg599": "Platform patches",
+  "ssdtMsg600": "Patch guide",
+  "ssdtMsg601": "About the application",
+  "ssdtMsg602": "{arg0}: {arg1}",
+  "@ssdtMsg602": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg603": "Select patch",
+  "ssdtMsg604": "Desktop",
+  "ssdtMsg605": "server",
+  "ssdtMsg606": "SSDT is being generated, please do not repeat the operation!",
+  "ssdtMsg607": "No SSDT selected",
+  "ssdtMsg608": "{arg0} {arg1}",
+  "@ssdtMsg608": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg609": "{arg0} list: {arg1}",
+  "@ssdtMsg609": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg610": "Prefabricated SSDT",
+  "ssdtMsg611": "Custom SSDT",
+  "ssdtMsg612": "CPU type:",
+  "ssdtMsg613": "Platform type:",
+  "ssdtMsg614": "Desktop",
+  "ssdtMsg615": "Desktop",
+  "ssdtMsg616": "notebook",
+  "ssdtMsg617": "notebook",
+  "ssdtMsg618": "Mini host",
+  "ssdtMsg619": "Mini host",
+  "ssdtMsg620": "server",
+  "ssdtMsg621": "server",
+  "ssdtMsg622": "Currently selected SSDT list: {arg0}",
+  "@ssdtMsg622": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg623": "Platform information:",
+  "ssdtMsg624": "Check all",
+  "ssdtMsg625": "Core (official recommendation)",
+  "ssdtMsg626": "Recommend (function fix)",
+  "ssdtMsg627": "Optional (complete with functions)",
+  "ssdtMsg628": "Platform information:",
+  "ssdtMsg629": "Prefabricated SSDT",
+  "ssdtMsg630": "Custom SSDT",
+  "ssdtMsg631": "Custom SSDT",
+  "ssdtMsg632": "Prefabricated SSDT",
+  "ssdtMsg633": "{arg0} {arg1}",
+  "@ssdtMsg633": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg634": "{arg0}{arg1}",
+  "@ssdtMsg634": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg635": "{arg0}{arg1}",
+  "@ssdtMsg635": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg636": "Visit GitHub",
+  "ssdtMsg637": "Download now",
+  "ssdtMsg638": "closure",
+  "ssdtMsg639": "new version found",
+  "ssdtMsg640": "Version number:",
+  "ssdtMsg641": "Release time:",
+  "ssdtMsg642": "Connection to server timed out",
+  "ssdtMsg643": "Connection to server timed out",
+  "ssdtMsg644": "Download canceled",
+  "ssdtMsg645": "Download canceled",
+  "ssdtMsg646": "Read response timeout",
+  "ssdtMsg647": "Read response timeout",
+  "ssdtMsg648": "An exception occurred while obtaining server information! Status code: {arg0}",
+  "@ssdtMsg648": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg649": "Request failed, status code: {arg0}",
+  "@ssdtMsg649": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg650": "Download timed out, no progress for {arg0} seconds, task canceled",
+  "@ssdtMsg650": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg651": "Log channel does not exist: {arg0}",
+  "@ssdtMsg651": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg652": "Export successful! File path: {arg0}{arg1}{arg2}",
+  "@ssdtMsg652": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg653": "Export failed! Error message: {arg0}",
+  "@ssdtMsg653": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg654": "File does not exist! Export failed! File path: {arg0}",
+  "@ssdtMsg654": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg655": "Log file initialization failed: {arg0}",
+  "@ssdtMsg655": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg656": "unknown",
+  "ssdtMsg657": "loosest",
+  "ssdtMsg658": "length only",
+  "ssdtMsg659": "Table ID and length, disable normalized headers",
+  "ssdtMsg660": "Table ID and length, enable normalized headers",
+  "ssdtMsg661": "Intel 1st generation Arrandale, 2nd generation Sandy Bridge, 3rd generation Ivy Bridge",
+  "ssdtMsg662": "Intel 4th generation Haswell, 5th generation Broadwell",
+  "ssdtMsg663": "Intel 6th generation Skylake, 7th generation Kaby Lake, some 4th generation Haswell",
+  "ssdtMsg664": "Custom brightness, usually used for some non-standard equipment or special needs settings",
+  "ssdtMsg665": "Custom brightness, usually used for some non-standard equipment or special needs settings",
+  "ssdtMsg666": "Intel 8th generation CoffeeLake ~ 10th generation, and AMD notebooks",
+  "ssdtMsg667": "Others (requires custom applbkl-name / applbkl-data device properties), may not be supported",
+  "ssdtMsg668": "Table does not exist: {arg0}",
+  "@ssdtMsg668": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg669": "Incoming data length is less than 4 bytes: {arg0}",
+  "@ssdtMsg669": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg670": "File content is less than 4 bytes: {arg0}",
+  "@ssdtMsg670": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg671": "Error reading signature: {arg0}, file path: {arg1}",
+  "@ssdtMsg671": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg672": "Temporary directory has been created at: {arg0}",
+  "@ssdtMsg672": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg673": "Temporary directory already exists at: {arg0}",
+  "@ssdtMsg673": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg674": "Decompiling {arg0} file...",
+  "@ssdtMsg674": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg675": "Decompiling SSDT.aml files in batches...",
+  "ssdtMsg676": "Decompiling DSDT.aml and SSDT.aml files in batches...",
+  "ssdtMsg677": "=> {arg0} decompilation failed!",
+  "@ssdtMsg677": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg678": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg678": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg679": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg679": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg680": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg680": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg681": "Decompiling failed .aml files individually...",
+  "ssdtMsg682": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg682": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg683": "=> {arg0} decompilation failed!",
+  "@ssdtMsg683": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg684": "Decompiling other .aml files...",
+  "ssdtMsg685": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg685": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg686": "Note: Try not to include Chinese or special characters in the path or file name, otherwise it may cause unexpected problems!",
+  "ssdtMsg687": "An error occurred: {arg0}",
+  "@ssdtMsg687": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg688": "An error occurred when processing paths in the getDevicePathsWithId method {arg0}: {arg1}",
+  "@ssdtMsg688": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg689": "Skip: {arg0}, which has been decompiled correctly before!",
+  "@ssdtMsg689": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg690": "Target file is in exclude list: {arg0}",
+  "@ssdtMsg690": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg691": "Invalid path: {arg0}",
+  "@ssdtMsg691": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg692": "Invalid path",
+  "ssdtMsg693": "No valid .aml or .dat file found at {arg0}!",
+  "@ssdtMsg693": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg694": "No valid .aml or .dat file found",
+  "ssdtMsg695": "Decompilation failed: {arg0}",
+  "@ssdtMsg695": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg696": "The acpidump tool is not ready! Operation terminated!",
+  "ssdtMsg697": "Exporting ACPI tables...",
+  "ssdtMsg698": "The current platform does not support it!",
+  "ssdtMsg699": "Waiting for sudo password authorization...",
+  "platformName1000": "Generation 0-Penryn-775 platform",
+  "platformName1001": "Generation 0-Penryn-Notebook",
+  "platformName1002": "Generation 0-Penryn-mini host",
+  "platformName1003": "10th Generation-Cascade Lake-X&W-X599 Platform",
+  "platformName1004": "10th Generation-Comet Lake-1200 Platform",
+  "platformName1005": "10th Generation-Comet Lake-Laptop",
+  "platformName1006": "10th generation-Comet Lake-mini host",
+  "platformName1007": "10th Generation-Ice Lake-Laptop",
+  "platformName1008": "10th generation-Ice Lake-mini host",
+  "platformName1009": "11th generation-Rocket Lake-1200 platform",
+  "platformName1010": "11th Generation-Rocket Lake-Laptop",
+  "platformName1011": "11th generation-Tiger Lake-mini host",
+  "platformName1012": "12th generation-Alder Lake-1700 platform",
+  "platformName1013": "12th generation-Alder Lake-notebook",
+  "platformName1014": "12th generation-Alder Lake-mini host",
+  "platformName1015": "13th generation-Raptor Lake-1700 platform",
+  "platformName1016": "13th generation-Raptor Lake-notebook",
+  "platformName1017": "13th generation-Raptor Lake-mini host",
+  "platformName1018": "14th generation-Raptor Lake-1700 platform",
+  "platformName1019": "14th generation-Raptor Lake-notebook",
+  "platformName1020": "14th generation-Raptor Lake-mini host",
+  "platformName1021": "15th Generation-Arrow Lake-1851 Platform",
+  "platformName1022": "15th generation-Arrow Lake-notebook",
+  "platformName1023": "15th generation-Arrow Lake-mini host",
+  "platformName1024": "Generation 1-Arrandale-Notebook",
+  "platformName1025": "Generation 1-Arrandale-mini host",
+  "platformName1026": "Generation 1-Lynnfield-1156 Platform",
+  "platformName1027": "Generation 1-Nehalem&Westmere-X58 platform",
+  "platformName1028": "2nd generation-Sandy Bridge-1155 platform",
+  "platformName1029": "2nd generation-Sandy Bridge-E-X79 platform",
+  "platformName1030": "2nd generation-Sandy Bridge-notebook",
+  "platformName1031": "2nd generation-Sandy Bridge-mini host",
+  "platformName1032": "3rd generation-Ivy Bridge-1155 platform",
+  "platformName1033": "3rd generation-Ivy Bridge-E-X79 platform",
+  "platformName1034": "3rd generation-Ivy Bridge-notebook",
+  "platformName1035": "3rd generation-Ivy Bridge-mini host",
+  "platformName1036": "4th generation-Haswell-1150 platform",
+  "platformName1037": "4th generation-Haswell-E-X99 platform",
+  "platformName1038": "4th Generation-Haswell-Laptop",
+  "platformName1039": "4th generation-Haswell-mini host",
+  "platformName1040": "5th generation-Broadwell-1150 platform",
+  "platformName1041": "5th generation-Broadwell-E-X99 platform",
+  "platformName1042": "5th generation-Broadwell-notebook",
+  "platformName1043": "5th generation-Broadwell-mini host",
+  "platformName1044": "6th generation-Skylake-1151 platform",
+  "platformName1045": "6th generation-Skylake-X&W-X299 platform",
+  "platformName1046": "6th generation-Skylake-notebook",
+  "platformName1047": "6th generation-Skylake-mini host",
+  "platformName1048": "7th Generation-Kaby Lake-1151 Platform",
+  "platformName1049": "7th Generation-Kaby Lake-Notebook",
+  "platformName1050": "7th generation-Kaby Lake-mini host",
+  "platformName1051": "8th generation-Coffee Lake-1151 platform",
+  "platformName1052": "8th Generation-Coffee Lake-Notebook",
+  "platformName1053": "8th generation-Coffee Lake-mini host",
+  "platformName1054": "9th generation-Coffee Lake-1151 platform",
+  "platformName1055": "9th Generation-Coffee Lake-Notebook",
+  "platformName1056": "9th generation-Coffee Lake-mini host",
+  "platformName1057": "Bulldozer(15h) and Jaguar(16h)",
+  "platformName1058": "Bulldozer(15h) and Jaguar(16h)-Notebook",
+  "platformName1059": "Bulldozer(15h) and Jaguar(16h)-mini host",
+  "platformName1060": "Ryzen and Threadripper(17h and 19h)",
+  "platformName1061": "Ryzen and Threadripper(17h and 19h)-high-end servers",
+  "platformName1062": "Ryzen-notebook",
+  "platformName1063": "Ryzen-mini host",
+  "platformName1064": "server",
+  "platformName1065": "notebook",
+  "platformName1066": "Mini host"
 }

@@ -22,7 +22,7 @@ class Run {
     if (args.isEmpty) return ['No command', '', '1'];
 
     if (message != null) debugPrint('$message');
-    if (show) debugPrint('执行命令: ${args.join(' ')}');
+    if (show) debugPrint('Executing command: ${args.join(' ')}');
 
     await ExecutablePermissionManager.instance.ensureExecutable(args.first);
 
@@ -69,7 +69,7 @@ class Run {
         exitCode.toString(),
       ];
     } catch (e) {
-      debugPrint('命令执行失败: $e');
+      debugPrint('Command execution failed: $e');
       return ['', 'Error: $e', '1'];
     }
   }

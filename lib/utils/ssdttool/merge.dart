@@ -64,14 +64,14 @@ class PatchMerge {
       // 处理异步路径检查
       final folderPath = await util.checkPath(filePath: resultsPath);
       if (folderPath.isEmpty) {
-        Log.error("路径检查失败，返回空路径");
+        Log.error("Path, Path");
         return null;
       }
 
       // 校验路径是否为有效的目录
       final directory = Directory(folderPath);
       if (!directory.existsSync()) {
-        Log.warning("修补ACPI路径不存在: $folderPath");
+        Log.warning("ACPIPathIn: $folderPath");
         return null;
       }
 
@@ -79,7 +79,7 @@ class PatchMerge {
       final pathInfoList = _getPatchesPlists(folderPath);
       // 校验pathInfoList是否合法（避免空列表导致的索引越界）
       if (pathInfoList.length < 2) {
-        Log.warning("获取plist文件信息失败，返回结果不完整");
+        Log.warning("plist, ");
         return null;
       }
       // 检查是否存在至少一个目标plist文件
@@ -94,7 +94,7 @@ class PatchMerge {
       return folderPath;
     } catch (e) {
       // 捕获所有异常
-      Log.error("处理结果文件夹路径时发生错误: $e");
+      Log.error("Path: $e");
       return null;
     }
   }
@@ -129,16 +129,16 @@ class PatchMerge {
           _extractData(patchOrDrop[key] ?? 0),
         );
         if (unprintable) {
-          Log.warning('\n注意: NormalizeHeaders 已启用，且表 ID 包含不可打印字符！');
-          Log.warning('$checkType 可能无法匹配或应用！\n');
+          Log.warning('\n: NormalizeHeaders ,  ID !');
+          Log.warning('$checkType !\n');
           return true;
         }
       }
     } else {
       for (String key in sig) {
         if (_extractData(patchOrDrop[key] ?? 0).contains(0x3F)) {
-          Log.warning('\n注意: NormalizeHeaders 未启用，且表 ID 包含 \'?\' 字符！');
-          Log.warning('$checkType 可能无法匹配或应用！\n');
+          Log.warning('\n: NormalizeHeaders ,  ID  \'?\' !');
+          Log.warning('$checkType !\n');
           return true;
         }
       }
@@ -188,9 +188,9 @@ class PatchMerge {
 
     var (plistType, configData, e) = getPlistInfo(configPath!);
     if (!handlePlistLoadingError(plistType, e)) return;
-    Log('=> 当前引导类型: ${plistType.value}');
-    Log('=> 当前config路径: $configPath');
-    Log('=> 当前补丁路径: $resultsFolder');
+    Log('=> : ${plistType.value}');
+    Log('=> configPath: $configPath');
+    Log('=> Path: $resultsFolder');
     var pathInfo = getPatchPlistForType(resultsFolder!, plistType);
     if (!validatePatchFile(pathInfo)) return;
     var (_, targetData, e2) = getPlistInfo(pathInfo.$1);
@@ -223,11 +223,11 @@ class PatchMerge {
 
   bool validateConfigPath() {
     if (configPath == null) {
-      Log.warning('未选择目标 config.plist 文件！');
+      Log.warning(' config.plist !');
       return false;
     }
     if (!File(configPath!).existsSync()) {
-      Log.warning('未找到目标 config.plist 文件：$configPath');
+      Log.warning('found config.plist : $configPath');
       return false;
     }
     return true;
@@ -243,13 +243,13 @@ class PatchMerge {
 
   bool handlePlistLoadingError(PlistType plistType, dynamic e) {
     String configName = path.basename(configPath!);
-    Log('正在加载 $configName...');
+    Log('In $configName...');
     if (e != null) {
-      Log.error('=> 加载失败！失败原因: $e \n');
+      Log.error('=> !: $e \n');
       return false;
     }
     if (plistType == PlistType.unknown) {
-      Log.warning('=> 无法确定 config.plist 类型！\n');
+      Log.warning('=>  config.plist !\n');
       return false;
     }
     return true;
@@ -257,28 +257,28 @@ class PatchMerge {
 
   bool validatePatchFile((String, bool, String) pathInfo) {
     if (!pathInfo.$2) {
-      Log.error('未找到补丁路径下 ${pathInfo.$3} 文件！已终止操作！\n');
+      Log.error('foundPath ${pathInfo.$3} !Operation aborted!\n');
       return false;
     }
     if (!File(pathInfo.$1).existsSync()) {
-      Log.error('未找到所需修补文件：${pathInfo.$1}！已终止操作！\n');
+      Log.error('found: ${pathInfo.$1}!Operation aborted!\n');
       return false;
     }
     String targetName = path.basename(pathInfo.$1);
-    Log('正在加载补丁 $targetName...');
+    Log('In $targetName...');
     return true;
   }
 
   bool handlePatchFileLoadingError(PlistType plistType, dynamic e2) {
     if (e2 != null) {
-      Log.error('=> 加载失败！失败原因: $e2\n');
+      Log.error('=> !: $e2\n');
       return false;
     }
     String configName = path.basename(configPath!);
     String targetName = path.basename(
       getPatchPlistForType(resultsFolder!, plistType).$1,
     );
-    Log('正在检查并确保 $configName 和 $targetName 中的路径配置无误...');
+    Log('In $configName  $targetName Path...');
     return true;
   }
 
@@ -346,42 +346,42 @@ class PatchMerge {
   ) {
     Log('');
     if (ssdts.isEmpty) {
-      Log.warning('=> 未找到 SSDT 表！跳过...');
+      Log.warning('=> found SSDT !skipping...');
       return;
     }
-    Log('=> 正在检查目标 SSDT 表（共 ${ssdts.length} 个）...');
+    Log('=> In SSDT ( ${ssdts.length} )...');
     List<dynamic> sRem = [];
     List<dynamic> sBroken = plistType == PlistType.openCore
         ? sOrig.where((x) => x is! Map).toList()
         : [];
     for (var s in ssdts) {
       if (plistType == PlistType.openCore) {
-        Log('=> 正在检查 ${s['Path']}...');
+        Log('=> In ${s['Path']}...');
         List<dynamic> existing = sOrig
             .where((x) => x is Map && x['Path'] == s['Path'])
             .toList();
         if (existing.isNotEmpty) {
-          Log('=> 已找到 ${existing.length} 个相同 SSDT 表，标记为替换...');
+          Log('=> Found ${existing.length}  SSDT , ...');
           sRem.addAll(existing);
         }
       } else {
-        Log('=> 正在检查 $s...');
+        Log('=> In $s...');
         List<dynamic> existing = sOrig.where((x) => x == s).toList();
         if (existing.isNotEmpty) {
-          Log('=> 已找到 ${existing.length} 个相同 SSDT 表，标记为替换...');
+          Log('=> Found ${existing.length}  SSDT , ...');
           sRem.addAll(existing);
         }
       }
     }
     if (sRem.isNotEmpty) {
-      Log('=> 正在移除 ${sRem.length} 个重复 SSDT 表...');
+      Log('=> In ${sRem.length}  SSDT ...');
       for (var r in sRem) {
         sOrig.remove(r);
       }
     } else {
-      Log('=> 未找到重复 SSDT 表！');
+      Log('=> found SSDT !');
     }
-    Log('=> 正在添加 ${ssdts.length} 个 SSDT 表...');
+    Log('=> InAdding ${ssdts.length}  SSDT ...');
     sOrig.addAll(ssdts);
     if (sBroken.isNotEmpty) {
       errorsFound = true;
@@ -400,14 +400,14 @@ class PatchMerge {
   ) {
     Log('');
     if (patch.isEmpty) {
-      Log('=> 未找到 Patch 补丁！跳过...');
+      Log('=> found Patch !skipping...');
       return;
     }
-    Log('=> 正在检查目标 Patch 补丁（共 ${patch.length} 个）...');
+    Log('=> In Patch ( ${patch.length} )...');
     List<dynamic> pRem = [];
     List<dynamic> pBroken = pOrig.where((x) => x is! Map).toList();
     for (var p in patch) {
-      Log('=> 正在检查 ${p['Comment']}...');
+      Log('=> In ${p['Comment']}...');
       if (plistType == PlistType.openCore &&
           checkNormalize(p, normalizeHeaders)) {
         errorsFound = true;
@@ -421,19 +421,19 @@ class PatchMerge {
           )
           .toList();
       if (existing.isNotEmpty) {
-        Log('=> 已找到 ${existing.length} 个相同 Patch 补丁，标记为替换...');
+        Log('=> Found ${existing.length}  Patch , ...');
         pRem.addAll(existing);
       }
     }
     if (pRem.isNotEmpty) {
-      Log('=> 正在移除 ${pRem.length} 个重复 Patch 补丁...');
+      Log('=> In ${pRem.length}  Patch ...');
       for (var r in pRem) {
         pOrig.remove(r);
       }
     } else {
-      Log('=> 未找到重复 Patch 补丁！');
+      Log('=> found Patch !');
     }
-    Log('=> 正在添加 ${patch.length} 个 Patch 补丁...');
+    Log('=> InAdding ${patch.length}  Patch ...');
     pOrig.addAll(patch);
     if (pBroken.isNotEmpty) {
       errorsFound = true;
@@ -452,15 +452,15 @@ class PatchMerge {
   ) {
     Log('');
     if (drops.isEmpty) {
-      Log('=> 未找到 Drop 补丁！跳过...');
+      Log('=> found Drop !skipping...');
       return;
     }
-    Log('=> 正在检查目标 Drop 补丁（共 ${drops.length} 个）...');
+    Log('=> In Drop ( ${drops.length} )...');
     List<dynamic> dRem = [];
     List<dynamic> dBroken = dOrig.where((x) => x is! Map).toList();
     for (var d in drops) {
       if (plistType == PlistType.openCore) {
-        Log('=> 正在检查 ${d['Comment']}...');
+        Log('=> In ${d['Comment']}...');
         if (checkNormalize(d, normalizeHeaders, checkType: 'Dropped table')) {
           errorsFound = true;
         }
@@ -473,7 +473,7 @@ class PatchMerge {
             )
             .toList();
         if (existing.isNotEmpty) {
-          Log('=> 已找到 ${existing.length} 个相同 Drop 补丁，标记为替换...');
+          Log('=> Found ${existing.length}  Drop , ...');
           dRem.addAll(existing);
         }
       } else {
@@ -481,7 +481,7 @@ class PatchMerge {
           d['Signature'] ?? '',
           d['TableId'] ?? '',
         ].where((x) => x.isNotEmpty).join(' - ');
-        Log('=> 正在检查 $name...');
+        Log('=> In $name...');
         List<dynamic> existing = dOrig
             .where(
               (x) =>
@@ -491,20 +491,20 @@ class PatchMerge {
             )
             .toList();
         if (existing.isNotEmpty) {
-          Log('=> 已找到 ${existing.length} 个相同 Drop 补丁，标记为替换...');
+          Log('=> Found ${existing.length}  Drop , ...');
           dRem.addAll(existing);
         }
       }
     }
     if (dRem.isNotEmpty) {
-      Log('=> 正在移除 ${dRem.length} 个重复 Drop 补丁...');
+      Log('=> In ${dRem.length}  Drop ...');
       for (var r in dRem) {
         dOrig.remove(r);
       }
     } else {
-      Log('=> 未找到重复 Drop 补丁！');
+      Log('=> found Drop !');
     }
-    Log('=> 正在添加 ${drops.length} 个 Drop 补丁...');
+    Log('=> InAdding ${drops.length}  Drop ...');
     dOrig.addAll(drops);
     if (dBroken.isNotEmpty) {
       errorsFound = true;
@@ -521,13 +521,13 @@ class PatchMerge {
   ) {
     Log('');
     if (quirks.isEmpty) {
-      Log('=> 未找到需要更新的 Quirks 配置！跳过...');
+      Log('=> foundUpdating Quirks !skipping...');
       return;
     }
-    Log('=> 正在检查目标 Quirks 配置...');
+    Log('=> In Quirks ...');
     for (var q in quirks.entries) {
       if (q.value is bool) {
-        Log('=> 更新 ${q.key} 为 ${q.value}');
+        Log('=> Updating ${q.key}  ${q.value}');
         quirksOrig[q.key] = quirks[q.key];
       }
     }
@@ -552,10 +552,10 @@ class PatchMerge {
   }
 
   void backupConfig(String configPath) {
-    Log('正在备份当前config配置文件...');
+    Log('Inconfig...');
     String backupPath = _generateBackupFileName(configPath);
     File(configPath).copySync(backupPath);
-    Log('已成功备份文件到: $backupPath');
+    Log('to: $backupPath');
   }
 
   String resolveOutputPath() {
@@ -566,7 +566,7 @@ class PatchMerge {
   }
 
   Future<void> copyAmlFiles(PlistType plistType, String configPath) async {
-    Log('准备复制 SSDT 文件...');
+    Log(' SSDT ...');
 
     String acpiPath = path.join(path.dirname(configPath), 'ACPI');
     if (plistType == PlistType.clover) {
@@ -579,18 +579,18 @@ class PatchMerge {
       if (results != null && Directory(results).existsSync()) {
         Directory(results).listSync().forEach((element) {
           if (element.path.endsWith('.aml')) {
-            Log('正在拷贝 " ${path.basename(element.path)} " 到 $acpiPath 目录...');
+            Log('In " ${path.basename(element.path)} " to $acpiPath ...');
             File(
               element.path,
             ).copySync(path.join(acpiPath, path.basename(element.path)));
           }
         });
       } else {
-        Log('未找到目录: $results');
+        Log('found: $results');
       }
     } else {
-      Log('未找到目录: $acpiPath');
-      Log('请手动将 $results 目录下所有 .aml 文件,拷贝到 $acpiPath 目录下！');
+      Log('found: $acpiPath');
+      Log(' $results  .aml ,to $acpiPath !');
     }
   }
 
@@ -602,10 +602,10 @@ class PatchMerge {
     );
 
     if (success) {
-      Log('保存配置成功！');
-      Log('合并已完成!\n');
+      Log('!');
+      Log('!\n');
     } else {
-      Log.error('合并失败!\n');
+      Log.error('!\n');
     }
 
     return success;
@@ -613,16 +613,16 @@ class PatchMerge {
 
   void logWarningsAndErrors(bool success, bool errorsFound) {
     if (errorsFound) {
-      Log.error('注意: 合并过程中发现潜在错误,请检查并修复！');
+      Log.error(': In,!');
     } else {
       if (!overwrite) {
         final outputDir = path.dirname(resolveOutputPath());
         final efiDir = path.dirname(configPath!);
         final acpiDir = path.join(path.dirname(configPath!), 'ACPI');
-        Log.warning('注意: 当前配置未设置为覆盖目标EFI模式!');
-        Log.warning('你需要手动进行以下操作:');
-        Log.warning('1. 你需要手动将 $outputDir 目录下 config.plist 文件替换到 $efiDir 目录下！');
-        Log.warning('2. 你需要手动将 $outputDir 目录下所有 .aml 文件,拷贝到 $acpiDir 目录下！');
+        Log.warning(': EFI!');
+        Log.warning(':');
+        Log.warning('1.  $outputDir  config.plist to $efiDir !');
+        Log.warning('2.  $outputDir  .aml ,to $acpiDir !');
       }
     }
   }
@@ -639,7 +639,7 @@ class PatchMerge {
     }
 
     final String outputPath = resolveOutputPath();
-    Log('正在保存配置到路径: $outputPath...');
+    Log('IntoPath: $outputPath...');
     final bool success = savePlist(outputPath, configData);
     logWarningsAndErrors(success, errorsFound);
   }

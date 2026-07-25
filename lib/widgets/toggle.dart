@@ -2,6 +2,7 @@
 //  Created by JeoJay127 
 //
 import 'package:flutter/material.dart';
+import 'package:macos_ui/macos_ui.dart';
 
 class ToggleSwitch extends StatefulWidget {
   final bool value;
@@ -64,29 +65,15 @@ class _ToggleSwitchState extends State<ToggleSwitch>
         children: [
           if (widget.text != null)
             Text(widget.text!, style: const TextStyle(fontSize: 11)),
-          AnimatedContainer(
-            width: widget.width,
-            height: widget.height,
-            duration: widget.duration,
-            padding: const EdgeInsets.all(4),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(widget.height / 2),
-              color: _currentValue ? widget.activeColor : widget.inactiveColor,
-            ),
-            child: AnimatedAlign(
-              duration: widget.duration,
-              alignment: _currentValue
-                  ? Alignment.centerRight
-                  : Alignment.centerLeft,
-              child: Container(
-                width: widget.height - 8,
-                height: widget.height - 8,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white,
-                ),
-              ),
-            ),
+          MacosSwitch(
+            value: _currentValue,
+            onChanged: (v) {
+              setState(() {
+                _currentValue = v;
+              });
+              widget.onChanged(v);
+            },
+            activeColor: MacosColor(widget.activeColor.value),
           ),
         ],
       ),

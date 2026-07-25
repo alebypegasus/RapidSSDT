@@ -38,11 +38,9 @@ class MarkdownPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    return Scaffold(
-      appBar: showAppBar
-          ? AppBar(centerTitle: true, title: Text(title ?? ''))
-          : null,
-      body: FutureBuilder<String>(
+    return Container(
+      color: Colors.transparent,
+      child: FutureBuilder<String>(
         future: _loadLocalizedMarkdown(context),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {

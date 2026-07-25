@@ -113,10 +113,10 @@ class ACPITool {
       await _checkIaslValid(local: useLocaliAsl, legacy: useLegacyAsl);
       if ((_iaslLocal.isEmpty && _iaslLocalLegacy.isEmpty) &&
           (_iaslRemote.isEmpty && _iaslRemoteLegacy.isEmpty)) {
-        Log.error("初始化 iasl 工具失败");
+        Log.error(" iasl ");
       }
     } catch (e) {
-      Log.error("初始化 iasl 工具失败: $e");
+      Log.error(" iasl : $e");
       rethrow;
     }
   }
@@ -145,12 +145,12 @@ class ACPITool {
     final jsonStr = await _httpClientManager.getString(
       url,
       onError: (e) {
-        Log.error('获取远程信息失败: $e');
+        Log.error(': $e');
       },
     );
 
     if (jsonStr == null || jsonStr.isEmpty) {
-      Log.warning('将使用本地已缓存的远程工具,可能无效,谨慎使用!');
+      Log.warning(',,!');
       return {};
     }
 
@@ -180,7 +180,7 @@ class ACPITool {
           ? await _loadRemoteChecksums()
           : await _loadLocalChecksums();
     } catch (e) {
-      Log.warning('校验出错: $e');
+      Log.warning(': $e');
       return FileVerifyStatus.unknown;
     }
 
@@ -188,7 +188,7 @@ class ACPITool {
     final expected = checksums[key];
 
     if (expected == null && checksums.isNotEmpty) {
-      Log.warning('校验信息未包含 $key');
+      Log.warning(' $key');
       return FileVerifyStatus.unknown;
     }
 
@@ -220,7 +220,7 @@ class ACPITool {
     );
 
     if (!isLocalMode && _activeRequests.containsKey(taskKey)) {
-      Log.warning('任务 $taskKey 已在执行，等待完成...');
+      Log.warning(' $taskKey In, ...');
       return await _activeRequests[taskKey]!;
     }
 
@@ -293,13 +293,13 @@ class ACPITool {
   }
 
   Future<String> _validateLocalTool(String filePath, String toolName) async {
-    Log('校验内置工具 $toolName...');
+    Log(' $toolName...');
     final status = await _verifyToolFile(filePath, remote: false);
     if (status == FileVerifyStatus.valid) {
-      Log('内置工具 $toolName 校验通过!');
+      Log(' $toolName !');
       return filePath;
     }
-    Log('内置工具 $toolName 无效，重新复制');
+    Log(' $toolName , ');
     await _copyLocalToolFiles(replaceExisting: true);
     return filePath;
   }
@@ -309,25 +309,25 @@ class ACPITool {
     String toolName,
     String toolDir,
   ) async {
-    Log('校验远程工具 $toolName...');
+    Log(' $toolName...');
 
     return _runTaskIfNotActive(_getTaskKeyByName(toolName), () async {
       if (useLocaliAsl) {
-        Log.warning('已切换到内置模式,放弃远程任务 $toolName');
+        Log.warning('to, $toolName');
         return '';
       }
       final status = await _verifyToolFile(filePath, remote: true);
       switch (status) {
         case FileVerifyStatus.valid:
-          Log('远程工具 $toolName 校验通过');
+          Log(' $toolName ');
           return filePath;
 
         case FileVerifyStatus.unknown:
-          Log.warning('远程工具 $toolName 校验状态未知，谨慎使用!');
+          Log.warning(' $toolName , !');
           return filePath;
 
         case FileVerifyStatus.invalid:
-          Log.error('远程工具 $toolName 校验失败，文件不存在或无效，重新下载');
+          Log.error(' $toolName , In, ');
           await _deleteFileIfExists(filePath);
 
           final url = _getDownloadUrlByName(toolName);
@@ -360,7 +360,7 @@ class ACPITool {
       await _extractZip(filePath: filePath, extractDir: targetDir);
       return true;
     } catch (e) {
-      Log.error('下载/解压失败: $e');
+      Log.error('/: $e');
       return false;
     } finally {
       _cancelTokens.remove(cancelToken);
@@ -373,7 +373,7 @@ class ACPITool {
     bool deleteZipAfter = true,
   }) async {
     if (!filePath.toLowerCase().endsWith('.zip')) return;
-    Log('开始解压: ${path.basename(filePath)}');
+    Log(': ${path.basename(filePath)}');
     final zipFile = File(filePath);
     if (!await zipFile.exists()) throw Exception('ZIP 文件不存在: $filePath');
 
@@ -456,7 +456,7 @@ class ACPITool {
         if (success && (!Platform.isWindows || _isACPITool(target))) {
           await _chmodExecutable(target);
         }
-        if (!success) Log.error('复制内置工具失败: $asset 到 $localDir');
+        if (!success) Log.error(': $asset to $localDir');
       }),
     );
   }
@@ -480,7 +480,7 @@ class ACPITool {
       await File(targetFilePath).writeAsBytes(assetData.buffer.asUint8List());
       return true;
     } catch (e) {
-      Log.error('复制 Asset 失败 ($assetPath → $targetFilePath): $e');
+      Log.error(' Asset  ($assetPath → $targetFilePath): $e');
       return false;
     }
   }
@@ -517,7 +517,7 @@ class ACPITool {
   ) async {
     final existing = _activeRequests[taskKey];
     if (existing != null) {
-      Log.warning('任务 $taskKey 已在执行，等待完成...');
+      Log.warning(' $taskKey In, ...');
       return await existing as T;
     }
 
@@ -525,7 +525,7 @@ class ACPITool {
       try {
         return await task();
       } catch (e) {
-        Log.error('$taskKey 执行失败: $e');
+        Log.error('$taskKey : $e');
         rethrow;
       } finally {
         _activeRequests.remove(taskKey);
@@ -539,11 +539,11 @@ class ACPITool {
 
   void _logNetworkError(dynamic e) {
     if (e is SocketException) {
-      Log.error("网络连接异常: $e");
+      Log.error(": $e");
     } else if (e is TimeoutException) {
-      Log.error('网络链接超时!请稍后尝试!: $e');
+      Log.error('!!: $e');
     } else {
-      Log.error('发生异常: $e');
+      Log.error(': $e');
     }
   }
 
@@ -556,7 +556,7 @@ class ACPITool {
     final toolType = isLocal ? "内置" : "远程";
     final toolName = path.basename(toolPath);
     if (toolPath.isNotEmpty) {
-      Log('$toolType工具 $toolName 准备就绪!\n');
+      Log('$toolType $toolName !\n');
     } else {
       Log.error(
         '$toolType工具$toolName未就绪！${isLocal ? "请检查工具完整性" : "建议切换到内置模式"}! \n',

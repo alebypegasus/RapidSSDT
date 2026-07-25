@@ -1,7 +1,8 @@
 //  custom_checkbox_list_tile.dart 
 //  Created by JeoJay127 
 //
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide CheckboxListTile;
+import 'package:macos_ui/macos_ui.dart';
 
 class CustomCheckboxListTile extends StatefulWidget {
   // == 控制部分 ==
@@ -121,50 +122,28 @@ class _CustomCheckboxListTileState extends State<CustomCheckboxListTile> {
       borderRadius: BorderRadius.circular(widget.borderRadius),
       child: Material(
           color: isChecked ? selectedBackgroundColor : Colors.transparent,
-          child: CheckboxListTile(
-            value: isChecked,
-            onChanged: _handleChanged,
-            mouseCursor: widget.mouseCursor,
-            activeColor: activeColor,
-            fillColor: widget.fillColor,
-            checkColor: widget.checkColor,
-            hoverColor: widget.hoverColor,
-            overlayColor: widget.overlayColor,
-            splashRadius: widget.splashRadius,
-            materialTapTargetSize: widget.materialTapTargetSize,
-            visualDensity: widget.visualDensity,
-            focusNode: widget.focusNode,
-            autofocus: widget.autofocus,
-            shape: widget.shape,
-            side: widget.side,
-            isError: widget.isError,
-            enabled: widget.enabled,
-            tileColor: widget.tileColor,
-            selectedTileColor: widget.selectedTileColor,
-            title: isChecked && widget.title != null
-                ? DefaultTextStyle.merge(
-                    style: TextStyle(color: selectedTitleTextColor),
-                    child: widget.title!,
-                  )
-                : widget.title,
-            subtitle: isChecked && widget.subtitle != null
-                ? DefaultTextStyle.merge(
-                    style: TextStyle(color: selectedSubtitleTextColor),
-                    child: widget.subtitle!,
-                  )
-                : widget.subtitle,
-            isThreeLine: widget.isThreeLine,
-            dense: widget.dense,
-            secondary: widget.secondary,
-            selected: widget.selected,
-            controlAffinity: widget.controlAffinity,
-            contentPadding: widget.contentPadding,
-            tristate: widget.tristate,
-            checkboxShape: widget.checkboxShape,
-            onFocusChange: widget.onFocusChange,
-            enableFeedback: widget.enableFeedback,
-            checkboxSemanticLabel: widget.checkboxSemanticLabel,
-            checkboxScaleFactor: widget.checkboxScaleFactor,
+          child: GestureDetector(
+            onTap: () => _handleChanged(!isChecked),
+            child: MacosListTile(
+              leading: MacosCheckbox(
+                value: isChecked,
+                onChanged: _handleChanged,
+                activeColor: activeColor != null ? MacosColor(activeColor.value) : null,
+              ),
+              title: isChecked && widget.title != null
+                  ? DefaultTextStyle.merge(
+                      style: TextStyle(color: selectedTitleTextColor),
+                      child: widget.title!,
+                    )
+                  : widget.title ?? const SizedBox.shrink(),
+              subtitle: isChecked && widget.subtitle != null
+                  ? DefaultTextStyle.merge(
+                      style: TextStyle(color: selectedSubtitleTextColor),
+                      child: widget.subtitle!,
+                    )
+                  : widget.subtitle,
+              onClick: () => _handleChanged(!isChecked),
+            ),
           )),
     );
   }

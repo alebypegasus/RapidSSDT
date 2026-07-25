@@ -1,0 +1,3222 @@
+{
+  "ssdtMsg500": "Device ACPI path:",
+  "ssdtMsg501": "Select the graphics card device to be counterfeited",
+  "ssdtMsg502": "Unknown graphics card model",
+  "ssdtMsg503": "Counterfeit graphics card ID database:",
+  "ssdtMsg504": "{arg0}",
+  "@ssdtMsg504": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg505": "For example: 73BF",
+  "ssdtMsg506": "Requires 4 hexadecimal characters",
+  "ssdtMsg507": "{arg0}",
+  "@ssdtMsg507": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg508": "Optional, graphics card name",
+  "ssdtMsg509": "Counterfeit graphics card ID:",
+  "ssdtMsg510": "Counterfeit graphics card name:",
+  "ssdtMsg511": "Whether to delete the source .dsl file: {arg0}",
+  "@ssdtMsg511": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg512": "Whether to force compilation: {arg0}",
+  "@ssdtMsg512": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg513": "Whether to overwrite the target EFI: {arg0}",
+  "@ssdtMsg513": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg514": "Match pattern: {arg0}",
+  "@ssdtMsg514": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg515": "Failed to load HPET data: {arg0}",
+  "@ssdtMsg515": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg516": "Failed to initialize HPET data: {arg0}",
+  "@ssdtMsg516": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg517": "Failed to initialize ACPI path: {arg0}",
+  "@ssdtMsg517": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg518": "No patch notes",
+  "ssdtMsg519": "No patch notes",
+  "ssdtMsg520": "Failed to get patch notes: {arg0}",
+  "@ssdtMsg520": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg521": "Failed to get patch notes",
+  "ssdtMsg522": "{arg0} Clear configuration path",
+  "@ssdtMsg522": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg523": "{arg0} selected an invalid file: {arg1}",
+  "@ssdtMsg523": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg524": "No patch configuration found for {arg0}",
+  "@ssdtMsg524": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg525": "Please select the SSDT that needs to be customized before proceeding!",
+  "ssdtMsg526": "Failed to execute patch: {arg0}",
+  "@ssdtMsg526": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg527": "Failed to execute patch [{arg0}]: {arg1}",
+  "@ssdtMsg527": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg528": "SSDT is being generated, please do not repeat the operation!",
+  "ssdtMsg529": "The patch list is empty!",
+  "ssdtMsg530": "Extraction is in progress, please do not repeat the operation!",
+  "ssdtMsg531": "The ACPI table extracted by the current {arg0} platform is very likely to be contaminated by ACPI patches injected by OpenCore and others. It is strongly recommended to operate on the Windows/Linux platform!",
+  "@ssdtMsg531": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg532": "Failed to extract ACPI!",
+  "ssdtMsg533": "Extraction of ACPI successful!",
+  "ssdtMsg534": "Failed to prepare patch: {arg0}",
+  "@ssdtMsg534": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg535": "Failed to load DSDT/ACPI: {arg0}",
+  "@ssdtMsg535": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg536": "The config.plist file does not exist: {arg0}",
+  "@ssdtMsg536": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg537": "Unrecognized plist file format",
+  "ssdtMsg538": "The config.plist type is \"{arg0}\"",
+  "@ssdtMsg538": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg539": "Failed to parse plist type: {arg0}",
+  "@ssdtMsg539": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg540": "Please select the ACPIs directory first!",
+  "ssdtMsg541": "Please select the config.plist file in the EFI directory first!",
+  "ssdtMsg542": "Invalid ACPI path: {arg0}",
+  "@ssdtMsg542": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg543": "The config.plist file does not exist: {arg0}",
+  "@ssdtMsg543": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg544": "Failed to merge plist files: {arg0}",
+  "@ssdtMsg544": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg545": "yes",
+  "ssdtMsg546": "no",
+  "ssdtMsg547": "yes",
+  "ssdtMsg548": "no",
+  "ssdtMsg549": "yes",
+  "ssdtMsg550": "no",
+  "ssdtMsg551": "built-in",
+  "ssdtMsg552": "remote",
+  "ssdtMsg553": "New version of iasl",
+  "ssdtMsg554": "Old version iasl-legacy",
+  "ssdtMsg555": "yes",
+  "ssdtMsg556": "no",
+  "ssdtMsg557": "Preferences",
+  "ssdtMsg558": "iasl mode",
+  "ssdtMsg559": "iasl compilation type",
+  "ssdtMsg560": "Delete decompiled .dsl files",
+  "ssdtMsg561": "Force compilation",
+  "ssdtMsg562": "Whether to overwrite the target EFI",
+  "ssdtMsg563": "ACPI matching mode",
+  "ssdtMsg564": "core patch",
+  "ssdtMsg565": "Feature patches",
+  "ssdtMsg566": "Device patches",
+  "ssdtMsg567": "dedicated patch",
+  "ssdtMsg568": "sleep patch",
+  "ssdtMsg569": "Auxiliary patches",
+  "ssdtMsg570": "Pre-made patches",
+  "ssdtMsg571": "Basic patches necessary for normal system startup and power management",
+  "ssdtMsg572": "Patches that provide additional functionality or fix feature issues",
+  "ssdtMsg573": "Patches for graphics card hardware",
+  "ssdtMsg574": "Patches only required on specific motherboards or architectures",
+  "ssdtMsg575": "Optional, used to fix sleep problems",
+  "ssdtMsg576": "Not required, but can complete the ACPI structure or enhance compatibility",
+  "ssdtMsg577": "Select DMAR",
+  "ssdtMsg578": "Please select the DMAR table that needs to be customized",
+  "ssdtMsg579": "Select APIC",
+  "ssdtMsg580": "Please select the APIC table that needs to be customized",
+  "ssdtMsg581": "Select FACP",
+  "ssdtMsg582": "Please select FACP form",
+  "ssdtMsg583": "Select FACP",
+  "ssdtMsg584": "Please select FACP form",
+  "ssdtMsg585": "log",
+  "ssdtMsg586": "clear log",
+  "ssdtMsg587": "Export log",
+  "ssdtMsg588": "Pre-made patches",
+  "ssdtMsg589": "Execute patch",
+  "ssdtMsg590": "Please select a file/directory",
+  "ssdtMsg591": "Extract ACPI",
+  "ssdtMsg592": "output directory",
+  "ssdtMsg593": "Please select DSDT file or ACPIs directory",
+  "ssdtMsg594": "Select ACPIs",
+  "ssdtMsg595": "Merge config",
+  "ssdtMsg596": "Select config",
+  "ssdtMsg597": "Please select the config.plist file",
+  "ssdtMsg598": "Preferences",
+  "ssdtMsg599": "Platform patches",
+  "ssdtMsg600": "Patch guide",
+  "ssdtMsg601": "About the application",
+  "ssdtMsg602": "{arg0}: {arg1}",
+  "@ssdtMsg602": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg603": "Select patch",
+  "ssdtMsg604": "Desktop",
+  "ssdtMsg605": "server",
+  "ssdtMsg606": "SSDT is being generated, please do not repeat the operation!",
+  "ssdtMsg607": "No SSDT selected",
+  "ssdtMsg608": "{arg0} {arg1}",
+  "@ssdtMsg608": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg609": "{arg0} list: {arg1}",
+  "@ssdtMsg609": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg610": "Prefabricated SSDT",
+  "ssdtMsg611": "Custom SSDT",
+  "ssdtMsg612": "CPU type:",
+  "ssdtMsg613": "Platform type:",
+  "ssdtMsg614": "Desktop",
+  "ssdtMsg615": "Desktop",
+  "ssdtMsg616": "notebook",
+  "ssdtMsg617": "notebook",
+  "ssdtMsg618": "Mini host",
+  "ssdtMsg619": "Mini host",
+  "ssdtMsg620": "server",
+  "ssdtMsg621": "server",
+  "ssdtMsg622": "Currently selected SSDT list: {arg0}",
+  "@ssdtMsg622": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg623": "Platform information:",
+  "ssdtMsg624": "Check all",
+  "ssdtMsg625": "Core (official recommendation)",
+  "ssdtMsg626": "Recommend (function fix)",
+  "ssdtMsg627": "Optional (complete with functions)",
+  "ssdtMsg628": "Platform information:",
+  "ssdtMsg629": "Prefabricated SSDT",
+  "ssdtMsg630": "Custom SSDT",
+  "ssdtMsg631": "Custom SSDT",
+  "ssdtMsg632": "Prefabricated SSDT",
+  "ssdtMsg633": "{arg0} {arg1}",
+  "@ssdtMsg633": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg634": "{arg0}{arg1}",
+  "@ssdtMsg634": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg635": "{arg0}{arg1}",
+  "@ssdtMsg635": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg636": "Visit GitHub",
+  "ssdtMsg637": "Download now",
+  "ssdtMsg638": "closure",
+  "ssdtMsg639": "new version found",
+  "ssdtMsg640": "Version number:",
+  "ssdtMsg641": "Release time:",
+  "ssdtMsg642": "Connection to server timed out",
+  "ssdtMsg643": "Connection to server timed out",
+  "ssdtMsg644": "Download canceled",
+  "ssdtMsg645": "Download canceled",
+  "ssdtMsg646": "Read response timeout",
+  "ssdtMsg647": "Read response timeout",
+  "ssdtMsg648": "An exception occurred while obtaining server information! Status code: {arg0}",
+  "@ssdtMsg648": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg649": "Request failed, status code: {arg0}",
+  "@ssdtMsg649": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg650": "Download timed out, no progress for {arg0} seconds, task canceled",
+  "@ssdtMsg650": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg651": "Log channel does not exist: {arg0}",
+  "@ssdtMsg651": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg652": "Export successful! File path: {arg0}{arg1}{arg2}",
+  "@ssdtMsg652": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg653": "Export failed! Error message: {arg0}",
+  "@ssdtMsg653": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg654": "File does not exist! Export failed! File path: {arg0}",
+  "@ssdtMsg654": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg655": "Log file initialization failed: {arg0}",
+  "@ssdtMsg655": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg656": "unknown",
+  "ssdtMsg657": "loosest",
+  "ssdtMsg658": "length only",
+  "ssdtMsg659": "Table ID and length, disable normalized headers",
+  "ssdtMsg660": "Table ID and length, enable normalized headers",
+  "ssdtMsg661": "Intel 1st generation Arrandale, 2nd generation Sandy Bridge, 3rd generation Ivy Bridge",
+  "ssdtMsg662": "Intel 4th generation Haswell, 5th generation Broadwell",
+  "ssdtMsg663": "Intel 6th generation Skylake, 7th generation Kaby Lake, some 4th generation Haswell",
+  "ssdtMsg664": "Custom brightness, usually used for some non-standard equipment or special needs settings",
+  "ssdtMsg665": "Custom brightness, usually used for some non-standard equipment or special needs settings",
+  "ssdtMsg666": "Intel 8th generation CoffeeLake ~ 10th generation, and AMD notebooks",
+  "ssdtMsg667": "Others (requires custom applbkl-name / applbkl-data device properties), may not be supported",
+  "ssdtMsg668": "Table does not exist: {arg0}",
+  "@ssdtMsg668": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg669": "Incoming data length is less than 4 bytes: {arg0}",
+  "@ssdtMsg669": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg670": "File content is less than 4 bytes: {arg0}",
+  "@ssdtMsg670": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg671": "Error reading signature: {arg0}, file path: {arg1}",
+  "@ssdtMsg671": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg672": "Temporary directory has been created at: {arg0}",
+  "@ssdtMsg672": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg673": "Temporary directory already exists at: {arg0}",
+  "@ssdtMsg673": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg674": "Decompiling {arg0} file...",
+  "@ssdtMsg674": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg675": "Decompiling SSDT.aml files in batches...",
+  "ssdtMsg676": "Decompiling DSDT.aml and SSDT.aml files in batches...",
+  "ssdtMsg677": "=> {arg0} decompilation failed!",
+  "@ssdtMsg677": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg678": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg678": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg679": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg679": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg680": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg680": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg681": "Decompiling failed .aml files individually...",
+  "ssdtMsg682": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg682": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg683": "=> {arg0} decompilation failed!",
+  "@ssdtMsg683": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg684": "Decompiling other .aml files...",
+  "ssdtMsg685": "=> {arg0} decompiled successfully!",
+  "@ssdtMsg685": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg686": "Note: Try not to include Chinese or special characters in the path or file name, otherwise it may cause unexpected problems!",
+  "ssdtMsg687": "An error occurred: {arg0}",
+  "@ssdtMsg687": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg688": "An error occurred when processing paths in the getDevicePathsWithId method {arg0}: {arg1}",
+  "@ssdtMsg688": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg689": "Skip: {arg0}, which has been decompiled correctly before!",
+  "@ssdtMsg689": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg690": "Target file is in exclude list: {arg0}",
+  "@ssdtMsg690": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg691": "Invalid path: {arg0}",
+  "@ssdtMsg691": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg692": "Invalid path",
+  "ssdtMsg693": "No valid .aml or .dat file found at {arg0}!",
+  "@ssdtMsg693": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg694": "No valid .aml or .dat file found",
+  "ssdtMsg695": "Decompilation failed: {arg0}",
+  "@ssdtMsg695": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg696": "The acpidump tool is not ready! Operation terminated!",
+  "ssdtMsg697": "Exporting ACPI tables...",
+  "ssdtMsg698": "The current platform does not support it!",
+  "ssdtMsg699": "Waiting for sudo password authorization...",
+  "ssdtMsg700": "User cancels authorization",
+  "ssdtMsg701": "An error occurred: {arg0}",
+  "@ssdtMsg701": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg702": "The ACPI table extracted by the current platform is empty or does not support exporting the ACPI table!",
+  "ssdtMsg703": "=> DSDT not found, exporting by signature...",
+  "ssdtMsg704": "An error occurred: {arg0}",
+  "@ssdtMsg704": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg705": "Updating table name...",
+  "ssdtMsg706": "=> Rename failed: {arg0}",
+  "@ssdtMsg706": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg707": "Export ACPI table successfully!",
+  "ssdtMsg708": "No valid ACPI table provided!",
+  "ssdtMsg709": "Hexadecimal data starting at position {arg0} not found!",
+  "@ssdtMsg709": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg710": "The hexadecimal data to be located was not found!",
+  "ssdtMsg711": "{arg2} not found in range index {arg0}-{arg1}!",
+  "@ssdtMsg711": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg712": "Instance {arg0} is out of scope!",
+  "@ssdtMsg712": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg713": "The hexadecimal data to be located was not found!",
+  "ssdtMsg714": "The hexadecimal data to be located was not found!",
+  "ssdtMsg715": "Unique fill ID not found!",
+  "ssdtMsg716": "=> getScopeOfDevice: invalid table parameter",
+  "ssdtMsg717": "=> Definition of Device ({arg0}) not found in table (devicePath={arg1})",
+  "@ssdtMsg717": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg718": "=> Found Device ({arg0}) row (index={arg1}), but cannot extract Scope",
+  "@ssdtMsg718": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg719": "=> The extracted Scope does not appear to contain the device name {arg0} (devicePath={arg1}), but the content is still returned.",
+  "@ssdtMsg719": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg720": "getScopeOfDevice: An error occurred while retrieving scope: {arg0}",
+  "@ssdtMsg720": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg721": "Execution failed: {arg0}, error: {arg1}",
+  "@ssdtMsg721": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg722": "Unsupported patch operation: {arg0}",
+  "@ssdtMsg722": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg723": "Failed to get plist type: {arg0}",
+  "@ssdtMsg723": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg724": "\\nNote: NormalizeHeaders is enabled and the table ID contains non-printable characters!",
+  "ssdtMsg725": "{arg0} may not be matched or applied! \\n",
+  "@ssdtMsg725": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg726": "\\nNote: NormalizeHeaders is not enabled and the table ID contains \\",
+  "ssdtMsg727": "character!",
+  "ssdtMsg728": "{arg0} may not be matched or applied! \\n",
+  "@ssdtMsg728": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg729": "=> Current boot type: {arg0}",
+  "@ssdtMsg729": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg730": "=> Current config path: {arg0}",
+  "@ssdtMsg730": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg731": "=> Current patch path: {arg0}",
+  "@ssdtMsg731": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg732": "Target config.plist file not selected!",
+  "ssdtMsg733": "Target config.plist file not found: {arg0}",
+  "@ssdtMsg733": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg734": "Loading {arg0}...",
+  "@ssdtMsg734": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg735": "=> Loading failed! Failure reason: {arg0} \\n",
+  "@ssdtMsg735": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg736": "=> Unable to determine config.plist type! \\n",
+  "ssdtMsg737": "The {arg0} file in the patch path was not found! Operation terminated! \\n",
+  "@ssdtMsg737": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg738": "Required patch file not found: {arg0}! Operation terminated! \\n",
+  "@ssdtMsg738": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg739": "Loading patch {arg0}...",
+  "@ssdtMsg739": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg740": "=> Loading failed! Failure reason: {arg0}\\n",
+  "@ssdtMsg740": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg741": "Checking to make sure the paths in {arg0} and {arg1} are configured correctly...",
+  "@ssdtMsg741": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg742": "=> SSDT table not found! jump over...",
+  "ssdtMsg743": "=> Checking target SSDT tables ({arg0} in total)...",
+  "@ssdtMsg743": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg744": "=> Checking ${s[",
+  "ssdtMsg745": "=> Found {arg0} identical SSDT tables, marked for replacement...",
+  "@ssdtMsg745": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg746": "=> Checking {arg0}...",
+  "@ssdtMsg746": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg747": "=> Found {arg0} identical SSDT tables, marked for replacement...",
+  "@ssdtMsg747": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg748": "=> Removing {arg0} duplicate SSDT tables...",
+  "@ssdtMsg748": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg749": "=> Duplicate SSDT table not found!",
+  "ssdtMsg750": "=> Adding {arg0} SSDT tables...",
+  "@ssdtMsg750": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg751": "\\nNote: {arg0} malformed SSDT tables found, please fix {arg1}!",
+  "@ssdtMsg751": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg752": "=> Patch not found! jump over...",
+  "ssdtMsg753": "=> Checking target patches ({arg0} in total)...",
+  "@ssdtMsg753": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg754": "=> Checking ${p[",
+  "ssdtMsg755": "=> {arg0} identical patches found, marked for replacement...",
+  "@ssdtMsg755": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg756": "=> Removing {arg0} duplicate patches...",
+  "@ssdtMsg756": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg757": "=> Duplicate Patch not found!",
+  "ssdtMsg758": "=> Adding {arg0} patches...",
+  "@ssdtMsg758": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg759": "\\nNote: {arg0} malformed patches have been found, please fix {arg1}!",
+  "@ssdtMsg759": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg760": "=> Drop patch not found! jump over...",
+  "ssdtMsg761": "=> Checking target Drop patches ({arg0} total)...",
+  "@ssdtMsg761": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg762": "=> Checking ${d[",
+  "ssdtMsg763": "=> {arg0} identical Drop patches found, marked for replacement...",
+  "@ssdtMsg763": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg764": "=> Checking {arg0}...",
+  "@ssdtMsg764": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg765": "=> {arg0} identical Drop patches found, marked for replacement...",
+  "@ssdtMsg765": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg766": "=> Removing {arg0} duplicate Drop patches...",
+  "@ssdtMsg766": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg767": "=> Duplicate Drop patch not found!",
+  "ssdtMsg768": "=> Adding {arg0} Drop patches...",
+  "@ssdtMsg768": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg769": "\\nNote: {arg0} malformed Drop patches, please fix {arg1}!",
+  "@ssdtMsg769": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg770": "=> No Quirks configuration found that needs to be updated! jump over...",
+  "ssdtMsg771": "=> Checking target Quirks configuration...",
+  "ssdtMsg772": "=> Update {arg0} to {arg1}",
+  "@ssdtMsg772": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg773": "Backing up current config configuration file...",
+  "ssdtMsg774": "Successfully backed up files to: {arg0}",
+  "@ssdtMsg774": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg775": "Preparing to copy SSDT files...",
+  "ssdtMsg776": "Copying \" {arg0} \" to directory {arg1}...",
+  "@ssdtMsg776": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg777": "Directory not found: {arg0}",
+  "@ssdtMsg777": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg778": "Directory not found: {arg0}",
+  "@ssdtMsg778": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg779": "Please manually copy all .aml files in the {arg0} directory to the {arg1} directory!",
+  "@ssdtMsg779": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg780": "Configuration saved successfully!",
+  "ssdtMsg781": "Merge completed!\\n",
+  "ssdtMsg782": "Merge failed!\\n",
+  "ssdtMsg783": "Note: Potential errors are found during the merge process, please check and fix them!",
+  "ssdtMsg784": "Note: The current configuration is not set up to override the target EFI mode!",
+  "ssdtMsg785": "You need to do the following manually:",
+  "ssdtMsg786": "1. You need to manually replace the config.plist file in the {arg0} directory to the {arg1} directory!",
+  "@ssdtMsg786": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg787": "2. You need to manually copy all .aml files in the {arg0} directory to the {arg1} directory!",
+  "@ssdtMsg787": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg788": "Saving configuration to path: {arg0}...",
+  "@ssdtMsg788": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg789": "Path check fails and returns empty path",
+  "ssdtMsg790": "Patch ACPI path does not exist: {arg0}",
+  "@ssdtMsg790": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg791": "Failed to obtain plist file information and the returned result was incomplete.",
+  "ssdtMsg792": "The patches_OC.plist and patches_Clover.plist files were not found under the patch ACPI path: {arg0}! Please make the required ACPI patches before trying again!",
+  "@ssdtMsg792": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg793": "An error occurred while processing the results folder path: {arg0}",
+  "@ssdtMsg793": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg794": "Root dictionary element not found",
+  "ssdtMsg795": "Failed to parse plist! Failure reason: {arg0}",
+  "@ssdtMsg795": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg796": "File does not exist: {arg0}",
+  "@ssdtMsg796": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg797": "Error loading {arg0} file: {arg1}",
+  "@ssdtMsg797": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg798": "Error loading {arg0} file: {arg1}",
+  "@ssdtMsg798": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg799": "Failed to write file! Failure reason: {arg0}",
+  "@ssdtMsg799": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg800": "Error parsing file contents: {arg0}",
+  "@ssdtMsg800": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg801": "File does not exist: {arg0}",
+  "@ssdtMsg801": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg802": "stat failed: {arg0}",
+  "@ssdtMsg802": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg803": "Unchanged, skipped: {arg0}",
+  "@ssdtMsg803": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg804": "chmod failed ({arg0}): {arg1}",
+  "@ssdtMsg804": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg805": "Permissions still not satisfied after chmod: {arg0}",
+  "@ssdtMsg805": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg806": "Executable permissions set: {arg0}",
+  "@ssdtMsg806": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg807": "Execute command: ${args.join(",
+  "ssdtMsg808": "Command execution failed: {arg0}",
+  "@ssdtMsg808": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg809": "Note: The old version of iasl-legacy only supports macOS 10.6 and earlier versions. There may be compatibility issues with current mainstream systems, so use with caution!!!\\n",
+  "ssdtMsg810": "A total of {arg0} ACPI tables were found, of which {arg1} are valid:",
+  "@ssdtMsg810": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg811": "=> No need to apply pre-made patches!\\n",
+  "ssdtMsg812": "Total time taken: {arg0} seconds\\n",
+  "@ssdtMsg812": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg813": "${config.useLeagcyiAsl?",
+  "ssdtMsg814": "}Compile {arg0}.aml...",
+  "@ssdtMsg814": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg815": "Compilation result: {arg0}",
+  "@ssdtMsg815": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg816": "Compilation failed!",
+  "ssdtMsg817": "Compiling {arg0}.aml successfully!",
+  "@ssdtMsg817": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg818": "According to the settings, delete the {arg0}.dsl source file",
+  "@ssdtMsg818": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg819": "exist",
+  "ssdtMsg820": "does not exist",
+  "ssdtMsg821": "=> There are multiple return statements, or the return value is not Return (0x0F)",
+  "ssdtMsg822": "s_CRS to XCRS rename\nDefinitionBlock (\"\", \"SSDT\", 2, \"RAPID\", \"HPET\", 0x00000000)\n{\n    External ([[name]], DeviceObj)\n    External ([[name]].XCRS, [[type]])\n\n    Scope ([[name]])\n    {\n        Name (BUFX, ResourceTemplate ()\n        {\n            IRQNoFlags()\n                {0,8}\n            // [[mem]]\n            Memory32Fixed ([[mem_access]],\n                [[mem_base]],\n                [[mem_length]],\n            )\n        })\n        Method (_CRS, 0, Serialized) // _CRS: Current Resource Settings\n        {\n            If (LOr (_OSI (\"Darwin\"), LNot(CondRefOf ([[name]].XCRS))))\n            {\n                Return(BUFX)\n            }\n            // Not macOS and XCRS exists - return its result\n            Return ([[name]].XCRS[[method]])\n        }\"\"\";\n      // Replace [[name]] with the passed in `name`\n      ssdt = ssdt.replaceAll(r\"[[name]]\", name ??",
+  "ssdtMsg823": ");\n\n      //Select \"MethodObj\" or \"BuffObj\" based on the value of hpet[0].last\n      ssdt = ssdt.replaceAll(\n        r\"[[type]]\",\n        hpet[0].last == \"Method\" ? \"MethodObj\" : \"BuffObj\",\n      );\n\n      //Select memory configuration information based on `gotMem`\n      ssdt = ssdt.replaceAll(\n        r\"[[mem]]\",\n        gotMem\n            ? \"AccessType/Base/Length pulled from DSDT\"\n            : \"Default AccessType/Base/Length - verify with your DSDT!\",\n      );\n\n      //Replace memory configuration information\n      ssdt = ssdt.replaceAll(r\"[[mem_access]]\", memAccess ??",
+  "ssdtMsg824": ");\n\n      // Select whether to use \"()\" based on the value of hpet[0].last\n      ssdt = ssdt.replaceAll(\n        r\"[[method]]\",\n        hpet[0].last == \"Method\" ? \" ()\" : \"\",\n      );\n\n      // Modify configuration based on hpetSta and related conditions\n      if (hpetSTA) {\n        List<String> ssdtParts = [];\n        bool external = false;\n\n        // Process ssdt configuration line by line and insert external reference XSTA method\n        ssdt.split(\"\\n\").forEach((line) {\n          if (line.trim().contains(\"External (\")) {\n            external = true;\n          } else if (external) {\n            ssdtParts.add(\" External ([[name]].XSTA, ${sta?[",
+  "ssdtMsg825": "]})\");\n            external = false;\n          }\n          ssdtParts.add(line);\n        });\n\n        //Add XSTA method\n        ssdt = ssdtParts.join(\"\\n\");\n        ssdt += \"\\n\";\n        ssdt += \"\"\"\n        Method (_STA, 0, NotSerialized) // _STA: Status\n        {\n            // Return 0x0F if booting macOS or the XSTA method\n            // no longer exists for some reason\n            If (LOr (_OSI (\"Darwin\"), LNot (CondRefOf ([[name]].XSTA))))\n            {\n                Return (0x0F)\n            }\n            // Not macOS and XSTA exists - return its result\n            Return ([[name]].XSTA[[called]])\n        }\"\"\";\n        ssdt = ssdt.replaceAll(r\"[[name]]\", name ??",
+  "ssdtMsg826": "] == \"MethodObj\" ? \" ()\" : \"\",\n        );\n      }\n\n      // Close the final bracket\n      ssdt += \"\\n\";\n      ssdt += \"\"\"\n    }\n}\"\"\";\n    }\n    //Write to SSDT file\n    writeSSDT(ssdtName, ssdt);\n    final acpi = {\n      \"Comment\": hpetFake\n          ? \"HPET Device Fake\"\n          : \"${name?.split(",
+  "ssdtMsg827": ")} _CRS - requires _CRS to XCRS rename\",\n      \"Enabled\": true,\n      \"Path\": \"{arg0}.aml\",\n    };\n    makePlist(acpi: acpi, patches: patches);\n  }\n\n  Future<void> ssdtPNLF({\n    bool prebuilt = false,\n    int? uid = 99,\n    bool? getIgpu = false,\n    String? manualIGPUPath,\n  }) async => prebuilt\n      ? await _ssdtPNLFPrebuilt()\n      : await _ssdtPNLF(\n          uid: uid,\n          getIgpu: getIgpu,\n          manualIGPUPath: manualIGPUPath,\n        );\n\n  bool _isExactPnlfDevicePath(List<dynamic> pathInfo) {\n    if (pathInfo.length < 3 || pathInfo[2] != \"Device\") return false;\n\n    final lastSegment = pathInfo[0]\n        .toString()\n        .split(\".\")\n        .last\n        .replaceAll(RegExp(r\"_+$\"), \"\")\n        .toUpperCase();\n    return lastSegment == \"PNLF\";\n  }\n\n  List<_NativePnlfDevice> _findNativePnlfDevices() {\n    final matches = <_NativePnlfDevice>[];\n    final sortedTableNames = sortedNicely(d.acpiTables.keys.toList());\n\n    for (final tableName in sortedTableNames) {\n      final rawTable = d.acpiTables[tableName];\n      if (rawTable is! Map<String, dynamic>) continue;\n\n      final paths = d.getPathOfType(\n        objType: \"Device\",\n        obj: \"PNLF\",\n        table: rawTable,\n      );\n      for (final pathInfo in paths) {\n        if (!_isExactPnlfDevicePath(pathInfo)) continue;\n        matches.add((tableName: tableName, table: rawTable, path: pathInfo));\n      }\n    }\n\n    return matches;\n  }\n\n  String _externalAcpiPath(String acpiPath) {\n    final cleanPath = acpiPath.replaceFirst(\"\\\\\", \"\");\n    return cleanPath\n        .split(\".\")\n        .map((part) => part == \"_SB\" ? \"_SB_\" : part)\n        .join(\".\");\n  }\n\n  String _normalizeManualIgpuPath(String manualIGPUPath) {\n    List<String> parts = manualIGPUPath\n        .replaceFirst(\"\\\\\", \"\")\n        .toUpperCase()\n        .split(\".\");\n    String valid = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\";\n    String noStart = \"0123456789\";\n\n    if (parts.any(\n      (p) =>\n          p.isEmpty ||\n          p.length > 4 ||\n          noStart.contains(p[0]) ||\n          p.split(\"\").any((x) => !valid.contains(x)),\n    )) {\n      Log(\"Invalid iGPU path: {arg1}\");\n    }\n\n    parts = parts.map((p) => p.replaceAll(RegExp(r\"_+$\"), \"\")).toList();\n    return \"\\\\{arg2}\";\n  }\n\n  _IgpuPathResult _findIgpuPath({\n    String? manualIGPUPath,\n    bool allowManual = false,\n  }) {\n    String igpu = \"\";\n    bool guessed = false;\n\n    Log(\"Looking for iGPU device at 0x00020000...\");\n    final tableNameList = d.acpiTables.keys.toList();\n    final sortedTableNames = sortedNicely(tableNameList, first: \"DSDT\");\n\n    for (final tableName in sortedTableNames) {\n      final table = d.acpiTables[tableName];\n      Log(\"Checking {arg3}...\");\n      final paths = d.getPathOfType(objType: \"Name\", obj: \"_ADR\", table: table);\n\n      for (final path in paths) {\n        final adr = getAddressFromLine(path[1], table: table);\n        if (adr == 0x00020000) {\n          igpu = path[0].substring(0, path[0].length - 5);\n          Log(\"=>iGPU device found at {arg4}!\");\n          return (path: igpu, guessed: false, manual: false);\n        }\n      }\n    }\n\n    Log(\"iGPU device not found by address!\");\n    Log(\"Searching for common iGPU names...\");\n\n    for (final tableName in sortedTableNames) {\n      final rawTable = d.acpiTables[tableName];\n      if (rawTable is! Map<String, dynamic>) continue;\n      Log(\"Checking {arg5}...\");\n\n      final pciRoots = [\n        d.getDevicePathsWithHid(hid: \"PNP0A08\", table: rawTable),\n        d.getDevicePathsWithHid(hid: \"PNP0A03\", table: rawTable),\n        d.getDevicePathsWithHid(hid: \"ACPI0016\", table: rawTable),\n      ];\n\n      final external = <String>[];\n      rawTable[\"lines\"]?.forEach((line) {\n        final trimmedLine = line.toString().trim();\n        if (!trimmedLine.startsWith(\"External (\")) return;\n        try {\n          final pathPart = trimmedLine.split(",
+  "@ssdtMsg827": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg828": ");\n        } catch (_) {\n          debugPrint(\"Error processing line: {arg0}\");\n        }\n      });\n\n      for (final rootList in pciRoots) {\n        if (rootList.isEmpty) continue;\n        final rootPath = rootList[0][0].toString();\n        for (final name in [\n          \"IGPU\",\n          \"_VID\",\n          \"VID0\",\n          \"VID1\",\n          \"GFX0\",\n          \"VGA\",\n          \"_VGA\",\n        ]) {\n          final testPath = \"{arg1}.{arg2}\";\n          final devicePaths = d.getDevicePaths(obj: testPath, table: rawTable);\n          String?device;\n          if (devicePaths.isNotEmpty) {\n            device = devicePaths[0][0];\n          } else {\n            device = external.firstWhere(\n              (x) => testPath == x,\n              orElse: () => \"\",\n            );\n            if (device.isEmpty) device = null;\n          }\n\n          if (device == null) continue;\n          if (d\n              .getPathOfType(\n                objType: \"Name\",\n                obj: \"{arg3}._ADR\",\n                table: rawTable,\n              )\n              .isNotEmpty) {\n            continue;\n          }\n\n          igpu = device;\n          guessed = true;\n          Log(\"=>Possible iGPU device found at {arg4}\");\n          return (path: igpu, guessed: guessed, manual: false);\n        }\n      }\n    }\n\n    if (allowManual && manualIGPUPath != null && manualIGPUPath.isNotEmpty) {\n      Log(\"It has been manually set to {arg5} according to the given iGPU path \\n\");\n      return (\n        path: _normalizeManualIgpuPath(manualIGPUPath),\n        guessed: false,\n        manual: true,\n      );\n    }\n\n    return (path: \"\", guessed: false, manual: false);\n  }\n\n  /// Backlight repair\n  /// [uid] UID\n  ///[getIgpu] When UID=14, whether to include GPU register code\n  /// [manualIGPUPath] Manually specify the iGPU path\n  Future<void> _ssdtPNLF({\n    int? uid = 99,\n    bool? getIgpu = false,\n    String? manualIGPUPath,\n  }) async {\n    if (!await ensureDSDT()) return;\n    // Check if a valid uid is provided\n    if (uid == null) {\n      Log.warning(\"No valid UID provided, operation terminated!\");\n      return;\n    }\n\n    final uidList = PNLFUIDs.map((item) => item[",
+  "@ssdtMsg828": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg829": "]).toList();\n    if (!uidList.contains(uid)) {\n      Log.warning(\"{arg0} is a custom UID that may require manual customization or may not be supported at all!\");\n    }\n\n    bool getIGpuInfo = false;\n    if (uid == 14) {\n      Log(\"\");\n      Log.warning(\n        \"Note: Intel's 1st generation Arrandale, 2nd generation Sandy Bridge, and 3rd generation Ivy Bridge use UID: 14 by default, but some machines using UID: 14 will encounter limited maximum brightness or other problems. In order to solve these problems, the correct device path of the iGPU (integrated graphics card) must be set, and the IGPU register information may need to be supplemented\",\n      );\n      Log(\"\");\n      getIGpuInfo = getIgpu ?? false;\n    }\n    final String ssdtName = \"SSDT-PNLF\";\n    Log(\"Creating precompiled {arg1}.dsl...\");\n    //Print the UID used, the platform used and the corresponding PWMMax\n    for (var item in PNLFUIDs) {\n      if (item[",
+  "@ssdtMsg829": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg830": "] == uid) {\n        Log(\"=> UID used: ${item[",
+  "ssdtMsg831": "]}\");\n        Log(\"=> Applicable platforms: ${item[",
+  "ssdtMsg832": ";\n    bool ecLocated = false;\n    for (var tableName in sortedNicely(d.acpiTables.keys.toList())) {\n      var table = d.acpiTables[tableName];\n      var ecList = d.getDevicePathsWithHid(hid: \"PNP0C09\", table: table);\n\n      if (ecList.isNotEmpty) {\n        lpcName = ecList.first[0]\n            .split(\".\")\n            .sublist(0, ecList.first[0].split(\".\").length - 1)\n            .join(\".\");\n        Log(\"=>{arg1} PNP0C09 (EC) devices found at {arg0}\");\n        Log(\"=>Verifying...\");\n\n        for (var deviceInfo in ecList) {\n          String device = deviceInfo[0];\n          String origDevice = device;\n          Log(\"=> found {arg2}\");\n\n          if (device.split(\".\").last == \"EC\") {\n            namedEc = true;\n            if (!isLaptop) {\n              // Rename only on non-notebooks\n              Log(\" => PNP0C09 (EC) device is named EC and is being renamed\");\n              device =\n                  \"{arg3}.EC0\";\n              rename = true;\n            }\n          }\n\n          var scope = d\n              .getScope(\n                startingIndex: deviceInfo[1],\n                stripComments: true,\n                table: table,\n              )\n              .join(\"\\n\");\n\n          if ([\"_HID\", \"_CRS\", \"_GPE\"].every((key) => scope.contains(key))) {\n            Log(\"=> Valid PNP0C09 (EC) device\");\n            ecLocated = true;\n\n            var sta = getStaVar(\n              device: origDevice,\n              devHid: \"PNP0C09\",\n              devName: origDevice.split(\".\").last,\n              table: table,\n            );\n\n            if (!isLaptop) {\n              ecToPatch.add(device);\n              if (sta[\"patches\"] != null && sta[\"patches\"].isNotEmpty) {\n                patches.addAll(sta[\"patches\"]);\n                ecSta[device] = sta;\n              }\n            } else if (sta[\"patches\"] != null && sta[\"patches\"].isNotEmpty) {\n              if (staNeedsPatching(sta, table)) {\n                ecToEnable.add(device);\n                ecEnableSta[device] = sta;\n                for (var patch in sta[\"patches\"]) {\n                  patch[\"Enabled\"] = false;\n                  patch[\"Disabled\"] = true;\n                  patches.add(patch);\n                }\n              } else {\n                Log(\"=> _STA is enabled correctly, skip renaming\");\n              }\n            }\n          } else {\n            Log(\"=>Invalid PNP0C09 (EC) device\");\n          }\n        }\n      }\n    }\n\n    if (!ecLocated) {\n      Log(\"=> No valid PNP0C09 (EC) device found, just fake an EC device\");\n    }\n\n    if (isLaptop && namedEc && patches.isEmpty) {\n      Log.warning(\"=>The named EC device has been found, no need to counterfeit!\\n\");\n      return;\n    }\n\n    lpcName ??= getLpcName(skipEc: true, skipCommonNames: true);\n\n    if (lpcName == null) {\n      return;\n    }\n\n    String comment = \"Faked Embedded Controller\";\n    if (isLaptop) {\n      comment +=",
+  "@ssdtMsg832": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg833": ";\n    }\n    if (rename) {\n      patches.insert(0, {\n        \"Comment\":\n            \"EC to EC0{arg0}\",\n        \"Find\": \"45435f5f\",\n        \"Replace\": \"4543305f\",\n      });\n      comment +=\n          \" - requires EC to EC0 {arg1}\";\n    } else if (ecSta.isNotEmpty) {\n      comment += \" - requires EC _STA to XSTA renames\";\n    }\n\n    Log(\"Creating {arg2}.dsl...\");\n\n    var ssdt = \"\"\"\nDefinitionBlock (\"\", \"SSDT\", 2, \"RAPID\", \"SsdtEC\", 0x00001000)\n{\n    External ([[LPCName]], DeviceObj)\n\"\"\";\n    ssdt = ssdt.replaceAll(r\"[[LPCName]]\", lpcName);\n\n    for (var x in ecToPatch) {\n      ssdt += \"External ({arg3}, DeviceObj)\\n\";\n      if (ecSta.containsKey(x)) {\n        ssdt +=\n            \"External ({arg4}.XSTA, {arg5})\\n\";\n      }\n    }\n\n    // Traverse ecToEnable\n    for (var x in ecToEnable) {\n      ssdt += \"External ({arg6}, DeviceObj)\\n\";\n      if (ecEnableSta.containsKey(x)) {\n        // Add _STA and XSTA references as patching may not be enabled\n        ssdt +=\n            \"External ({arg7}._STA, {arg8})\\n\";\n        ssdt +=\n            \"External ({arg9}.XSTA, {arg10})\\n\";\n      }\n    }\n\n    // Traverse ecToPatch and add _STA method\n    for (var x in ecToPatch) {\n      ssdt +=\n          \"\"\"\n    Scope ({arg11})\n    {\n        Method (_STA, 0, NotSerialized) // _STA: Status\n        {\n            If (_OSI (\"Darwin\"))\n            {\n                Return (Zero)\n            }\n            Else\n            {\n                Return ({arg12}\" : \"0x0F\"})\n            }\n        }\n    }\n\"\"\";\n    }\n\n    // Traverse ecToEnable to force enable again\n    for (var x in ecToEnable) {\n      ssdt +=\n          \"\"\"\n    If (LAnd (CondRefOf ({arg13}.XSTA), LNot (CondRefOf ({arg14}._STA))))\n    {\n        Scope ({arg15})\n        {\n            Method (_STA, 0, NotSerialized) // _STA: Status\n            {\n                If (_OSI (\"Darwin\"))\n                {\n                    Return(0x0F)\n                }\n                Else\n                {\n                    Return ({arg16}\" : \"Zero\"})\n                }\n            }\n        }\n    }\n\"\"\";\n    }\n\n    //Create virtual EC\n    if (!isLaptop || !namedEc) {\n      ssdt +=\n          \"\"\"\n    Scope ({arg17})\n    {\n        Device (EC)\n        {\n            Name (_HID, \"ACID0001\") // _HID: Hardware ID\n            Method (_STA, 0, NotSerialized) // _STA: Status\n            {\n                If (_OSI (\"Darwin\"))\n                {\n                    Return(0x0F)\n                }\n                Else\n                {\n                    Return (Zero)\n                }\n            }\n        }\n    }\n\"\"\";\n    }\n\n    if (injectUSBPower) {\n      comment +=",
+  "@ssdtMsg833": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      },
+      "arg13": {
+        "type": "String"
+      },
+      "arg14": {
+        "type": "String"
+      },
+      "arg15": {
+        "type": "String"
+      },
+      "arg16": {
+        "type": "String"
+      },
+      "arg17": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg834": ";\n      ssdt += \"\"\"\n    Scope (\\\\_SB)\n    {\n        Device(USBX)\n        {\n            Name (_ADR, Zero) // _ADR: Address\n            Method (_DSM, 4, NotSerialized) // _DSM: Device-Specific Method\n            {\n                If (!Arg2)\n                {\n                    Return (Buffer (One)\n                    {\n                         0x03 // .\n                    })\n                }\n\n                Return (Package (0x08)\n                {\n                    \"kUSBSleepPowerSupply\",\n                    0x13EC,\n                    \"kUSBSleepPortCurrentLimit\",\n                    0x0834,\n                    \"kUSBWakePowerSupply\",\n                    0x13EC,\n                    \"kUSBWakePortCurrentLimit\",\n                    0x0834\n                })\n            }\n\n            Method (_STA, 0, NotSerialized) // _STA: Status\n            {\n                If (_OSI (\"Darwin\"))\n                {\n                    Return(0x0F)\n                }\n                Else\n                {\n                    Return (Zero)\n                }\n            }\n        }\n    }\n\"\"\";\n    }\n    ssdt += \"\"\"\n}\"\"\";\n    //Write to SSDT file\n    final acpi = {\"Comment\": comment, \"Enabled\": true, \"Path\": \"{arg0}.aml\"};\n    makePlist(acpi: acpi, patches: patches, replace: true);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> ssdtUSBX({\n    bool prebuilt = false,\n    Map<String, String>? usbxProps,\n  }) async => prebuilt ? null : await _ssdtUSBX(usbxProps: usbxProps);\n\n  /// SSDT-USBX\n  /// [usbxProps] USBX properties\n  Future<void> _ssdtUSBX({Map<String, String>? usbxProps}) async {\n    if (!await ensureDSDT()) return;\n    if (usbxProps == null || usbxProps.isEmpty) {\n      Log.warning(\"USBX attribute patch cannot be empty! The operation has been terminated!\");\n      return;\n    }\n\n    final String ssdtName = \"SSDT-USBX\";\n    Log(\"Creating precompiled {arg1}.dsl...\");\n    final acpi = {\n      \"Comment\": \"Generic USBX device for USB power properties\",\n      \"Enabled\": true,\n      \"Path\": \"{arg2}.aml\",\n    };\n    makePlist(acpi: acpi);\n    // Generate SSDT content\n    String ssdt =",
+  "@ssdtMsg834": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg835": ";\n\n    //Add USBX properties\n    usbxProps.forEach((key, value) {\n      ssdt +=",
+  "ssdtMsg836": ";\n    });\n\n    // Remove extra commas at the end\n    ssdt = ssdt.trimRight().replaceAll(RegExp(r",
+  "ssdtMsg837": "),\n                  radix: 16,\n                );\n                var currInd = i + 4;\n\n                if (lastAdr != null) {\n                  // Compare range values\n                  var adjust = currAdr - (lastAdr + lastLen!);\n                  if (adjust != 0) {\n                    rtcRangeNeeded = true;\n                    Log(\n                      \"=> Adjusting IO range {arg0} to length {arg1}\",\n                    );\n\n                    try {\n                      var hexFind = util.hexy(lastLen, padTo: 2);\n                      var hexRepl = util.hexy(lastLen + adjust, padTo: 2);\n                      if (lastInd != null) {\n                        crsLines[lastInd] = crsLines[lastInd].replaceAll(\n                          hexFind,\n                          hexRepl,\n                        );\n                      }\n                    } catch (e) {\n                      Log(\"=>Unable to adjust value, unable to verify RTC range.\");\n                      rtcRangeNeeded = false;\n                      break;\n                    }\n                  }\n                }\n\n                //Save the last value\n                lastAdr = currAdr;\n                lastLen = currLen;\n                lastInd = currInd;\n              } catch (e) {\n                // handle value errors\n                Log(\"=>Failed to collect value, unable to verify RTC range.\");\n                rtcRangeNeeded = false;\n                break;\n              }\n            }\n\n            crsLines.add(line);\n          }\n        } else {\n          Log(\"=> _CRS is a method, cannot verify RTC range!\");\n        }\n        if (rtcRangeNeeded) {\n          // Need to generate a patch that renames _CRS to XCRS\n          Log(\"=> Generating _CRS to XCRS rename...\");\n\n          // Get the index of _CRS\n          var crsIndex = d.findNextHex(index: rtcCrs[0][1]).{arg2};\n          Log(\"=> Found at index {arg3}\");\n\n          //Define hexadecimal string\n          var crsHex = \"5F435253\"; // _CRS\n          var xcrsHex = \"58435253\"; // XCRS\n\n          // Get the unique fill value\n          final (padl, padr) = d.getShortestUniquePad(\n            currentHex: crsHex,\n            index: crsIndex,\n          );\n          // add patch\n          final patches = rtcDict[\"patches\"] ?? [];\n          patches.add({\n            \"Comment\": \"{arg4} _CRS to XCRS rename\",\n            \"Find\": \"{arg5}{arg6}{arg7}\",\n            \"Replace\": \"{arg8}{arg9}{arg10}\",\n          });\n\n          rtcDict[\"patches\"] = patches;\n          rtcDict[\"crs\"] = true;\n        }\n      } else {\n        Log(\"=> not found\");\n      }\n    }\n\n    /// Verify whether SSDT is required\n    if ((rtcDict[\"valid\"] as bool) &&\n        !(rtcDict[\"has_var\"] as bool) &&\n        rtcDict[\"sta\"].isEmpty &&\n        !rtcRangeNeeded) {\n      Log.warning(\"=> A valid PNP0B00 (RTC) device has been found and verified, no patch or SSDT required! The operation has been terminated!\");\n      return;\n    }\n\n    String comment = rtcDict[\"valid\"] == false\n        ? \"RTC Fake\"\n        :rtcRangeNeeded\n        ? \"Fixing RTC Range\"\n        : \"Fixing RTC Enable\";\n\n    List<String> suffix = [];\n    for (var x in [rtcDict]) {\n      if (!(x[\"valid\"] as bool)) continue;\n      String val = \"\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty && !(x[\"has_var\"] as bool)) {\n        val = \"{arg11} _STA to XSTA\";\n      }\n      if (x[\"crs\"] == true) {\n        val += \"${val.isNotEmpty?",
+  "@ssdtMsg837": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg838": ")} rename\";\n    }\n\n    final String ssdtName = \"SSDT-RTC0-RANGE\";\n    final acpi = {\"Comment\": comment, \"Enabled\": true, \"Path\": \"{arg0}.aml\"};\n    final patches = rtcDict[\"patches\"] ?? [];\n    makePlist(acpi: acpi, patches: patches, replace: true);\n    Log(\"Creating {arg1}.dsl...\");\n\n    String ssdt = \"\"\"\n\n    DefinitionBlock (\"\", \"SSDT\", 2, \"RAPID\", \"RTC0RANGE\", 0x00000000)\n    {\n    \"\"\";\n    if ([rtcDict].any((x) => x[\"has_var\"] == true)) {\n      ssdt += \"\"\" External (STAS, IntObj)\n          Scope (\\\\)\n          {\n              Method (_INI, 0, NotSerialized) // _INI: Initialize\n              {\n                  If (_OSI (\"Darwin\"))\n                  {\n                      Store (One, STAS)\n                  }\n              }\n          }\n      \"\"\";\n    }\n    for (var x in [rtcDict]) {\n      if (x[\"valid\"] != true || x[\"has_var\"] == true || x[\"device\"] == null) {\n        continue;\n      }\n\n      // Device found and no STAS variable - check if there is _STA (possibly renamed)\n      var macos = x[\"dev_hid\"] == \"ACPI000E\" ? \"Zero\" : \"0x0F\";\n      var original = x[\"dev_hid\"] == \"ACPI000E\" ? \"0x0F\" : \"Zero\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty) {\n        ssdt += \"\"\" External ([[DevPath]], DeviceObj)\n        External ([[DevPath]].XSTA, [[sta_type]])\n        Scope ([[DevPath]])\n        {\n            Name (ZSTA, [[Original]])\n            Method (_STA, 0, NotSerialized) // _STA: Status\n            {\n                If (_OSI (\"Darwin\"))\n                {\n                    Return ([[macOS]])\n                }\n                // Default to [[Original]] - but return the result of the renamed XSTA if possible\n                If (CondRefOf ([[DevPath]].XSTA))\n                {\n                    Store ([[DevPath]].XSTA[[called]], ZSTA)\n                }\n                Return (ZSTA)\n            }\n        }\n    \"\"\";\n        ssdt = ssdt\n            .replaceAll(r\"[[DevPath]]\", x[\"device\"][0])\n            .replaceAll(r\"[[Original]]\", original)\n            .replaceAll(r\"[[macOS]]\", macos)\n            .replaceAll(r\"[[sta_type]]\", x[\"sta_type\"])\n            .replaceAll(\n              r\"[[called]]\",\n              x[\"sta_type\"] == \"MethodObj\" ? \" ()\" : \"\",\n            );\n      } else if (x[\"dev_hid\"] == \"ACPI000E\") {\n        //The AWAC device has neither STAS variable nor _STA method, add one at this time\n        ssdt += \"\"\" External ([[DevPath]], DeviceObj)\n              Scope ([[DevPath]])\n              {\n                  Method (_STA, 0, NotSerialized) // _STA: Status\n                  {\n                      If (_OSI (\"Darwin\"))\n                      {\n                          Return (Zero)\n                      }\n                      Else\n                      {\n                          Return(0x0F)\n                      }\n                  }\n              }\n          \"\"\";\n        ssdt = ssdt.replaceAll(r\"[[DevPath]]\", x[\"device\"][0]);\n      }\n    }\n    // Check if RTC range needs to be corrected\n    if (rtcRangeNeeded &&\n        rtcCrsType?.toLowerCase() == \"buffobj\" &&\n        crsLines.isNotEmpty &&\n        rtcDict[\"valid\"] == true) {\n      ssdt += \"\"\" External ([[DevPath]], DeviceObj)\n              External ([[DevPath]].XCRS, [[type]])\n              Scope ([[DevPath]])\n              {\n                  // Adjusted and renamed _CRS buffer ripped from DSDT with corrected range\n          [[NewCRS]]\n                  // End of adjusted _CRS and renamed buffer\n\n                  // Create a new _CRS method that returns the result of the renamed XCRS\n                  Method (_CRS, 0, Serialized) // _CRS: Current Resource Settings\n                  {\n                      If (LOr (_OSI (\"Darwin\"), LNot (CondRefOf ([[DevPath]].XCRS))))\n                      {\n                          // Return our buffer if booting macOS or the XCRS method\n                          // no longer exists for some reason\n                          Return(BUFX)\n                      }\n                      // Not macOS and XCRS exists - return its result\n                      Return ([[DevPath]].XCRS[[method]])\n                  }\n              }\n          \"\"\";\n      ssdt = ssdt\n          .replaceAll(\"[[DevPath]]\", rtcDict[\"device\"][0])\n          .replaceAll(\"[[type]]\", rtcCrsType ??",
+  "@ssdtMsg838": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg839": ")\n          .replaceAll(\"[[method]]\", rtcCrsType == \"Method\" ? \" ()\" : \"\")\n          .replaceAll(\n            \"[[NewCRS]]\",\n            crsLines.map((x) => \" {arg0}\").join(\"\\n\"),\n          );\n    }\n    // Check if RTC device exists\n    if (!rtcDict.containsKey(\"valid\") &&\n        lpcName != null &&\n        lpcName.isNotEmpty) {\n      ssdt += \"\"\" External ([[LPCName]], DeviceObj) // (from opcode)\n          Scope ([[LPCName]])\n          {\n              Device (RTC0)\n              {\n                  Name (_HID, EisaId (\"PNP0B00\")) // _HID: Hardware ID\n                  Name (_CRS, ResourceTemplate () // _CRS: Current Resource Settings\n                  {\n                      IO (Decode16,\n                          0x0070, // Range Minimum\n                          0x0070, // Range Maximum\n                          0x01, //Alignment\n                          0x08, // Length\n                          )\n                      IRQNoFlags()\n                          {8}\n                  })\n                  Method (_STA, 0, NotSerialized) // _STA: Status\n                  {\n                      If (_OSI (\"Darwin\"))\n                      {\n                          Return(0x0F)\n                      }\n                      Else\n                      {\n                          Return (Zero)\n                      }\n                  }\n              }\n          }\n      \"\"\";\n      ssdt = ssdt.replaceAll(r\"[[LPCName]]\", lpcName);\n    }\n    ssdt += \"}\";\n\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> _ssdtAWAC() async {\n    if (!await ensureDSDT()) return;\n    var awacDict = getStaVar(varS: \"STAS\", devHid: \"ACPI000E\", devName: \"AWAC\");\n\n    /// Verify whether SSDT is required\n    if (!(awacDict[\"valid\"] as bool)) {\n      Log.warning(\"=> ACPI000E (AWAC) device not found, no patch or SSDT required! Operation terminated!\");\n      return;\n    }\n\n    String comment = \"Fixing Incompatible AWAC\";\n\n    List<String> suffix = [];\n    for (var x in [awacDict]) {\n      if (!(x[\"valid\"] as bool)) continue;\n      String val = \"\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty && !(x[\"has_var\"] as bool)) {\n        val = \"{arg1} _STA to XSTA\";\n      }\n      if (x[\"crs\"] == true) {\n        val += \"${val.isNotEmpty?",
+  "@ssdtMsg839": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg840": ")} rename\";\n    }\n    final String ssdtName = \"SSDT-AWAC\";\n    final acpi = {\"Comment\": comment, \"Enabled\": true, \"Path\": \"{arg0}.aml\"};\n    final patches = awacDict[\"patches\"] ?? [];\n    makePlist(acpi: acpi, patches: patches, replace: true);\n    Log(\"Creating {arg1}.dsl...\");\n\n    String ssdt = \"\"\"\n    DefinitionBlock (\"\", \"SSDT\", 2, \"RAPID\", \"AWAC\", 0x00000000)\n    {\n    \"\"\";\n    if ([awacDict].any((x) => x[\"has_var\"] == true)) {\n      ssdt += \"\"\" External (STAS, IntObj)\n          Scope(_SB)\n          {\n              Method (_INI, 0, NotSerialized) // _INI: Initialize\n              {\n                  If (_OSI (\"Darwin\"))\n                  {\n                      Store (One, STAS)\n                  }\n              }\n          }\n        }\n      \"\"\";\n    }\n    for (var x in [awacDict]) {\n      if (x[\"valid\"] != true || x[\"has_var\"] == true || x[\"device\"] == null) {\n        continue;\n      }\n\n      // Device found and no STAS variable - check if there is _STA (possibly renamed)\n      var macos = x[\"dev_hid\"] == \"ACPI000E\" ? \"Zero\" : \"0x0F\";\n      var original = x[\"dev_hid\"] == \"ACPI000E\" ? \"0x0F\" : \"Zero\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty) {\n        ssdt += \"\"\" External ([[DevPath]], DeviceObj)\n        External ([[DevPath]].XSTA, [[sta_type]])\n        Scope ([[DevPath]])\n        {\n            Name (ZSTA, [[Original]])\n            Method (_STA, 0, NotSerialized) // _STA: Status\n            {\n                If (_OSI (\"Darwin\"))\n                {\n                    Return ([[macOS]])\n                }\n                // Default to [[Original]] - but return the result of the renamed XSTA if possible\n                If (CondRefOf ([[DevPath]].XSTA))\n                {\n                    Store ([[DevPath]].XSTA[[called]], ZSTA)\n                }\n                Return (ZSTA)\n            }\n        }\n    \"\"\";\n        ssdt = ssdt\n            .replaceAll(r\"[[DevPath]]\", x[\"device\"][0])\n            .replaceAll(r\"[[Original]]\", original)\n            .replaceAll(r\"[[macOS]]\", macos)\n            .replaceAll(r\"[[sta_type]]\", x[\"sta_type\"])\n            .replaceAll(\n              r\"[[called]]\",\n              x[\"sta_type\"] == \"MethodObj\" ? \" ()\" : \"\",\n            );\n      } else if (x[\"dev_hid\"] == \"ACPI000E\") {\n        //The AWAC device has neither STAS variable nor _STA method, add one at this time\n        ssdt += \"\"\" External ([[DevPath]], DeviceObj)\n              Scope ([[DevPath]])\n              {\n                  Method (_STA, 0, NotSerialized) // _STA: Status\n                  {\n                      If (_OSI (\"Darwin\"))\n                      {\n                          Return (Zero)\n                      }\n                      Else\n                      {\n                          Return(0x0F)\n                      }\n                  }\n              }\n          \"\"\";\n        ssdt = ssdt.replaceAll(r\"[[DevPath]]\", x[\"device\"][0]);\n      }\n    }\n\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> ssdtRHUB({bool prebuilt = false}) async =>\n      prebuilt ? await _ssdtRHUBPrebuilt() : await _ssdtRHUB();\n\n  /// SSDT-RHUB\n  Future<void> _ssdtRHUB() async {\n    if (!await ensureDSDT()) return;\n    Log(",
+  "@ssdtMsg840": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg841": ").length - 2)]\n          : \"\";\n\n      if (illegalNames.contains(name) || usedNames.contains(name)) {\n        Log(\"=>Needs to be renamed!\");\n        task[\"device\"] = task[\"device\"]\n            .split(",
+  "ssdtMsg842": ");\n\n        if (name.startsWith(\"EHC\")) {\n          final result = getUniqueDevice(\n            task[\"parent\"],\n            \"EH01\",\n            startingNumber: ehcNum,\n            usedNames: usedNames,\n          );\n          task[\"rename\"] = result.name;\n          ehcNum = result.number;\n          ehcNum += 1;\n        } else {\n          final result = getUniqueDevice(\n            task[\"parent\"],\n            \"XHCI\",\n            startingNumber: xhcNum,\n            usedNames: usedNames,\n          );\n          task[\"rename\"] = result.name;\n          xhcNum = result.number;\n          xhcNum += 1;\n        }\n\n        usedNames.add(task[\"rename\"]);\n      } else {\n        usedNames.add(name);\n      }\n\n      final staMethod = d.getMethodPaths(obj: \"{arg0}._STA\");\n      Log(\"=> Check ${task[\"device\"].split(",
+  "@ssdtMsg842": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg843": ").last}: Whether there is _STA method\");\n      if (staMethod.isNotEmpty) {\n        final staIndex = d.findNextHex(index: staMethod[0][1]).{arg0};\n        Log(\"=> Found _STA method at index {arg1}!\");\n        Log(\"=>Generate patch from _STA to XSTA\");\n\n        const staHex = \"5F535441\";\n        const xstaHex = \"58535441\";\n\n        final (padl, padr) = d.getShortestUniquePad(\n          currentHex: staHex,\n          index: staIndex,\n        );\n\n        Log(\"\");\n        Log(\" Find: {arg2}\");\n        Log(\" Replace: {arg3}\");\n        Log(\"\");\n\n        patches.add({\n          \"Comment\": \"${task[\"device\"].split(",
+  "@ssdtMsg843": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg844": ").last} _STA to XSTA rename\",\n          \"Find\": padl + staHex + padr,\n          \"Replace\": padl + xstaHex + padr,\n        });\n      } else {\n        Log(\"=> _STA method not found!\");\n      }\n\n      final scopeAdr = d.getNamePaths(obj: \"{arg0}._ADR\");\n      if (scopeAdr.isNotEmpty) {\n        final line = d.getDsdt()?[\"lines\"][scopeAdr[0][1]];\n        task[\"address\"] = line.trim();\n      } else {\n        task[\"address\"] = \"Name (_ADR, Zero) // _ADR: Address\";\n      }\n\n      tasks.add(task);\n    }\n    Log(\"\");\n    final ssdtName = \"SSDT-RHUB\";\n    Log(\"Creating {arg1}.dsl...\");\n    final acpi = {\n      \"Comment\": \"Disable USB RHUB/HUBN/URTH and rename devices\",\n      \"Enabled\": true,\n      \"Path\": \"{arg2}.aml\",\n    };\n    makePlist(acpi: acpi, patches: patches);\n\n    String ssdt =",
+  "@ssdtMsg844": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg845": ";\n\n    //Collect unique parent paths and sort them\n    final parents =\n        tasks\n            .where((t) => t.containsKey(",
+  "ssdtMsg846": ";\n\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// Print unmatched paths\n  /// [unmatched] Unmatched path list\n  /// [pciRootPaths] PciRoot() path list\n  void debugPrintUnmatched({\n    List<String>? unmatched,\n    List<dynamic>? pciRootPaths,\n  }) {\n    Log(\"\");\n    if (unmatched != null && unmatched.isNotEmpty) {\n      Log.warning(\"No match found for the following path:\");\n      for (var path in unmatched..sort()) {\n        Log(\"=> {arg0}\");\n      }\n    } else {\n      Log.warning(\"No matches found!\");\n    }\n\n    if (pciRootPaths != null && pciRootPaths.isNotEmpty) {\n      Log.warning(\"Note, the device path must start with the following PciRoot() to match the current ACPI table:\");\n      for (var item\n          in pciRootPaths\n            ..sort((a, b) => (a[",
+  "@ssdtMsg846": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg847": "] ?? item}\");\n      }\n    }\n  }\n\n  /// There is an _ADR address overflow in the printing device path.\n  /// [addrOverflow] List of device paths with address overflow\n  void debugPrintAddressOverflow(List<String> addrOverflow) {\n    Log(\"\");\n    Log(\"=> There is an _ADR address overflow in the device path!\");\n    Log(\"=>The following devices may require bridging adjustments to work properly:\");\n    for (var d in (addrOverflow.toSet().toList()..sort())) {\n      Log(\"=> {arg0}\");\n    }\n  }\n\n  /// Print unresolved bridges\n  /// [failedBridges] Unresolvable bridge list\n  void debugPrintFailedBridges(List<String> failedBridges) {\n    debugPrint(\"\\nThe following bridge cannot be resolved:\");\n    for (var fb in failedBridges..sort()) {\n      Log(\"=> {arg1}\");\n    }\n  }\n\n  /// SSDT bridge device\n  /// [pciBridges] PCI bridge device list\n  Future<void> ssdtPCIBridge({List<String>? pciBridges}) async {\n    if (!await ensureDSDT()) return;\n    Log(\"Collecting PCI bridge devices...\");\n    if (pciBridges == null || pciBridges.isEmpty) {\n      Log(\"PCI bridge device is empty! The operation has been terminated!\");\n      return;\n    }\n    Log(\"Building bridge device...\");\n    var pathDict = getDevicePath(inputPaths: pciBridges);\n    if (pathDict.isEmpty) {\n      Log(\"PCI bridge device is empty! Skip...\");\n      return;\n    }\n    final (deviceDict, pciRootPaths) = getDevicePaths();\n    final matches = <(String, (String, Map<String, dynamic>, bool, int))>[];\n    List<String> unmatched = [];\n    Log(\"Matching device path...\");\n    for (final p in pathDict.keys.toList()..sort()) {\n      Log(\"=> {arg2}\");\n      final match = getLongestMatch(deviceDict, p);\n      if (match == null) {\n        Log(\"No match found!\");\n        unmatched.add(p);\n      } else {\n        if (match.{arg3}) {\n          Log(\"=> matches {arg4}, no bridging required\");\n        } else {\n          final b =",
+  "@ssdtMsg847": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg848": ".allMatches(p.substring(match.{arg0} + 1)).length + 1;\n          Log(\n            \"=> matches {arg1}, requires ${b.toString().replaceAllMapped(RegExp(r",
+  "@ssdtMsg848": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg849": ")} bridge devices\",\n          );\n        }\n        matches.add((p, match));\n      }\n    }\n\n    if (matches.isEmpty) {\n      debugPrintUnmatched(unmatched: unmatched, pciRootPaths: pciRootPaths);\n      Log(\"No match found!\\n\");\n      return;\n    }\n\n    final addrOverflow = <String>[];\n    for (final (_, match) in matches) {\n      if (match.{arg0}[\"adr_overflow\"] == true) {\n        final overFlow = getAllMatches(deviceDict, match.{arg1}[\"path\"]);\n        for (final d in overFlow) {\n          if (d.{arg2}[\"dev_overflow\"] != null && d.{arg3}[\"dev_overflow\"].isNotEmpty) {\n            addrOverflow.addAll(List<String>.from(d.{arg4}[\"dev_overflow\"]));\n          }\n        }\n      }\n    }\n\n    final allNoBridge = matches.every((m) => m.{arg5}.{arg6});\n    if (allNoBridge) {\n      if (unmatched.isNotEmpty) {\n        debugPrintUnmatched(unmatched: unmatched, pciRootPaths: pciRootPaths);\n      }\n      if (addrOverflow.isNotEmpty) {\n        debugPrintAddressOverflow(addrOverflow);\n      }\n      Log(\"No need to bridge!\\n\");\n      return;\n    }\n\n    Log(\"Resolving bridge device...\");\n    final bridgeMatch = <String, String>{};\n    final bridgeList = <String>[];\n    final failedBridges = <String>[];\n    final externalRefs = <String>[];\n\n    for (final (testPath, match) in matches) {\n      /// No bridging required\n      if (match.{arg7}) continue;\n      final remain = testPath.substring(match.{arg8} + 1);\n      Log(\"=> {arg9}\");\n      final bridges = getBridgeDevices(remain);\n      if (bridges.isEmpty) {\n        Log(\"=>Cannot be parsed!\");\n        failedBridges.add(testPath);\n      } else {\n        var path = match.{arg10};\n        for (var i = 0; i < bridges.length; i++) {\n          path += \"{arg11}\";\n          if (!bridgeList.contains(path)) {\n            bridgeList.add(path);\n          }\n          if (i == bridges. length - 1) {\n            bridgeMatch[path] = testPath;\n          }\n        }\n        if (!externalRefs.contains(match.{arg12})) {\n          externalRefs.add(match.{arg13});\n        }\n      }\n    }\n\n    if (bridgeList.isEmpty) {\n      if (failedBridges.isNotEmpty) {\n        debugPrintFailedBridges(failedBridges);\n      }\n      if (unmatched.isNotEmpty) {\n        debugPrintUnmatched(unmatched: unmatched, pciRootPaths: pciRootPaths);\n      }\n      if (addrOverflow.isNotEmpty) {\n        debugPrintAddressOverflow(addrOverflow);\n      }\n      Log(\"Error while parsing the bridge device!\\n\");\n      return;\n    }\n    final String ssdtName = \"SSDT-Bridge\";\n    Log(\"Creating {arg14}.dsl...\");\n    final pad =",
+  "@ssdtMsg849": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      },
+      "arg13": {
+        "type": "String"
+      },
+      "arg14": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg850": "Collecting XHC/XHCI/XDCI/CNVW devices...",
+  "ssdtMsg851": "=> Checking if {arg0} device supports PMEE...",
+  "@ssdtMsg851": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg852": "=> {arg0} does not support PMEE, skipped",
+  "@ssdtMsg852": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg853": "=> {arg0} supports PMEE",
+  "@ssdtMsg853": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg854": "=> No matching XHC/XHCI/XDCI/CNVW devices found! Operation terminated! \\n",
+  "ssdtMsg855": "Checking for existence of GPRW method...",
+  "ssdtMsg856": "=> GPRW method not found!",
+  "ssdtMsg857": "Checking for existence of XPRW method...",
+  "ssdtMsg858": "=> XPRW method found! The current method has been renamed and may not be the original ACPI table! Please re-obtain the original ACPI table and try again!\\n",
+  "ssdtMsg859": "=> XPRW method not found! Operation terminated!",
+  "ssdtMsg860": "=> GPRW method found at {arg0}!",
+  "@ssdtMsg860": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg861": "Checking for existence of UPRW method...",
+  "ssdtMsg862": "=> UPRW method not found!",
+  "ssdtMsg863": "Checking for existence of XPRW method...",
+  "ssdtMsg864": "=> XPRW method found! The current method has been renamed and may not be the original ACPI table! Please re-obtain the original ACPI table and try again!\\n",
+  "ssdtMsg865": "=> XPRW method not found! Operation terminated!",
+  "ssdtMsg866": "=> UPRW method found at {arg0}!",
+  "@ssdtMsg866": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg867": "=> GPI0 device not found! Operation terminated! \\n",
+  "ssdtMsg868": "=> GPI0 device found at {arg0}!",
+  "@ssdtMsg868": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg869": "=> _STA method not found! Operation terminated! \\n",
+  "ssdtMsg870": "No valid PCI device path provided! Operation terminated!",
+  "ssdtMsg871": "Checking device {arg0} for an _ON or _OFF method...",
+  "@ssdtMsg871": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg872": "The corresponding _ON or _OFF method for {arg0} was not found in DSDT or SSDT! Operation aborted!",
+  "@ssdtMsg872": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg873": "Checking device {arg0} for _PS3 or _DSM methods...",
+  "@ssdtMsg873": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg874": "The _PS3 or _DSM method corresponding to {arg0} was not found in the DSDT or SSDT! Operation aborted!",
+  "@ssdtMsg874": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg875": "Checking device {arg0}...",
+  "@ssdtMsg875": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg876": "=> The _PRT method corresponding to {arg0} was not found in DSDT or SSDT!",
+  "@ssdtMsg876": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg877": "Creating {arg0}.dsl...",
+  "@ssdtMsg877": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg878": "=> {arg0} device path that needs to be blocked: {arg1}",
+  "@ssdtMsg878": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg879": "=> Shielding method: {arg0} method",
+  "@ssdtMsg879": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg880": "=> Device relative path has been converted to absolute path: {arg0}",
+  "@ssdtMsg880": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg881": "Unknown masking method: {arg0}, operation aborted.",
+  "@ssdtMsg881": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg882": ";\n\n  /// PS3 method\n  String _buildSsdtPS3(String pciPath, String type) =>",
+  "ssdtMsg883": ";\n\n  /// IOName method\n  String _buildSsdtIOName(\n    String pciPath,\n    String type, {\n    bool needBridge = false,\n  }) {\n    final typeLower = type.toLowerCase();\n    final ioName = switch (typeLower) {",
+  "ssdtMsg884": ",\n    };\n\n    // _DSM method content\n    final dsmMethod =",
+  "ssdtMsg885": ";\n\n    // Generate bridge device structure\n    final bridgeBody =",
+  "ssdtMsg886": ";\n  }\n\n  /// Check whether the specified method exists in the ACPI table\n  /// [pciPath] Device PCI address\n  /// [methods] List of methods to check\n  bool _hasMethodInTables(String pciPath, List<String> methods) {\n    final normalizedPath = pciPath.replaceAll(",
+  "ssdtMsg887": ") ==\n              normalizedPath,\n        );\n\n        if (hasMethod) {\n          foundSet.add(method);\n          Log(\"=> Found {arg1}.{arg2} method in {arg0}\");\n        }\n        if (foundSet.length == methods.length) {\n          // All methods have been found\n          return true;\n        }\n      }\n    }\n\n    // If only part is found, print a prompt\n    if (foundSet.isNotEmpty) {\n      final missing = methods.where((m) => !foundSet.contains(m)).join(",
+  "@ssdtMsg887": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg888": ");\n    }\n\n    return false;\n  }\n\n  /// SMBUS\n  Future<void> ssdtSBUSMCHC({bool prebuilt = false}) async =>\n      prebuilt ? await _ssdtSBUSMCHCPrebuilt() : await _ssdtSBUSMCHC();\n\n  Future<void> _ssdtSBUSMCHCPrebuilt() async {\n    if (!checkIasl()) return;\n    final String ssdtName = \"SSDT-SBUS-MCHC\";\n    Log(\"Creating precompiled {arg0}.dsl...\");\n    String ssdt = Prebuilt.ssdtSBUSMCHC;\n    writeSSDT(ssdtName, ssdt);\n    final acpi = {\n      \"Comment\": \"Defines an MCHC and BUS0 device for SMBus compatibility\",\n      \"Enabled\": true,\n      \"Path\": \"{arg1}.aml\",\n    };\n    makePlist(acpi: acpi, replace: true);\n  }\n\n  /// smbusPath device PCI address\n  Future<void> _ssdtSBUSMCHC() async {\n    if (!await ensureDSDT()) return;\n    Log(\"Collecting possible bus devices...\");\n    String? busPath, busParent, tableName;\n    final dev1F4 = getDevAtAdr(targetAdr: 0x001F0004);\n    final dev1F3 = getDevAtAdr(\n      targetAdr: 0x001F0003,\n      excludeNames: [\"AZAL\", \"HDEF\", \"HDAS\"],\n    );\n    final dev1B = getDevAtAdr(targetAdr: 0x001B0000);\n    final dev14 = getDevAtAdr(targetAdr: 0x00140000);\n\n    ({String busPath, String busParent, String tableName})? busCheck;\n    int? adr;\n\n    if (dev1F4 != null && dev1F3 != null) {\n      /// New Intel solution\n      busCheck = dev1F4;\n      adr = 0x001F0004;\n    } else if (dev1F3 != null && dev1B != null) {\n      /// Old Intel solution\n      busCheck = dev1F3;\n      adr = 0x001F0003;\n    } else if (dev1F4 != null) {\n      /// May be a new Intel solution\n      busCheck = dev1F4;\n      adr = 0x001F0004;\n    } else if (dev1F3 != null) {\n      /// May be an old Intel solution\n      busCheck = dev1F3;\n      adr = 0x001F0003;\n    } else if (dev14 != null) {\n      /// It may be an AMD solution, not an Intel solution\n      busCheck = dev14;\n      adr = 0x00140000;\n    }\n\n    if (busCheck == null) {\n      Log.warning(\"=> Unable to find a valid bus device, the operation has been terminated!\");\n      return;\n    }\n    // Deconstruct variables\n    busPath = busCheck.busPath;\n    busParent = busCheck.busParent;\n    tableName = busCheck.tableName;\n    Log(\n      \"=> According to address in {arg2}: 0x${adr?.toRadixString(16).toUpperCase().padLeft(8,",
+  "@ssdtMsg888": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg889": "s located at address 87 (0x57) on the SMBus controller.\n        * While \"diagsvault\" may refer to diags, a hardware diagnosis program via EFI for Macs\n        * that communicates with the SMBus controller, the effect is really unknown for hacks.\n        * Uncomment this with caution.\n        */\n\n        /**\n        Device (DVL0)\n        {\n            Name (_ADR, 0x57) // _ADR: Address\n            Name (_CID, \"diagsvault\") // _CID: Compatible ID\n            Method (_DSM, 4, NotSerialized) // _DSM: Device-Specific Method\n            {\n                If (!Arg2)\n                {\n                    Return (Buffer (One)\n                    {\n                        0x57 //W\n                    })\n                }\n\n                Return (Package (0x02)\n                {\n                    \"address\",\n                    0x57\n                })\n            }\n        }\n        **/\n\n        Method (_STA, 0, NotSerialized) // _STA: Status\n        {\n            If (_OSI (\"Darwin\"))\n            {\n                Return(0x0F)\n            }\n            Else\n            {\n                Return (Zero)\n            }\n        }\n    }\n}\"\"\";\n\n    ssdt = ssdt.replaceAll(r\"[[bus_parent]]\", busParent);\n    ssdt = ssdt.replaceAll(r\"[[bus_path]]\", busPath);\n    final acpi = {\n      \"Comment\": \"Defines an MCHC and BUS0 device for SMBus compatibility\",\n      \"Enabled\": true,\n      \"Path\": \"{arg0}.aml\",\n    };\n    makePlist(acpi: acpi);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> ssdtGPUSPOOF({\n    String? gpuPath,\n    String?deviceId,\n    String?fakeModel,\n  }) async => await _ssdtGPUSPOOF(\n    gpuPath: gpuPath,\n    deviceId: deviceId,\n    fakeModel: fakeModel,\n  );\n\n  /// Graphics card counterfeiting\n  /// [gpuPath] Graphics card ACPI path\n  /// [deviceId] Graphics card counterfeit ID\n  /// [fakeModel] Graphics card fake name\n  Future<void> _ssdtGPUSPOOF({\n    String? gpuPath,\n    String?deviceId,\n    String?fakeModel,\n  }) async {\n    if (!checkIasl()) return;\n    if (gpuPath == null || !util.checkACPIPath(acpiPath: gpuPath)) {\n      Log.warning(\"A valid graphics card ACPI path was not provided! The operation has been terminated!\");\n      return;\n    }\n    if (deviceId == null || deviceId.isEmpty || deviceId.length != 4) {\n      Log.warning(\"A valid counterfeit graphics card ID was not provided! The operation has been terminated!\");\n      return;\n    }\n    if (fakeModel == null || fakeModel.isEmpty) {\n      Log.warning(\"No valid counterfeit graphics card name provided! Fake name will not be injected!\");\n    }\n    bool adrOverflow = false;\n    bool needBridge = false;\n    bool sureDsdtOrACPI = d.acpiTables.isNotEmpty;\n    if (sureDsdtOrACPI) {\n      Log(\"Checking graphics card device {arg1}...\");\n      // Check whether the graphics card device exists\n      final (pciPath, overflow) = acpiDevicePath(sanitizeAcpiPath(gpuPath));\n      if (pciPath != null && pciPath.isNotEmpty) {\n        adrOverflow = overflow;\n        // Check if pciPath exists Method: _PRT\n        bool foundMethod = _hasMethodInTables(gpuPath, [",
+  "@ssdtMsg889": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg890": ");\n          needBridge = false;\n        } else {\n          Log.warning(\"The current graphics card path {arg0} may hide the real device!\");\n          Log.warning(\"=> There is a _PRT method for device {arg1}, the real device may have been hidden, and a GFX0 device will be injected!\");\n          needBridge = true;\n        }\n      } else {\n        Log.warning(\"=>Device {arg2} not found in DSDT or SSDT! Operation aborted!\");\n        return;\n      }\n    } else {\n      final commonGPUNames = [\n        \"PEGP\",\n        \"GFX0\",\n        \"GFX1\",\n        \"GFX2\",\n        \"VGA\",\n        \"VID\",\n        \"H000\",\n      ];\n      final gpuName = gpuPath.split(\".\").last;\n      needBridge = !commonGPUNames.contains(gpuName);\n    }\n\n    if (adrOverflow) {\n      needBridge = true;\n      Log.warning(\"=>The _ADR address of the graphics card device {arg3} has an overflow!\");\n      gpuPath = gpuPath.substring(0, gpuPath.lastIndexOf(\".\"));\n      Log.warning(\"=> Backtrack to parent device path: {arg4} and inject a GFX0 device!\");\n    }\n\n    String ssdtName = \"SSDT-{arg5}-GPU-SPOOF\";\n    Log(\"Creating {arg6}.dsl...\");\n    Log(\"=> Graphics card device path: {arg7}\");\n    Log(\"=>Fake graphics card ID: {arg8}\");\n    Log(\"=> Fake graphics card name: {arg9}\");\n\n    final dsmMethod = \"\"\"\n    Method (_DSM, 4, NotSerialized)\n    {\n        If ((!Arg2 || !_OSI (\"Darwin\")))\n        {\n            Return (Buffer (One)\n            {\n              0x03\n            })\n        }\n        Return (Package (0x02)\n        {\n                \"device-id\",\n                Buffer(0x02)\n                {\n                  [[DEVICE_ID]]\n                },\n                [[MODEL_PACKAGE]]\n        })\n    }\n  \"\"\";\n\n    final dsmBlock = needBridge\n        ? \"\"\"\n        Device (GFX0)\n        {\n            Name (_ADR, Zero)\n            {arg10}\n        }\n      \"\"\"\n        : dsmMethod;\n\n    String ssdt =\n        \"\"\"\n    DefinitionBlock (\"\", \"SSDT\", 2, \"RAPID\", \"GPUSPOOF\", 0x00001000)\n    {\n\n        External ([[GPU_PATH]], DeviceObj)\n\n        Scope ([[GPU_PATH]])\n        {\n            {arg11}\n        }\n    }\n \"\"\";\n\n    ssdt = ssdt.replaceAll(r\"[[GPU_PATH]]\", gpuPath);\n    ssdt = ssdt.replaceAll(\n      r\"[[DEVICE_ID]]\",\n      util.convertDeviceIdToSpoof(deviceId),\n    );\n\n    String modelPackage = \"\";\n    if (fakeModel != null && fakeModel.isNotEmpty) {\n      modelPackage = \"\"\"\n        \"model\",\n            Buffer()\n            {\n                \"[[MODEL]]\"\n            }\n      \"\"\";\n      modelPackage = modelPackage.replaceAll(r\"[[MODEL]]\", fakeModel);\n    }\n    ssdt = ssdt.replaceAll(r\"[[MODEL_PACKAGE]]\", modelPackage);\n\n    final acpi = {\n      \"Comment\": \"GPU Spoof\",\n      \"Enabled\": true,\n      \"Path\": \"{arg12}.aml\",\n    };\n    makePlist(acpi: acpi);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// Clean up ACPI path\n  /// [path] ACPI path\n  List<String>? sanitizeAcpiPath(String path) {\n    path = path\n        .replaceAll(\"ACPI(\", \"\")\n        .replaceAll(\")\", \"\")\n        .replaceAll(\"#\", \".\")\n        .replaceAll(\"\\\\\", \"\");\n\n    List<String> newPath = [];\n    const String valid = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\";\n    for (var element in path.split(\".\")) {\n      element = element.replaceAll(RegExp(r\"_+$\"), \"\").toUpperCase();\n      if (element.length > 4 ||\n          !element.split(\"\").every((ch) => valid.contains(ch))) {\n        return null;\n      }\n\n      newPath.add(element);\n    }\n\n    return newPath;\n  }\n\n  /// Match ACPI path to PCIPath\n  /// [path] ACPI path\n  /// [return] The matched PCIPath and whether there is an address overflow\n  (String?, bool) acpiDevicePath(List<String>? path) {\n    String? matchedPCIPath;\n    bool adrOverflow = false;\n    if (path == null || path.isEmpty) {\n      return (matchedPCIPath, adrOverflow);\n    }\n    final (deviceDict, _) = getDevicePaths();\n    String? p;\n    for (var key in deviceDict.keys) {\n      if (compareAcpiPaths(key, path)) {\n        p = key;\n        break;\n      }\n    }\n\n    if (p == null) {\n      Log(\"=> Not found!\");\n      return (matchedPCIPath, adrOverflow);\n    }\n    matchedPCIPath = deviceDict[p]![",
+  "@ssdtMsg890": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg891": "];\n    Log(\"=> Matched PCI path: {arg0}\");\n    if (deviceDict[p]?[\"adr_overflow\"] == true) {\n      final overFlow = getAllMatches(deviceDict, deviceDict[p]?[\"path\"]);\n      List<dynamic> devs = [];\n      for (var d in overFlow) {\n        final devInfo = d.{arg1};\n        if (devInfo[\"dev_overflow\"] != null) {\n          devs.addAll(devInfo[\"dev_overflow\"]);\n        }\n      }\n      if (devs.isNotEmpty) {\n        Log.warning(\"There is an address _ADR overflow in the device path!\");\n        Log.warning(\"The following devices may affect attribute injection:\");\n        final uniqueSorted = devs.toSet().toList()..sort();\n        for (var d in uniqueSorted) {\n          Log.warning(\"=> {arg2}\");\n          if (compareAcpiPaths(d, path)) {\n            adrOverflow = true;\n          }\n        }\n      }\n    }\n    return (matchedPCIPath, adrOverflow);\n  }\n\n  bool compareAcpiPaths(String path, List<String> pathList) {\n    final pathCheck = sanitizeAcpiPath(path);\n    if (pathCheck == null) {\n      return false;\n    }\n    if (pathList.length != pathCheck.length) {\n      return false;\n    }\n    for (var i = 0; i < pathList.length; i++) {\n      if (pathList[i] != pathCheck[i]) {\n        return false;\n      }\n    }\n    return true;\n  }\n\n  Future<void> makePlist({\n    Map<String, dynamic>? acpi,\n    List<Map<String, dynamic>>? patches,\n    List<Map<String, dynamic>>? drops,\n    bool replace = false,\n    List<PlistType> targets = const [PlistType.openCore, PlistType.clover],\n  }) async {\n    for (var target in targets) {\n      _makeSinglePlist(\n        target,\n        acpi: acpi,\n        patches: patches,\n        drops: drops,\n        replace: replace,\n      );\n    }\n    if (_lastACPIMatchMode != config.acpiMatchMode) {\n      _lastACPIMatchMode = config.acpiMatchMode;\n    }\n  }\n\n  void beginPlistBatch() {\n    if (_plistBatchDepth == 0) {\n      _batchedPlists.clear();\n    }\n    _plistBatchDepth++;\n  }\n\n  Future<void> endPlistBatch({bool save = true}) async {\n    if (_plistBatchDepth == 0) return;\n\n    _plistBatchDepth--;\n    if (_plistBatchDepth > 0) return;\n\n    try {\n      if (save) {\n        _saveBatchedPlists();\n      }\n    } finally {\n      _batchedPlists.clear();\n    }\n  }\n\n  void _saveBatchedPlists() {\n    final parser = PlistParser();\n    for (final entry in _batchedPlists.entries) {\n      final plist = entry.value;\n      if (plist.isEmpty) continue;\n\n      final success = parser.savePlist(entry.key, plist);\n      Log(success?",
+  "@ssdtMsg891": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg892": "];\n    if (sortedOrder is! List || sortedOrder.length < 2) return;\n\n    final paths = sortedOrder\n        .map((entry) => entry?.toString())\n        .whereType<String>()\n        .toList();\n    final order = _dependencySortedPaths(paths);\n    if (order.isEmpty) return;\n\n    final rank = {for (var i = 0; i < order.length; i++) order[i]: i};\n    final indexed = sortedOrder.asMap().entries.toList();\n    indexed.sort((a, b) {\n      final aRank = rank[a.value?.toString()];\n      final bRank = rank[b.value?.toString()];\n      if (aRank == null && bRank == null) return a.key.compareTo(b.key);\n      if (aRank == null) return 1;\n      if (bRank == null) return -1;\n      final result = aRank.compareTo(bRank);\n      return result != 0 ? result : a.key.compareTo(b.key);\n    });\n\n    for (var i = 0; i < indexed.length; i++) {\n      sortedOrder[i] = indexed[i].value;\n    }\n  }\n\n  List<String> _dependencySortedPaths(List<String> paths) {\n    final uniquePaths = <String>[];\n    final seen = <String>{};\n    for (final path in paths) {\n      if (seen.add(path)) uniquePaths.add(path);\n    }\n\n    final available = uniquePaths.toSet();\n    final sorted = <String>[];\n    final visiting = <String>{};\n    final visited = <String>{};\n\n    void visit(String path) {\n      if (visited.contains(path)) return;\n      if (visiting.contains(path)) return;\n      visiting.add(path);\n      for (final dependency in ssdtDependencies[path] ?? const <String>[]) {\n        if (available.contains(dependency)) visit(dependency);\n      }\n      visiting.remove(path);\n      visited.add(path);\n      sorted.add(path);\n    }\n\n    for (final path in uniquePaths) {\n      visit(path);\n    }\n    return sorted;\n  }\n\n  void _processSectionWrapper<T>({\n    required Map<String, dynamic> plist,\n    required PlistType type,\n    required List<String> keyPath,\n    required dynamic items,\n    required T Function(T item) buildEntry,\n    required bool Function(T existing, T item) equalsEntry,\n    required bool replace,\n    required String Function(T item) logCallback,\n  }) {\n    final normalized = _normalizeItems<T>(items);\n\n    _processSection<T>(\n      plist: plist,\n      keyPath: keyPath,\n      rawItems: normalized,\n      buildEntry: buildEntry,\n      equalsEntry: equalsEntry,\n      replace: replace,\n      type: type,\n      logCallback: logCallback,\n    );\n  }\n\n  Object _getOrInitAtPath(Map<String, dynamic> root, List<dynamic> path) {\n    Map<String, dynamic> current = root;\n    for (int i = 0; i < path.length - 1; i++) {\n      current =\n          current.putIfAbsent(path[i], () => <String, dynamic>{})\n              as Map<String, dynamic>;\n    }\n\n    // If it already exists, return directly\n    var existing = current[path.last];\n    if (existing is Map<String, dynamic>) {\n      return existing;\n    }\n    if (existing is List<dynamic>) {\n      return existing;\n    }\n\n    // If the key name ends with \"Map\", it will be used as Map, otherwise it will be used as List\n    if (path.last.toLowerCase().contains(\"map\")) {\n      return current.putIfAbsent(path.last, () => <String, dynamic>{})\n          as Map<String, dynamic>;\n    } else {\n      return current.putIfAbsent(path.last, () => <dynamic>[]) as List<dynamic>;\n    }\n  }\n\n  bool _isValidItem(Object? item) {\n    return switch (item) {\n      String s => s.isNotEmpty,\n      Map m => m.isNotEmpty,\n      List l => l.isNotEmpty,\n      null => false,\n      _ => true,\n    };\n  }\n\n  String _plistName(PlistType type) =>\n      type == PlistType.clover ? \"patches_Clover.plist\" : \"patches_OC.plist\";\n\n  /// Process the specified path in plist\n  /// [plist] plist data\n  /// [keyPath] path in plist\n  /// [rawItems] Patch items to add\n  /// [buildEntry] Convert T to the entry to be written to plist\n  /// [equalsEntry] is used to determine whether the existing entry is equal to the new entry.\n  /// [replace] Whether to replace\n  /// [type] plist type\n  /// [logCallback] Log callback\n  Map<String, dynamic> _processSection<T>({\n    required Map<String, dynamic> plist,\n    required List<String> keyPath,\n    required List<T?>? rawItems,\n    required T Function(T item) buildEntry,\n    required bool Function(T existing, T item) equalsEntry,\n    required bool replace,\n    PlistType type = PlistType.openCore,\n    String Function(T item)? logCallback,\n  }) {\n    // If keyPath is [\"\"], it means inserting in the plist itself instead of [\"ACPI\", ...keyPath]\n    final effectivePath = (keyPath.length == 1 && keyPath.first.isEmpty)\n        ?[\"ACPI\"]\n        : [\"ACPI\", ...keyPath];\n\n    final section = effectivePath.isEmpty\n        ? plist\n        : _getOrInitAtPath(plist, effectivePath);\n\n    final validItems = (rawItems ?? [])\n        .whereType<T>()\n        .where(_isValidItem)\n        .toList();\n\n    if (section is List<dynamic>) {\n      for (final item in validItems) {\n        final entry = buildEntry(item);\n        final comment = logCallback?.call(item);\n\n        String patchType =",
+  "ssdtMsg893": ";\n        }\n\n        // Find matches\n        final index = section.indexWhere((e) => equalsEntry(e, entry));\n\n        if (index != -1) {\n          // already exists\n          if (replace) {\n            // Replace and update at the original position\n            section[index] = entry;\n            Log(",
+  "ssdtMsg894": ");\n          }\n        } else {\n          //Add if it does not exist\n          Log(",
+  "ssdtMsg895": ");\n          section.add(entry);\n        }\n      }\n    } else if (section is Map<String, dynamic>) {\n      for (final item in validItems) {\n        final entry = buildEntry(item);\n        if (entry is Map<String, dynamic>) {\n          for (final kv in entry.entries) {\n            final key = kv.key;\n            final newValue = kv.value;\n            final oldValue = section[key];\n            if (oldValue != null) {\n              //The key already exists → update value\n              if (replace || oldValue != newValue) {\n                section[key] = newValue;\n                if (_lastACPIMatchMode != config.acpiMatchMode) {\n                  Log(",
+  "ssdtMsg896": ");\n                }\n              }\n            } else {\n              //The key does not exist → add\n              section[key] = newValue;\n              if (_lastACPIMatchMode != config.acpiMatchMode) {\n                Log(",
+  "ssdtMsg897": ",\n      );\n    }\n\n    return plist;\n  }\n\n  /// Get the byte array of data\n  /// [data] supports String, List, Uint8List\n  /// [padTo] is padded to the specified length (the missing part is filled with 0)\n  List<int> getData(dynamic data, {int padTo = 0}) {\n    if (data == null) return [];\n\n    late List<int> byteData;\n\n    if (data is String) {\n      byteData = data.codeUnits;\n    } else if (data is Uint8List) {\n      byteData = data.toList();\n    } else if (data is List) {\n      // Check whether the List elements are all ints\n      if (data.every((e) => e is int)) {\n        byteData = List<int>.from(data);\n      } else {\n        byteData = []; // Otherwise return empty\n      }\n    } else {\n      throwArgumentError(",
+  "ssdtMsg898": ");\n    }\n\n    //Padding to padTo length\n    if (padTo > byteData.length) {\n      byteData = [...byteData, ...List.filled(padTo - byteData.length, 0)];\n    }\n\n    return byteData;\n  }\n\n  /// Get table ID\n  /// [table] table dictionary\n  /// [idName] ID name\n  /// [mode] matching mode\n  List<int> _getTableId(\n    Map<dynamic, dynamic>? table,\n    String idName, {\n    ACPIMatchMode? mode,\n  }) {\n    mode ??= config.acpiMatchMode; // acpiMatchMode is used by default\n\n    if (table == null) {\n      mode = ACPIMatchMode.leastStrict;\n    }\n\n    // Define the size of the zero-byte array\n    int byteLength = idName == \"id\" ? 8 : 4;\n    List<int> zero = util.getHexBytes(\"00\" * byteLength);\n\n    dynamic rawValue;\n\n    switch (mode) {\n      case ACPIMatchMode.tableIDsAndLength:\n        rawValue = table?[idName];\n        break;\n      case ACPIMatchMode.tableIDsAndLengthAndNormalizeHeaders:\n        rawValue = table?[\"{arg0}_ascii\"] ?? table?[idName] ?? zero;\n        break;\n      default: // leastStrict / lengthOnly\n        return zero;\n    }\n\n    if (rawValue is String) {\n      return rawValue.codeUnits;\n    } else if (rawValue is List<int>) {\n      return rawValue;\n    } else {\n      return zero;\n    }\n  }\n\n  /// Get the table length\n  /// [table] table dictionary\n  /// [mode] matching mode\n  int _getTableLength(Map<dynamic, dynamic>? table, {ACPIMatchMode? mode}) {\n    mode ??= config.acpiMatchMode;\n    if (table == null || mode == ACPIMatchMode.leastStrict) {\n      //Table not found, or length 0\n      return 0;\n    }\n    // If the mode is not 0, return the table length\n    return table[\"length\"] ?? 0;\n  }\n\n  /// Clover patch patch\n  /// [patch] patch dictionary\n  Map<String, dynamic> getCloverPatch(Map<String, dynamic> patch) {\n    return {\n      \"Comment\": patch[\"Comment\"],\n      \"Disabled\": patch.containsKey(\"Disabled\") ? patch[\"Disabled\"] : false,\n      \"Find\": getData(util.getHexBytes(patch[\"Find\"])),\n      \"Replace\": getData(util.getHexBytes(patch[\"Replace\"])),\n    };\n  }\n\n  Map<String, dynamic> getCloverDrop(Map<String, dynamic> drop) {\n    final table = drop[",
+  "@ssdtMsg898": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg899": "] ?? leng;\n    if (length > 0) {\n      t[\"Length\"] = length;\n    }\n    return t;\n  }\n\n  /// Clover quirks\n  /// [quirks] quirks dictionary\n  Map<String, dynamic> getCloverQuirks(Map<String, dynamic> quirks) {\n    return {\"FixHeaders\": quirks[\"FixHeaders\"] ?? false};\n  }\n\n  /// OpenCore patch patch\n  /// [patch] patch dictionary\n  Map<String, dynamic> getOpenCorePatch(Map<String, dynamic> patch) {\n    var table = patch[\"Table\"] ?? d.getDsdt();\n    if (table == null || table.isEmpty) {\n      table = {};\n    }\n    return {\n      \"Base\": patch[\"Base\"] ?? \"\",\n      \"BaseSkip\": patch[\"BaseSkip\"] ?? 0,\n      \"Comment\": patch[\"Comment\"],\n      \"Count\": patch[\"Count\"] ?? 0,\n      \"Enabled\": patch.containsKey(\"Enabled\") ? patch[\"Enabled\"] : true,\n      \"Find\": getData(util.getHexBytes(patch[\"Find\"])),\n      \"Limit\": patch[\"Limit\"] ?? 0,\n      \"Mask\": getData(patch[",
+  "ssdtMsg900": "),\n        padTo: 4,\n      ),\n    };\n  }\n\n  /// OpenCore drop patch\n  /// [drop] drop dictionary\n  Map<String, dynamic> getOpenCoreDrop(Map<String, dynamic> drop) {\n    var table = drop[\"Table\"] ?? d.getDsdt();\n    if (table == null || table.isEmpty) {\n      table = {};\n    }\n    return {\n      \"All\": drop[\"All\"] ?? false,\n      \"Comment\": drop[\"Comment\"] ?? \"\",\n      \"Enabled\": drop[\"Enabled\"] ?? true,\n      \"OemTableId\": getData(\n        drop[\"TableId\"] ?? _getTableId(table,",
+  "ssdtMsg901": "Locating LPC(B)/SBRG…",
+  "ssdtMsg902": "=> {arg1} found in {arg0}",
+  "@ssdtMsg902": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg903": "=> {arg1} found in {arg0}",
+  "@ssdtMsg903": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg904": "=> {arg1} found in {arg0}",
+  "@ssdtMsg904": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg905": "=> Failed to find LPC(B)! Operation terminated!",
+  "ssdtMsg906": "No valid DSDT found! Please select a DSDT file or a file directory containing DSDT first!",
+  "ssdtMsg907": "DSDT path provided: {arg0}",
+  "@ssdtMsg907": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg908": "The supplied DSDT path is invalid: {arg0}",
+  "@ssdtMsg908": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg909": "The iasl tool preparation failed! Please update or use the built-in iasl tool first!",
+  "ssdtMsg910": "Collecting valid ACPI tables from directory {arg0}...",
+  "@ssdtMsg910": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg911": "No valid .aml file found!\\n",
+  "ssdtMsg912": "No valid DSDT found! Please select a DSDT file or a file directory containing DSDT first!",
+  "ssdtMsg913": "Several files with DSDT signatures were verified:",
+  "ssdtMsg914": "Multiple DSDT files are currently detected and only one is allowed to be processed at a time. Please keep one DSDT file and remove the others and try again.\\n",
+  "ssdtMsg915": "About to decompile {arg0} to verify if pre-made patches need to be applied...",
+  "@ssdtMsg915": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg916": "Loading {arg0}...",
+  "@ssdtMsg916": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg917": "Invalid DSDT file! Please reselect a valid DSDT file!",
+  "ssdtMsg918": "Processing completed!\\n",
+  "ssdtMsg919": "The file or folder passed in does not exist!\\n",
+  "ssdtMsg920": "Handling problematic DSDT files...",
+  "ssdtMsg921": "Check available pre-made patches…",
+  "ssdtMsg922": "Loading {arg0} file into memory...",
+  "@ssdtMsg922": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg923": "Processing patches one by one...\\n",
+  "ssdtMsg924": "=> Positioned, applying…",
+  "ssdtMsg925": "=> The DSDT file from the previous question was decompiled successfully!",
+  "ssdtMsg926": "=> The patch has been applied to the modified file and the file is saved in the Results folder:\\n {arg0}",
+  "@ssdtMsg926": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg927": "{arg0} Decompilation failed!\\n",
+  "@ssdtMsg927": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg928": "Loading valid ACPI tables in {arg0}...",
+  "@ssdtMsg928": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg929": "Decompilation of all valid ACPI tables completed!",
+  "ssdtMsg930": "=> Scope not found for device {arg0}",
+  "@ssdtMsg930": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg931": "=> Unable to locate {arg0}",
+  "@ssdtMsg931": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg932": "Locating {arg0} ({arg1}) device...",
+  "@ssdtMsg932": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg933": "=> Unable to target any {arg0} devices",
+  "@ssdtMsg933": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg934": "=> found {arg0}",
+  "@ssdtMsg934": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg935": "=> Looking for verification _STA…",
+  "ssdtMsg936": "=> _STA has been renamed to XSTA! Skip other checks…",
+  "ssdtMsg937": "=> Please disable the renaming of the device from _STA to XSTA in DSDT and try again after restarting!\\n",
+  "ssdtMsg938": "=> {arg0} variable {arg1}",
+  "@ssdtMsg938": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg939": "=> _STA method/name not found",
+  "ssdtMsg940": "=> Found _STA method at index {arg0}!",
+  "@ssdtMsg940": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg941": "=> Generating _STA to XSTA rename",
+  "ssdtMsg942": "Error occurred while processing IntObj type: {arg0}",
+  "@ssdtMsg942": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg943": "Error processing MethodObj type: {arg0}",
+  "@ssdtMsg943": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg944": "Gathering ACPI device information...",
+  "ssdtMsg945": "Gathering ACPI device paths...",
+  "ssdtMsg946": "Rechecking orphaned devices...",
+  "ssdtMsg947": "No IRQ information found!",
+  "ssdtMsg948": "The current options or custom IRQs are empty! Unable to generate IRQ patch!",
+  "ssdtMsg949": "Current custom IRQs: {arg0}",
+  "@ssdtMsg949": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg950": "=> No IRQ information found!",
+  "ssdtMsg951": "Custom IRQ list format wrong! ! ! Separate devices with spaces and IRQs with commas! ! !",
+  "ssdtMsg952": "=> Example: RTC:0 IPIC:2 TMR:8,11 \\n",
+  "ssdtMsg953": "=> Found _HID: {arg0}",
+  "@ssdtMsg953": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg954": "=> _HID parsing error: {arg0}",
+  "@ssdtMsg954": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg955": "No valid device found, skipping HPET operation!",
+  "ssdtMsg956": "No valid IRQs were provided or the IRQs are empty! Operation aborted!",
+  "ssdtMsg957": "Locating PNP0103 (HPET) device…",
+  "ssdtMsg958": "=> positioned at {arg0}",
+  "@ssdtMsg958": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg959": "Locating _CRS method/name for HPET...",
+  "ssdtMsg960": "=> Unable to locate {arg0}._CRS! Operation terminated!",
+  "@ssdtMsg960": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg961": "=> Unable to locate {arg0}._CRS!",
+  "@ssdtMsg961": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg962": "=> _CRS appears to have been named XCRS!",
+  "ssdtMsg963": "=> Please disable the renaming of the device from _CRS to XCRS in DSDT and try again after restarting!\\n",
+  "ssdtMsg964": "=> Located at {arg0}._CRS",
+  "@ssdtMsg964": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg965": "=> Found at index: {arg0}",
+  "@ssdtMsg965": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg966": "=> Type: {arg0}",
+  "@ssdtMsg966": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg967": "=> Checking Memory32Fixed…",
+  "ssdtMsg968": "=> Unable to determine memory access type!",
+  "ssdtMsg969": "=> Cannot convert Base or Length to integer!",
+  "ssdtMsg970": "=> Get {arg0} {arg1} => {arg2}",
+  "@ssdtMsg970": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg971": "=> Not found!",
+  "ssdtMsg972": "=> Use default value {arg0} => {arg1}",
+  "@ssdtMsg972": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg973": "=> Not found!",
+  "ssdtMsg974": "Creating IRQ patch...",
+  "ssdtMsg975": "Checking IRQ…",
+  "ssdtMsg976": "IRQ is empty! Skip...\\n",
+  "ssdtMsg977": "=> Nothing to patch!",
+  "ssdtMsg978": "No match found.",
+  "ssdtMsg979": "Missing IRQ patch ending ({arg1}) for {arg0}! Skipped…",
+  "@ssdtMsg979": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg980": "The following may not be unique and are disabled by default! \\n",
+  "ssdtMsg981": "Creating precompiled {arg0}.dsl...",
+  "@ssdtMsg981": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg982": "Creating a fake HPET device...",
+  "ssdtMsg983": "=> Core display ACPI path found: {arg0}",
+  "@ssdtMsg983": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg984": "=> Device (PNLF) will be mounted under {arg0}",
+  "@ssdtMsg984": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg985": "=> No legal verification ACPI path found",
+  "ssdtMsg986": "=> Will return to the root level and inject Device (PNLF)",
+  "ssdtMsg987": "No valid iGPU path found in passed ACPI table!\\n",
+  "ssdtMsg988": "Please enter the iGPU ACPI path to use. The character limit for each path element is 4 alphanumeric characters (starting with a letter or underscore), separated by spaces. For example: SB.PCI0.GFX0\\n",
+  "ssdtMsg989": "It has been manually set to {arg0} according to the given iGPU path \\n",
+  "@ssdtMsg989": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg990": "Checking ACPI table for native PNLF device...",
+  "ssdtMsg991": "=> Native PNLF device found at {arg0}: {arg1}",
+  "@ssdtMsg991": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg992": "=> Native PNLF needs to be renamed to XNLF, renaming patch is being generated...",
+  "ssdtMsg993": "=> Native PNLF device not found!",
+  "ssdtMsg994": "=> No need to generate PNLF to XNLF rename patch!",
+  "ssdtMsg995": "Name (NBCF, 0x00) detected in {arg0}, generating patch...",
+  "@ssdtMsg995": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg996": "Name (NBCF, Zero) detected in {arg0}, generating patch...",
+  "@ssdtMsg996": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg997": "Note: iGPU path is guessed as {arg0}\\n Please verify before use!",
+  "@ssdtMsg997": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg998": "Note: The iGPU path has been manually set to {arg0}. Please be sure to confirm whether the path is correct before use!",
+  "@ssdtMsg998": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg999": "Note: NBCF patch has been generated (depends on BrightnessKeys.kext driver), enabled by default! If you encounter problems during use, please disable this patch!",
+  "ssdtMsg1000": "Locating PNP0C09(EC) device...",
+  "ssdtMsg1001": "Determining CPU naming scheme...",
+  "ssdtMsg1002": "Checking {arg0}…",
+  "@ssdtMsg1002": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1003": "=> Processor found: {arg0}",
+  "@ssdtMsg1003": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1004": "Creating {arg0}.dsl...",
+  "@ssdtMsg1004": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1005": "=> No Processor object found...",
+  "ssdtMsg1006": "=> ACPI0007 device not found…",
+  "ssdtMsg1007": "=> {arg0} ACPI0007 devices found",
+  "@ssdtMsg1007": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1008": "=> Found parent device at {arg0}, processing...",
+  "@ssdtMsg1008": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1009": "=> Checking {arg0}…",
+  "@ssdtMsg1009": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1010": "=> Not found! jump over…",
+  "ssdtMsg1011": "=> Not found! jump over…",
+  "ssdtMsg1012": "Processing {arg0} valid processor devices...",
+  "@ssdtMsg1012": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1013": "No valid processor device found!",
+  "ssdtMsg1014": "Failed to obtain LPC Name...",
+  "ssdtMsg1015": "Creating precompiled {arg0}.dsl...",
+  "@ssdtMsg1015": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1016": "=> Need to counterfeit RTC!",
+  "ssdtMsg1017": "=> Checking _CRS…",
+  "ssdtMsg1018": "=> _CRS is a buffer, checking RTC range...",
+  "ssdtMsg1019": ", 0x00000000)\n{\n    /*\n     * Start copying here if you're adding this info to an existing SSDT-Bridge!\n     */\n''';\n\n    for (final acpi in externalRefs) {\n      ssdt += ' External ({arg0}, DeviceObj)\\n';\n    }\n    ssdt += '\\n';\n\n    /// Close parenthesis\n    /// [input] input string\n    /// [depth] depth\n    /// [iterations] Number of iterations\n    /// [pad] padding string\n    String closeBrackets(String input, int depth, int iterations, String pad) {\n      while (iterations > 0) {\n        input += '{arg1}}\\n';\n        iterations--;\n        depth--;\n      }\n      return input;\n    }\n\n    List<String> lastPath = [];\n    String? acpiString;\n    final bridgeNames = <String, List<String>>{};\n    final acpiPaths = <String, String>{};\n\n    for (final element in bridgeList..sort()) {\n      final comp = element.split(' ');\n      final acpi = comp.first;\n      int match = 0;\n      for (int i = 0; i < comp.length && i < lastPath.length; ++i) {\n        if (comp[i] != lastPath[i]) break;\n        match++;\n      }\n\n      if (lastPath.isNotEmpty) {\n        ssdt = closeBrackets(\n          ssdt,\n          lastPath.length,\n          lastPath.length - match,\n          pad,\n        );\n      }\n\n      lastPath = comp;\n\n      if (acpi != acpiString) {\n        acpiString = acpi;\n        ssdt += ' Scope ({arg2})\\n {\\n';\n      }\n\n      final currDepth = comp.length;\n      if (currDepth == 0) continue;\n\n      final parentPath = comp.sublist(0, currDepth - 1).join(' ');\n      bridgeNames.putIfAbsent(parentPath, () => []);\n\n      final parentAcpi = acpiPaths[parentPath] ?? acpi;\n      final baseName = pathDict[bridgeMatch[element]];\n      final unique = getUniqueDevice(\n        parentAcpi,\n        baseName ?? 'BRG0',\n        startingNumber: -1,\n        usedNames: bridgeNames[parentPath]!,\n      );\n      final name = unique.name;\n      bridgeNames[parentPath]!.add(name);\n      acpiPaths[element] = '{arg3}.{arg4}';\n\n      String p = pad * currDepth;\n      if (bridgeMatch.containsKey(element)) {\n        final base = pathDict[bridgeMatch[element]];\n        if (base != null && base.isNotEmpty && base != name) {\n          ssdt +=\n              '{arg5}// User-provided name \\'{arg6}\\' supplied, incremented for uniqueness\\n';\n        } else if (base != null && base.isNotEmpty) {\n          ssdt += '{arg7}// User-provided name \\'{arg8}\\' supplied\\n';\n        } else {\n          ssdt +=\n              '{arg9}// Customize the following device name if needed, eg. GFX0\\n';\n        }\n      }\n\n      ssdt += ' Device ({arg10})\\n{arg11}{\\n';\n      p += pad;\n\n      if (bridgeMatch.containsKey(element)) {\n        ssdt += '{arg12}// Target Device Path:\\n{arg13}// {arg14}\\n';\n      }\n\n      final adrInt = int.parse(comp.last.replaceFirst('0x', ''));\n      final adr = switch (adrInt) {\n        0 => 'Zero',\n        1 => 'One',\n        _ =>\n          adrInt > 0xFFFF\n              ? '0x{arg15}'\n              : '0x{arg16}',\n      };\n\n      ssdt += '{arg17} Name (_ADR, {arg18})\\n';\n    }\n\n    if (lastPath.isNotEmpty) {\n      final depth = lastPath.length;\n      ssdt = closeBrackets(ssdt, depth, depth, pad);\n    }\n\n    ssdt += '''\n}\n''';\n\n    writeSSDT(ssdtName, ssdt);\n    final acpi = {",
+  "@ssdtMsg1019": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      },
+      "arg13": {
+        "type": "String"
+      },
+      "arg14": {
+        "type": "String"
+      },
+      "arg15": {
+        "type": "String"
+      },
+      "arg16": {
+        "type": "String"
+      },
+      "arg17": {
+        "type": "String"
+      },
+      "arg18": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1020": ",\n    };\n    makePlist(acpi: acpi);\n  }\n\n  Future<void> ssdtALS0({bool prebuilt = false}) async =>\n      prebuilt ? await _ssdtALS0Prebuilt() : await _ssdtALS0();\n\n  ///Light sensor (for notebooks)\n  Future<void> _ssdtALS0() async {\n    if (!await ensureDSDT()) return;\n    Log(",
+  "ssdtMsg1021": ");\n      //Try to find any ambient light sensor device in the current table\n      var als = d.getDevicePathsWithHid(hid:",
+  "ssdtMsg1022": ");\n        }\n        return;\n      }\n    }\n\n    /// No ALS devices found\n    Log(",
+  "ssdtMsg1023": ",\n    };\n    writeSSDT(ssdtName, ssdt);\n    makePlist(acpi: acpi);\n  }\n\n  Future<void> ssdtXOSI({bool prebuilt = false, String? targetString}) async =>\n      prebuilt\n      ? await _ssdtXOSIPrebuilt()\n      : await _ssdtXOSI(targetString: targetString);\n\n  /// XOSI scheme\n  /// [targetString] target string\n  Future<void> _ssdtXOSI({String? targetString}) async {\n    if (!await ensureDSDT()) return;\n    String?highestOsi;\n    osiStrings.forEach((key, value) {\n      var dsdtTable = d.getDsdt()!['table'];\n      if (dsdtTable.contains(value)) {\n        highestOsi = key;\n      }\n    });\n    final String ssdtName =",
+  "ssdtMsg1024": ");\n      }\n      //Automatically select default items\n      if (highestOsi != null && highestOsi!.isNotEmpty) {\n        targetString = highestOsi;\n      } else {\n        targetString = osiStrings.keys.first;\n      }\n      Log(",
+  "ssdtMsg1025": "';\n      if (x == targetString || i == osiStrings.length - 1) {\n        // last item - stop\n        ssdt +=",
+  "ssdtMsg1026": ";\n        break;\n      }\n      //Add comma and newline\n      ssdt +=",
+  "ssdtMsg1027": ",\n    };\n    makePlist(acpi: acpi, patches: patches, replace: true);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// Load the specified ACPI table\n  /// [tableSignature] table signature\n  /// [tablePath] table path\n  Future<Map<String, dynamic>?> loadTable(\n    String tableSignature, {\n    String? tablePath,\n  }) async {\n    if (!checkIasl()) return null;\n    Log(",
+  "ssdtMsg1028": ");\n    Map<String, dynamic>? table;\n    // If the ACPI table path is not passed in, search from the loaded ACPI table\n    if (tablePath == null || tablePath.isEmpty) {\n      final tableList = d.acpiTables.values\n          .where(\n            (t) =>\n                t['signature']?.toUpperCase() == tableSignature.toUpperCase(),\n          )\n          .toList();\n      if (tableList.isNotEmpty) table = tableList.first;\n    } else {\n      //Load the table from the ACPI table path passed in\n      // Check to make sure the path is valid\n      tablePath = await util.checkPath(\n        filePath: tablePath,\n        onError: (e) => Log.error(e),\n      );\n      if (tablePath.isNotEmpty) {\n        //Load table\n        final result = await d.loadTable(tablePath);\n        final tableList = result.{arg0}.values\n            .where(\n              (t) =>\n                  t['signature']?.toUpperCase() == tableSignature.toUpperCase(),\n            )\n            .toList();\n        if (tableList.isNotEmpty) table = tableList.first;\n      }\n    }\n\n    if (table == null || table.isEmpty) {\n      Log.warning(\n        config.acpiDirectory != null && config.acpiDirectory!.isNotEmpty\n            ?",
+  "@ssdtMsg1028": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1029": ",\n      );\n      return null;\n    }\n\n    return table;\n  }\n\n  /// Find the first field value containing the keyword from FACP lines\n  String findFacpField(List<dynamic> lines, String key) {\n    for (var line in lines) {\n      if (line.contains(key)) {\n        final parts = line.split(",
+  "ssdtMsg1030": ";\n  }\n\n  /// Verify SSDT table signature\n  /// [tableSignature] table signature\n  /// [tablePath] table path\n  Future<(bool, Map)> validateTableSignature(\n    String tableSignature, {\n    String? tablePath,\n  }) async {\n    final targetTable = await loadTable(tableSignature, tablePath: tablePath);\n    if (targetTable == null) return (false, {});\n    Log(",
+  "ssdtMsg1031": ");\n    }\n    return (gotSig, targetTable);\n  }\n\n  /// SSDT-FACP\n  /// [facpPath] FACP table path\n  Future<void> ssdtFACP({String? facpPath}) async {\n    final (valid, table) = await validateTableSignature(\n      'FACP',\n      tablePath: facpPath,\n    );\n    if (!valid) return;\n    final String valueToCauseReset = 'Value to cause reset';\n    Log(",
+  "ssdtMsg1032": ");\n\n    // Extract the Reset Register Address (usually in the first two lines)\n    String addressValue =",
+  "ssdtMsg1033": ":replaceAddress,\n      },\n    ];\n\n    makePlist(patches: patches, replace: true);\n  }\n\n  /// SSDT-APIC\n  /// [apicPath] APIC table path\n  Future<void> ssdtAPIC({String? apicPath}) async {\n    if (!await ensureDSDT()) return;\n    final (valid, table) = await validateTableSignature(\n      'APIC',\n      tablePath: apicPath,\n    );\n    if (!valid) return;\n\n    Log(",
+  "ssdtMsg1034": ": table['signature'] ?? 'APIC',\n      },\n    ];\n\n    makePlist(acpi: acpi, drops: drops);\n  }\n\n  /// SSDT-DMAR\n  /// [dmarPath] DMAR table path\n  Future<void> ssdtDMAR({String? dmarPath}) async {\n    final (valid, table) = await validateTableSignature(\n      'DMAR',\n      tablePath: dmarPath,\n    );\n    if (!valid) return;\n    bool reserved = false;\n    int regionCount = 0;\n    List<String> newDMAR = [];\n    List<String> lines = table['lines'] ?? [];\n    Log(",
+  "ssdtMsg1035": ")) {\n        reserved = false;\n      }\n      if (!reserved) {\n        // ensure",
+  "ssdtMsg1036": "Any number in is 0\n        if (line.contains(",
+  "ssdtMsg1037": ".contains(char)) {\n                // Directly store the remaining content into the variable as is.\n                newVal.write(value.substring(i));\n                break;\n              } else if (char !=",
+  "ssdtMsg1038": ") {\n                // Make sure all non-zero, non-space values are set to 0\n                char =",
+  "ssdtMsg1039": ": table['signature'] ?? 'DMR',\n      },\n    ];\n    makePlist(acpi: acpi, drops: drops);\n  }\n\n  Future<void> ssdtIMEI({bool prebuilt = false, String? fakeid}) async =>\n      prebuilt\n      ? await _ssdtIMEIPrebuilt(fakeid: fakeid)\n      : await _ssdtIMEI(fakeid: fakeid);\n\n  /// SSDT-IMEI\n  /// Used to bridge counterfeit IMEI devices, suitable for Ivy Bridge 6 series motherboards and Sandy Bridge 7 series motherboards\n  /// The 6-series motherboard requires the fake ID to be 3A1E, and the 7-series motherboard requires the fake ID to be 3A1C.\n  /// [fakeid] Fake device ID\n  Future<void> _ssdtIMEI({String? fakeid}) async {\n    if (!await ensureDSDT()) return;\n    if (fakeid == null) {\n      Log.warning(",
+  "ssdtMsg1040": "; // XSTA\n\n    /// Record whether each UNC exists natively _STA\n    final Map<String, bool> hasStaMap = {};\n\n    for (var device in devices) {\n      final devicePath = device.first;\n      final devName = devicePath.split('.').last;\n\n      final staMethod = d.getMethodPaths(obj:",
+  "ssdtMsg1041": ");\n      if (methodPath.isEmpty) {\n        // Find if DTGP method exists\n        Log(",
+  "ssdtMsg1042": ");\n\n      /// Find DMA device based on device ID: PNP0200\n      Log(",
+  "ssdtMsg1043": ",\n    };\n    await makePlist(acpi: acpi, replace: true);\n  }\n\n  /// Check system status support (_S0, _S3, _S4, _S5)\n  /// Return value: (supported system status list, unsupported system status list)\n  Future<(List?, List?)> checkSystemState({String? facpPath}) async {\n    if (!await ensureDSDT()) return (null, null);\n    bool? aoacState = await checkAOAC(facpPath: facpPath);\n    final List<String> systemStatesCheck = [",
+  "ssdtMsg1044": ");\n    //Support system status\n    Log(",
+  "ssdtMsg1045": ");\n    // Unsupported system status\n    final systemStatesNotSupported = systemStatesCheck\n        .where((element) => !systemStatesFound.contains(element))\n        .toList();\n    if (systemStatesNotSupported.isNotEmpty) {\n      Log.warning(",
+  "ssdtMsg1046": ");\n    }\n    //Non-AOAC machine\n    if (false == aoacState) {\n      if (systemStatesNotSupported.isEmpty) {\n        Log(",
+  "ssdtMsg1047": ");\n      }\n    } else if (true == aoacState) {\n      // AOAC machine\n      Log.warning(",
+  "ssdtMsg1048": ", table: table);\n      // Most are Name _S3\n      if (nameS3.isNotEmpty && nameS3[0].isNotEmpty) {\n        final target = nameS3[0].first;\n        Log(",
+  "ssdtMsg1049": ");\n      if (devicePath.isEmpty) {\n        /// Find LID device based on device ID: PNP0C0D\n        Log(",
+  "ssdtMsg1050": ");\n        }\n      }\n      if (!foundMethodLID) {\n        // Start checking if the _LID method exists\n        final methodLID = d.getMethodPaths(obj:",
+  "ssdtMsg1051": ");\n          // Check if ZTTS method exists\n          final ztts = d.getMethodInfo(obj:",
+  "ssdtMsg1052": ");\n      if (devicePath.isEmpty) {\n        /// Find PWRB device based on device ID: PNP0C0C\n        Log(",
+  "ssdtMsg1053": ");\n      if (devicePath.isEmpty) {\n        /// Find SLPB device based on device ID: PNP0C0E\n        Log(",
+  "ssdtMsg1054": ");\n          // Start checking whether the PNP0C0E device exists _STA method\n          final staMethod = d.getMethodPaths(obj:",
+  "ssdtMsg1055": ";\n\n    /// Device ID: PNP0C01 Find MEM2/RMEM/MEM/AMDN common devices\n    List<String> posiaDevices = [",
+  "ssdtMsg1056": ",\n    };\n    await makePlist(acpi: acpi, replace: true);\n  }\n\n  Future<void> ssdtGPRW({bool prebuilt = true}) async =>\n      prebuilt ? await _ssdtGPRWPrebuilt() : await _ssdtGPRW();\n\n  Future<void> _ssdtGPRW() async {\n    if (!await ensureDSDT()) return;\n    // Check if GPRW method exists\n    Log(l10nGlobal.ssdtMsg855);\n    var gprw = d.getMethodPaths(obj: 'GPRW');\n    if (gprw.isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg856);\n      // Check if XPRW method exists\n      Log(l10nGlobal.ssdtMsg857);\n      var xprw = d.getMethodPaths(obj: 'XPRW');\n      if (xprw.isNotEmpty) {\n        Log.warning(l10nGlobal.ssdtMsg858);\n        return;\n      } else {\n        Log.warning(l10nGlobal.ssdtMsg859);\n      }\n    }\n    if (gprw.isNotEmpty) {\n      Log(l10nGlobal.ssdtMsg860(arg0: gprw[0][0].toString()));\n      _ssdtGPRWPrebuilt();\n    }\n  }\n\n  /// SSDT-GPRW\n  Future<void> _ssdtGPRWPrebuilt() async {\n    if (!checkIasl()) return;\n    final String ssdtName =",
+  "ssdtMsg1057": ",\n      },\n    ];\n    makePlist(acpi: acpi, patches: patches, replace: true);\n  }\n\n  Future<void> ssdtUPRW({bool prebuilt = true}) async =>\n      prebuilt ? await _ssdtUPRWPrebuilt() : await _ssdtUPRW();\n\n  Future<void> _ssdtUPRW() async {\n    if (!await ensureDSDT()) return;\n    // Check if UPRW method exists\n    Log(l10nGlobal.ssdtMsg861);\n    var uprw = d.getMethodPaths(obj: 'UPRW');\n    if (uprw.isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg862);\n      // Check if XPRW method exists\n      Log(l10nGlobal.ssdtMsg863);\n      var xprw = d.getMethodPaths(obj: 'XPRW');\n      if (xprw.isNotEmpty) {\n        Log.warning(l10nGlobal.ssdtMsg864);\n        return;\n      } else {\n        Log.warning(l10nGlobal.ssdtMsg865);\n      }\n    }\n    if (uprw.isNotEmpty) {\n      Log(l10nGlobal.ssdtMsg866(arg0: uprw[0][0].toString()));\n      _ssdtUPRWPrebuilt();\n    }\n  }\n\n  /// SSDT-UPRW\n  Future<void> _ssdtUPRWPrebuilt() async {\n    if (!checkIasl()) return;\n    final String ssdtName =",
+  "ssdtMsg1058": ");\n    if (gpi0s.isEmpty || gpi0s[0].isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg867);\n      return;\n    }\n    Log(l10nGlobal.ssdtMsg868(arg0: gpi0s[0].first.toString()));\n\n    // Check if GPI0 exists _STA method\n    Log(",
+  "ssdtMsg1059": ")) {\n        /// Do not check the data table, continue\n        continue;\n      }\n\n      Log(",
+  "ssdtMsg1060": ");\n        return;\n      } else {\n        // If no processor object is found, continue checking for ACPI0007 devices\n        Log(",
+  "ssdtMsg1061": ");\n        found = true;\n        //Analyze procs[0][0].split(",
+  "ssdtMsg1062": ") Determine whether there is a PLTF device after segmentation\n        if (!procs[0][0].split(",
+  "ssdtMsg1063": ";\n\n        // Loop through the processor objects and add them to the SSDT\n        for (var i = 0; i < procList.length; i++) {\n          var procUid = procList[i];\n          var proc = procUid[",
+  "ssdtMsg1064": ");\n    }\n  }\n\n  /// SSDT-CPUR precompiled file\n  Future<void> _ssdtCPURPrebuilt() async {\n    if (!checkIasl()) return;\n    final String ssdtName =",
+  "ssdtMsg1065": ",\n    };\n    makePlist(acpi: acpi, replace: true);\n  }\n\n  /// Generate SSDT-EC related precompiled files\n  /// [isLaptop] Whether it is a laptop (determine whether to use the desktop or laptop version)\n  /// [injectUSBPower] Whether to inject USB power attributes (determines whether to include USBX)\n  Future<void> _ssdtECPrebuilt({\n    bool isLaptop = false,\n    bool injectUSBPower = false,\n  }) async {\n    // Check if the tool is available\n    if (!checkIasl()) return;\n    // Determine the file name and content based on parameters\n    late String fileName;\n    late String ssdtContent;\n    late String comment;\n\n    if (injectUSBPower) {\n      // When injecting USB power attributes: Contains the USBX logo\n      if (isLaptop) {\n        fileName =",
+  "ssdtMsg1066": ";\n      }\n    } else {\n      // When the USB power attribute is not injected: no USBX logo is included\n      if (isLaptop) {\n        fileName =",
+  "ssdtMsg1067": ",\n    };\n    makePlist(acpi: acpi, replace: true);\n  }\n\n  /// SSDT-AWAC\n  /// Generate SSDT-AWAC precompiled file\n  Future<void> _ssdtAWACPrebuilt() async {\n    if (!checkIasl()) return;\n    final String ssdtName =",
+  "ssdtMsg1068": ",\n    };\n    makePlist(acpi: acpi, replace: true);\n  }\n\n  /// Counterfeit wired network card, suitable for notebooks without wired network card\n  Future<void> ssdtRMNE() async {\n    if (!checkIasl()) return;\n    final String ssdtName =",
+  "ssdtMsg1069": ",\n    };\n    makePlist(acpi: acpi, replace: true);\n  }\n\n  Future<void> ssdtPCIDISABLE({\n    String? pciPath,\n    String?disableMethod,\n    String? type,\n  }) async => await _ssdtPCIDISABLE(\n    pciPath: pciPath,\n    disableMethod: disableMethod ?? 'OFF',\n    type: type ?? 'GPU',\n  );\n\n  ///Block PCI device/\n  /// [pciPath] device path\n  /// [disableMethod] Disable method (support",
+  "ssdtMsg1070": ")\n  /// [type] Device type\n  Future<void> _ssdtPCIDISABLE({\n    String? pciPath,\n    required String disableMethod,\n    required String type,\n  }) async {\n    if (!checkIasl()) return;\n\n    if (pciPath == null || !util.checkACPIPath(acpiPath: pciPath)) {\n      Log.warning(l10nGlobal.ssdtMsg870);\n      return;\n    }\n\n    bool sureDsdtOrACPI = d.acpiTables.isNotEmpty;\n    bool foundMethod = false;\n    bool needBridge = false;\n    bool adrOverflow = false;\n\n    if (sureDsdtOrACPI) {\n      if (disableMethod == 'OFF') {\n        Log(l10nGlobal.ssdtMsg871(arg0: pciPath.toString()));\n        foundMethod = _hasMethodInTables(pciPath, ['_ON', '_OFF']);\n        if (!foundMethod) {\n          Log.warning(l10nGlobal.ssdtMsg872(arg0: pciPath.toString()));\n          return;\n        }\n      } else if (disableMethod == 'PS3') {\n        Log(l10nGlobal.ssdtMsg873(arg0: pciPath.toString()));\n        foundMethod = _hasMethodInTables(pciPath, ['_PS3,_DSM']);\n        if (!foundMethod) {\n          Log.warning(l10nGlobal.ssdtMsg874(arg0: pciPath.toString()));\n          return;\n        }\n      } else if (disableMethod == 'IOName') {\n        Log(l10nGlobal.ssdtMsg875(arg0: pciPath.toString()));\n        // Check whether the graphics card device exists\n        final (pPath, overflow) = acpiDevicePath(sanitizeAcpiPath(pciPath));\n        if (pPath != null && pPath.isNotEmpty) {\n          adrOverflow = overflow;\n          // Check if pciPath exists Method: _PRT\n          foundMethod = _hasMethodInTables(pciPath, ['_PRT']);\n          if (!foundMethod) {\n            Log(l10nGlobal.ssdtMsg876(arg0: pciPath.toString()));\n            needBridge = false;\n          } else {\n            Log.warning(",
+  "ssdtMsg1071": ";\n    Log(l10nGlobal.ssdtMsg877(arg0: ssdtName.toString()));\n    Log(l10nGlobal.ssdtMsg878(arg0: type.toString(), arg1: pciPath.toString()));\n    Log(l10nGlobal.ssdtMsg879(arg0: disableMethod.toString()));\n\n    // Make sure it is an absolute path\n    if (!pciPath.startsWith('\\\\')) {\n      pciPath = '\\\\{arg0}';\n      Log(l10nGlobal.ssdtMsg880(arg0: pciPath.toString()));\n    }\n\n    // Generate SSDT source code\n    final ssdt = switch (disableMethod) {\n      String m when m.contains('OFF') => _buildSsdtOFF(pciPath, type),\n      String m when m.contains('PS3') => _buildSsdtPS3(pciPath, type),\n      String m when m.contains('IOName') => _buildSsdtIOName(\n        pciPath,\n        type,\n        needBridge: needBridge,\n      ),\n      _ => '',\n    };\n\n    if (ssdt.isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg881(arg0: disableMethod.toString()));\n      return;\n    }\n\n    final acpi = {",
+  "@ssdtMsg1071": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1072": ",\n    };\n\n    makePlist(acpi: acpi, replace: true);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// OFF method\n  String _buildSsdtOFF(String pciPath, String type) =>\n      '''\n/* Based off of RehabMan's SSDT-DDGPU.dsl */\nDefinitionBlock(",
+  "ssdtMsg1073": ", 0x00000000)\n    {\n        External ({arg0}, DeviceObj)\n    {arg1}\n    }\n  ''l10nGlobal.ssdtMsg886\\\\', '');\n    final foundSet = <String>{};\n    for (final tableName in sortedNicely(d.acpiTables.keys.toList())) {\n      final table = d.acpiTables[tableName];\n\n      for (final method in methods) {\n        final paths = d.getMethodPaths(obj: method, table: table);\n        final hasMethod = paths.any(\n          (e) =>\n              e[0].replaceAll('.{arg2}', '').replaceAll('\\\\', 'l10nGlobal.ssdtMsg887(arg0: tableName.toString(), arg1: pciPath.toString(), arg2: method.toString()), ');\n      Log.warning('Some methods not found: {arg3}.ssdtMsg888(arg0: ssdtName.toString(), arg1: ssdtName.toString(), arg2: tableName.toString())0')} Found {arg4}",
+  "@ssdtMsg1073": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1074": "Creating precompiled {arg0}.dsl...",
+  "@ssdtMsg1074": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1075": "is the diagnostic vault where messages are stored.\n        * Itl10nGlobal.ssdtMsg889(arg0: ssdtName.toString(), arg1: gpuPath.toString())_PRT']);\n        if (!foundMethod) {\n          Log('=> The _PRT method corresponding to {arg0} was not found in DSDT or SSDT!l10nGlobal.ssdtMsg890(arg0: gpuPath.toString(), arg1: gpuPath.toString(), arg2: gpuPath.toString(), arg3: gpuPath.toString(), arg4: gpuPath.toString(), arg5: deviceId.toString(), arg6: ssdtName.toString(), arg7: gpuPath.toString(), arg8: deviceId.toString(), arg9: fakeModel.toString(), arg10: dsmMethod.toString(), arg11: dsmBlock.toString(), arg12: ssdtName.toString())pathl10nGlobal.ssdtMsg891(arg0: matchedPCIPath.toString(), arg1: 2.toString(), arg2: d.toString()) Successfully saved the file to: {arg1}' : 'Save failed: {arg2}');\n      Log('');\n    }\n  }\n\n  void _makeSinglePlist(\n    PlistType type, {\n    Map<String, dynamic>? acpi,\n    List<Map<String, dynamic>>? patches,\n    List<Map<String, dynamic>>? drops,\n    bool replace = false,\n  }) {\n    final plistPath = path.join(\n      config.outputDirectory!,\n      outputFolder,\n      _plistName(type),\n    );\n    final parser = PlistParser();\n    final isBatching = _plistBatchDepth > 0;\n    final usesBatchedPlist =\n        isBatching && _batchedPlists.containsKey(plistPath);\n    final result = usesBatchedPlist\n        ?PlistParseResult(\n            status: PlistParseStatus.success,\n            data: _batchedPlists[plistPath],\n          )\n        : parser.loadPlist(plistPath);\n\n    if (result.status == PlistParseStatus.parseError) {\n      Log(result.message);\n      return;\n    }\n    if (!usesBatchedPlist) {\n      Log(\n        result.status == PlistParseStatus.success\n            ? 'Read file: {arg3}'\n            : 'Create file: {arg4}',\n      );\n    }\n\n    var plist = result.data ?? {};\n    if (isBatching) {\n      _batchedPlists[plistPath] = plist;\n    }\n    if (type == PlistType.openCore) {\n      _prepareOpenCore(\n        plist,\n        acpi,\n        patches,\n        drops,\n        {",
+  "@ssdtMsg1075": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1076": ":\n              config.acpiMatchMode ==\n              ACPIMatchMode.tableIDsAndLengthAndNormalizeHeaders,\n        },\n        replace,\n        type,\n      );\n    }\n\n    if (!isBatching && plist.isNotEmpty) {\n      final success = parser.savePlist(plistPath, plist);\n      Log(success? 'Successfully saved file to: {arg0}' : 'Failed to save: {arg1}');\n      Log('');\n    }\n  }\n\n  void _prepareOpenCore(\n    Map<String, dynamic> plist,\n    Map<String, dynamic>? acpi,\n    List<Map<String, dynamic>>? patches,\n    List<Map<String, dynamic>>? drops,\n    Map<String, dynamic>? quirks,\n    bool replace,\n    PlistType type,\n  ) {\n    final ensurePath = util.ensurePath;\n\n    ensurePath(plist, [",
+  "@ssdtMsg1076": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1077": "],\n      items: quirks ?? {},\n      buildEntry: getCloverQuirks,\n      equalsEntry: (e, q) => e == q,\n      replace: replace,\n      logCallback: (i) => i.toString(),\n    );\n    _sortCloverAcpiSortedOrderByDependencies(plist);\n  }\n\n  List<T?> _normalizeItems<T>(dynamic input) {\n    if (input == null) return [];\n\n    if (input is List) {\n      return input.cast<T?>();\n    } else {\n      return [input as T?];\n    }\n  }\n\n  void _sortOpenCoreAcpiAddByDependencies(Map<String, dynamic> plist) {\n    final add = plist['ACPI']?['Add'];\n    if (add is! List || add.length < 2) return;\n\n    final paths = add\n        .whereType<Map>()\n        .map((entry) => entry['Path']?.toString())\n        .whereType<String>()\n        .toList();\n    final order = _dependencySortedPaths(paths);\n    if (order.isEmpty) return;\n\n    final rank = {for (var i = 0; i < order.length; i++) order[i]: i};\n    final indexed = add.asMap().entries.toList();\n    indexed.sort((a, b) {\n      final aPath = a.value is Map ? a.value['Path']?.toString() : null;\n      final bPath = b.value is Map ? b.value['Path']?.toString() : null;\n      final aRank = rank[aPath];\n      final bRank = rank[bPath];\n      if (aRank == null && bRank == null) return a.key.compareTo(b.key);\n      if (aRank == null) return 1;\n      if (bRank == null) return -1;\n      final result = aRank.compareTo(bRank);\n      return result != 0 ? result : a.key.compareTo(b.key);\n    });\n\n    for (var i = 0; i < indexed.length; i++) {\n      add[i] = indexed[i].value;\n    }\n  }\n\n  void _sortCloverAcpiSortedOrderByDependencies(Map<String, dynamic> plist) {\n    final sortedOrder = plist['ACPI']?['SortedOrderl10nGlobal.ssdtMsg892';\n        if (item is Map<String, dynamic> &&\n            (item.containsKey('Find') || item.containsKey('Signature'))) {\n          patchType = 'Patch l10nGlobal.ssdtMsg893=> Update {arg0}",
+  "@ssdtMsg1077": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1078": "to {arg0}');\n          } else {\n            Log('=> {arg1}",
+  "@ssdtMsg1078": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1079": "Already exists in {arg0}, skip...l10nGlobal.ssdtMsg894=> Add {arg1}",
+  "@ssdtMsg1079": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1080": "to {arg0}l10nGlobal.ssdtMsg895=> update key",
+  "@ssdtMsg1080": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1081": "The value is",
+  "ssdtMsg1082": "in {arg0}');\n                }\n              } else {\n                if (_lastACPIMatchMode != config.acpiMatchMode) {\n                  Log('=> key",
+  "@ssdtMsg1082": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1083": "The value of is already up to date, skip {arg0}l10nGlobal.ssdtMsg896=> Add key",
+  "@ssdtMsg1083": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1084": "value",
+  "ssdtMsg1085": "to {arg0}');\n              }\n            }\n          }\n        }\n      }\n    } else {\n      throwStateError(\n        'Path ${[",
+  "@ssdtMsg1085": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1086": ")} is neither a List nor a Map, but {arg0}l10nGlobal.ssdtMsg897Data must be String, List<int> or Uint8Listl10nGlobal.ssdtMsg898(arg0: idName.toString())Table'] ?? d.getDsdt();\n    int length = _getTableLength(table);\n    Map<String, dynamic> t = {",
+  "@ssdtMsg1086": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1087": "] ?? _getTableId(table, 'signature'),\n        padTo: 4,\n      ),\n    };\n  }\n\n  /// OpenCore quirks\n  /// [quirks] quirks dictionary\n  Map<String, dynamic> getOpenCoreQuirks(Map<String, dynamic> quirks) {\n    return {",
+  "ssdtMsg1088": "Eliminate IRQ conflicts, often used for sound card repairs",
+  "ssdtMsg1089": "• HPET (High Precision Event Timer) is a hardware module used for system timing.\n• Under macOS, some motherboard HPET devices may cause IRQ (interrupt request) conflicts, which will affect the normal operation of the audio device, causing the system to be unstable or even unable to start.\n• This patch adjusts HPET-related ACPI device definitions to avoid IRQ conflicts, ensure that macOS can correctly use HPET timers, fix sound card issues, and improve system stability.",
+  "ssdtMsg1090": "Counterfeit EC and inject USB power attributes (applicable to Intel 6th generation and above desktop computers)",
+  "ssdtMsg1091": "• Applicable to Intel 6th generation and above desktop computers\n• This patch will disable the system's original EC device and then create a virtual EC device to \"trick\" macOS into thinking that a compatible EC exists, thus solving startup problems caused by missing EC devices. \n• Added necessary USB power properties to fix potential issues. Equivalent to merge: SSDT-EC-DESKTOP.aml + SSDT-USBX.aml",
+  "ssdtMsg1092": "Only counterfeits EC, does not affect existing EC, and injects USB power attributes at the same time (applicable to Intel 6th generation and above notebooks)",
+  "ssdtMsg1093": "• Applicable to Intel 6th generation and above notebooks\n• Suitable for notebooks, it does not delete or modify the existing EC, but creates a new virtual EC separately to avoid damaging the original EC device and preventing functional abnormalities such as notebook power management and keyboard backlight.\n• Added necessary USB power properties to fix potential issues. Equivalent to merging: SSDT-EC-LAPTOP.aml + SSDT-USBX.aml",
+  "ssdtMsg1094": "Counterfeit EC (applicable to Intel 5th generation and below desktop computers)",
+  "ssdtMsg1095": "• Applicable to Intel 5th generation and below desktops\n• This patch will disable the system's original EC device and then create a virtual EC device to \"trick\" macOS into thinking that a compatible EC exists, thus solving startup problems caused by missing EC devices.",
+  "ssdtMsg1096": "Only counterfeit EC, does not affect existing EC (applicable to Intel 5th generation and below notebooks)",
+  "ssdtMsg1097": "• Applicable to Intel 5th generation and below notebooks\n• It does not delete or modify the existing EC, but creates a new virtual EC separately to avoid damaging the original EC device and preventing functional abnormalities such as notebook power management and keyboard backlight.",
+  "ssdtMsg1098": "USB power attribute correction (applicable to Intel 6th generation and newer platforms)",
+  "ssdtMsg1099": "• Applicable to Intel Skylake 6th generation and above, server Haswell-E 4th generation and above, AMD Ryzen and other platforms\n• Starting with Intel Skylake and newer processors, macOS requires specific USB power properties to ensure that USB devices are properly powered and recognized.\n• This patch corrects the power management of USB ports to comply with macOS requirements and solves problems such as abnormal USB device recognition, insufficient power supply, and inability to hot-plug.\n• For notebooks: SSDT-EC-LAPTOP.aml + SSDT-USBX.aml The combination of the two is equivalent to SSDT-EC-USBX-LAPTOP.aml\n• For desktop: SSDT-EC-DESKTOP.aml + SSDT-USBX.aml The combination of the two is equivalent to SSDT-EC-USBX-DESKTOP.aml",
+  "ssdtMsg1100": "CPU core identification, enabling frequency adjustment and energy saving correction",
+  "ssdtMsg1101": "• SSDT-PLUG is suitable for Intel Haswell 4th generation ~ 11th generation, server Haswell-E 4th generation and above platforms (when customizing SSDT-PLUG, the tool automatically detects and generates it!)\n• SSDT-PLUG-ALT is suitable for Intel Alder Lake 12th generation and above, and AMD Ryzen platform (when customizing SSDT-PLUG, the tool automatically detects and generates it and renames it to SSDT-PLUG-ALT!)\n• macOS relies on the CPU power management plug-in (PluginType) to adjust the CPU frequency and improve energy efficiency and battery life.\n• This patch will modify the CPU definition so that macOS thinks it is a plugin-type = 1 processor required by Apple devices, thereby correctly loading CPU frequency management and improving performance and power consumption control.",
+  "ssdtMsg1102": "Enable NVRAM support (usually for Intel native 300 series motherboards)",
+  "ssdtMsg1103": "• Applicable to Intel Coffee Lake 8th generation ~ 9th generation platforms\n• Native 300 series motherboards (such as Z370, B360) may not use NVRAM correctly under macOS, resulting in some functions (such as iMessage, volume memory, boot parameters, etc.) not being saved.\n• This patch enables the motherboard's PMC (Power Management Controller), allowing macOS to use native NVRAM normally without the need for an additional EmuVariableUEFI driver.",
+  "ssdtMsg1104": "Add PNLF device for backlight support (notebooks and all-in-ones only)",
+  "ssdtMsg1105": "• macOS requires a PNLF device (Panel Brightness) to correctly control notebook screen brightness.\n• This patch will create a PNLF device in ACPI, allowing macOS to adjust screen brightness and display brightness control options in System Preferences.\n• Suitable for notebooks and some all-in-one computers to solve the problem of unavailable brightness adjustment.\n• UID = 14, applicable to: Intel 1st generation Arrandale, 2nd generation Sandy Bridge, 3rd generation Ivy Bridge\n  Note: Some machines using UID: 14 will encounter limited maximum brightness or other problems. In order to solve these problems, the correct device path of the iGPU (integrated graphics card) must be set, and the IGPU register information may need to be supplemented.\n• UID = 15, applicable to: Intel 4th generation Haswell, 5th generation Broadwell\n• UID = 16, applicable to: Intel 6th generation Skylake, 7th generation Kaby Lake, some 4th generation Haswell\n• UID = 17, suitable for: Custom brightness, usually used for some non-standard devices or Hackintosh settings with special needs\n• UID = 18, suitable for: Custom brightness, usually used for some non-standard devices or Hackintosh settings with special needs\n• UID = 19, applicable to: Intel 8th generation CoffeeLake and above, below 10th generation, and AMD notebooks\n• UID = 99, applies to: Others (requires custom applbkl-name / applbkl-data device properties), may not work at all",
+  "ssdtMsg1106": "Provides sensor support required for screen backlight adjustment (only applicable to notebooks and all-in-one computers)",
+  "ssdtMsg1107": "• Used to simulate and enable Apple's native sensor (Ambient Light Sensor, ALS) function to automatically adjust screen brightness\n• If your device really has ALS (such as some high-end notebooks) and there are problems, you can try adding SSDT-ALS0 to correct the automatic brightness adjustment function, otherwise it is not recommended to add\n• Applicable to: All-in-one PCs (AIOs) and laptops only",
+  "ssdtMsg1108": "macOS disguises itself as Windows and unlocks blocked devices (such as I2C touchpads)",
+  "ssdtMsg1109": "• _OSI (Operating System Interface) is a method of ACPI that allows the operating system to report which features it supports.\n• Some motherboard firmware may decide whether to enable certain devices based on the _OSI return value, which may not be recognized by macOS, resulting in loss of functionality.\n• The patch \"tricks\" the firmware into thinking macOS is also Windows, activating hidden features such as: I2C touchpad, battery management, etc.",
+  "ssdtMsg1110": "USB port reset and fix",
+  "ssdtMsg1111": "• Some OEMs violate the ACPI specification, which causes problems when booting macOS. To resolve this issue, the RHUB device needs to be shut down and force macOS to rebuild the port manually.\n• This patch resets the USB controller (including EHC1, EHC2 and other USB device shielding and renaming) when macOS starts, so that all USB ports can be correctly identified, and is used with USB mapping (such as: UTBMap.kext) to ensure that USB devices work properly.\n• Usually suitable for desktop 400 series motherboards (Asus, etc.) and mobile IceLake platforms (Dell, Lenovo, etc.).",
+  "ssdtMsg1112": "Create bridge for missing PCI device path",
+  "ssdtMsg1113": "• The PCI device paths of some motherboards or devices may not be recognized correctly under macOS, causing the device to not work properly, such as graphics cards, sound cards, wireless network cards, etc.\n• This patch will create the correct PCI bridges for these devices, ensuring that macOS can correctly recognize and use these PCI devices.",
+  "ssdtMsg1114": "Remove DMAR reserved memory area, fix system startup problems and network card compatibility issues",
+  "ssdtMsg1115": "• DMAR (DMA Remapping Table) is part of Intel VT-d virtualization technology for IOMMU (Input-Output Memory Management Unit) support.\n• This patch will remove the reserved memory area in the DMAR table that is causing the problem, thus preventing macOS from misreading the DMAR and causing the system to fail to boot.\n• Provide support for VT-d compatibility so that VT-d works properly in macOS Big Sur and newer, especially involving hardware driven by DriverKit.\n• macOS supports VT-d, but there are compatibility issues with the DMAR table provided by some motherboards or BIOS, which may cause macOS to cause kernel crashes, startup lags, system instability and other issues when parsing the ACPI DMAR table (stuck in AppleACPICPU, IOPCI, AppleVTD related log locations).\n• Supported hardware range: I225 network card, Aquantia network card, some WiFi devices, etc.\n• The original DMAR table needs to be dropped in the firmware before the patched table can be loaded.\n• Applicable CPU: Any processor that supports VT-d technology.",
+  "ssdtMsg1116": "Correct the APIC table to solve the CPU kernel panic problem (applicable to HEDT server platform)",
+  "ssdtMsg1117": "• Repair or rewrite the Processor ID in the APIC table to ensure that macOS can correctly identify the number and number of CPU cores and avoid kernel panic or core identification errors.\n• The original APIC table needs to be dropped in the firmware before the patched table can be loaded.\n• Applicable to X58, X79, X99, X299 and other Intel server (HEDT) platforms.",
+  "ssdtMsg1118": "Add system bus SMBus support",
+  "ssdtMsg1119": "• macOS requires an SMBus (System Management Bus) device to properly run certain services, such as:\n  I2C touchpad, battery management, light-sensing automatic brightness adjustment, some Wi-Fi/Bluetooth devices\n• SSDT-SBUS-MCHC makes macOS think this is a native Apple device by adding SBUS (system management bus) and MCHC (memory controller) devices to ACPI, ensuring that related functions work properly.\n• If the device I2C touchpad, battery information, and automatic brightness adjustment cannot be used, you can try to enable this patch.",
+  "ssdtMsg1120": "Fix the problem of core graphics acceleration failure (usually applicable to Ivy Bridge and Sandy Bridge)",
+  "ssdtMsg1121": "• Intel Management Engine (IMEI for short) is a hardware interface used to connect to the management engine. It is only needed when old platforms (Sandy/Ivy) and some motherboards lack MEI/IMEI/HECI devices.\n• Applicable to Intel 3rd generation Ivy Bridge processor and 6 series motherboard when mixed (for example: i3 3225 processor, H61 motherboard), core graphics acceleration problem\n• Applicable to Intel 2nd generation Sandy Bridge processor and 7 series motherboard when mixed (for example: i5 2500k processor, B75 motherboard), core graphics acceleration problem\n• Intel 3rd generation Ivy Bridge processors paired with 7 series motherboards, and Intel 2nd generation Sandy Bridge processors paired with 6 series motherboards do not require this SSDT!\n• Intel 4th generation Haswell and newer platforms can usually implement MEI/IMEI/HECI devices correctly and do not need this SSDT!",
+  "ssdtMsg1122": "Fix the problem of shutting down and restarting or shutting down without power supply",
+  "ssdtMsg1123": "• Fixed the problem that some motherboards sometimes do not completely turn off the power to the USB controller when macOS is shutting down (S5), resulting in failure to shut down normally (shutdown becomes restarting or shutdown without power)\n• Requires ACPI rename patch: _PTS -> ZPTS",
+  "ssdtMsg1124": "Check the current system status, mainly to check whether S3 sleep is supported (non-customized SSDT)",
+  "ssdtMsg1125": "• Check whether the current machine is an AOAC machine (non-customized SSDT)\n• Check the system status in the current BIOS settings, mainly to check whether S3 sleep is supported (non-customized SSDT)\n• Note: Only non-AOAC machines are compatible with S3 sleep. AOAC machines conflict with S3 sleep and do not support S3 sleep!\n• If the check result shows that the system status of a non-AOAC machine (AOAC machine does not support S3 sleep, do not read below) does not support S3 sleep, there may be the following situations:\n  1. The motherboard firmware supports S3 sleep, but S3 sleep is not enabled in the BIOS settings. After it is enabled, S3 sleep can be supported.\n  2. The motherboard firmware does not physically castrate S3, but the DSDT does not define the _S3 method. Completing the _S3 method has a probability of fixing the S3 sleep problem.\n  3. The motherboard firmware physically castrates S3 and does not support S3 sleep at all. Even if the _S3 method is completed, the S3 sleep problem cannot be repaired.",
+  "ssdtMsg1126": "Check whether it is an AOAC machine (non-customized SSDT)",
+  "ssdtMsg1127": "• Check whether it is an AOAC machine (non-customized SSDT) based on FACP.aml\n• Note: Only non-AOAC machines are compatible with S3 sleep. AOAC machines conflict with S3 sleep and do not support S3 sleep! AOAC machines are common in notebooks.\n• Once the AOAC machine enters S3 sleep, it may appear that it cannot be woken up after sleeping and appears in a crash state, and can only be forced to shut down. It is recommended to disable S3 sleep.\n• AOAC machines recommend considering the following solutions:\n  1. Unlock BIOS and disable AOAC (usually difficult to do, but the most stable)\n  2. Disable S3 sleep (disable S3 sleep in BIOS, or SSDT-S3-DISABLE to disable S3 sleep)\n  3. Turn off the independent graphics power supply\n  4. Use NVMeFix.kext to enable APST of SSD\n  5. Enable ASPM (BIOS advanced options enable ASPM, SSDT patch enables L1)",
+  "ssdtMsg1128": "Fix the problem of waking up from sleep due to USB controller",
+  "ssdtMsg1129": "• Rename GPRW to XPRW to fix the instant wake-up problem (note: it may cause the USB keyboard to be unable to wake up the device, you can wake it up through the power key)\n• SSDT-GPRW is more commonly used because most platforms use the GPRW method and very few platforms provide and use the UPRW method.\n• Available for Skylake and newer platforms",
+  "ssdtMsg1130": "Fix the problem of waking up from sleep due to USB controller",
+  "ssdtMsg1131": "• Rename GPRW to XPRW to fix the instant wake-up problem (note: it may cause the USB keyboard to be unable to wake up the device, you can wake it up through the power key)\n• SSDT-UPRW is rarely used because most platforms use the GPRW method and very few platforms provide and use the UPRW method.\n• Available for Skylake and newer platforms",
+  "ssdtMsg1132": "Fix sleep button sleep problem (applicable to notebooks)",
+  "ssdtMsg1133": "• When some computers enter sleep through the sleep button SLPB (PNP0C0E), ACPI transmits incorrect parameters, causing macOS to mistakenly think it is a shutdown. This may lead to: direct restart, crash after sleep, or successful sleep but damaged system status.\n• Pretend \"lid is closed\" when pressing the sleep button, forcing dangerous PNP0C0E sleep into safe and stable PNP0C0D sleep\n• Typically suitable for laptops",
+  "ssdtMsg1134": "Fixed the issue where you need to press any key to turn on the screen after waking up",
+  "ssdtMsg1135": "• Fixed the issue where some machines need to press any key to turn on the screen after waking up",
+  "ssdtMsg1136": "Fix the abnormal breathing light problem of the power button after waking up (applicable to Lenovo notebooks)",
+  "ssdtMsg1137": "• Fixed an issue where the breathing light on side A and the breathing light on the power button did not return to normal after waking up on some Lenovo notebooks\n• Fixed the issue where the F4 microphone indicator light status is abnormal after waking up on some Lenovo laptops\n• Mainly applicable to Lenovo series notebooks, other brands of notebooks are usually not applicable",
+  "ssdtMsg1138": "Disable system S3 sleep state (fix S3 sleep wake-up crash, restart or shutdown issues)",
+  "ssdtMsg1139": "• Only disable S3 sleep state under macOS system to avoid system crash, restart or shutdown when macOS system wakes up\n• When disabled, only macOS no longer supports S3 sleep (clicking the sleep button or the monitor enters power-saving mode, the screen turns off, but the host will still run and the fan will not stop running)\n• After disabling the S3 sleep state in macOS, you no longer need to modify any system settings of macOS, and you do not need to turn off the energy-saving mode (before this, you may need to modify the system settings -> turn off the display when inactive -> never)\n• Applicable scenarios: When the sleep problem has not been repaired, the energy-saving mode is turned on in the macOS system settings (\"Turn off the display when inactive -> 10 minutes\"). After the system enters sleep state, when the macOS system is awakened, the system may crash, restart or shut down. At this time, the S3 sleep state can be disabled to fix the problem.\n• Requires ACPI rename patch: _S3 -> XS3",
+  "ssdtMsg1140": "Hot restart is changed to cold restart to fix the problem of some hardware being unavailable.",
+  "ssdtMsg1141": "• Hot restart is changed to cold restart, which fixes the problem that some hardware becomes unavailable after restarting from Windows to macOS on some platforms. (For example: sound card, WiFi, Bluetooth)\n• Note: No SSDT-FACP.aml is generated! Only ACPI-Patch is generated!",
+  "ssdtMsg1142": "Counterfeit graphics card",
+  "ssdtMsg1143": "• Only applicable to AMD graphics cards, SSDT-GPU-SPOOF modifies the device ID read by macOS, making macOS mistakenly think that the graphics card is a supported model, thereby enabling the acceleration function.\n• Common graphics card models that need to be counterfeited:\n  • AMD Radeon RX 550 Lexa Core\n  • AMD Radeon RX 6650XT, RX 6950XT, etc.",
+  "ssdtMsg1144": "Shield PCI devices, including unsupported graphics cards, NVMe solid-state drives, etc.",
+  "ssdtMsg1145": "• There are 3 common methods (OFF, PS3, and IOName can all be blocked) to block unsupported PCIe devices, including unsupported graphics cards, NVMe solid-state drives, wireless network cards, etc. Method priority: OFF > PS3 > IOName\n• SSDT-GPU-DISABLE-OFF (applicable to notebooks, desktops generally do not provide an OFF method) by disabling the independent graphics card at the ACPI level, the macOS system can completely not detect the independent graphics card, and the independent graphics card is in a power-off state, thereby saving power consumption and reducing temperature.\n• SSDT-GPU-DISABLE-PS3 (applicable to notebooks, desktops generally do not provide the PS3 method) By disabling the independent graphics card at the ACPI level, the independent graphics of the macOS system can stop power supply in the S3 sleep state, thereby saving power consumption and reducing temperature.\n• SSDT-GPU-DISABLE-IOName (applicable to all platforms) Modify the graphics card device ID. The macOS system will still detect the graphics card, but the corresponding graphics card driver will not be loaded. The graphics card is in an undriven state, so there is a certain power consumption.\n• When the original ACPI table of the notebook does not contain the OFF and PS3 methods, the corresponding SSDT-GPU-DISABLE-OFF and SSDT-GPU-DISABLE-PS3 method shielding will fail. It is recommended to do the next best thing and use the IOName method to shield the PCI device.",
+  "ssdtMsg1146": "Counterfeit wired network card equipment (applicable to notebooks without wired network cards)",
+  "ssdtMsg1147": "• Provides NullEthernet fake virtual network card for Hackintosh systems to solve the dependence of iMessage, Facetime, iCloud and other Apple services on built-in network equipment",
+  "ssdtMsg1148": "Fix notebook I2C touchpad problem (applicable to notebooks)",
+  "ssdtMsg1149": "• By repairing the ACPI hardware node mounting, ensuring that the device is enabled in the macOS system, and fixing the problem that some I2C touchpads cannot be recognized normally.\n• SSDT-GPI0 solves the problem of driver mounting hardware devices. SSDT-XOSI is mainly used to fix the problem of incompatibility between BIOS/ACPI initialization logic and operating system recognition (sometimes it can fix the touchpad problem)",
+  "ssdtMsg1150": "CPU renaming for B850, B650, B550, A520 chipsets (only for Ryzen platforms)",
+  "ssdtMsg1151": "• Applicable to CPU renaming of B850, B650, B550, and A520 chipsets to fix the crash problem caused by the AMD platform not being able to recognize the CPU (recommended only when using pre-made SSDT patches)\n• When customizing the SSDT patch, it is recommended to use the customized SSDT-PLUG! (AMD Ryzen platform automatically changes its name to SSDT-PLUG-ALT when customizing the SSDT)",
+  "ssdtMsg1152": "Fix power management (applicable to Intel 12th generation and above, some AMD Ryzen and other platforms)",
+  "ssdtMsg1153": "• macOS relies on the CPU power management plug-in (PluginType) to adjust the CPU frequency and improve energy efficiency and battery life.\n• This patch will modify the CPU definition so that macOS thinks it is a plugin-type = 1 processor required by Apple devices, thereby correctly loading CPU frequency management and improving performance and power consumption control.\n• Applicable to Intel Alder Lake 12th generation and above, and some AMD Ryzen platforms",
+  "ssdtMsg1154": "Disable AWAC (Modern Timer) (available for Intel Coffee Lake 8th generation and above)",
+  "ssdtMsg1155": "• Disable AWAC (Modern Timer) while enabling or spoofing legacy RTC\n• Compatible with Intel Coffee Lake 8th generation and above",
+  "ssdtMsg1156": "Required by all native X99 (C612) motherboards and most native X79 (C602) motherboards",
+  "ssdtMsg1157": "• This SSDT is applicable to all X99 motherboards and most X79 motherboards. Its main function is to disable unused devices in ACPI to prevent IOPCIFamily from causing kernel panic.\n• Applicable motherboards: All native X99 (C612) motherboards and most native X79 (C602) motherboards.",
+  "ssdtMsg1158": "Enable or fake legacy RTC timer, and fix RTC range (applies to all native X99 (C612) and X299 motherboards)",
+  "ssdtMsg1159": "• Enable or fake legacy RTC timers and fix RTC range.\n• Solve incorrect boot time, RTC related errors, sleep wake-up issues, etc.\n• This SSDT is applicable to all X99(C612) motherboards as well as X299 motherboards",
+  "ssdtMsg1160": "Add DTGP support",
+  "ssdtMsg1161": "• Inject hardware device attributes to fix some ACPI issues with graphics cards, sound cards, thunderbolt cards, etc. (When there is no DTGP method support, these attribute injections may fail or not work!)",
+  "ssdtMsg1162": "Counterfeiting a standard DMA controller",
+  "ssdtMsg1163": "• A virtual device controller (PNP0200) that imitates a standard DMA Controller (Direct Memory Access Controller), completes the ACPI resource table, and allows macOS to properly recognize LPC bus devices and DMA functions.\n• Typically not required for HEDT/server platforms\n• Add missing parts, this is just a perfect solution, not necessary!",
+  "ssdtMsg1164": "Counterfeiting a standard PWRB controller",
+  "ssdtMsg1165": "• Counterfeit a standard Power Button (PNP0C0C) device to allow macOS to recognize the system power button normally and support sleep and wake-up\n• There is no PNP0C0C in some BIOS/motherboard ACPI trees, and macOS cannot handle the power button correctly, which may result in the inability to sleep, the inability to wake up, and the unavailability of the menu bar power button.\n• Add missing parts, this is just a perfect solution, not necessary!",
+  "ssdtMsg1166": "Counterfeiting a standard SLPB controller",
+  "ssdtMsg1167": "• Counterfeit a standard Sleep Button (PNP0C0E) device to allow macOS to correctly identify the system sleep button and implement sleep and wake functions\n• There is no PNP0C0E in some BIOS/motherboard ACPI trees, and macOS cannot handle the sleep button correctly, which may result in the inability to sleep, the inability to wake up, and the unavailability of the sleep button in the menu bar.\n• This part is required for PNP0C0E sleep correction method!\n• Add missing parts, this is just a perfect solution, not necessary!",
+  "ssdtMsg1168": "MEM2 device required to imitate an IGPU",
+  "ssdtMsg1169": "• Add MEM2 ACPI device required by IGPU and fix IGPU related issues\n• Supplement core display memory mapping to avoid driver initialization failure\n• Applicable scope: Haswell ~ Kaby Lake, core graphics system only. Usually only discrete graphics do not need this SSDT!",
+  "ssdtMsg1170": "Failed to obtain remote information: {arg0}",
+  "@ssdtMsg1170": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1171": "Local cached remote tools will be used, which may be invalid, so use with caution!",
+  "ssdtMsg1172": "Validation error: {arg0}",
+  "@ssdtMsg1172": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1173": "Verification information does not contain {arg0}",
+  "@ssdtMsg1173": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1174": "Task {arg0} is already executing, waiting to be completed...",
+  "@ssdtMsg1174": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1175": "Verify built-in tools {arg0}...",
+  "@ssdtMsg1175": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1176": "Built-in tool {arg0} verification passed!",
+  "@ssdtMsg1176": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1177": "Built-in tool {arg0} is invalid, copy again",
+  "@ssdtMsg1177": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1178": "Verify remote tool {arg0}...",
+  "@ssdtMsg1178": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1179": "Switched to built-in mode, abandoning remote task {arg0}",
+  "@ssdtMsg1179": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1180": "Remote tool {arg0} passed verification",
+  "@ssdtMsg1180": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1181": "The verification status of remote tool {arg0} is unknown, use with caution!",
+  "@ssdtMsg1181": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1182": "The remote tool {arg0} failed to verify that the file does not exist or is invalid. Please download again.",
+  "@ssdtMsg1182": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1183": "Download/extraction failed: {arg0}",
+  "@ssdtMsg1183": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1184": "Start decompression: {arg0}",
+  "@ssdtMsg1184": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1185": "ZIP file does not exist: {arg0}",
+  "@ssdtMsg1185": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1186": "{arg0} Download progress:",
+  "@ssdtMsg1186": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1187": "{arg0}% | Speed: {arg1} | Remaining: {arg2}",
+  "@ssdtMsg1187": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1188": "Failed to copy built-in tool: {arg0} to {arg1}",
+  "@ssdtMsg1188": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1189": "Failed to copy Asset ({arg0} → {arg1}): {arg2}",
+  "@ssdtMsg1189": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1190": "Unsupported platforms: {arg0}",
+  "@ssdtMsg1190": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1191": "Task {arg0} is already executing, waiting to be completed...",
+  "@ssdtMsg1191": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1192": "{arg0} execution failed: {arg1}",
+  "@ssdtMsg1192": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1193": "Network link timed out! Please try again later!: {arg0}",
+  "@ssdtMsg1193": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1194": "Exception occurred: {arg0}",
+  "@ssdtMsg1194": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1195": "{arg0}Tools {arg1} are ready!\\n",
+  "@ssdtMsg1195": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1196": "{arg0}Tool {arg1} is not ready! {arg2}! \\n",
+  "@ssdtMsg1196": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1197": "Failed to initialize iasl tool",
+  "ssdtMsg1198": "Failed to initialize iasl tool: {arg0}",
+  "@ssdtMsg1198": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1199": "Network connection exception: {arg0}",
+  "@ssdtMsg1199": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1200": "built-in",
+  "ssdtMsg1201": "remote",
+  "ssdtMsg1202": "Please check tool integrity",
+  "ssdtMsg1203": "It is recommended to switch to built-in mode",
+  "ssdtMsg1204": "Unable to get home directory",
+  "ssdtMsg1205": "Unsupported operating system: {arg0}",
+  "@ssdtMsg1205": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1206": "Source directory does not exist",
+  "ssdtMsg1207": "Unable to get desktop directory",
+  "ssdtMsg1208": "File system error: {arg0}",
+  "@ssdtMsg1208": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1209": "Handling path errors: {arg0}",
+  "@ssdtMsg1209": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1210": "Checking for updates, please wait...",
+  "ssdtMsg1211": "Just checked for updates, please try again later",
+  "ssdtMsg1212": "Currently {arg0} is the latest version",
+  "@ssdtMsg1212": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1213": "New version found: {arg0}",
+  "@ssdtMsg1213": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1214": "Failed to check for updates, please try again later",
+  "ssdtMsg1215": "Failed to obtain release version list, please try again later",
+  "ssdtMsg1216": "Release version list is empty",
+  "ssdtMsg1217": "An error occurred: {arg0}",
+  "@ssdtMsg1217": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "platformName1000": "Generation 0-Penryn-775 platform",
+  "platformName1001": "Generation 0-Penryn-Notebook",
+  "platformName1002": "Generation 0-Penryn-mini host",
+  "platformName1003": "10th Generation-Cascade Lake-X&W-X599 Platform",
+  "platformName1004": "10th Generation-Comet Lake-1200 Platform",
+  "platformName1005": "10th Generation-Comet Lake-Laptop",
+  "platformName1006": "10th generation-Comet Lake-mini host",
+  "platformName1007": "10th Generation-Ice Lake-Laptop",
+  "platformName1008": "10th generation-Ice Lake-mini host",
+  "platformName1009": "11th generation-Rocket Lake-1200 platform",
+  "platformName1010": "11th Generation-Rocket Lake-Laptop",
+  "platformName1011": "11th generation-Tiger Lake-mini host",
+  "platformName1012": "12th generation-Alder Lake-1700 platform",
+  "platformName1013": "12th generation-Alder Lake-notebook",
+  "platformName1014": "12th generation-Alder Lake-mini host",
+  "platformName1015": "13th generation-Raptor Lake-1700 platform",
+  "platformName1016": "13th generation-Raptor Lake-notebook",
+  "platformName1017": "13th generation-Raptor Lake-mini host",
+  "platformName1018": "14th generation-Raptor Lake-1700 platform",
+  "platformName1019": "14th generation-Raptor Lake-notebook",
+  "platformName1020": "14th generation-Raptor Lake-mini host",
+  "platformName1021": "15th Generation-Arrow Lake-1851 Platform",
+  "platformName1022": "15th generation-Arrow Lake-notebook",
+  "platformName1023": "15th generation-Arrow Lake-mini host",
+  "platformName1024": "Generation 1-Arrandale-Notebook",
+  "platformName1025": "Generation 1-Arrandale-mini host",
+  "platformName1026": "Generation 1-Lynnfield-1156 Platform",
+  "platformName1027": "Generation 1-Nehalem&Westmere-X58 platform",
+  "platformName1028": "2nd generation-Sandy Bridge-1155 platform",
+  "platformName1029": "2nd generation-Sandy Bridge-E-X79 platform",
+  "platformName1030": "2nd generation-Sandy Bridge-notebook",
+  "platformName1031": "2nd generation-Sandy Bridge-mini host",
+  "platformName1032": "3rd generation-Ivy Bridge-1155 platform",
+  "platformName1033": "3rd generation-Ivy Bridge-E-X79 platform",
+  "platformName1034": "3rd generation-Ivy Bridge-notebook",
+  "platformName1035": "3rd generation-Ivy Bridge-mini host",
+  "platformName1036": "4th generation-Haswell-1150 platform",
+  "platformName1037": "4th generation-Haswell-E-X99 platform",
+  "platformName1038": "4th Generation-Haswell-Laptop",
+  "platformName1039": "4th generation-Haswell-mini host",
+  "platformName1040": "5th generation-Broadwell-1150 platform",
+  "platformName1041": "5th generation-Broadwell-E-X99 platform",
+  "platformName1042": "5th generation-Broadwell-notebook",
+  "platformName1043": "5th generation-Broadwell-mini host",
+  "platformName1044": "6th generation-Skylake-1151 platform",
+  "platformName1045": "6th generation-Skylake-X&W-X299 platform",
+  "platformName1046": "6th generation-Skylake-notebook",
+  "platformName1047": "6th generation-Skylake-mini host",
+  "platformName1048": "7th Generation-Kaby Lake-1151 Platform",
+  "platformName1049": "7th Generation-Kaby Lake-Notebook",
+  "platformName1050": "7th generation-Kaby Lake-mini host",
+  "platformName1051": "8th generation-Coffee Lake-1151 platform",
+  "platformName1052": "8th Generation-Coffee Lake-Notebook",
+  "platformName1053": "8th generation-Coffee Lake-mini host",
+  "platformName1054": "9th generation-Coffee Lake-1151 platform",
+  "platformName1055": "9th Generation-Coffee Lake-Notebook",
+  "platformName1056": "9th generation-Coffee Lake-mini host",
+  "platformName1057": "Bulldozer(15h) and Jaguar(16h)",
+  "platformName1058": "Bulldozer(15h) and Jaguar(16h)-Notebook",
+  "platformName1059": "Bulldozer(15h) and Jaguar(16h)-mini host",
+  "platformName1060": "Ryzen and Threadripper(17h and 19h)",
+  "platformName1061": "Ryzen and Threadripper(17h and 19h)-high-end servers",
+  "platformName1062": "Ryzen-notebook",
+  "platformName1063": "Ryzen-mini host",
+  "platformName1064": "server",
+  "platformName1065": "notebook",
+  "platformName1066": "Mini host"
+}

@@ -5,23 +5,27 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:rapidssdt/l10n/app_localizations.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 import 'package:rapidssdt/l10n/language_provider.dart';
 import 'package:rapidssdt/pages/provider/patch_viewmodel_provider.dart';
 import 'package:rapidssdt/pages/viewmodel/patch_viewmodel.dart';
 import 'package:rapidssdt/utils/log/log.dart';
 import 'package:sp_util/sp_util.dart';
-import 'package:rapidssdt/pages/views/acpi_page.dart';
+import 'package:rapidssdt/theme/theme_provider.dart';
+import 'package:rapidssdt/pages/views/home_page.dart';
 import 'package:rapidssdt/utils/app_info.dart';
 import 'package:rapidssdt/utils/constant.dart';
 import 'package:rapidssdt/utils/theme_util.dart';
 import 'package:window_manager/window_manager.dart';
+import 'package:macos_ui/macos_ui.dart';
+import 'package:macos_window_utils/macos_window_utils.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Sputil初始化
   await SpUtil.getInstance();
   LanguageProvider.init();
-  await windowManager.ensureInitialized();
+  await MacosWindowUtilsConfig().apply();
 
   ///获取AppVersion
   final appVersion = await AppInfo.version;
@@ -33,7 +37,7 @@ void main() async {
       minimumSize: const Size(800, 600),
       center: false,
       skipTaskbar: false,
-      titleBarStyle: TitleBarStyle.normal,
+      titleBarStyle: TitleBarStyle.hidden,
       windowButtonVisibility: true,
     );
     windowManager.waitUntilReadyToShow(windowOptions, () async {
@@ -56,21 +60,26 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final PatchViewModel patchViewModel = PatchViewModel();
   final LanguageProvider languageProvider = LanguageProvider();
+  final ThemeProvider themeProvider = ThemeProvider();
 
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColorDark;
     return ListenableBuilder(
-      listenable: languageProvider,
+      listenable: Listenable.merge([languageProvider, themeProvider]),
       builder: (context, child) {
         return PatchViewModelProvider(
           patchViewModel: patchViewModel,
-          child: MaterialApp(
+          child: MacosApp(
             title: Constant.appName,
             debugShowCheckedModeBanner: false,
-            theme: ThemeUtil.appTheme(primary: primaryColor),
-            darkTheme: ThemeUtil.appTheme(isDarkMode: true, primary: primaryColor),
-            themeMode: ThemeMode.system,
+            theme: MacosThemeData.light().copyWith(
+              primaryColor: primaryColor,
+            ),
+            darkTheme: MacosThemeData.dark().copyWith(
+              primaryColor: primaryColor,
+            ),
+            themeMode: themeProvider.themeMode,
             locale: languageProvider.locale,
             localizationsDelegates: const [
               AppLocalizations.delegate,
@@ -79,7 +88,20 @@ class _MyAppState extends State<MyApp> {
               GlobalCupertinoLocalizations.delegate,
             ],
             supportedLocales: AppLocalizations.supportedLocales,
-            home: AcpiPage(languageProvider: languageProvider),
+            localeResolutionCallback: (locale, supportedLocales) {
+              // Force exact locale from provider — prevents Flutter from auto-resolving
+              // pt → pt_BR (which triggers a Flutter TextPainter rendering bug on macOS)
+              return languageProvider.locale;
+            },
+            home: Builder(
+              builder: (ctx) {
+                GlobalLocalizations.init(ctx);
+                return HomePage(
+                  languageProvider: languageProvider,
+                  themeProvider: themeProvider,
+                );
+              }
+            ),
           ),
         );
       },
@@ -90,6 +112,7 @@ class _MyAppState extends State<MyApp> {
   void dispose() {
     patchViewModel.dispose();
     languageProvider.dispose();
+    themeProvider.dispose();
     Log.shutdownAll();
     super.dispose();
   }

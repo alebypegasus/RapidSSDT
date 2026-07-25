@@ -3,6 +3,7 @@
 //
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:macos_ui/macos_ui.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MarkdownViewer extends StatefulWidget {
@@ -29,12 +30,17 @@ class _MarkdownViewerState extends State<MarkdownViewer> {
       },
     );
 
+    final macosTheme = MacosTheme.of(context);
     return Markdown(
       data: modifiedMarkdownData,
-      styleSheet: MarkdownStyleSheet.fromTheme(Theme.of(context)).copyWith(
-        a: TextStyle(color: Theme.of(context).colorScheme.primary),
-
-        horizontalRuleDecoration: BoxDecoration(
+      styleSheet: MarkdownStyleSheet(
+        p: macosTheme.typography.body,
+        h1: macosTheme.typography.title1,
+        h2: macosTheme.typography.title2,
+        h3: macosTheme.typography.title3,
+        listBullet: macosTheme.typography.body,
+        a: TextStyle(color: macosTheme.primaryColor),
+        horizontalRuleDecoration: const BoxDecoration(
           border: Border(top: BorderSide(color: Colors.grey, width: 1.0)),
         ),
       ),

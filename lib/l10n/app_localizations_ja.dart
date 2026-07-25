@@ -722,4 +722,930 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get languagePortuguese => '葡萄牙语';
+
+  @override
+  String get ssdtMsg500 => 'デバイスの ACPI パス:';
+
+  @override
+  String get ssdtMsg501 => '偽造するグラフィックス カード デバイスを選択してください';
+
+  @override
+  String get ssdtMsg502 => '不明なグラフィックス カード モデル';
+
+  @override
+  String get ssdtMsg503 => '偽造グラフィックス カード ID データベース:';
+
+  @override
+  String ssdtMsg504(String arg0) {
+    return '$arg0';
+  }
+
+  @override
+  String get ssdtMsg505 => '例: 73BF';
+
+  @override
+  String get ssdtMsg506 => '4 つの 16 進文字が必要です';
+
+  @override
+  String ssdtMsg507(String arg0) {
+    return '$arg0';
+  }
+
+  @override
+  String get ssdtMsg508 => 'オプション、グラフィックス カード名';
+
+  @override
+  String get ssdtMsg509 => '偽造グラフィックス カード ID:';
+
+  @override
+  String get ssdtMsg510 => '偽造グラフィックス カード名:';
+
+  @override
+  String ssdtMsg511(String arg0) {
+    return 'ソース .dsl ファイルを削除するかどうか: $arg0';
+  }
+
+  @override
+  String ssdtMsg512(String arg0) {
+    return '強制的にコンパイルするかどうか: $arg0';
+  }
+
+  @override
+  String ssdtMsg513(String arg0) {
+    return 'ターゲット EFI を上書きするかどうか: $arg0';
+  }
+
+  @override
+  String ssdtMsg514(String arg0) {
+    return '一致パターン: $arg0';
+  }
+
+  @override
+  String ssdtMsg515(String arg0) {
+    return 'HPET データのロードに失敗しました: $arg0';
+  }
+
+  @override
+  String ssdtMsg516(String arg0) {
+    return 'HPET データの初期化に失敗しました: $arg0';
+  }
+
+  @override
+  String ssdtMsg517(String arg0) {
+    return 'ACPI パスの初期化に失敗しました: $arg0';
+  }
+
+  @override
+  String get ssdtMsg518 => 'パッチノートはありません';
+
+  @override
+  String get ssdtMsg519 => 'パッチノートはありません';
+
+  @override
+  String ssdtMsg520(String arg0) {
+    return 'パッチノートの取得に失敗しました: $arg0';
+  }
+
+  @override
+  String get ssdtMsg521 => 'パッチノートの取得に失敗しました';
+
+  @override
+  String ssdtMsg522(String arg0) {
+    return '$arg0 構成パスをクリアします';
+  }
+
+  @override
+  String ssdtMsg523(String arg0, String arg1) {
+    return '$arg0 が無効なファイルを選択しました: $arg1';
+  }
+
+  @override
+  String ssdtMsg524(String arg0) {
+    return '$arg0 のパッチ構成が見つかりません';
+  }
+
+  @override
+  String get ssdtMsg525 => '続行する前に、カスタマイズする必要がある SSDT を選択してください。';
+
+  @override
+  String ssdtMsg526(String arg0) {
+    return 'パッチの実行に失敗しました: $arg0';
+  }
+
+  @override
+  String ssdtMsg527(String arg0, String arg1) {
+    return 'パッチ [$arg0] の実行に失敗しました: $arg1';
+  }
+
+  @override
+  String get ssdtMsg528 => 'SSDT が生成されています。操作を繰り返さないでください。';
+
+  @override
+  String get ssdtMsg529 => 'パッチリストが空です!';
+
+  @override
+  String get ssdtMsg530 => '抽出が進行中です。操作を繰り返さないでください。';
+
+  @override
+  String ssdtMsg531(String arg0) {
+    return '現在の $arg0 プラットフォームによって抽出された ACPI テーブルは、OpenCore などによって挿入された ACPI パッチによって汚染されている可能性が非常に高くなります。 Windows/Linux プラットフォームで動作することを強くお勧めします。';
+  }
+
+  @override
+  String get ssdtMsg532 => 'ACPIの抽出に失敗しました!';
+
+  @override
+  String get ssdtMsg533 => 'ACPIの抽出に成功しました!';
+
+  @override
+  String ssdtMsg534(String arg0) {
+    return 'パッチの準備に失敗しました: $arg0';
+  }
+
+  @override
+  String ssdtMsg535(String arg0) {
+    return 'DSDT/ACPI のロードに失敗しました: $arg0';
+  }
+
+  @override
+  String ssdtMsg536(String arg0) {
+    return 'config.plist ファイルが存在しません: $arg0';
+  }
+
+  @override
+  String get ssdtMsg537 => '認識できない plist ファイル形式';
+
+  @override
+  String ssdtMsg538(String arg0) {
+    return 'config.plist タイプは「$arg0」です';
+  }
+
+  @override
+  String ssdtMsg539(String arg0) {
+    return 'plist タイプの解析に失敗しました: $arg0';
+  }
+
+  @override
+  String get ssdtMsg540 => '最初に ACPI ディレクトリを選択してください。';
+
+  @override
+  String get ssdtMsg541 => 'まず、EFI ディレクトリ内の config.plist ファイルを選択してください。';
+
+  @override
+  String ssdtMsg542(String arg0) {
+    return '無効な ACPI パス: $arg0';
+  }
+
+  @override
+  String ssdtMsg543(String arg0) {
+    return 'config.plist ファイルが存在しません: $arg0';
+  }
+
+  @override
+  String ssdtMsg544(String arg0) {
+    return 'plist ファイルのマージに失敗しました: $arg0';
+  }
+
+  @override
+  String get ssdtMsg545 => 'はい';
+
+  @override
+  String get ssdtMsg546 => 'いいえ';
+
+  @override
+  String get ssdtMsg547 => 'はい';
+
+  @override
+  String get ssdtMsg548 => 'いいえ';
+
+  @override
+  String get ssdtMsg549 => 'はい';
+
+  @override
+  String get ssdtMsg550 => 'いいえ';
+
+  @override
+  String get ssdtMsg551 => '内蔵';
+
+  @override
+  String get ssdtMsg552 => 'リモート';
+
+  @override
+  String get ssdtMsg553 => '新しいバージョンのiasl';
+
+  @override
+  String get ssdtMsg554 => '古いバージョンの iasl-legacy';
+
+  @override
+  String get ssdtMsg555 => 'はい';
+
+  @override
+  String get ssdtMsg556 => 'いいえ';
+
+  @override
+  String get ssdtMsg557 => '設定';
+
+  @override
+  String get ssdtMsg558 => 'IASLモード';
+
+  @override
+  String get ssdtMsg559 => 'IASL コンパイル タイプ';
+
+  @override
+  String get ssdtMsg560 => '逆コンパイルされた .dsl ファイルを削除する';
+
+  @override
+  String get ssdtMsg561 => '強制コンパイル';
+
+  @override
+  String get ssdtMsg562 => 'ターゲットEFIを上書きするかどうか';
+
+  @override
+  String get ssdtMsg563 => 'ACPIマッチングモード';
+
+  @override
+  String get ssdtMsg564 => 'コアパッチ';
+
+  @override
+  String get ssdtMsg565 => '機能パッチ';
+
+  @override
+  String get ssdtMsg566 => 'デバイスパッチ';
+
+  @override
+  String get ssdtMsg567 => '専用パッチ';
+
+  @override
+  String get ssdtMsg568 => 'スリープパッチ';
+
+  @override
+  String get ssdtMsg569 => '補助パッチ';
+
+  @override
+  String get ssdtMsg570 => '既製のパッチ';
+
+  @override
+  String get ssdtMsg571 => '通常のシステム起動と電源管理に必要な基本パッチ';
+
+  @override
+  String get ssdtMsg572 => '追加機能を提供する、または機能の問題を修正するパッチ';
+
+  @override
+  String get ssdtMsg573 => 'グラフィックス カード ハードウェア用のパッチ';
+
+  @override
+  String get ssdtMsg574 => 'パッチは特定のマザーボードまたはアーキテクチャでのみ必要です';
+
+  @override
+  String get ssdtMsg575 => 'オプション、睡眠の問題を解決するために使用されます';
+
+  @override
+  String get ssdtMsg576 => '必須ではありませんが、ACPI 構造を完成させたり、互換性を強化したりできます';
+
+  @override
+  String get ssdtMsg577 => 'DMARを選択します';
+
+  @override
+  String get ssdtMsg578 => 'カスタマイズする必要があるDMARテーブルを選択してください';
+
+  @override
+  String get ssdtMsg579 => 'APIC を選択します';
+
+  @override
+  String get ssdtMsg580 => 'カスタマイズする必要がある APIC テーブルを選択してください';
+
+  @override
+  String get ssdtMsg581 => 'FACPを選択します';
+
+  @override
+  String get ssdtMsg582 => 'FACP フォームを選択してください';
+
+  @override
+  String get ssdtMsg583 => 'FACPを選択します';
+
+  @override
+  String get ssdtMsg584 => 'FACP フォームを選択してください';
+
+  @override
+  String get ssdtMsg585 => 'ログ';
+
+  @override
+  String get ssdtMsg586 => 'ログをクリアする';
+
+  @override
+  String get ssdtMsg587 => 'ログのエクスポート';
+
+  @override
+  String get ssdtMsg588 => '既製のパッチ';
+
+  @override
+  String get ssdtMsg589 => 'パッチの実行';
+
+  @override
+  String get ssdtMsg590 => 'ファイル/ディレクトリを選択してください';
+
+  @override
+  String get ssdtMsg591 => 'ACPIの抽出';
+
+  @override
+  String get ssdtMsg592 => '出力ディレクトリ';
+
+  @override
+  String get ssdtMsg593 => 'DSDT ファイルまたは ACPI ディレクトリを選択してください';
+
+  @override
+  String get ssdtMsg594 => 'ACPIの選択';
+
+  @override
+  String get ssdtMsg595 => '構成をマージする';
+
+  @override
+  String get ssdtMsg596 => '構成を選択します';
+
+  @override
+  String get ssdtMsg597 => 'config.plist ファイルを選択してください';
+
+  @override
+  String get ssdtMsg598 => '設定';
+
+  @override
+  String get ssdtMsg599 => 'プラットフォームパッチ';
+
+  @override
+  String get ssdtMsg600 => 'パッチガイド';
+
+  @override
+  String get ssdtMsg601 => 'アプリケーションについて';
+
+  @override
+  String ssdtMsg602(String arg0, String arg1) {
+    return '$arg0: $arg1';
+  }
+
+  @override
+  String get ssdtMsg603 => 'パッチを選択';
+
+  @override
+  String get ssdtMsg604 => 'デスクトップ';
+
+  @override
+  String get ssdtMsg605 => 'サーバ';
+
+  @override
+  String get ssdtMsg606 => 'SSDT が生成されています。操作を繰り返さないでください。';
+
+  @override
+  String get ssdtMsg607 => 'SSDT が選択されていません';
+
+  @override
+  String ssdtMsg608(String arg0, String arg1) {
+    return '$arg0 $arg1';
+  }
+
+  @override
+  String ssdtMsg609(String arg0, String arg1) {
+    return '$arg0 リスト: $arg1';
+  }
+
+  @override
+  String get ssdtMsg610 => 'プレハブSSDT';
+
+  @override
+  String get ssdtMsg611 => 'カスタムSSDT';
+
+  @override
+  String get ssdtMsg612 => 'CPUの種類:';
+
+  @override
+  String get ssdtMsg613 => 'プラットフォームの種類:';
+
+  @override
+  String get ssdtMsg614 => 'デスクトップ';
+
+  @override
+  String get ssdtMsg615 => 'デスクトップ';
+
+  @override
+  String get ssdtMsg616 => 'ノート';
+
+  @override
+  String get ssdtMsg617 => 'ノート';
+
+  @override
+  String get ssdtMsg618 => 'ミニホスト';
+
+  @override
+  String get ssdtMsg619 => 'ミニホスト';
+
+  @override
+  String get ssdtMsg620 => 'サーバ';
+
+  @override
+  String get ssdtMsg621 => 'サーバ';
+
+  @override
+  String ssdtMsg622(String arg0) {
+    return '現在選択されている SSDT リスト: $arg0';
+  }
+
+  @override
+  String get ssdtMsg623 => 'プラットフォーム情報:';
+
+  @override
+  String get ssdtMsg624 => 'すべてチェックしてください';
+
+  @override
+  String get ssdtMsg625 => 'コア（公式推奨）';
+
+  @override
+  String get ssdtMsg626 => '推奨（機能修正）';
+
+  @override
+  String get ssdtMsg627 => 'オプション（機能を完備）';
+
+  @override
+  String get ssdtMsg628 => 'プラットフォーム情報:';
+
+  @override
+  String get ssdtMsg629 => 'プレハブSSDT';
+
+  @override
+  String get ssdtMsg630 => 'カスタムSSDT';
+
+  @override
+  String get ssdtMsg631 => 'カスタムSSDT';
+
+  @override
+  String get ssdtMsg632 => 'プレハブSSDT';
+
+  @override
+  String ssdtMsg633(String arg0, String arg1) {
+    return '$arg0 $arg1';
+  }
+
+  @override
+  String ssdtMsg634(String arg0, String arg1) {
+    return '$arg0$arg1';
+  }
+
+  @override
+  String ssdtMsg635(String arg0, String arg1) {
+    return '$arg0$arg1';
+  }
+
+  @override
+  String get ssdtMsg636 => 'GitHub にアクセス';
+
+  @override
+  String get ssdtMsg637 => '今すぐダウンロード';
+
+  @override
+  String get ssdtMsg638 => '閉鎖';
+
+  @override
+  String get ssdtMsg639 => '新しいバージョンが見つかりました';
+
+  @override
+  String get ssdtMsg640 => 'バージョン番号:';
+
+  @override
+  String get ssdtMsg641 => '発売時期：';
+
+  @override
+  String get ssdtMsg642 => 'サーバーへの接続がタイムアウトしました';
+
+  @override
+  String get ssdtMsg643 => 'サーバーへの接続がタイムアウトしました';
+
+  @override
+  String get ssdtMsg644 => 'ダウンロードがキャンセルされました';
+
+  @override
+  String get ssdtMsg645 => 'ダウンロードがキャンセルされました';
+
+  @override
+  String get ssdtMsg646 => '読み取り応答タイムアウト';
+
+  @override
+  String get ssdtMsg647 => '読み取り応答タイムアウト';
+
+  @override
+  String ssdtMsg648(String arg0) {
+    return 'サーバー情報の取得中に例外が発生しました。ステータスコード: $arg0';
+  }
+
+  @override
+  String ssdtMsg649(String arg0) {
+    return 'リクエストが失敗しました。ステータス コード: $arg0';
+  }
+
+  @override
+  String ssdtMsg650(String arg0) {
+    return 'ダウンロードがタイムアウトしました。$arg0 秒間進捗がありません。タスクはキャンセルされました。';
+  }
+
+  @override
+  String ssdtMsg651(String arg0) {
+    return 'ログ チャネルが存在しません: $arg0';
+  }
+
+  @override
+  String ssdtMsg652(String arg0, String arg1, String arg2) {
+    return 'エクスポートが成功しました。ファイルパス: $arg0$arg1$arg2';
+  }
+
+  @override
+  String ssdtMsg653(String arg0) {
+    return 'エクスポートに失敗しました!エラーメッセージ: $arg0';
+  }
+
+  @override
+  String ssdtMsg654(String arg0) {
+    return 'ファイルが存在しません!エクスポートに失敗しました!ファイルパス: $arg0';
+  }
+
+  @override
+  String ssdtMsg655(String arg0) {
+    return 'ログ ファイルの初期化に失敗しました: $arg0';
+  }
+
+  @override
+  String get ssdtMsg656 => '未知';
+
+  @override
+  String get ssdtMsg657 => '最も緩い';
+
+  @override
+  String get ssdtMsg658 => '長さのみ';
+
+  @override
+  String get ssdtMsg659 => 'テーブル ID と長さ、正規化されたヘッダーを無効にする';
+
+  @override
+  String get ssdtMsg660 => 'テーブル ID と長さ、正規化されたヘッダーを有効にする';
+
+  @override
+  String get ssdtMsg661 =>
+      'Intel 第 1 世代 Arrandale、第 2 世代 Sandy Bridge、第 3 世代 Ivy Bridge';
+
+  @override
+  String get ssdtMsg662 => 'Intel第4世代Haswell、第5世代Broadwell';
+
+  @override
+  String get ssdtMsg663 =>
+      'Intel 第 6 世代 Skylake、第 7 世代 Kaby Lake、第 4 世代 Haswell の一部';
+
+  @override
+  String get ssdtMsg664 => 'カスタムの明るさ。通常、一部の非標準機器または特別なニーズの設定に使用されます。';
+
+  @override
+  String get ssdtMsg665 => 'カスタムの明るさ。通常、一部の非標準機器または特別なニーズの設定に使用されます。';
+
+  @override
+  String get ssdtMsg666 => 'Intel 第 8 世代 CoffeeLake ～ 第 10 世代、および AMD ノートブック';
+
+  @override
+  String get ssdtMsg667 =>
+      'その他 (カスタム applbkl-name / applbkl-data デバイス プロパティが必要) はサポートされていない可能性があります';
+
+  @override
+  String ssdtMsg668(String arg0) {
+    return 'テーブルが存在しません: $arg0';
+  }
+
+  @override
+  String ssdtMsg669(String arg0) {
+    return '受信データの長さが 4 バイト未満です: $arg0';
+  }
+
+  @override
+  String ssdtMsg670(String arg0) {
+    return 'ファイルの内容は 4 バイト未満です: $arg0';
+  }
+
+  @override
+  String ssdtMsg671(String arg0, String arg1) {
+    return '署名の読み取りエラー: $arg0、ファイル パス: $arg1';
+  }
+
+  @override
+  String ssdtMsg672(String arg0) {
+    return '一時ディレクトリが次の場所に作成されました: $arg0';
+  }
+
+  @override
+  String ssdtMsg673(String arg0) {
+    return '一時ディレクトリはすでに次の場所に存在します: $arg0';
+  }
+
+  @override
+  String ssdtMsg674(String arg0) {
+    return '$arg0 ファイルを逆コンパイルしています...';
+  }
+
+  @override
+  String get ssdtMsg675 => '正在批量反编译 SSDT.aml 文件...';
+
+  @override
+  String get ssdtMsg676 => 'DSDT.aml および SSDT.aml ファイルをバッチで逆コンパイルしています...';
+
+  @override
+  String ssdtMsg677(String arg0) {
+    return '=> $arg0 の逆コンパイルに失敗しました。';
+  }
+
+  @override
+  String ssdtMsg678(String arg0) {
+    return '=> $arg0 は正常に逆コンパイルされました!';
+  }
+
+  @override
+  String ssdtMsg679(String arg0) {
+    return '=> $arg0 は正常に逆コンパイルされました!';
+  }
+
+  @override
+  String ssdtMsg680(String arg0) {
+    return '=> $arg0 は正常に逆コンパイルされました!';
+  }
+
+  @override
+  String get ssdtMsg681 => '失敗した .aml ファイルを個別に逆コンパイルしています...';
+
+  @override
+  String ssdtMsg682(String arg0) {
+    return '=> $arg0 は正常に逆コンパイルされました!';
+  }
+
+  @override
+  String ssdtMsg683(String arg0) {
+    return '=> $arg0 の逆コンパイルに失敗しました。';
+  }
+
+  @override
+  String get ssdtMsg684 => '他の .aml ファイルを逆コンパイルしています...';
+
+  @override
+  String ssdtMsg685(String arg0) {
+    return '=> $arg0 は正常に逆コンパイルされました!';
+  }
+
+  @override
+  String get ssdtMsg686 =>
+      '注: パスまたはファイル名に中国語または特殊文字を含めないように注意してください。含めると、予期しない問題が発生する可能性があります。';
+
+  @override
+  String ssdtMsg687(String arg0) {
+    return 'エラーが発生しました: $arg0';
+  }
+
+  @override
+  String ssdtMsg688(String arg0, String arg1) {
+    return 'getDevicePathsWithId メソッド $arg0 でパスを処理中にエラーが発生しました: $arg1';
+  }
+
+  @override
+  String ssdtMsg689(String arg0) {
+    return 'スキップ: $arg0。これは以前に正しく逆コンパイルされています。';
+  }
+
+  @override
+  String ssdtMsg690(String arg0) {
+    return 'ターゲット ファイルは除外リストにあります: $arg0';
+  }
+
+  @override
+  String ssdtMsg691(String arg0) {
+    return '無効なパス: $arg0';
+  }
+
+  @override
+  String get ssdtMsg692 => '無効なパス';
+
+  @override
+  String ssdtMsg693(String arg0) {
+    return '$arg0 に有効な .aml または .dat ファイルが見つかりません!';
+  }
+
+  @override
+  String get ssdtMsg694 => '有効な .aml または .dat ファイルが見つかりません';
+
+  @override
+  String ssdtMsg695(String arg0) {
+    return '逆コンパイルに失敗しました: $arg0';
+  }
+
+  @override
+  String get ssdtMsg696 => 'acpidump ツールの準備ができていません。作戦終了！';
+
+  @override
+  String get ssdtMsg697 => 'ACPI テーブルをエクスポートしています...';
+
+  @override
+  String get ssdtMsg698 => '現在のプラットフォームではサポートされていません。';
+
+  @override
+  String get ssdtMsg699 => 'sudo パスワード認証を待っています...';
+
+  @override
+  String get platformName1000 => 'ジェネレーション 0-Penryn-775 プラットフォーム';
+
+  @override
+  String get platformName1001 => 'ジェネレーション 0-ペンリン-ノートブック';
+
+  @override
+  String get platformName1002 => '世代 0-Penryn-mini ホスト';
+
+  @override
+  String get platformName1003 => '第 10 世代 - Cascade Lake - X&W-X599 プラットフォーム';
+
+  @override
+  String get platformName1004 => '第 10 世代 - Comet Lake - 1200 プラットフォーム';
+
+  @override
+  String get platformName1005 => '第 10 世代 - Comet Lake - ラップトップ';
+
+  @override
+  String get platformName1006 => '10代目-Comet Lake-ミニホスト';
+
+  @override
+  String get platformName1007 => '第 10 世代 - Ice Lake - ラップトップ';
+
+  @override
+  String get platformName1008 => '第10世代 - Ice Lake - ミニホスト';
+
+  @override
+  String get platformName1009 => '第 11 世代 - Rocket Lake - 1200 プラットフォーム';
+
+  @override
+  String get platformName1010 => '第 11 世代 - Rocket Lake - ラップトップ';
+
+  @override
+  String get platformName1011 => '11代目 - Tiger Lake - ミニホスト';
+
+  @override
+  String get platformName1012 => '第12世代-Alder Lake-1700プラットフォーム';
+
+  @override
+  String get platformName1013 => '12代目-アルダーレイク-ノート';
+
+  @override
+  String get platformName1014 => '12代目-Alder Lake-ミニホスト';
+
+  @override
+  String get platformName1015 => '第 13 世代 - Raptor Lake-1700 プラットフォーム';
+
+  @override
+  String get platformName1016 => '13代目-Raptor Lake-ノート';
+
+  @override
+  String get platformName1017 => '13代目-Raptor Lake-ミニホスト';
+
+  @override
+  String get platformName1018 => '第 14 世代 - Raptor Lake-1700 プラットフォーム';
+
+  @override
+  String get platformName1019 => '14代目-Raptor Lake-ノートブック';
+
+  @override
+  String get platformName1020 => '第14世代 - Raptor Lake - ミニホスト';
+
+  @override
+  String get platformName1021 => '第 15 世代 - Arrow Lake - 1851 プラットフォーム';
+
+  @override
+  String get platformName1022 => '15代目-アローレイク-手帳';
+
+  @override
+  String get platformName1023 => '15代目 - Arrow Lake - ミニホスト';
+
+  @override
+  String get platformName1024 => '第 1 世代 - アランデール - ノートブック';
+
+  @override
+  String get platformName1025 => '第 1 世代 - アランデール - ミニ ホスト';
+
+  @override
+  String get platformName1026 => '第 1 世代 - Lynnfield-1156 プラットフォーム';
+
+  @override
+  String get platformName1027 => '第 1 世代 - Nehalem&Westmere - X58 プラットフォーム';
+
+  @override
+  String get platformName1028 => '第 2 世代 - Sandy Bridge - 1155 プラットフォーム';
+
+  @override
+  String get platformName1029 => '第2世代-Sandy Bridge-E-X79プラットフォーム';
+
+  @override
+  String get platformName1030 => '2代目-Sandy Bridge-ノート';
+
+  @override
+  String get platformName1031 => '2代目-Sandy Bridge-ミニホスト';
+
+  @override
+  String get platformName1032 => '第 3 世代 - Ivy Bridge - 1155 プラットフォーム';
+
+  @override
+  String get platformName1033 => '第 3 世代 - Ivy Bridge - E-X79 プラットフォーム';
+
+  @override
+  String get platformName1034 => '3代目-Ivy Bridge-ノートブック';
+
+  @override
+  String get platformName1035 => '第 3 世代 - Ivy Bridge - ミニホスト';
+
+  @override
+  String get platformName1036 => '第4世代Haswell-1150プラットフォーム';
+
+  @override
+  String get platformName1037 => '第4世代Haswell-E-X99プラットフォーム';
+
+  @override
+  String get platformName1038 => '第 4 世代 - Haswell - ラップトップ';
+
+  @override
+  String get platformName1039 => '第4世代-Haswell-miniホスト';
+
+  @override
+  String get platformName1040 => '第 5 世代 - Broadwell-1150 プラットフォーム';
+
+  @override
+  String get platformName1041 => '第 5 世代 - Broadwell-E-X99 プラットフォーム';
+
+  @override
+  String get platformName1042 => '第5世代-Broadwell-ノートブック';
+
+  @override
+  String get platformName1043 => '第 5 世代 - Broadwell - ミニ ホスト';
+
+  @override
+  String get platformName1044 => '第6世代-Skylake-1151プラットフォーム';
+
+  @override
+  String get platformName1045 => '第6世代-Skylake-X&W-X299プラットフォーム';
+
+  @override
+  String get platformName1046 => '第6世代-Skylake-ノートブック';
+
+  @override
+  String get platformName1047 => '第6世代-Skylake-miniホスト';
+
+  @override
+  String get platformName1048 => '第 7 世代 - Kaby Lake - 1151 プラットフォーム';
+
+  @override
+  String get platformName1049 => '第 7 世代 - Kaby Lake - ノートブック';
+
+  @override
+  String get platformName1050 => '第7世代 - Kaby Lake - ミニホスト';
+
+  @override
+  String get platformName1051 => '第8世代-Coffee Lake-1151プラットフォーム';
+
+  @override
+  String get platformName1052 => '第 8 世代-Coffee Lake-ノートブック';
+
+  @override
+  String get platformName1053 => '8代目-Coffee Lake-ミニホスト';
+
+  @override
+  String get platformName1054 => '第9世代-Coffee Lake-1151プラットフォーム';
+
+  @override
+  String get platformName1055 => '第9世代-Coffee Lake-ノートブック';
+
+  @override
+  String get platformName1056 => '9代目-Coffee Lake-ミニホスト';
+
+  @override
+  String get platformName1057 => 'ブルドーザー(15時間)とジャガー(16時間)';
+
+  @override
+  String get platformName1058 => 'ブルドーザー (15 時間) およびジャガー (16 時間) - ノートブック';
+
+  @override
+  String get platformName1059 => 'ブルドーザー (15 時間) およびジャガー (16 時間) - ミニ ホスト';
+
+  @override
+  String get platformName1060 => 'Ryzen と Threadripper (17 時間と 19 時間)';
+
+  @override
+  String get platformName1061 =>
+      'Ryzen および Threadripper (17 時間および 19 時間) - ハイエンド サーバー';
+
+  @override
+  String get platformName1062 => 'Ryzen ノートブック';
+
+  @override
+  String get platformName1063 => 'Ryzen-miniホスト';
+
+  @override
+  String get platformName1064 => 'サーバ';
+
+  @override
+  String get platformName1065 => 'ノート';
+
+  @override
+  String get platformName1066 => 'ミニホスト';
 }

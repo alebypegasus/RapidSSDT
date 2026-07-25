@@ -71,7 +71,7 @@ class DSDT {
     // 检查表是否存在
     final file = File(filePath);
     if (!file.existsSync()) {
-      Log('表不存在: $filePath');
+      Log('In: $filePath');
       return null;
     }
     if (data != null) {
@@ -79,7 +79,7 @@ class DSDT {
       if (data.length >= 4) {
         return String.fromCharCodes(data.sublist(0, 4));
       } else {
-        Log('传入数据长度不足 4 字节: $filePath');
+        Log(' 4 : $filePath');
         return null;
       }
     }
@@ -91,7 +91,7 @@ class DSDT {
       // 读取前4个字节
       final bytes = openedFile.readSync(4);
       if (bytes.length < 4) {
-        Log('文件内容不足 4 字节: $filePath');
+        Log(' 4 : $filePath');
         return null;
       }
 
@@ -99,7 +99,7 @@ class DSDT {
       return String.fromCharCodes(bytes);
     } catch (e) {
       // 捕获任何异常并返回 null
-      Log.error('读取签名发生错误: $e, 文件路径: $filePath');
+      Log.error(': $e, Path: $filePath');
       return null;
     } finally {
       // 确保文件关闭
@@ -398,7 +398,7 @@ class DSDT {
             .where((item) {
               final name = path.basename(item.path);
               if (excludeSet.contains(name.toLowerCase())) {
-                Log("跳过: $name ,先前已经正确反编译!");
+                Log("skipping: $name ,!");
                 return false;
               }
               return tableIsValid(tablePath, tableName: name);
@@ -408,17 +408,17 @@ class DSDT {
       } else if (File(tablePath).existsSync()) {
         final name = path.basename(tablePath);
         if (excludeSet.contains(name.toLowerCase())) {
-          Log.warning("目标文件在排除列表中: $name");
+          Log.warning("In: $name");
         } else if (tableIsValid(tablePath, checkSignature: false)) {
           validFiles = [tablePath];
         }
       } else {
-        Log.warning("无效路径: $tablePath");
+        Log.warning("Path: $tablePath");
         throw FileSystemException("无效路径", tablePath);
       }
 
       if (validFiles.isEmpty && exclude.isEmpty) {
-        Log.warning("在$tablePath 没有找到有效的.aml 或.dat 文件!");
+        Log.warning("In$tablePath found.aml .dat !");
         return ({}, failed);
       }
 
@@ -428,9 +428,9 @@ class DSDT {
       if (!temp.existsSync()) {
         // 创建目录
         temp.createSync(recursive: true);
-        debugPrint('临时目录已创建于：${temp.path}');
+        debugPrint('in: ${temp.path}');
       } else {
-        debugPrint('临时目录已存在于：${temp.path}');
+        debugPrint('Inin: ${temp.path}');
       }
 
       for (var file in validFiles) {
@@ -489,12 +489,12 @@ class DSDT {
       // 反编译 DSDT 和 SSDT 表
       if (dsdtOrSsdt.isNotEmpty) {
         if (dsdtOrSsdt.length == 1) {
-          Log('正在反编译 ${dsdtOrSsdt.first} 文件...');
+          Log('In ${dsdtOrSsdt.first} ...');
         } else {
           if (excludeSet.contains('dsdt.aml')) {
-            Log('正在批量反编译 SSDT.aml 文件...');
+            Log('In SSDT.aml ...');
           } else {
-            Log('正在批量反编译 DSDT.aml 和 SSDT.aml 文件...');
+            Log('In DSDT.aml  SSDT.aml ...');
           }
         }
         List<String> failedTemp = [];
@@ -516,21 +516,21 @@ class DSDT {
                 temp.path,
                 targetFiles[path.basename(e)]!['disassembledName'],
               )) {
-                Log.warning('=> ${path.basename(e)} 反编译失败！');
+                Log.warning('=> ${path.basename(e)} !');
               } else {
-                Log('=> ${path.basename(e)} 反编译成功！');
+                Log('=> ${path.basename(e)} !');
               }
             }
             Log('');
           } else {
             for (var e in dsdtOrSsdt) {
-              Log('=> ${path.basename(e)} 反编译成功！');
+              Log('=> ${path.basename(e)} !');
             }
             Log('');
           }
         } else {
           for (var e in dsdtOrSsdt) {
-            Log('=> ${path.basename(e)} 反编译成功！');
+            Log('=> ${path.basename(e)} !');
           }
         }
 
@@ -546,16 +546,16 @@ class DSDT {
 
         // 单独反编译失败的.aml 文件
         if (failedTemp.isNotEmpty) {
-          Log('正在单独反编译失败的.aml 文件...');
+          Log('In.aml ...');
           for (var e in failedTemp) {
             args = [acpiTool.iasl, "-dl", "-l", e];
             final res = await r.run([
               {"args": args},
             ]);
             if (res.isNotEmpty && res.last == '0') {
-              Log('=> $e 反编译成功！');
+              Log('=> $e !');
             } else {
-              Log.error('=> $e 反编译失败！');
+              Log.error('=> $e !');
             }
             if (!exists(
               temp.path,
@@ -570,7 +570,7 @@ class DSDT {
 
       // 反编译其他.aml文件 (例如 DMAR, APIC)
       if (otherTables.isNotEmpty) {
-        Log('正在反编译其他.aml文件...');
+        Log('In.aml...');
         List<String> args = [acpiTool.iasl, "-dl", "-l", ...otherTables];
         final res = await r.run([
           {"args": args},
@@ -578,7 +578,7 @@ class DSDT {
 
         if (res.last == '0') {
           for (var e in otherTables) {
-            Log('=>  ${path.basename(e)} 反编译成功！');
+            Log('=>  ${path.basename(e)} !');
           }
         }
         // 获取反编译名称失败的列表
@@ -593,7 +593,7 @@ class DSDT {
       }
 
       if (failed.length == targetFiles.length && exclude.isEmpty) {
-        Log.error("反编译失败: ${failed.toList()}");
+        Log.error(": ${failed.toList()}");
       }
 
       List<String> toRemove = [];
@@ -719,9 +719,9 @@ class DSDT {
       return (targetFiles, failed);
     } catch (e) {
       if (e.toString().contains('Failed to decode data using encoding')) {
-        Log.warning('注意：路径或文件名尽量不要包含中文或特殊字符,否则可能带来意外问题！');
+        Log.warning(': Path,!');
       } else {
-        Log.error('发生错误 : ${e.toString()}');
+        Log.error(' : ${e.toString()}');
       }
 
       return ({}, failed);
@@ -764,18 +764,18 @@ class DSDT {
   }) async {
     final exePath = await _getDumpToolPath(useLocaliAsl: useLocaliAsl);
     if (exePath == null || !File(exePath).existsSync()) {
-      Log.warning("acpidump 工具未准备就绪！已终止操作！");
+      Log.warning("acpidump !Operation aborted!");
       return null;
     }
 
-    Log("正在导出 ACPI 表...");
+    Log("In ACPI ...");
     String outputPath = await util.checkPath(
       filePath: filePath,
       onError: (error) => Log.error(error),
     );
 
     if (!(Platform.isWindows || Platform.isLinux || Platform.isMacOS)) {
-      Log.error("当前平台不支持!");
+      Log.error("!");
       return null;
     }
 
@@ -812,17 +812,17 @@ class DSDT {
 
     String? sudoPassword;
     if (Platform.isLinux && onRequestSudoPassword != null) {
-      Log("等待输入 sudo 密码授权...");
+      Log(" sudo ...");
       sudoPassword = await onRequestSudoPassword();
       if (sudoPassword == null || sudoPassword.isEmpty) {
-        Log.warning("用户取消授权");
+        Log.warning("");
         return null;
       }
     }
     final result = await runDump(sudoPassword: sudoPassword);
 
     if (result.exitCode != 0) {
-      Log.error("发生错误: ${result.stderr}");
+      Log.error(": ${result.stderr}");
       return null;
     }
 
@@ -832,26 +832,26 @@ class DSDT {
           file.path.toLowerCase().endsWith(".dat"),
     );
     if (!hasTable) {
-      Log.warning("当前平台提取 ACPI 表为空或不支持导出 ACPI 表！");
+      Log.warning(" ACPI  ACPI !");
       return null;
     }
 
     if (!Directory(
       outputPath,
     ).listSync().any((file) => file.path.toLowerCase().contains("dsdt."))) {
-      Log.warning("=> 未找到 DSDT，正在按签名导出…");
+      Log.warning("=> found DSDT, In...");
       final dsdtResult = await Process.run(exePath, [
         '-b',
         '-n',
         'DSDT',
       ], workingDirectory: outputPath);
       if (dsdtResult.exitCode != 0) {
-        Log.error("发生错误: ${dsdtResult.stderr}");
+        Log.error(": ${dsdtResult.stderr}");
         return null;
       }
     }
 
-    Log("正在更新表名…");
+    Log("InUpdating...");
     for (var entity in Directory(outputPath).listSync()) {
       if (entity is File) {
         String newName = entity.uri.pathSegments.last
@@ -862,13 +862,13 @@ class DSDT {
           try {
             entity.renameSync(path.join(outputPath, newName));
           } catch (e) {
-            Log.error("=> 重命名失败: $e");
+            Log.error("=> : $e");
           }
         }
       }
     }
 
-    Log("导出 ACPI 表成功!");
+    Log(" ACPI !");
     if (disassemble) {
       await loadTable(outputPath);
     }
@@ -1070,7 +1070,7 @@ class DSDT {
   }) {
     table ??= getDsdt();
     if (table?["lines"] == null) {
-      Log("=> getScopeOfDevice: 无效的 table 参数");
+      Log("=> getScopeOfDevice:  table ");
       return <String>[];
     }
 
@@ -1155,7 +1155,7 @@ class DSDT {
     }
 
     if (foundIndex == null) {
-      Log("=> 未在表中找到 Device ($deviceName) 的定义（devicePath=$devicePath）");
+      Log("=> Infound Device ($deviceName) (devicePath=$devicePath)");
       return <String>[];
     }
 
@@ -1167,7 +1167,7 @@ class DSDT {
         table: table,
       );
       if (scopeLines.isEmpty) {
-        Log("=> 找到 Device ($deviceName) 行 (index=$foundIndex)，但无法提取 Scope");
+        Log("=> found Device ($deviceName)  (index=$foundIndex),  Scope");
         return <String>[];
       }
 
@@ -1184,7 +1184,7 @@ class DSDT {
 
       return scopeLines;
     } catch (e) {
-      Log.error("getScopeOfDevice: 在提取 scope 时发生错误: $e");
+      Log.error("getScopeOfDevice: In scope : $e");
       return <String>[];
     }
   }
@@ -1642,7 +1642,7 @@ class DSDT {
           }
         }
       } catch (e) {
-        Log.error('getDevicePathsWithId方法处理路径发生错误 $p: $e');
+        Log.error('getDevicePathsWithIdmethodPath $p: $e');
         continue;
       }
     }

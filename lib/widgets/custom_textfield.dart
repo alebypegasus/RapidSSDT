@@ -1,8 +1,9 @@
 //  custom_textfield.dart 
 //  Created by JeoJay127 
 //
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide TextField;
 import 'package:flutter/services.dart';
+import 'package:macos_ui/macos_ui.dart';
 
 /// 自定义十六进制输入框组件，支持暗黑模式、自定义样式、输入校验、格式限制等。
 class CustomTextField<T> extends StatefulWidget {
@@ -134,71 +135,52 @@ class _CustomTextFieldState<T> extends State<CustomTextField<T>> {
   @override
   Widget build(BuildContext context) {
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-    UnderlineInputBorder buildBorder({
-      required Color? color,
-      required double? width,
-      required Color fallbackColor,
-      required double fallbackWidth,
-    }) {
-      return UnderlineInputBorder(
-        borderSide: BorderSide(
-          color: color ?? fallbackColor,
-          width: width ?? fallbackWidth,
-        ),
-      );
-    }
-
-    final input = TextField(
-      controller: widget.controller,
-      focusNode: widget.focusNode,
-      keyboardType: widget.keyboardType,
-      textAlign: widget.textAlign,
-      inputFormatters: widget.inputFormatters,
-      style: widget.style ?? TextStyle(fontSize: 11),
-      decoration: InputDecoration(
-        isDense: true,
-        contentPadding: EdgeInsets.symmetric(vertical: 12),
-        hintText: widget.hintText,
-        hintStyle:
-            widget.hintStyle ??
-            TextStyle(
-              fontSize: 11,
-              color: isDarkMode ? Colors.grey.shade500 : Colors.grey.shade400,
+    final input = Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        MacosTextField(
+          controller: widget.controller,
+          focusNode: widget.focusNode,
+          keyboardType: widget.keyboardType,
+          textAlign: widget.textAlign,
+          inputFormatters: widget.inputFormatters,
+          style: widget.style ?? const TextStyle(fontSize: 11),
+          placeholder: widget.hintText,
+          placeholderStyle: widget.hintStyle ??
+              TextStyle(
+                fontSize: 11,
+                color: isDarkMode ? Colors.grey.shade500 : Colors.grey.shade400,
+              ),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: _effectiveErrorText != null
+                  ? (widget.errorBorderColor ?? Colors.red.shade600)
+                  : (widget.enabledBorderColor ?? MacosColors.controlColor),
+              width: _effectiveErrorText != null
+                  ? (widget.errorBorderWidth ?? 1.0)
+                  : (widget.enabledBorderWidth ?? 1.0),
             ),
-        border: widget.border ?? const UnderlineInputBorder(),
-        enabledBorder: buildBorder(
-          color: widget.enabledBorderColor,
-          width: widget.enabledBorderWidth,
-          fallbackColor: isDarkMode
-              ? Colors.grey.shade700
-              : Colors.grey.shade400,
-          fallbackWidth: 1.0,
+            borderRadius: BorderRadius.circular(4.0),
+            color: isDarkMode
+                ? MacosColors.controlBackgroundColor.darkColor
+                : MacosColors.controlBackgroundColor,
+          ),
+          onChanged: (value) {
+            bool isValid = _validate(value);
+            widget.onChanged?.call(isValid ? value : '', widget.extra);
+          },
         ),
-        focusedBorder: buildBorder(
-          color: widget.focusedBorderColor,
-          width: widget.focusedBorderWidth,
-          fallbackColor: isDarkMode ? Colors.blue.shade300 : Colors.blue,
-          fallbackWidth: 2.0,
-        ),
-        errorBorder: buildBorder(
-          color: widget.errorBorderColor,
-          width: widget.errorBorderWidth,
-          fallbackColor: Colors.red.shade600,
-          fallbackWidth: 1.0,
-        ),
-        focusedErrorBorder: buildBorder(
-          color: widget.focusedErrorBorderColor,
-          width: widget.focusedErrorBorderWidth,
-          fallbackColor: Colors.red.shade600,
-          fallbackWidth: 2.0,
-        ),
-        errorText: _effectiveErrorText,
-        errorStyle: widget.errorStyle ?? TextStyle(color: Colors.red.shade600),
-      ),
-      onChanged: (value) {
-        bool isValid = _validate(value);
-        widget.onChanged?.call(isValid ? value : '', widget.extra);
-      },
+        if (_effectiveErrorText != null)
+          Padding(
+            padding: const EdgeInsets.only(top: 4.0),
+            child: Text(
+              _effectiveErrorText!,
+              style: widget.errorStyle ??
+                  TextStyle(color: Colors.red.shade600, fontSize: 10),
+            ),
+          ),
+      ],
     );
 
     return IntrinsicWidth(

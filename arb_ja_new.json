@@ -1,0 +1,3222 @@
+{
+  "ssdtMsg500": "デバイスの ACPI パス:",
+  "ssdtMsg501": "偽造するグラフィックス カード デバイスを選択してください",
+  "ssdtMsg502": "不明なグラフィックス カード モデル",
+  "ssdtMsg503": "偽造グラフィックス カード ID データベース:",
+  "ssdtMsg504": "{arg0}",
+  "@ssdtMsg504": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg505": "例: 73BF",
+  "ssdtMsg506": "4 つの 16 進文字が必要です",
+  "ssdtMsg507": "{arg0}",
+  "@ssdtMsg507": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg508": "オプション、グラフィックス カード名",
+  "ssdtMsg509": "偽造グラフィックス カード ID:",
+  "ssdtMsg510": "偽造グラフィックス カード名:",
+  "ssdtMsg511": "ソース .dsl ファイルを削除するかどうか: {arg0}",
+  "@ssdtMsg511": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg512": "強制的にコンパイルするかどうか: {arg0}",
+  "@ssdtMsg512": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg513": "ターゲット EFI を上書きするかどうか: {arg0}",
+  "@ssdtMsg513": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg514": "一致パターン: {arg0}",
+  "@ssdtMsg514": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg515": "HPET データのロードに失敗しました: {arg0}",
+  "@ssdtMsg515": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg516": "HPET データの初期化に失敗しました: {arg0}",
+  "@ssdtMsg516": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg517": "ACPI パスの初期化に失敗しました: {arg0}",
+  "@ssdtMsg517": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg518": "パッチノートはありません",
+  "ssdtMsg519": "パッチノートはありません",
+  "ssdtMsg520": "パッチノートの取得に失敗しました: {arg0}",
+  "@ssdtMsg520": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg521": "パッチノートの取得に失敗しました",
+  "ssdtMsg522": "{arg0} 構成パスをクリアします",
+  "@ssdtMsg522": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg523": "{arg0} が無効なファイルを選択しました: {arg1}",
+  "@ssdtMsg523": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg524": "{arg0} のパッチ構成が見つかりません",
+  "@ssdtMsg524": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg525": "続行する前に、カスタマイズする必要がある SSDT を選択してください。",
+  "ssdtMsg526": "パッチの実行に失敗しました: {arg0}",
+  "@ssdtMsg526": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg527": "パッチ [{arg0}] の実行に失敗しました: {arg1}",
+  "@ssdtMsg527": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg528": "SSDT が生成されています。操作を繰り返さないでください。",
+  "ssdtMsg529": "パッチリストが空です!",
+  "ssdtMsg530": "抽出が進行中です。操作を繰り返さないでください。",
+  "ssdtMsg531": "現在の {arg0} プラットフォームによって抽出された ACPI テーブルは、OpenCore などによって挿入された ACPI パッチによって汚染されている可能性が非常に高くなります。 Windows/Linux プラットフォームで動作することを強くお勧めします。",
+  "@ssdtMsg531": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg532": "ACPIの抽出に失敗しました!",
+  "ssdtMsg533": "ACPIの抽出に成功しました!",
+  "ssdtMsg534": "パッチの準備に失敗しました: {arg0}",
+  "@ssdtMsg534": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg535": "DSDT/ACPI のロードに失敗しました: {arg0}",
+  "@ssdtMsg535": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg536": "config.plist ファイルが存在しません: {arg0}",
+  "@ssdtMsg536": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg537": "認識できない plist ファイル形式",
+  "ssdtMsg538": "config.plist タイプは「{arg0}」です",
+  "@ssdtMsg538": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg539": "plist タイプの解析に失敗しました: {arg0}",
+  "@ssdtMsg539": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg540": "最初に ACPI ディレクトリを選択してください。",
+  "ssdtMsg541": "まず、EFI ディレクトリ内の config.plist ファイルを選択してください。",
+  "ssdtMsg542": "無効な ACPI パス: {arg0}",
+  "@ssdtMsg542": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg543": "config.plist ファイルが存在しません: {arg0}",
+  "@ssdtMsg543": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg544": "plist ファイルのマージに失敗しました: {arg0}",
+  "@ssdtMsg544": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg545": "はい",
+  "ssdtMsg546": "いいえ",
+  "ssdtMsg547": "はい",
+  "ssdtMsg548": "いいえ",
+  "ssdtMsg549": "はい",
+  "ssdtMsg550": "いいえ",
+  "ssdtMsg551": "内蔵",
+  "ssdtMsg552": "リモート",
+  "ssdtMsg553": "新しいバージョンのiasl",
+  "ssdtMsg554": "古いバージョンの iasl-legacy",
+  "ssdtMsg555": "はい",
+  "ssdtMsg556": "いいえ",
+  "ssdtMsg557": "設定",
+  "ssdtMsg558": "IASLモード",
+  "ssdtMsg559": "IASL コンパイル タイプ",
+  "ssdtMsg560": "逆コンパイルされた .dsl ファイルを削除する",
+  "ssdtMsg561": "強制コンパイル",
+  "ssdtMsg562": "ターゲットEFIを上書きするかどうか",
+  "ssdtMsg563": "ACPIマッチングモード",
+  "ssdtMsg564": "コアパッチ",
+  "ssdtMsg565": "機能パッチ",
+  "ssdtMsg566": "デバイスパッチ",
+  "ssdtMsg567": "専用パッチ",
+  "ssdtMsg568": "スリープパッチ",
+  "ssdtMsg569": "補助パッチ",
+  "ssdtMsg570": "既製のパッチ",
+  "ssdtMsg571": "通常のシステム起動と電源管理に必要な基本パッチ",
+  "ssdtMsg572": "追加機能を提供する、または機能の問題を修正するパッチ",
+  "ssdtMsg573": "グラフィックス カード ハードウェア用のパッチ",
+  "ssdtMsg574": "パッチは特定のマザーボードまたはアーキテクチャでのみ必要です",
+  "ssdtMsg575": "オプション、睡眠の問題を解決するために使用されます",
+  "ssdtMsg576": "必須ではありませんが、ACPI 構造を完成させたり、互換性を強化したりできます",
+  "ssdtMsg577": "DMARを選択します",
+  "ssdtMsg578": "カスタマイズする必要があるDMARテーブルを選択してください",
+  "ssdtMsg579": "APIC を選択します",
+  "ssdtMsg580": "カスタマイズする必要がある APIC テーブルを選択してください",
+  "ssdtMsg581": "FACPを選択します",
+  "ssdtMsg582": "FACP フォームを選択してください",
+  "ssdtMsg583": "FACPを選択します",
+  "ssdtMsg584": "FACP フォームを選択してください",
+  "ssdtMsg585": "ログ",
+  "ssdtMsg586": "ログをクリアする",
+  "ssdtMsg587": "ログのエクスポート",
+  "ssdtMsg588": "既製のパッチ",
+  "ssdtMsg589": "パッチの実行",
+  "ssdtMsg590": "ファイル/ディレクトリを選択してください",
+  "ssdtMsg591": "ACPIの抽出",
+  "ssdtMsg592": "出力ディレクトリ",
+  "ssdtMsg593": "DSDT ファイルまたは ACPI ディレクトリを選択してください",
+  "ssdtMsg594": "ACPIの選択",
+  "ssdtMsg595": "構成をマージする",
+  "ssdtMsg596": "構成を選択します",
+  "ssdtMsg597": "config.plist ファイルを選択してください",
+  "ssdtMsg598": "設定",
+  "ssdtMsg599": "プラットフォームパッチ",
+  "ssdtMsg600": "パッチガイド",
+  "ssdtMsg601": "アプリケーションについて",
+  "ssdtMsg602": "{引数0}: {引数1}",
+  "@ssdtMsg602": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg603": "パッチを選択",
+  "ssdtMsg604": "デスクトップ",
+  "ssdtMsg605": "サーバ",
+  "ssdtMsg606": "SSDT が生成されています。操作を繰り返さないでください。",
+  "ssdtMsg607": "SSDT が選択されていません",
+  "ssdtMsg608": "{引数0} {引数1}",
+  "@ssdtMsg608": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg609": "{arg0} リスト: {arg1}",
+  "@ssdtMsg609": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg610": "プレハブSSDT",
+  "ssdtMsg611": "カスタムSSDT",
+  "ssdtMsg612": "CPUの種類:",
+  "ssdtMsg613": "プラットフォームの種類:",
+  "ssdtMsg614": "デスクトップ",
+  "ssdtMsg615": "デスクトップ",
+  "ssdtMsg616": "ノート",
+  "ssdtMsg617": "ノート",
+  "ssdtMsg618": "ミニホスト",
+  "ssdtMsg619": "ミニホスト",
+  "ssdtMsg620": "サーバ",
+  "ssdtMsg621": "サーバ",
+  "ssdtMsg622": "現在選択されている SSDT リスト: {arg0}",
+  "@ssdtMsg622": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg623": "プラットフォーム情報:",
+  "ssdtMsg624": "すべてチェックしてください",
+  "ssdtMsg625": "コア（公式推奨）",
+  "ssdtMsg626": "推奨（機能修正）",
+  "ssdtMsg627": "オプション（機能を完備）",
+  "ssdtMsg628": "プラットフォーム情報:",
+  "ssdtMsg629": "プレハブSSDT",
+  "ssdtMsg630": "カスタムSSDT",
+  "ssdtMsg631": "カスタムSSDT",
+  "ssdtMsg632": "プレハブSSDT",
+  "ssdtMsg633": "{引数0} {引数1}",
+  "@ssdtMsg633": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg634": "{arg0}{arg1}",
+  "@ssdtMsg634": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg635": "{arg0}{arg1}",
+  "@ssdtMsg635": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg636": "GitHub にアクセス",
+  "ssdtMsg637": "今すぐダウンロード",
+  "ssdtMsg638": "閉鎖",
+  "ssdtMsg639": "新しいバージョンが見つかりました",
+  "ssdtMsg640": "バージョン番号:",
+  "ssdtMsg641": "発売時期：",
+  "ssdtMsg642": "サーバーへの接続がタイムアウトしました",
+  "ssdtMsg643": "サーバーへの接続がタイムアウトしました",
+  "ssdtMsg644": "ダウンロードがキャンセルされました",
+  "ssdtMsg645": "ダウンロードがキャンセルされました",
+  "ssdtMsg646": "読み取り応答タイムアウト",
+  "ssdtMsg647": "読み取り応答タイムアウト",
+  "ssdtMsg648": "サーバー情報の取得中に例外が発生しました。ステータスコード: {arg0}",
+  "@ssdtMsg648": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg649": "リクエストが失敗しました。ステータス コード: {arg0}",
+  "@ssdtMsg649": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg650": "ダウンロードがタイムアウトしました。{arg0} 秒間進捗がありません。タスクはキャンセルされました。",
+  "@ssdtMsg650": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg651": "ログ チャネルが存在しません: {arg0}",
+  "@ssdtMsg651": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg652": "エクスポートが成功しました。ファイルパス: {arg0}{arg1}{arg2}",
+  "@ssdtMsg652": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg653": "エクスポートに失敗しました!エラーメッセージ: {arg0}",
+  "@ssdtMsg653": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg654": "ファイルが存在しません!エクスポートに失敗しました!ファイルパス: {arg0}",
+  "@ssdtMsg654": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg655": "ログ ファイルの初期化に失敗しました: {arg0}",
+  "@ssdtMsg655": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg656": "未知",
+  "ssdtMsg657": "最も緩い",
+  "ssdtMsg658": "長さのみ",
+  "ssdtMsg659": "テーブル ID と長さ、正規化されたヘッダーを無効にする",
+  "ssdtMsg660": "テーブル ID と長さ、正規化されたヘッダーを有効にする",
+  "ssdtMsg661": "Intel 第 1 世代 Arrandale、第 2 世代 Sandy Bridge、第 3 世代 Ivy Bridge",
+  "ssdtMsg662": "Intel第4世代Haswell、第5世代Broadwell",
+  "ssdtMsg663": "Intel 第 6 世代 Skylake、第 7 世代 Kaby Lake、第 4 世代 Haswell の一部",
+  "ssdtMsg664": "カスタムの明るさ。通常、一部の非標準機器または特別なニーズの設定に使用されます。",
+  "ssdtMsg665": "カスタムの明るさ。通常、一部の非標準機器または特別なニーズの設定に使用されます。",
+  "ssdtMsg666": "Intel 第 8 世代 CoffeeLake ～ 第 10 世代、および AMD ノートブック",
+  "ssdtMsg667": "その他 (カスタム applbkl-name / applbkl-data デバイス プロパティが必要) はサポートされていない可能性があります",
+  "ssdtMsg668": "テーブルが存在しません: {arg0}",
+  "@ssdtMsg668": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg669": "受信データの長さが 4 バイト未満です: {arg0}",
+  "@ssdtMsg669": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg670": "ファイルの内容は 4 バイト未満です: {arg0}",
+  "@ssdtMsg670": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg671": "署名の読み取りエラー: {arg0}、ファイル パス: {arg1}",
+  "@ssdtMsg671": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg672": "一時ディレクトリが次の場所に作成されました: {arg0}",
+  "@ssdtMsg672": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg673": "一時ディレクトリはすでに次の場所に存在します: {arg0}",
+  "@ssdtMsg673": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg674": "{arg0} ファイルを逆コンパイルしています...",
+  "@ssdtMsg674": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg675": "正在批量反编译 SSDT.aml 文件...",
+  "ssdtMsg676": "DSDT.aml および SSDT.aml ファイルをバッチで逆コンパイルしています...",
+  "ssdtMsg677": "=> {arg0} の逆コンパイルに失敗しました。",
+  "@ssdtMsg677": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg678": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg678": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg679": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg679": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg680": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg680": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg681": "失敗した .aml ファイルを個別に逆コンパイルしています...",
+  "ssdtMsg682": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg682": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg683": "=> {arg0} の逆コンパイルに失敗しました。",
+  "@ssdtMsg683": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg684": "他の .aml ファイルを逆コンパイルしています...",
+  "ssdtMsg685": "=> {arg0} は正常に逆コンパイルされました!",
+  "@ssdtMsg685": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg686": "注: パスまたはファイル名に中国語または特殊文字を含めないように注意してください。含めると、予期しない問題が発生する可能性があります。",
+  "ssdtMsg687": "エラーが発生しました: {arg0}",
+  "@ssdtMsg687": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg688": "getDevicePathsWithId メソッド {arg0} でパスを処理中にエラーが発生しました: {arg1}",
+  "@ssdtMsg688": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg689": "スキップ: {arg0}。これは以前に正しく逆コンパイルされています。",
+  "@ssdtMsg689": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg690": "ターゲット ファイルは除外リストにあります: {arg0}",
+  "@ssdtMsg690": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg691": "無効なパス: {arg0}",
+  "@ssdtMsg691": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg692": "無効なパス",
+  "ssdtMsg693": "{arg0} に有効な .aml または .dat ファイルが見つかりません!",
+  "@ssdtMsg693": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg694": "有効な .aml または .dat ファイルが見つかりません",
+  "ssdtMsg695": "逆コンパイルに失敗しました: {arg0}",
+  "@ssdtMsg695": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg696": "acpidump ツールの準備ができていません。作戦終了！",
+  "ssdtMsg697": "ACPI テーブルをエクスポートしています...",
+  "ssdtMsg698": "現在のプラットフォームではサポートされていません。",
+  "ssdtMsg699": "sudo パスワード認証を待っています...",
+  "ssdtMsg700": "ユーザーが認証をキャンセルする",
+  "ssdtMsg701": "エラーが発生しました: {arg0}",
+  "@ssdtMsg701": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg702": "現在のプラットフォームで抽出された ACPI テーブルが空であるか、ACPI テーブルのエクスポートをサポートしていません。",
+  "ssdtMsg703": "=> DSDT が見つかりません。署名によってエクスポートしています...",
+  "ssdtMsg704": "エラーが発生しました: {arg0}",
+  "@ssdtMsg704": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg705": "テーブル名を更新しています...",
+  "ssdtMsg706": "=> 名前の変更に失敗しました: {arg0}",
+  "@ssdtMsg706": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg707": "ACPI テーブルが正常にエクスポートされました。",
+  "ssdtMsg708": "有効な ACPI テーブルが提供されていません。",
+  "ssdtMsg709": "位置 {arg0} で始まる 16 進データが見つかりません!",
+  "@ssdtMsg709": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg710": "検索する 16 進データが見つかりませんでした。",
+  "ssdtMsg711": "{arg2} が範囲インデックス {arg0}-{arg1} に見つかりません!",
+  "@ssdtMsg711": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg712": "インスタンス {arg0} は範囲外です。",
+  "@ssdtMsg712": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg713": "検索する 16 進データが見つかりませんでした。",
+  "ssdtMsg714": "検索する 16 進データが見つかりませんでした。",
+  "ssdtMsg715": "一意の塗りつぶし ID が見つかりません!",
+  "ssdtMsg716": "=> getScopeOfDevice: 無効なテーブルパラメータ",
+  "ssdtMsg717": "=> デバイスの定義 ({arg0}) がテーブル (devicePath={arg1}) に見つかりません",
+  "@ssdtMsg717": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg718": "=> デバイス ({arg0}) 行 (index={arg1}) が見つかりましたが、スコープを抽出できません",
+  "@ssdtMsg718": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg719": "=> 抽出されたスコープにはデバイス名 {arg0} (devicePath={arg1}) が含まれていないように見えますが、内容は依然として返されます。",
+  "@ssdtMsg719": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg720": "getScopeOfDevice: スコープの取得中にエラーが発生しました: {arg0}",
+  "@ssdtMsg720": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg721": "実行失敗: {arg0}、エラー: {arg1}",
+  "@ssdtMsg721": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg722": "サポートされていないパッチ操作: {arg0}",
+  "@ssdtMsg722": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg723": "plist タイプの取得に失敗しました: {arg0}",
+  "@ssdtMsg723": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg724": "\\n注: NormalizeHeaders が有効になっており、テーブル ID に印刷不可能な文字が含まれています。",
+  "ssdtMsg725": "{arg0} が一致または適用されていない可能性があります。 \\n",
+  "@ssdtMsg725": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg726": "\\n注: NormalizeHeaders が有効になっておらず、テーブル ID に \\ が含まれています",
+  "ssdtMsg727": "キャラクター！",
+  "ssdtMsg728": "{arg0} が一致または適用されていない可能性があります。 \\n",
+  "@ssdtMsg728": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg729": "=> 現在のブート タイプ: {arg0}",
+  "@ssdtMsg729": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg730": "=> 現在の構成パス: {arg0}",
+  "@ssdtMsg730": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg731": "=> 現在のパッチ パス: {arg0}",
+  "@ssdtMsg731": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg732": "未选择目标 config.plist 文件！",
+  "ssdtMsg733": "ターゲットの config.plist ファイルが見つかりません: {arg0}",
+  "@ssdtMsg733": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg734": "{arg0} を読み込んでいます...",
+  "@ssdtMsg734": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg735": "=> 読み込みに失敗しました!失敗の理由: {arg0} \\n",
+  "@ssdtMsg735": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg736": "=> config.plist タイプを決定できません! \\n",
+  "ssdtMsg737": "パッチ パス内の {arg0} ファイルが見つかりませんでした。作戦終了！ \\n",
+  "@ssdtMsg737": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg738": "必要なパッチ ファイルが見つかりません: {arg0}!作戦終了！ \\n",
+  "@ssdtMsg738": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg739": "パッチ {arg0} をロードしています...",
+  "@ssdtMsg739": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg740": "=> 読み込みに失敗しました!失敗の理由: {arg0}\\n",
+  "@ssdtMsg740": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg741": "{arg0} と {arg1} のパスが正しく構成されていることを確認しています...",
+  "@ssdtMsg741": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg742": "=> SSDT テーブルが見つかりません!飛び越える...",
+  "ssdtMsg743": "=> ターゲット SSDT テーブル (合計 {arg0}) を確認しています...",
+  "@ssdtMsg743": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg744": "=> ${s[を確認しています",
+  "ssdtMsg745": "=> {arg0} 個の同一の SSDT テーブルが見つかり、置換対象としてマークされています...",
+  "@ssdtMsg745": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg746": "=> {arg0} をチェックしています...",
+  "@ssdtMsg746": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg747": "=> {arg0} 個の同一の SSDT テーブルが見つかり、置換対象としてマークされています...",
+  "@ssdtMsg747": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg748": "=> {arg0} の重複した SSDT テーブルを削除しています...",
+  "@ssdtMsg748": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg749": "=> 重複する SSDT テーブルが見つかりません。",
+  "ssdtMsg750": "=> {arg0} SSDT テーブルを追加しています...",
+  "@ssdtMsg750": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg751": "\\n注: {arg0} の不正な形式の SSDT テーブルが見つかりました。{arg1} を修正してください。",
+  "@ssdtMsg751": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg752": "=> パッチが見つかりません!飛び越える...",
+  "ssdtMsg753": "=> 対象パッチ(合計{arg0})を確認中...",
+  "@ssdtMsg753": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg754": "=> ${p[をチェック中",
+  "ssdtMsg755": "=> {arg0} 個の同一のパッチが見つかり、置換用にマークされています...",
+  "@ssdtMsg755": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg756": "=> {arg0} の重複パッチを削除しています...",
+  "@ssdtMsg756": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg757": "=> 重複したパッチが見つかりません!",
+  "ssdtMsg758": "=> {arg0} パッチを追加しています...",
+  "@ssdtMsg758": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg759": "\\n注: {arg0} の不正なパッチが見つかりました。{arg1} を修正してください。",
+  "@ssdtMsg759": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg760": "=> ドロップパッチが見つかりません!飛び越える...",
+  "ssdtMsg761": "=> ターゲットのドロップパッチ (合計 {arg0}) を確認しています...",
+  "@ssdtMsg761": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg762": "=> ${d[を確認しています",
+  "ssdtMsg763": "=> {arg0} 個の同一のドロップ パッチが見つかり、置換用にマークされています...",
+  "@ssdtMsg763": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg764": "=> {arg0} をチェックしています...",
+  "@ssdtMsg764": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg765": "=> {arg0} 個の同一のドロップ パッチが見つかり、置換用にマークされています...",
+  "@ssdtMsg765": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg766": "=> {arg0} の重複したドロップ パッチを削除しています...",
+  "@ssdtMsg766": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg767": "=> 重複したドロップ パッチが見つかりません!",
+  "ssdtMsg768": "=> {arg0} ドロップ パッチを追加しています...",
+  "@ssdtMsg768": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg769": "\\n注: {arg0} のドロップ パッチは不正な形式です。{arg1} を修正してください。",
+  "@ssdtMsg769": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg770": "=> 更新する必要のある Quirk 構成は見つかりませんでした。飛び越える...",
+  "ssdtMsg771": "=> ターゲットの Quirks 構成を確認しています...",
+  "ssdtMsg772": "=> {arg0} を {arg1} に更新します",
+  "@ssdtMsg772": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg773": "現在の構成構成ファイルをバックアップしています...",
+  "ssdtMsg774": "ファイルが次の場所に正常にバックアップされました: {arg0}",
+  "@ssdtMsg774": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg775": "SSDT ファイルをコピーする準備をしています...",
+  "ssdtMsg776": "「 {arg0} 」をディレクトリ {arg1} にコピーしています...",
+  "@ssdtMsg776": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg777": "ディレクトリが見つかりません: {arg0}",
+  "@ssdtMsg777": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg778": "ディレクトリが見つかりません: {arg0}",
+  "@ssdtMsg778": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg779": "{arg0} ディレクトリ内のすべての .aml ファイルを {arg1} ディレクトリに手動でコピーしてください。",
+  "@ssdtMsg779": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg780": "構成は正常に保存されました。",
+  "ssdtMsg781": "マージが完了しました!\\n",
+  "ssdtMsg782": "マージに失敗しました!\\n",
+  "ssdtMsg783": "注: マージ プロセス中に潜在的なエラーが見つかったので、確認して修正してください。",
+  "ssdtMsg784": "注: 現在の構成は、ターゲット EFI モードをオーバーライドするように設定されていません。",
+  "ssdtMsg785": "次のことを手動で行う必要があります。",
+  "ssdtMsg786": "1. {arg0} ディレクトリの config.plist ファイルを {arg1} ディレクトリに手動で置き換える必要があります。",
+  "@ssdtMsg786": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg787": "2. {arg0} ディレクトリ内のすべての .aml ファイルを {arg1} ディレクトリに手動でコピーする必要があります。",
+  "@ssdtMsg787": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg788": "設定をパスに保存しています: {arg0}...",
+  "@ssdtMsg788": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg789": "パスチェックが失敗し、空のパスが返される",
+  "ssdtMsg790": "パッチ ACPI パスが存在しません: {arg0}",
+  "@ssdtMsg790": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg791": "plist ファイル情報の取得に失敗し、返された結果は不完全でした。",
+  "ssdtMsg792": "patches_OC.plist ファイルと patches_Clover.plist ファイルがパッチ ACPI パス: {arg0} の下に見つかりませんでした。再試行する前に、必要な ACPI パッチを作成してください。",
+  "@ssdtMsg792": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg793": "結果フォルダーのパスの処理中にエラーが発生しました: {arg0}",
+  "@ssdtMsg793": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg794": "ルート辞書要素が見つかりません",
+  "ssdtMsg795": "plist の解析に失敗しました!失敗の理由: {arg0}",
+  "@ssdtMsg795": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg796": "ファイルが存在しません: {arg0}",
+  "@ssdtMsg796": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg797": "{arg0} ファイルのロード中にエラーが発生しました: {arg1}",
+  "@ssdtMsg797": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg798": "{arg0} ファイルのロード中にエラーが発生しました: {arg1}",
+  "@ssdtMsg798": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg799": "ファイルの書き込みに失敗しました!失敗の理由: {arg0}",
+  "@ssdtMsg799": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg800": "ファイル内容の解析エラー: {arg0}",
+  "@ssdtMsg800": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg801": "ファイルが存在しません: {arg0}",
+  "@ssdtMsg801": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg802": "統計に失敗しました: {arg0}",
+  "@ssdtMsg802": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg803": "変更せず、スキップ: {arg0}",
+  "@ssdtMsg803": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg804": "chmod が失敗しました ({arg0}): {arg1}",
+  "@ssdtMsg804": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg805": "chmod 後も権限がまだ満たされていません: {arg0}",
+  "@ssdtMsg805": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg806": "実行可能権限セット: {arg0}",
+  "@ssdtMsg806": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg807": "コマンドを実行します: ${args.join(",
+  "ssdtMsg808": "コマンドの実行に失敗しました: {arg0}",
+  "@ssdtMsg808": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg809": "注: iasl-legacy の古いバージョンは、macOS 10.6 以前のバージョンのみをサポートします。現在の主流システムとの互換性の問題がある可能性があるため、注意して使用してください!!!\\n",
+  "ssdtMsg810": "合計 {arg0} 個の ACPI テーブルが見つかり、そのうち {arg1} が有効です。",
+  "@ssdtMsg810": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg811": "=> 事前に作成されたパッチを適用する必要はありません!\\n",
+  "ssdtMsg812": "合計所要時間: {arg0} 秒\\n",
+  "@ssdtMsg812": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg813": "${config.useLeagcyiAsl?",
+  "ssdtMsg814": "} {arg0}.aml をコンパイルします...",
+  "@ssdtMsg814": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg815": "コンパイル結果: {arg0}",
+  "@ssdtMsg815": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg816": "コンパイルに失敗しました!",
+  "ssdtMsg817": "{arg0}.aml を正常にコンパイルしました。",
+  "@ssdtMsg817": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg818": "設定に従い、{arg0}.dslソースファイルを削除します。",
+  "@ssdtMsg818": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg819": "存在する",
+  "ssdtMsg820": "存在しません",
+  "ssdtMsg821": "=> return文が複数ある、または戻り値がReturn(0x0F)ではない",
+  "ssdtMsg822": "s_CRS から XCRS への名前変更\n定義ブロック (\"\"、\"SSDT\"、2、\"RAPID\"、\"HPET\"、0x00000000)\n{\n    外部 ([[名前]]、DeviceObj)\n    外部 ([[名前]].XCRS、[[タイプ]])\n\n    スコープ ([[名前]])\n    {\n        名前 (BUFX、ResourceTemplate ()\n        {\n            IRQNoFlags()\n                {0,8}\n            // [[mem]]\n            メモリ32固定 ([[mem_access]],\n                [[mem_base]]、\n                [[mem_length]]、\n            )\n        })\n        Method (_CRS, 0, Serialized) // _CRS: 現在のリソース設定\n        {\n            If (LOr (_OSI (\"Darwin\"), LNot(CondRefOf ([[name]].XCRS))))\n            {\n                リターン(BUFX)\n            }\n            // macOS と XCRS は存在しません - その結果を返します\n            戻り値 ([[名前]].XCRS[[メソッド]])\n        }\"\"\";\n      // [[name]] を渡された `name` に置き換えます\n      ssdt = ssdt.replaceAll(r\"[[名前]]\", 名前 ??",
+  "ssdtMsg823": ");\n\n      // hpet[0].last の値に基づいて「MethodObj」または「BuffObj」を選択します\n      ssdt = ssdt.replaceAll(\n        r\"[[タイプ]]\",\n        hpet[0].last == \"メソッド\" ? \"メソッドオブジェクト\" : \"BuffObj\",\n      );\n\n      //`gotMem`に基づいてメモリ構成情報を選択します\n      ssdt = ssdt.replaceAll(\n        r\"[[mem]]\",\n        ゲットメム\n            ? 「DSDT から取得した AccessType/Base/Length」\n            : \"デフォルトの AccessType/Base/Length - DSDT で確認してください!\",\n      );\n\n      //メモリ構成情報を置き換える\n      ssdt = ssdt.replaceAll(r\"[[mem_access]]\", memAccess ??",
+  "ssdtMsg824": ");\n\n      // hpet[0].lastの値に基づいて「()」を使用するかどうかを選択します\n      ssdt = ssdt.replaceAll(\n        r\"[[メソッド]]\",\n        hpet[0].last == \"メソッド\" ? \" ()\" : \"\",\n      );\n\n      // hpetSta および関連条件に基づいて構成を変更します\n      if (hpetSTA) {\n        List<String> ssdtParts = [];\n        ブール外部 = false;\n\n        // ssdt 構成を 1 行ずつ処理し、外部参照 XSTA メソッドを挿入します。\n        ssdt.split(\"\\n\").forEach((行) {\n          if (line.trim().contains(\"外部 (\")) {\n            外部 = true;\n          else if (外部) {\n            ssdtParts.add(\" 外部 ([[名前]].XSTA, ${sta?[",
+  "ssdtMsg825": "]})\");\n            外部 = 偽;\n          }\n          ssdtParts.add(行);\n        });\n\n        //XSTAメソッドを追加\n        ssdt = ssdtParts.join(\"\\n\");\n        ssdt += \"\\n\";\n        ssdt += \"\"\"\n        Method (_STA, 0, NotSerialized) // _STA: ステータス\n        {\n            // macOS または XSTA メソッドを起動する場合は 0x0F を返します\n            // 何らかの理由でもう存在しません\n            If (LOr (_OSI (\"Darwin\"), LNot (CondRefOf ([[name]].XSTA))))\n            {\n                リターン(0x0F)\n            }\n            // macOS と XSTA は存在しません - その結果を返します\n            戻り値 ([[名前]].XSTA[[呼び出された]])\n        }\"\"\";\n        ssdt = ssdt.replaceAll(r\"[[名前]]\", 名前 ??",
+  "ssdtMsg826": "] == \"メソッドオブジェクト\" ? \" ()\" : \"\",\n        );\n      }\n\n      // 最後の括弧を閉じます\n      ssdt += \"\\n\";\n      ssdt += \"\"\"\n    }\n}\"\"\";\n    }\n    //SSDTファイルに書き込む\n    writeSSDT(ssdtName, ssdt);\n    最終acpi = {\n      「コメント」: hpetFake\n          ? 「HPETデバイスの偽物」\n          : \"${名前?.split(",
+  "ssdtMsg827": ")} _CRS - XCRS の名前変更には _CRS が必要です\",\n      「有効」: true、\n      \"パス\": \"{arg0}.aml\",\n    };\n    makePlist(acpi:acpi、パッチ:パッチ);\n  }\n\n  Future<void> ssdtPNLF({\n    bool 事前構築済み = false、\n    整数？ uid = 99、\n    ブール？ getIgpu = false、\n    文字列？マニュアルIGPUパス、\n  }) 非同期 => 事前構築済み\n      ? await _ssdtPNLFPrebuilt()\n      : 待ってください _ssdtPNLF(\n          uid: uid、\n          getIgpu: getIgpu、\n          マニュアルIGPUPath: マニュアルIGPUPath、\n        );\n\n  bool _isExactPnlfDevicePath(List<動的> pathInfo) {\n    if (pathInfo.length < 3 || pathInfo[2] != \"デバイス\") は false を返します。\n\n    最終の lastSegment = pathInfo[0]\n        .toString()\n        .split(\".\")\n        .last\n        .replaceAll(RegExp(r\"_+$\"), \"\")\n        .toUpperCase();\n    return lastSegment == \"PNLF\";\n  }\n\n  List<_NativePnlfDevice> _findNativePnlfDevices() {\n    最終一致 = <_NativePnlfDevice>[];\n    最終sortedTableNames =sortedNicely(d.acpiTables.keys.toList());\n\n    for (sortedTableNames の最終テーブル名) {\n      最終 rawTable = d.acpiTables[テーブル名];\n      if (rawTable is! Map<String, Dynamic>) 続行;\n\n      最終パス = d.getPathOfType(\n        objType: \"デバイス\",\n        オブジェクト: \"PNLF\",\n        テーブル: rawTable、\n      );\n      for (パス内の最後の pathInfo) {\n        if (!_isExactPnlfDevicePath(pathInfo)) 続行;\n        matches.add((テーブル名: テーブル名、テーブル: rawTable、パス: pathInfo));\n      }\n    }\n\n    一致を返します。\n  }\n\n  文字列 _externalAcpiPath(String acpiPath) {\n    最終的な cleanPath = acpiPath.replaceFirst(\"\\\\\", \"\");\n    クリーンパスを返す\n        .split(\".\")\n        .map((部分) => 部分 == \"_SB\" ? \"_SB_\" : 部分)\n        .join(\".\");\n  }\n\n  String _normalizeManualIgpuPath(String ManualIGPUPath) {\n    List<String> パーツ = ManualIGPUPath\n        .replaceFirst(\"\\\\\", \"\")\n        .toUpperCase()\n        .split(\".\");\n    有効な文字列 = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\";\n    文字列 noStart = \"0123456789\";\n\n    if (parts.any(\n      (p) =>\n          p.isEmpty || 空です\n          p.length > 4 ||\n          noStart.contains(p[0]) ||\n          p.split(\"\").any((x) => !valid.contains(x))、\n    )){\n      Log(\"無効な iGPU パス: {arg1}\");\n    }\n\n    Parts = Parts.map((p) => p.replaceAll(RegExp(r\"_+$\"), \"\")).toList();\n    \"\\\\{arg2}\" を返します。\n  }\n\n  _IgpuPathResult _findIgpuPath({\n    文字列？マニュアルIGPUパス、\n    bool allowedManual = false、\n  }) {\n    文字列 igpu = \"\";\n    ブール値の推測 = false;\n\n    Log(\"0x00020000 で iGPU デバイスを探しています...\");\n    最終テーブル名リスト = d.acpiTables.keys.toList();\n    FinalsortedTableNames =sortedNicely(tableNameList, first: \"DSDT\");\n\n    for (sortedTableNames の最終テーブル名) {\n      最終テーブル = d.acpiTables[テーブル名];\n      Log(\"{arg3} をチェック中...\");\n      最終パス = d.getPathOfType(objType: \"名前\", obj: \"_ADR\", table: table);\n\n      for (パス内の最後のパス) {\n        最終 adr = getAddressFromLine(path[1], テーブル: テーブル);\n        if (adr == 0x00020000) {\n          igpu = パス[0].substring(0, パス[0].長さ - 5);\n          Log(\"=>iGPU デバイスが {arg4} で見つかりました!\");\n          return (パス: igpu、推測: false、手動: false);\n        }\n      }\n    }\n\n    Log(\"iGPU デバイスがアドレスで見つかりません!\");\n    Log(\"一般的な iGPU 名を検索しています...\");\n\n    for (sortedTableNames の最終テーブル名) {\n      最終 rawTable = d.acpiTables[テーブル名];\n      if (rawTable is! Map<String, Dynamic>) 続行;\n      Log(\"{arg5} をチェック中...\");\n\n      最終的な pciRoots = [\n        d.getDevicePathsWithHid(hid: \"PNP0A08\", テーブル: rawTable),\n        d.getDevicePathsWithHid(hid: \"PNP0A03\", テーブル: rawTable),\n        d.getDevicePathsWithHid(hid: \"ACPI0016\", テーブル: rawTable),\n      ];\n\n      最終外部 = <String>[];\n      rawTable[\"lines\"]?.forEach((line) {\n        最終トリムライン = line.toString().trim();\n        if (!trimmedLine.startsWith(\"外部 (\")) が戻る;\n        {を試してください\n          最終パスパート = trimedLine.split(",
+  "@ssdtMsg827": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg828": ");\n        } キャッチ (_) {\n          debugPrint(\"行の処理エラー: {arg0}\");\n        }\n      });\n\n      for (pciRoots の最終 rootList) {\n        if (rootList.isEmpty) 続行;\n        最終的な rootPath = rootList[0][0].toString();\n        for ([ の最後の名前\n          「IGPU」、\n          \"_VID\",\n          \"VID0\"、\n          \"VID1\"、\n          「GFX0」、\n          「VGA」、\n          \"_VGA\",\n        ]){\n          最終テストパス = \"{arg1}.{arg2}\";\n          最終的な devicePaths = d.getDevicePaths(obj: testPath、テーブル: rawTable);\n          文字列?デバイス;\n          if (devicePaths.isNotEmpty) {\n            デバイス = デバイスパス[0][0];\n          } それ以外の場合は {\n            デバイス = external.firstWhere(\n              (x) => テストパス == x、\n              またはその他の場合: () => \"\",\n            );\n            if (device.isEmpty) デバイス = null;\n          }\n\n          if (device == null) 続行;\n          if (d\n              .getPathOfType(\n                objType: \"名前\",\n                obj: \"{arg3}._ADR\",\n                テーブル: rawTable、\n              )\n              .isNotEmpty) {\n            続けます。\n          }\n\n          igpu = デバイス;\n          推測 = 真;\n          Log(\"=>考えられる iGPU デバイスが {arg4} で見つかりました\");\n          return (パス: igpu、推測: 推測、手動: false);\n        }\n      }\n    }\n\n    if (allowManual && ManualIGPUPath != null && ManualIGPUPath.isNotEmpty) {\n      Log(\"指定された iGPU パスに従って、手動で {arg5} に設定されました \\n\");\n      戻る (\n        パス: _normalizeManualIgpuPath(manualIGPUPath),\n        推測: 偽、\n        マニュアル: 本当、\n      );\n    }\n\n    return (パス: \"\"、推測: false、手動: false);\n  }\n\n  /// バックライト修理\n  /// [uid] UID\n  ///[getIgpu] UID=14の場合、GPUレジスタコードを含めるかどうか\n  /// [manualIGPUPath] iGPU パスを手動で指定します\n  将来<void> _ssdtPNLF({\n    整数？ uid = 99、\n    ブール？ getIgpu = false、\n    文字列？マニュアルIGPUパス、\n  }) 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    // 有効な uid が指定されているかどうかを確認します\n    if (uid == null) {\n      Log.warning(\"有効な UID が指定されていないため、操作は終了しました!\");\n      戻る;\n    }\n\n    最終 uidList = PNLFUIDs.map((item) => item[",
+  "@ssdtMsg828": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg829": "]).toList();\n    if (!uidList.contains(uid)) {\n      Log.warning(\"{arg0} はカスタム UID です。手動でのカスタマイズが必要か、まったくサポートされていない可能性があります!\");\n    }\n\n    bool getIGpuInfo = false;\n    if (uid == 14) {\n      ログ(\"\");\n      ログ.警告(\n        「注: Intel の第 1 世代 Arrandale、第 2 世代 Sandy Bridge、第 3 世代 Ivy Bridge はデフォルトで UID: 14 を使用しますが、UID: 14 を使用する一部のマシンでは最大輝度の制限やその他の問題が発生します。これらの問題を解決するには、iGPU (統合グラフィックス カード) の正しいデバイス パスを設定する必要があり、IGPU レジスタ情報を補足する必要がある場合があります。」\n      );\n      ログ（\"\"）;\n      getIGpuInfo = getIgpu ??間違い;\n    }\n    最終文字列 ssdtName = \"SSDT-PNLF\";\n    Log(\"プリコンパイルされた {arg1}.dsl を作成しています...\");\n    //使用された UID、使用されたプラットフォーム、および対応する PWMMax を出力します。\n    for (PNLFUID の var item) {\n      if (アイテム[",
+  "@ssdtMsg829": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg830": "] == uid) {\n        Log(\"=> 使用される UID: ${item[",
+  "ssdtMsg831": "]}\");\n        Log(\"=> 適用可能なプラットフォーム: ${item[",
+  "ssdtMsg832": ";\n    ブール ecLocated = false;\n    for (var tableName insortedNicely(d.acpiTables.keys.toList())) {\n      var table = d.acpiTables[テーブル名];\n      var ecList = d.getDevicePathsWithHid(hid: \"PNP0C09\", テーブル: テーブル);\n\n      if (ecList.isNotEmpty) {\n        lpcName = ecList.first[0]\n            .split(\".\")\n            .sublist(0, ecList.first[0].split(\".\").length - 1)\n            .join(\".\");\n        Log(\"=>{arg1} PNP0C09 (EC) デバイスが {arg0} で見つかりました\");\n        Log(\"=>検証中...\");\n\n        for (ecList の var deviceInfo) {\n          文字列デバイス = デバイス情報[0];\n          文字列 origDevice = デバイス;\n          Log(\"=> {arg2} が見つかりました\");\n\n          if (device.split(\".\").last == \"EC\") {\n            名前付きEc = true;\n            if (!isLaptop) {\n              // ノートブック以外でのみ名前を変更します\n              Log(\" => PNP0C09 (EC) デバイスは EC という名前であり、名前が変更されています\");\n              デバイス =\n                  \"{arg3}.EC0\";\n              名前を変更 = true;\n            }\n          }\n\n          変数スコープ = d\n              .getScope(\n                startingIndex: デバイス情報[1]、\n                ストリップコメント: true、\n                テーブル: テーブル、\n              )\n              .join(\"\\n\");\n\n          if ([\"_HID\", \"_CRS\", \"_GPE\"].every((key) =>scope.contains(key))) {\n            Log(\"=> 有効な PNP0C09 (EC) デバイス\");\n            ecLocated = true;\n\n            var sta = getStaVar(\n              デバイス: origDevice、\n              devHid: \"PNP0C09\",\n              devName: origDevice.split(\".\").last,\n              テーブル: テーブル、\n            );\n\n            if (!isLaptop) {\n              ecToPatch.add(デバイス);\n              if (sta[\"パッチ\"] != null && sta[\"パッチ\"].isNotEmpty) {\n                patches.addAll(sta[\"パッチ\"]);\n                ecSta[デバイス] = sta;\n              }\n            } else if (sta[\"パッチ\"] != null && sta[\"パッチ\"].isNotEmpty) {\n              if (staNeedsPatching(sta, table)) {\n                ecToEnable.add(デバイス);\n                ecEnableSta[デバイス] = sta;\n                for (var patch in sta[\"patches\"]) {\n                  パッチ[\"有効\"] = false;\n                  パッチ[\"無効\"] = true;\n                  patches.add(パッチ);\n                }\n              } それ以外の場合は {\n                Log(\"=> _STA は正しく有効になっているため、名前の変更をスキップします\");\n              }\n            }\n          } それ以外の場合は {\n            Log(\"=>無効な PNP0C09 (EC) デバイス\");\n          }\n        }\n      }\n    }\n\n    if (!ecLocated) {\n      Log(\"=> 有効な PNP0C09 (EC) デバイスが見つかりません。EC デバイスを偽装してください\");\n    }\n\n    if (isLaptop &&namedEc && patches.isEmpty) {\n      Log.warning(\"=>指定された EC デバイスが見つかりました。偽造する必要はありません!\\n\");\n      戻る;\n    }\n\n    lpcName ??= getLpcName(skipEc: true, stopCommonNames: true);\n\n    if (lpcName == null) {\n      戻る;\n    }\n\n    文字列コメント = \"偽の組み込みコントローラー\";\n    if (ラップトップです) {\n      コメント+=",
+  "@ssdtMsg832": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg833": ";\n    }\n    if (名前変更) {\n      パッチ.挿入(0, {\n        「コメント」:\n            \"EC から EC0{arg0}\",\n        \"検索\": \"45435f5f\",\n        \"置換\": \"4543305f\",\n      });\n      コメント+=\n          \" - EC から EC0 {arg1} までが必要です\";\n    else if (ecSta.isNotEmpty) {\n      comment += \" - EC _STA から XSTA への名前変更が必要です\";\n    }\n\n    Log(\"{arg2}.dsl を作成中...\");\n\n    var ssdt = \"\"\"\n定義ブロック (\"\"、\"SSDT\"、2、\"RAPID\"、\"SsdtEC\"、0x00001000)\n{\n    外部 ([[LPCName]]、DeviceObj)\n\"\"\";\n    ssdt = ssdt.replaceAll(r\"[[LPCName]]\", lpcName);\n\n    for (ecToPatch の var x) {\n      ssdt += \"外部 ({arg3}, DeviceObj)\\n\";\n      if (ecSta.containsKey(x)) {\n        ssdt +=\n            \"外部 ({arg4}.XSTA, {arg5})\\n\";\n      }\n    }\n\n    // ecToEnable をトラバースします\n    for (ecToEnable の var x) {\n      ssdt += \"外部 ({arg6}, DeviceObj)\\n\";\n      if (ecEnableSta.containsKey(x)) {\n        // パッチ適用が有効になっていない可能性があるため、_STA および XSTA 参照を追加します。\n        ssdt +=\n            \"外部 ({arg7}._STA, {arg8})\\n\";\n        ssdt +=\n            \"外部 ({arg9}.XSTA, {arg10})\\n\";\n      }\n    }\n\n    // ecToPatch をトラバースし、_STA メソッドを追加します\n    for (ecToPatch の var x) {\n      ssdt +=\n          「」\n    スコープ ({arg11})\n    {\n        Method (_STA, 0, NotSerialized) // _STA: ステータス\n        {\n            If (_OSI (\"ダーウィン\"))\n            {\n                リターン（ゼロ）\n            }\n            それ以外の場合\n            {\n                戻り値 ({arg12}\" : \"0x0F\"})\n            }\n        }\n    }\n\"\"\";\n    }\n\n    // ecToEnable をトラバースして再度強制的に有効化します\n    for (ecToEnable の var x) {\n      ssdt +=\n          「」\n    If (LAnd (CondRefOf ({arg13}.XSTA), LNot (CondRefOf ({arg14}._STA))))\n    {\n        スコープ ({arg15})\n        {\n            Method (_STA, 0, NotSerialized) // _STA: ステータス\n            {\n                If (_OSI (\"ダーウィン\"))\n                {\n                    リターン(0x0F)\n                }\n                それ以外の場合\n                {\n                    戻り値 ({arg16}\" : \"ゼロ\"})\n                }\n            }\n        }\n    }\n\"\"\";\n    }\n\n    //仮想ECの作成\n    if (!isLaptop || !namedEc) {\n      ssdt +=\n          「」\n    スコープ ({arg17})\n    {\n        デバイス(EC)\n        {\n            名前 (_HID, \"ACID0001\") // _HID: ハードウェア ID\n            Method (_STA, 0, NotSerialized) // _STA: ステータス\n            {\n                If (_OSI (\"ダーウィン\"))\n                {\n                    リターン(0x0F)\n                }\n                それ以外の場合\n                {\n                    リターン（ゼロ）\n                }\n            }\n        }\n    }\n\"\"\";\n    }\n\n    if (injectUSBPower) {\n      コメント+=",
+  "@ssdtMsg833": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      },
+      "arg13": {
+        "type": "String"
+      },
+      "arg14": {
+        "type": "String"
+      },
+      "arg15": {
+        "type": "String"
+      },
+      "arg16": {
+        "type": "String"
+      },
+      "arg17": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg834": ";\n      ssdt += \"\"\"\n    スコープ (\\\\_SB)\n    {\n        デバイス(USBX)\n        {\n            名前 (_ADR, ゼロ) // _ADR: アドレス\n            Method (_DSM, 4, NotSerialized) // _DSM: デバイス固有のメソッド\n            {\n                If (!Arg2)\n                {\n                    リターン(バッファ(1))\n                    {\n                         0x03 // 。\n                    })\n                }\n\n                リターン (パッケージ (0x08)\n                {\n                    \"kUSBSleepPowerSupply\",\n                    0x13EC、\n                    \"kUSBSleepPortCurrentLimit\",\n                    0x0834、\n                    \"kUSBWakePowerSupply\"、\n                    0x13EC、\n                    \"kUSBWakePortCurrentLimit\",\n                    0x0834\n                })\n            }\n\n            Method (_STA, 0, NotSerialized) // _STA: ステータス\n            {\n                If (_OSI (\"ダーウィン\"))\n                {\n                    リターン(0x0F)\n                }\n                それ以外の場合\n                {\n                    リターン（ゼロ）\n                }\n            }\n        }\n    }\n\"\"\";\n    }\n    ssdt += \"\"\"\n}\"\"\";\n    //SSDTファイルに書き込む\n    Final acpi = {\"コメント\": コメント、\"有効\": true、\"パス\": \"{arg0}.aml\"};\n    makePlist(acpi: acpi、パッチ: パッチ、replace: true);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> ssdtUSBX({\n    bool 事前構築済み = false、\n    マップ<文字列, 文字列>? usbxProps、\n  }) async => 事前構築済み? null : _ssdtUSBX を待ちます(usbxProps: usbxProps);\n\n  ///SSDT-USBX\n  /// [usbxProps] USBX プロパティ\n  Future<void> _ssdtUSBX({Map<String, String>? usbxProps}) async {\n    if (!await ensureDSDT()) が戻る;\n    if (usbxProps == null || usbxProps.isEmpty) {\n      Log.warning(\"USBX 属性パッチを空にすることはできません! 操作は終了しました!\");\n      戻る;\n    }\n\n    最終文字列 ssdtName = \"SSDT-USBX\";\n    Log(\"プリコンパイルされた {arg1}.dsl を作成しています...\");\n    最終acpi = {\n      \"コメント\": \"USB 電源プロパティ用の汎用 USBX デバイス\",\n      「有効」: true、\n      \"パス\": \"{arg2}.aml\",\n    };\n    makePlist(acpi:acpi);\n    // SSDT コンテンツを生成する\n    文字列 ssdt =",
+  "@ssdtMsg834": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg835": ";\n\n    //USBX プロパティを追加\n    usbxProps.forEach((キー, 値) {\n      ssdt +=",
+  "ssdtMsg836": ";\n    });\n\n    // 末尾の余分なカンマを削除します\n    ssdt = ssdt.trimRight().replaceAll(RegExp(r",
+  "ssdtMsg837": "）、\n                  基数: 16、\n                );\n                var currInd = i + 4;\n\n                if (lastAdr != null) {\n                  // 範囲値を比較します\n                  varAdjust = currAdr - (lastAdr + lastLen!);\n                  if (調整 != 0) {\n                    rtcRangeNeeded = true;\n                    ログ(\n                      \"=> IO 範囲 {arg0} を長さ {arg1} に調整しています\",\n                    );\n\n                    {を試してください\n                      var hexFind = util.hexy(lastLen、padTo: 2);\n                      var hexRepl = util.hexy(lastLen + 調整、padTo: 2);\n                      if (lastInd != null) {\n                        crsLines[lastInd] = crsLines[lastInd].replaceAll(\n                          hexFind、\n                          hexRepl、\n                        );\n                      }\n                    } キャッチ (e) {\n                      Log(\"=>値を調整できません。RTC 範囲を確認できません。\");\n                      rtcRangeNeeded = false;\n                      壊す;\n                    }\n                  }\n                }\n\n                //最後の値を保存する\n                lastAdr = currAdr;\n                lastLen = 現在のLen;\n                lastInd = currInd;\n              } キャッチ (e) {\n                // 値のエラーを処理します\n                Log(\"=>値の収集に失敗しました。RTC 範囲を確認できません。\");\n                rtcRangeNeeded = false;\n                壊す;\n              }\n            }\n\n            crsLines.add(行);\n          }\n        } それ以外の場合は {\n          Log(\"=> _CRS はメソッドであるため、RTC 範囲を検証できません!\");\n        }\n        if (rtcRangeNeeded) {\n          // _CRS の名前を XCRS に変更するパッチを生成する必要がある\n          Log(\"=> _CRS から XCRS への名前変更を生成中...\");\n\n          // _CRS のインデックスを取得します\n          var crsIndex = d.findNextHex(index: rtcCrs[0][1]).{arg2};\n          Log(\"=> インデックス {arg3} で見つかりました\");\n\n          //16進数の文字列を定義\n          var crsHex = \"5F435253\"; // _CRS\n          var xcrsHex = \"58435253\"; //XCRS\n\n          // 一意の塗りつぶし値を取得します\n          Final (padl, Padr) = d.getShortestUniquePad(\n            currentHex: crsHex、\n            インデックス: crsIndex、\n          );\n          // パッチを追加\n          最終パッチ = rtcDict[\"パッチ\"] ?? [];\n          パッチ.add({\n            \"コメント\": \"{arg4} _CRS から XCRS への名前変更\",\n            \"検索\": \"{arg5}{arg6}{arg7}\",\n            \"置換\": \"{arg8}{arg9}{arg10}\",\n          });\n\n          rtcDict[\"パッチ\"] = パッチ;\n          rtcDict[\"crs\"] = true;\n        }\n      } それ以外の場合は {\n        Log(\"=> 見つかりません\");\n      }\n    }\n\n    /// SSDT が必要かどうかを確認する\n    if ((rtcDict[\"valid\"] as bool) &&\n        !(rtcDict[\"has_var\"] as bool) &&\n        rtcDict[\"sta\"].isEmpty &&\n        !rtcRange必要) {\n      Log.warning(\"=> 有効な PNP0B00 (RTC) デバイスが見つかり、検証されました。パッチや SSDT は必要ありません。操作は終了しました!\");\n      戻る;\n    }\n\n    文字列コメント = rtcDict[\"有効\"] == false\n        ? 「RTCフェイク」\n        :rtc範囲が必要\n        ? 「RTC範囲の固定」\n        : \"RTC 有効化を修正\";\n\n    List<String> サフィックス = [];\n    for (var x in [rtcDict]) {\n      if (!(x[\"valid\"] as bool)) 続行;\n      文字列 val = \"\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty && !(x[\"has_var\"] as bool)) {\n        val = \"{arg11} _STA から XSTA へ\";\n      }\n      if (x[\"crs\"] == true) {\n        val += \"${val.isNotEmpty?",
+  "@ssdtMsg837": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg838": ")} 名前を変更します\";\n    }\n\n    最終文字列 ssdtName = \"SSDT-RTC0-RANGE\";\n    Final acpi = {\"コメント\": コメント、\"有効\": true、\"パス\": \"{arg0}.aml\"};\n    最終パッチ = rtcDict[\"パッチ\"] ?? [];\n    makePlist(acpi: acpi、パッチ: パッチ、replace: true);\n    Log(\"{arg1}.dsl を作成中...\");\n\n    文字列 ssdt = \"\"\"\n\n    定義ブロック (\"\"、\"SSDT\"、2、\"RAPID\"、\"RTC0RANGE\"、0x00000000)\n    {\n    \"\"\";\n    if ([rtcDict].any((x) => x[\"has_var\"] == true)) {\n      ssdt += \"\"\" 外部 (STAS、IntObj)\n          スコープ (\\\\)\n          {\n              Method (_INI, 0, NotSerialized) // _INI: 初期化\n              {\n                  If (_OSI (\"ダーウィン\"))\n                  {\n                      店舗（One、STAS）\n                  }\n              }\n          }\n      \"\"\";\n    }\n    for (var x in [rtcDict]) {\n      if (x[\"valid\"] != true || x[\"has_var\"] == true || x[\"device\"] == null) {\n        続けます。\n      }\n\n      // デバイスが見つかりましたが、STAS 変数はありません - _STA (名前が変更された可能性があります) があるかどうかを確認します\n      var macos = x[\"dev_hid\"] == \"ACPI000E\" ? \"ゼロ\" : \"0x0F\";\n      varoriginal = x[\"dev_hid\"] == \"ACPI000E\" ? \"0x0F\" : \"ゼロ\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty) {\n        ssdt += \"\"\" 外部 ([[DevPath]]、DeviceObj)\n        外部 ([[DevPath]].XSTA、[[sta_type]])\n        スコープ ([[DevPath]])\n        {\n            名前 (ZSTA、[[オリジナル]])\n            Method (_STA, 0, NotSerialized) // _STA: ステータス\n            {\n                If (_OSI (\"ダーウィン\"))\n                {\n                    リターン ([[macOS]])\n                }\n                // デフォルトは [[Original]] - ただし、可能であれば名前を変更した XSTA の結果を返します\n                If (CondRefOf ([[DevPath]].XSTA))\n                {\n                    ストア ([[DevPath]].XSTA[[呼び出された]]、ZSTA)\n                }\n                リターン(ZSTA)\n            }\n        }\n    \"\"\";\n        ssdt = ssdt\n            .replaceAll(r\"[[DevPath]]\", x[\"デバイス\"][0])\n            .replaceAll(r\"[[オリジナル]]\", オリジナル)\n            .replaceAll(r\"[[macOS]]\", macos)\n            .replaceAll(r\"[[sta_type]]\", x[\"sta_type\"])\n            .replaceAll(\n              r\"[[呼び出された]]\",\n              x[\"sta_type\"] == \"MethodObj\" ? \" ()\" : \"\",\n            );\n      else if (x[\"dev_hid\"] == \"ACPI000E\") {\n        //AWAC デバイスには STAS 変数も _STA メソッドもありません。この時点で 1 つ追加します\n        ssdt += \"\"\" 外部 ([[DevPath]]、DeviceObj)\n              スコープ ([[DevPath]])\n              {\n                  Method (_STA, 0, NotSerialized) // _STA: ステータス\n                  {\n                      If (_OSI (\"ダーウィン\"))\n                      {\n                          リターン（ゼロ）\n                      }\n                      それ以外の場合\n                      {\n                          リターン(0x0F)\n                      }\n                  }\n              }\n          \"\"\";\n        ssdt = ssdt.replaceAll(r\"[[DevPath]]\", x[\"デバイス\"][0]);\n      }\n    }\n    // RTC 範囲を修正する必要があるかどうかを確認します\n    if (rtcRangeNeeded &&\n        rtcCrsType?.toLowerCase() == \"buffobj\" &&\n        crsLines.isNotEmpty &&\n        rtcDict[\"有効\"] == true) {\n      ssdt += \"\"\" 外部 ([[DevPath]]、DeviceObj)\n              外部 ([[DevPath]].XCRS、[[type]])\n              スコープ ([[DevPath]])\n              {\n                  // 範囲を修正して DSDT からリッピングした _CRS バッファを調整し、名前を変更しました\n          [[NewCRS]]\n                  // 調整された _CRS と名前変更されたバッファの終了\n\n                  // 名前を変更した XCRS の結果を返す新しい _CRS メソッドを作成します。\n                  Method (_CRS, 0, Serialized) // _CRS: 現在のリソース設定\n                  {\n                      If (LOr (_OSI (\"Darwin\"), LNot (CondRefOf ([[DevPath]].XCRS))))\n                      {\n                          // macOS または XCRS メソッドを起動している場合はバッファを返します\n                          // 何らかの理由でもう存在しません\n                          リターン(BUFX)\n                      }\n                      // macOS と XCRS は存在しません - その結果を返します\n                      戻り値 ([[DevPath]].XCRS[[メソッド]])\n                  }\n              }\n          \"\"\";\n      ssdt = ssdt\n          .replaceAll(\"[[DevPath]]\", rtcDict[\"デバイス\"][0])\n          .replaceAll(\"[[タイプ]]\", rtcCrsType ??",
+  "@ssdtMsg838": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg839": ")\n          .replaceAll(\"[[メソッド]]\", rtcCrsType == \"メソッド\" ? \" ()\" : \"\")\n          .replaceAll(\n            \"[[NewCRS]]\",\n            crsLines.map((x) => \" {arg0}\").join(\"\\n\"),\n          );\n    }\n    // RTC デバイスが存在するかどうかを確認します\n    if (!rtcDict.containsKey(\"valid\") &&\n        lpcName != null &&\n        lpcName.isNotEmpty) {\n      ssdt += \"\"\" 外部 ([[LPCName]], DeviceObj) // (オペコードから)\n          スコープ ([[LPCName]])\n          {\n              デバイス(RTC0)\n              {\n                  Name (_HID, AisaId (\"PNP0B00\")) // _HID: ハードウェア ID\n                  Name (_CRS, ResourceTemplate () // _CRS: 現在のリソース設定\n                  {\n                      IO (デコード16、\n                          0x0070, // 範囲の最小値\n                          0x0070, // 最大範囲\n                          0x01, //位置合わせ\n                          0x08, // 長さ\n                          )\n                      IRQNoFlags()\n                          {8}\n                  })\n                  Method (_STA, 0, NotSerialized) // _STA: ステータス\n                  {\n                      If (_OSI (\"ダーウィン\"))\n                      {\n                          リターン(0x0F)\n                      }\n                      それ以外の場合\n                      {\n                          リターン（ゼロ）\n                      }\n                  }\n              }\n          }\n      \"\"\";\n      ssdt = ssdt.replaceAll(r\"[[LPCName]]\", lpcName);\n    }\n    ssdt += \"}\";\n\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> _ssdtAWAC() 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    var awacDict = getStaVar(varS: \"STAS\", devHid: \"ACPI000E\", devName: \"AWAC\");\n\n    /// SSDT が必要かどうかを確認する\n    if (!(awacDict[\"valid\"] as bool)) {\n      Log.warning(\"=> ACPI000E (AWAC) デバイスが見つかりません。パッチも SSDT も必要ありません。操作は終了しました!\");\n      戻る;\n    }\n\n    文字列コメント = \"互換性のない AWAC を修正\";\n\n    List<String> サフィックス = [];\n    for (var x in [awacDict]) {\n      if (!(x[\"valid\"] as bool)) 続行;\n      文字列 val = \"\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty && !(x[\"has_var\"] as bool)) {\n        val = \"{arg1} _STAからXSTAへ\";\n      }\n      if (x[\"crs\"] == true) {\n        val += \"${val.isNotEmpty?",
+  "@ssdtMsg839": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg840": ")} 名前を変更します\";\n    }\n    最終文字列 ssdtName = \"SSDT-AWAC\";\n    Final acpi = {\"コメント\": コメント、\"有効\": true、\"パス\": \"{arg0}.aml\"};\n    最終パッチ = awacDict[\"パッチ\"] ?? [];\n    makePlist(acpi: acpi、パッチ: パッチ、replace: true);\n    Log(\"{arg1}.dsl を作成中...\");\n\n    文字列 ssdt = \"\"\"\n    定義ブロック (\"\"、\"SSDT\"、2、\"RAPID\"、\"AWAC\"、0x00000000)\n    {\n    \"\"\";\n    if ([awacDict].any((x) => x[\"has_var\"] == true)) {\n      ssdt += \"\"\" 外部 (STAS、IntObj)\n          スコープ(_SB)\n          {\n              Method (_INI, 0, NotSerialized) // _INI: 初期化\n              {\n                  If (_OSI (\"ダーウィン\"))\n                  {\n                      店舗（One、STAS）\n                  }\n              }\n          }\n        }\n      \"\"\";\n    }\n    for (var x in [awacDict]) {\n      if (x[\"valid\"] != true || x[\"has_var\"] == true || x[\"device\"] == null) {\n        続けます。\n      }\n\n      // デバイスが見つかりましたが、STAS 変数はありません - _STA (名前が変更された可能性があります) があるかどうかを確認します\n      var macos = x[\"dev_hid\"] == \"ACPI000E\" ? \"ゼロ\" : \"0x0F\";\n      varoriginal = x[\"dev_hid\"] == \"ACPI000E\" ? \"0x0F\" : \"ゼロ\";\n      if (x[\"sta\"] != null && x[\"sta\"].isNotEmpty) {\n        ssdt += \"\"\" 外部 ([[DevPath]]、DeviceObj)\n        外部 ([[DevPath]].XSTA、[[sta_type]])\n        スコープ ([[DevPath]])\n        {\n            名前 (ZSTA、[[オリジナル]])\n            Method (_STA, 0, NotSerialized) // _STA: ステータス\n            {\n                If (_OSI (\"ダーウィン\"))\n                {\n                    リターン ([[macOS]])\n                }\n                // デフォルトは [[Original]] - ただし、可能であれば名前を変更した XSTA の結果を返します\n                If (CondRefOf ([[DevPath]].XSTA))\n                {\n                    ストア ([[DevPath]].XSTA[[呼び出された]]、ZSTA)\n                }\n                リターン(ZSTA)\n            }\n        }\n    \"\"\";\n        ssdt = ssdt\n            .replaceAll(r\"[[DevPath]]\", x[\"デバイス\"][0])\n            .replaceAll(r\"[[オリジナル]]\", オリジナル)\n            .replaceAll(r\"[[macOS]]\", macos)\n            .replaceAll(r\"[[sta_type]]\", x[\"sta_type\"])\n            .replaceAll(\n              r\"[[呼び出された]]\",\n              x[\"sta_type\"] == \"MethodObj\" ? \" ()\" : \"\",\n            );\n      else if (x[\"dev_hid\"] == \"ACPI000E\") {\n        //AWAC デバイスには STAS 変数も _STA メソッドもありません。この時点で 1 つ追加します\n        ssdt += \"\"\" 外部 ([[DevPath]]、DeviceObj)\n              スコープ ([[DevPath]])\n              {\n                  Method (_STA, 0, NotSerialized) // _STA: ステータス\n                  {\n                      If (_OSI (\"ダーウィン\"))\n                      {\n                          リターン（ゼロ）\n                      }\n                      それ以外の場合\n                      {\n                          リターン(0x0F)\n                      }\n                  }\n              }\n          \"\"\";\n        ssdt = ssdt.replaceAll(r\"[[DevPath]]\", x[\"デバイス\"][0]);\n      }\n    }\n\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> ssdtRHUB({bool prebuilt = false}) async =>\n      プレビルド？ await _ssdtRHUBPrebuilt() : await _ssdtRHUB();\n\n  /// SSDT-RHUB\n  Future<void> _ssdtRHUB() 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    ログ(",
+  "@ssdtMsg840": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg841": ").長さ - 2)]\n          : \"\";\n\n      if (illegalNames.contains(名前) || usedNames.contains(名前)) {\n        Log(\"=>名前を変更する必要があります!\");\n        タスク[\"デバイス\"] = タスク[\"デバイス\"]\n            .split(",
+  "ssdtMsg842": ");\n\n        if (name.startsWith(\"EHC\")) {\n          最終結果 = getUniqueDevice(\n            タスク[\"親\"]、\n            「EH01」、\n            開始番号: ehcNum、\n            usedNames: usedNames、\n          );\n          task[\"rename\"] = result.name;\n          ehcNum = 結果.番号;\n          ehcNum += 1;\n        } それ以外の場合は {\n          最終結果 = getUniqueDevice(\n            タスク[\"親\"]、\n            「XHCI」、\n            開始番号: xhcNum、\n            usedNames: usedNames、\n          );\n          task[\"rename\"] = result.name;\n          xhcNum = 結果.番号;\n          xhcNum += 1;\n        }\n\n        usedNames.add(タスク[\"名前の変更\"]);\n      } それ以外の場合は {\n        usedNames.add(名前);\n      }\n\n      最終 staMethod = d.getMethodPaths(obj: \"{arg0}._STA\");\n      Log(\"=> ${task[\"device\"].split( を確認してください)",
+  "@ssdtMsg842": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg843": ").last}: _STAメソッドの有無\");\n      if (staMethod.isNotEmpty) {\n        最終 staIndex = d.findNextHex(index: staMethod[0][1]).{arg0};\n        Log(\"=> インデックス {arg1} で _STA メソッドが見つかりました!\");\n        Log(\"=>_STA から XSTA へのパッチを生成\");\n\n        const staHex = \"5F535441\";\n        const xstaHex = \"58535441\";\n\n        Final (padl, Padr) = d.getShortestUniquePad(\n          currentHex: staHex、\n          インデックス: staIndex、\n        );\n\n        ログ(\"\");\n        Log(\" 検索: {arg2}\");\n        Log(\" 置換: {arg3}\");\n        ログ(\"\");\n\n        パッチ.add({\n          \"コメント\": \"${タスク[\"デバイス\"].split(",
+  "@ssdtMsg843": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg844": ").last} _STA から XSTA への名前変更\",\n          「検索」: Padl + staHex + Padr、\n          「置換」: Padl + xstaHex + Padr、\n        });\n      } それ以外の場合は {\n        Log(\"=> _STA メソッドが見つかりません!\");\n      }\n\n      FinalscopeAdr = d.getNamePaths(obj: \"{arg0}._ADR\");\n      if (scopeAdr.isNotEmpty) {\n        最終行 = d.getDsdt()?[\"lines\"][scopeAdr[0][1]];\n        task[\"アドレス\"] = line.trim();\n      } それ以外の場合は {\n        task[\"address\"] = \"名前 (_ADR, ゼロ) // _ADR: アドレス\";\n      }\n\n      タスク.追加(タスク);\n    }\n    ログ(\"\");\n    最終 ssdtName = \"SSDT-RHUB\";\n    Log(\"{arg1}.dsl を作成中...\");\n    最終acpi = {\n      \"コメント\": \"USB RHUB/HUBN/URTH を無効にし、デバイスの名前を変更します\",\n      「有効」: true、\n      \"パス\": \"{arg2}.aml\",\n    };\n    makePlist(acpi:acpi、パッチ:パッチ);\n\n    文字列 ssdt =",
+  "@ssdtMsg844": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg845": ";\n\n    //一意の親パスを収集して並べ替えます\n    最後の親 =\n        タスク\n            .where((t) => t.containsKey(",
+  "ssdtMsg846": ";\n\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// 一致しないパスを出力する\n  /// [不一致] 不一致のパスリスト\n  /// [pciRootPaths] PciRoot() パス リスト\n  void debugPrintUnmatched({\n    リスト<String>?比類のない、\n    List<dynamic>?pciRootPaths,\n  }) {\n    ログ(\"\");\n    if (unmatched != null && unmatched.isNotEmpty) {\n      Log.warning(\"次のパスに一致するものが見つかりませんでした:\");\n      for (unmatched..sort() の var path) {\n        Log(\"=> {arg0}\");\n      }\n    } それ以外の場合は {\n      Log.warning(\"一致するものが見つかりませんでした!\");\n    }\n\n    if (pciRootPaths != null && pciRootPaths.isNotEmpty) {\n      Log.warning(\"現在の ACPI テーブルと一致させるには、デバイス パスが次の PciRoot() で始まる必要があることに注意してください:\");\n      for (var item\n          pciRootPaths 内\n            ..sort((a, b) => (a[",
+  "@ssdtMsg846": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg847": "]??アイテム}\");\n      }\n    }\n  }\n\n  /// 印刷デバイスのパスに _ADR アドレスのオーバーフローがあります。\n  /// [addrOverflow] アドレス オーバーフローのあるデバイス パスのリスト\n  void debugPrintAddressOverflow(List<String> addrOverflow) {\n    ログ(\"\");\n    Log(\"=> デバイス パスに _ADR アドレス オーバーフローがあります!\");\n    Log(\"=>次のデバイスが正しく動作するには、ブリッジ調整が必要な場合があります:\");\n    for (var d in (addrOverflow.toSet().toList()..sort())) {\n      Log(\"=> {arg0}\");\n    }\n  }\n\n  /// 未解決のブリッジを出力する\n  /// [failedBridges] 解決できないブリッジのリスト\n  void debugPrintFailedBridges(List<String> failedBridges) {\n    debugPrint(\"\\n次のブリッジを解決できません:\");\n    for (var fb in failedBridges..sort()) {\n      Log(\"=> {arg1}\");\n    }\n  }\n\n  /// SSDT ブリッジデバイス\n  /// [pciBridges] PCI ブリッジデバイスリスト\n  Future<void> ssdtPCIBridge({List<String>? pciBridges}) async {\n    if (!await ensureDSDT()) が戻る;\n    Log(\"PCI ブリッジ デバイスを収集しています...\");\n    if (pciBridges == null || pciBridges.isEmpty) {\n      Log(\"PCI ブリッジデバイスは空です! 操作は終了しました!\");\n      戻る;\n    }\n    Log(\"ブリッジデバイスを構築中...\");\n    var pathDict = getDevicePath(inputPaths: pciBridges);\n    if (pathDict.isEmpty) {\n      Log(\"PCI ブリッジ デバイスが空です!スキップ...\");\n      戻る;\n    }\n    最終 (deviceDict、pciRootPaths) = getDevicePaths();\n    最終一致 = <(String, (String, Map<String, Dynamic>, bool, int))>[];\n    List<String> が一致しません = [];\n    Log(\"一致するデバイス パス...\");\n    for (pathDict.keys.toList()..sort() の最後の p) {\n      Log(\"=> {arg2}\");\n      最終一致 = getLongestMatch(deviceDict, p);\n      if (一致 == null) {\n        Log(\"一致するものが見つかりませんでした!\");\n        unmatched.add(p);\n      } それ以外の場合は {\n        if (match.{arg3}) {\n          Log(\"=> は {arg4} と一致します。ブリッジングは必要ありません\");\n        } それ以外の場合は {\n          最終b =",
+  "@ssdtMsg847": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg848": ".allMatches(p.substring(match.{arg0} + 1)).length + 1;\n          ログ(\n            \"=> {arg1} に一致します。${b.toString().replaceAllMapped(RegExp(r) が必要です",
+  "@ssdtMsg848": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg849": ")} ブリッジデバイス\",\n          );\n        }\n        マッチ.add((p, マッチ));\n      }\n    }\n\n    if (matches.isEmpty) {\n      debugPrintUnmatched(不一致: 不一致、pciRootPaths: pciRootPaths);\n      Log(\"一致するものが見つかりません!\\n\");\n      戻る;\n    }\n\n    最終的な addrOverflow = <String>[];\n    for (マッチの最終 (_, マッチ)) {\n      if (match.{arg0}[\"adr_overflow\"] == true) {\n        Final overFlow = getAllMatches(deviceDict, match.{arg1}[\"path\"]);\n        for (overFlow の最後の d) {\n          if (d.{arg2}[\"dev_overflow\"] != null && d.{arg3}[\"dev_overflow\"].isNotEmpty) {\n            addrOverflow.addAll(List<String>.from(d.{arg4}[\"dev_overflow\"]));\n          }\n        }\n      }\n    }\n\n    最終 allNoBridge =matches.every((m) => m.{arg5}.{arg6});\n    if (allNoBridge) {\n      if (unmatched.isNotEmpty) {\n        debugPrintUnmatched(不一致: 不一致、pciRootPaths: pciRootPaths);\n      }\n      if (addrOverflow.isNotEmpty) {\n        debugPrintAddressOverflow(addrOverflow);\n      }\n      Log(\"ブリッジする必要はありません!\\n\");\n      戻る;\n    }\n\n    Log(\"ブリッジデバイスを解決中...\");\n    最終bridgeMatch = <String, String>{};\n    最終ブリッジリスト = <String>[];\n    最終的な失敗したブリッジ = <String>[];\n    最終外部参照 = <String>[];\n\n    for (final (testPath, match) inmatches) {\n      /// ブリッジは必要ありません\n      if (match.{arg7}) 続行;\n      最終的な残り = testPath.substring(match.{arg8} + 1);\n      Log(\"=> {arg9}\");\n      最終ブリッジ = getBridgeDevices(remain);\n      if (bridges.isEmpty) {\n        Log(\"=>解析できません!\");\n        failedBridges.add(testPath);\n      } それ以外の場合は {\n        var path = match.{arg10};\n        for (var i = 0; i < Bridges.length; i++) {\n          パス += \"{arg11}\";\n          if (!bridgeList.contains(path)) {\n            BridgeList.add(パス);\n          }\n          if (i == ブリッジの長さ - 1) {\n            ブリッジマッチ[パス] = テストパス;\n          }\n        }\n        if (!externalRefs.contains(match.{arg12})) {\n          externalRefs.add(match.{arg13});\n        }\n      }\n    }\n\n    if (bridgeList.isEmpty) {\n      if (failedBridges.isNotEmpty) {\n        debugPrintFailedBridges(failedBridges);\n      }\n      if (unmatched.isNotEmpty) {\n        debugPrintUnmatched(不一致: 不一致、pciRootPaths: pciRootPaths);\n      }\n      if (addrOverflow.isNotEmpty) {\n        debugPrintAddressOverflow(addrOverflow);\n      }\n      Log(\"ブリッジ デバイスの解析中にエラーが発生しました!\\n\");\n      戻る;\n    }\n    最終文字列 ssdtName = \"SSDT ブリッジ\";\n    Log(\"{arg14}.dsl を作成中...\");\n    最終パッド =",
+  "@ssdtMsg849": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      },
+      "arg13": {
+        "type": "String"
+      },
+      "arg14": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg850": "XHC/XHCI/XDCI/CNVW デバイスを収集しています...",
+  "ssdtMsg851": "=> {arg0} デバイスが PMEE をサポートしているかどうかを確認しています...",
+  "@ssdtMsg851": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg852": "=> {arg0} は PMEE をサポートしていないため、スキップされます",
+  "@ssdtMsg852": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg853": "=> {arg0} は PMEE をサポートします",
+  "@ssdtMsg853": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg854": "=> 一致する XHC/XHCI/XDCI/CNVW デバイスが見つかりません。作戦終了！ \\n",
+  "ssdtMsg855": "GPRW メソッドの存在を確認しています...",
+  "ssdtMsg856": "=> GPRW メソッドが見つかりません!",
+  "ssdtMsg857": "XPRW メソッドの存在を確認しています...",
+  "ssdtMsg858": "=> XPRWメソッドが見つかりました!現在のメソッドは名前が変更されており、元の ACPI テーブルではない可能性があります。元の ACPI テーブルを再取得して、再試行してください。\\n",
+  "ssdtMsg859": "=> XPRW メソッドが見つかりません!作戦終了！",
+  "ssdtMsg860": "=> GPRW メソッドが {arg0} で見つかりました!",
+  "@ssdtMsg860": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg861": "UPRW メソッドの存在を確認しています...",
+  "ssdtMsg862": "=> UPRW メソッドが見つかりません!",
+  "ssdtMsg863": "XPRW メソッドの存在を確認しています...",
+  "ssdtMsg864": "=> XPRWメソッドが見つかりました!現在のメソッドは名前が変更されており、元の ACPI テーブルではない可能性があります。元の ACPI テーブルを再取得して、再試行してください。\\n",
+  "ssdtMsg865": "=> XPRW メソッドが見つかりません!作戦終了！",
+  "ssdtMsg866": "=> {arg0} で UPRW メソッドが見つかりました!",
+  "@ssdtMsg866": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg867": "=> GPI0 デバイスが見つかりません!作戦終了！ \\n",
+  "ssdtMsg868": "=> GPI0 デバイスが {arg0} で見つかりました!",
+  "@ssdtMsg868": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg869": "=> _STA メソッドが見つかりません!作戦終了！ \\n",
+  "ssdtMsg870": "有効な PCI デバイス パスが指定されていません。作戦終了！",
+  "ssdtMsg871": "デバイス {arg0} の _ON または _OFF メソッドを確認しています...",
+  "@ssdtMsg871": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg872": "{arg0} に対応する _ON または _OFF メソッドが DSDT または SSDT で見つかりませんでした。操作は中止されました!",
+  "@ssdtMsg872": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg873": "デバイス {arg0} の _PS3 または _DSM メソッドをチェックしています...",
+  "@ssdtMsg873": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg874": "{arg0} に対応する _PS3 または _DSM メソッドが DSDT または SSDT で見つかりませんでした。操作は中止されました!",
+  "@ssdtMsg874": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg875": "デバイス {arg0} をチェックしています...",
+  "@ssdtMsg875": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg876": "=> {arg0} に対応する _PRT メソッドが DSDT または SSDT で見つかりませんでした。",
+  "@ssdtMsg876": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg877": "{arg0}.dsl を作成しています...",
+  "@ssdtMsg877": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg878": "=> ブロックする必要がある {arg0} デバイス パス: {arg1}",
+  "@ssdtMsg878": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg879": "=> シールド方法: {arg0} メソッド",
+  "@ssdtMsg879": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg880": "=> デバイスの相対パスが絶対パスに変換されました: {arg0}",
+  "@ssdtMsg880": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg881": "不明なマスキング方法: {arg0}、操作は中止されました。",
+  "@ssdtMsg881": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg882": ";\n\n  /// PS3方式\n  文字列 _buildSsdtPS3(文字列 pciPath、文字列型) =>",
+  "ssdtMsg883": ";\n\n  /// IOName メソッド\n  文字列 _buildSsdtIONName(\n    文字列 pciPath、\n    文字列型、{\n    bool needBridge = false、\n  }) {\n    最終的な typeLower = type.toLowerCase();\n    Final ioName = switch (typeLower) {",
+  "ssdtMsg884": "、\n    };\n\n    // _DSM メソッドの内容\n    最終 dsmMethod =",
+  "ssdtMsg885": ";\n\n    // ブリッジデバイス構造を生成\n    最終ブリッジ本体 =",
+  "ssdtMsg886": ";\n  }\n\n  /// 指定されたメソッドが ACPI テーブルに存在するかどうかを確認します\n  /// [pciPath] デバイスの PCI アドレス\n  /// [メソッド] 確認するメソッドのリスト\n  bool _hasMethodInTables(String pciPath, List<String> メソッド) {\n    最終正規化パス = pciPath.replaceAll(",
+  "ssdtMsg887": ") ==\n              正規化されたパス、\n        );\n\n        if (hasMethod) {\n          foundSet.add(メソッド);\n          Log(\"=> {arg0} に {arg1}.{arg2} メソッドが見つかりました\");\n        }\n        if (foundSet.length ==methods.length) {\n          // すべてのメソッドが見つかりました\n          true を返します。\n        }\n      }\n    }\n\n    // 部分のみが見つかった場合は、プロンプトを出力します\n    if (foundSet.isNotEmpty) {\n      最終的な欠落 =methods.where((m) => !foundSet.contains(m)).join(",
+  "@ssdtMsg887": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg888": ");\n    }\n\n    false を返します。\n  }\n\n  /// SMバス\n  Future<void> ssdtSBUSMCHC({bool prebuilt = false}) async =>\n      プレビルド？ await _ssdtSBUSMCHCPrebuilt() : await _ssdtSBUSMCHC();\n\n  Future<void> _ssdtSBUSMCHCPrebuilt() async {\n    if (!checkIasl()) が戻る;\n    最終文字列 ssdtName = \"SSDT-SBUS-MCHC\";\n    Log(\"プリコンパイルされた {arg0}.dsl を作成しています...\");\n    文字列 ssdt = Prebuilt.ssdtSBUSMCHC;\n    writeSSDT(ssdtName, ssdt);\n    最終acpi = {\n      \"コメント\": \"SMBus 互換性のために MCHC および BUS0 デバイスを定義します\",\n      「有効」: true、\n      \"パス\": \"{arg1}.aml\",\n    };\n    makePlist(acpi: acpi、replace: true);\n  }\n\n  /// smbusPath デバイスの PCI アドレス\n  Future<void> _ssdtSBUSMCHC() 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    Log(\"可能なバス デバイスを収集中...\");\n    弦？バスパス、バス親、テーブル名;\n    最終的なdev1F4 = getDevAtAdr(targetAdr: 0x001F0004);\n    最終的な dev1F3 = getDevAtAdr(\n      targetAdr: 0x001F0003、\n      excludeNames: [\"AZAL\"、\"HDEF\"、\"HDAS\"]、\n    );\n    最終的なdev1B = getDevAtAdr(targetAdr: 0x001B0000);\n    最終的なdev14 = getDevAtAdr(targetAdr: 0x00140000);\n\n    ({StringbusPath,StringbusParent,StringtableName})?バスチェック;\n    整数？アドレナリン\n\n    if (dev1F4 != null && dev1F3 != null) {\n      /// 新しいインテルのソリューション\n      バスチェック = dev1F4;\n      adr = 0x001F0004;\n    else if (dev1F3 != null && dev1B != null) {\n      /// 古いインテルのソリューション\n      バスチェック = dev1F3;\n      adr = 0x001F0003;\n    else if (dev1F4 != null) {\n      /// 新しい Intel ソリューションの可能性があります\n      バスチェック = dev1F4;\n      adr = 0x001F0004;\n    else if (dev1F3 != null) {\n      /// 古い Intel ソリューションの可能性があります\n      バスチェック = dev1F3;\n      adr = 0x001F0003;\n    else if (dev14 != null) {\n      /// Intel ソリューションではなく、AMD ソリューションである可能性があります\n      バスチェック = dev14;\n      adr = 0x00140000;\n    }\n\n    if (busCheck == null) {\n      Log.warning(\"=> 有効なバス デバイスが見つからないため、操作は終了しました!\");\n      戻る;\n    }\n    // 変数を分解する\n    バスパス = バスチェック.バスパス;\n    バス親 = バスチェック.バス親;\n    テーブル名 = バスチェック.テーブル名;\n    ログ(\n      \"=> {arg2} のアドレスによると: 0x${adr?.toRadixString(16).toUpperCase().padLeft(8,",
+  "@ssdtMsg888": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg889": "SMBus コントローラのアドレス 87 (0x57) にあります。\n        *「diagsvault」は diags を指す場合がありますが、Mac 用の EFI を介したハードウェア診断プログラムです。\n        * SMBus コントローラーと通信しますが、ハッキングの影響は実際には不明です。\n        ※慎重にコメントを外してください。\n        */\n\n        /**\n        デバイス (DVL0)\n        {\n            名前 (_ADR, 0x57) // _ADR: アドレス\n            名前 (_CID, \"diagsvault\") // _CID: 互換性のある ID\n            Method (_DSM, 4, NotSerialized) // _DSM: デバイス固有のメソッド\n            {\n                If (!Arg2)\n                {\n                    リターン(バッファ(1))\n                    {\n                        0x57 //W\n                    })\n                }\n\n                リターン (パッケージ (0x02)\n                {\n                    「住所」、\n                    0x57\n                })\n            }\n        }\n        **/\n\n        Method (_STA, 0, NotSerialized) // _STA: ステータス\n        {\n            If (_OSI (\"ダーウィン\"))\n            {\n                リターン(0x0F)\n            }\n            それ以外の場合\n            {\n                リターン（ゼロ）\n            }\n        }\n    }\n}\"\"\";\n\n    ssdt = ssdt.replaceAll(r\"[[バス_親]]\", バス親);\n    ssdt = ssdt.replaceAll(r\"[[バスパス]]\", バスパス);\n    最終acpi = {\n      \"コメント\": \"SMBus 互換性のために MCHC および BUS0 デバイスを定義します\",\n      「有効」: true、\n      \"パス\": \"{arg0}.aml\",\n    };\n    makePlist(acpi:acpi);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  Future<void> ssdtGPUSPOOF({\n    文字列？ gpuパス、\n    文字列?デバイス ID、\n    文字列?偽モデル、\n  }) async => await _ssdtGPUSPOOF(\n    gpuパス: gpuパス、\n    デバイス ID: デバイス ID、\n    偽モデル: 偽モデル、\n  );\n\n  /// グラフィックス カードの偽造\n  /// [gpuPath] グラフィック カードの ACPI パス\n  /// [deviceId] グラフィックス カードの偽造 ID\n  /// [fakeModel] グラフィックス カードの偽名\n  将来<void> _ssdtGPUSPOOF({\n    文字列？ gpuパス、\n    文字列?デバイス ID、\n    文字列?偽モデル、\n  }) 非同期 {\n    if (!checkIasl()) が戻る;\n    if (gpuPath == null || !util.checkACPIPath(acpiPath: gpuPath)) {\n      Log.warning(\"有効なグラフィックス カード ACPI パスが指定されていません! 操作は終了しました!\");\n      戻る;\n    }\n    if (deviceId == null || deviceId.isEmpty || deviceId.length != 4) {\n      Log.warning(\"有効な偽造グラフィックス カード ID が提供されませんでした。操作は終了しました!\");\n      戻る;\n    }\n    if (fakeModel == null || fakeModel.isEmpty) {\n      Log.warning(\"有効な偽造グラフィックス カード名が指定されていません。偽の名前は挿入されません!\");\n    }\n    ブール adrOverflow = false;\n    ブール必要ブリッジ = false;\n    boolsureDsdtOrACPI = d.acpiTables.isNotEmpty;\n    if (sureDsdtOrACPI) {\n      Log(\"グラフィックス カード デバイス {arg1} をチェックしています...\");\n      // グラフィックス カード デバイスが存在するかどうかを確認します\n      最終 (pciPath、オーバーフロー) = acpiDevicePath(sanitizeAcpiPath(gpuPath));\n      if (pciPath != null && pciPath.isNotEmpty) {\n        adrOverflow = オーバーフロー;\n        // pciPath が存在するかどうかを確認します。メソッド: _PRT\n        bool foundMethod = _hasMethodInTables(gpuPath, [",
+  "@ssdtMsg889": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg890": ");\n          needBridge = false;\n        } それ以外の場合は {\n          Log.warning(\"現在のグラフィック カード パス {arg0} は実際のデバイスを隠している可能性があります!\");\n          Log.warning(\"=> デバイス {arg1} には _PRT メソッドがあります。実際のデバイスは隠されている可能性があり、GFX0 デバイスが挿入されます!\");\n          needBridge = true;\n        }\n      } それ以外の場合は {\n        Log.warning(\"=>デバイス {arg2} が DSDT または SSDT に見つかりません! 操作は中止されました!\");\n        戻る;\n      }\n    } それ以外の場合は {\n      最終的な commonGPUNames = [\n        「PEGP」、\n        「GFX0」、\n        「GFX1」、\n        「GFX2」、\n        「VGA」、\n        「ヴィッド」、\n        「H000」、\n      ];\n      Final gpuName = gpuPath.split(\".\").last;\n      needBridge = !commonGPUNames.contains(gpuName);\n    }\n\n    if (adrOverflow) {\n      needBridge = true;\n      Log.warning(\"=>グラフィックス カード デバイス {arg3} の _ADR アドレスがオーバーフローしました!\");\n      gpuPath = gpuPath.substring(0, gpuPath.lastIndexOf(\".\"));\n      Log.warning(\"=> 親デバイスのパス: {arg4} に戻り、GFX0 デバイスを挿入します!\");\n    }\n\n    文字列 ssdtName = \"SSDT-{arg5}-GPU-SPOOF\";\n    Log(\"{arg6}.dsl を作成中...\");\n    Log(\"=> グラフィックス カード デバイス パス: {arg7}\");\n    Log(\"=>偽のグラフィックス カード ID: {arg8}\");\n    Log(\"=> 偽のグラフィックス カード名: {arg9}\");\n\n    最終 dsmMethod = \"\"\"\n    メソッド (_DSM、4、NotSerialized)\n    {\n        If ((!Arg2 || !_OSI (\"ダーウィン\")))\n        {\n            リターン(バッファ(1))\n            {\n              0x03\n            })\n        }\n        リターン (パッケージ (0x02)\n        {\n                \"デバイスID\",\n                バッファ(0x02)\n                {\n                  [[デバイスID]]\n                }、\n                [[モデル_パッケージ]]\n        })\n    }\n  \"\"\";\n\n    最終的な dsmBlock = needBridge\n        ? 「」\n        デバイス (GFX0)\n        {\n            名前 (_ADR、ゼロ)\n            {arg10}\n        }\n      「」\n        : dsmメソッド;\n\n    文字列 ssdt =\n        「」\n    定義ブロック (\"\"、\"SSDT\"、2、\"RAPID\"、\"GPUSPOOF\"、0x00001000)\n    {\n\n        外部 ([[GPU_PATH]]、DeviceObj)\n\n        スコープ ([[GPU_PATH]])\n        {\n            {arg11}\n        }\n    }\n \"\"\";\n\n    ssdt = ssdt.replaceAll(r\"[[GPU_PATH]]\", gpuPath);\n    ssdt = ssdt.replaceAll(\n      r\"[[DEVICE_ID]]\",\n      util.convertDeviceIdToSpoof(deviceId)、\n    );\n\n    文字列モデルパッケージ = \"\";\n    if (fakeModel != null && fakeModel.isNotEmpty) {\n      モデルパッケージ = \"\"\"\n        「モデル」、\n            バッファ()\n            {\n                「[[モデル]]」\n            }\n      \"\"\";\n      modelPackage = modelPackage.replaceAll(r\"[[MODEL]]\", fakeModel);\n    }\n    ssdt = ssdt.replaceAll(r\"[[MODEL_PACKAGE]]\", modelPackage);\n\n    最終acpi = {\n      \"コメント\": \"GPU スプーフ\",\n      「有効」: true、\n      \"パス\": \"{arg12}.aml\",\n    };\n    makePlist(acpi:acpi);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// ACPI パスをクリーンアップする\n  /// [パス] ACPI パス\n  リスト<String>? sanitizeAcpiPath(文字列パス) {\n    パス = パス\n        .replaceAll(\"ACPI(\", \"\")\n        .replaceAll(\")\", \"\")\n        .replaceAll(\"#\", \".\")\n        .replaceAll(\"\\\\\", \"\");\n\n    List<String> newPath = [];\n    const 文字列有効 = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_\";\n    for (path.split(\".\") の var 要素) {\n      element = element.replaceAll(RegExp(r\"_+$\"), \"\").toUpperCase();\n      if (要素の長さ > 4 ||\n          !element.split(\"\").every((ch) => valid.contains(ch))) {\n        null を返します。\n      }\n\n      newPath.add(要素);\n    }\n\n    新しいパスを返します。\n  }\n\n  /// ACPI パスを PCIPath に一致させる\n  /// [パス] ACPI パス\n  /// [return] 一致した PCIPath とアドレス オーバーフローの有無\n  (String?, bool) acpiDevicePath(List<String>? path) {\n    文字列？一致したPCIPath;\n    ブール adrOverflow = false;\n    if (path == null || path.isEmpty) {\n      return (matchedPCIPath、adrOverflow);\n    }\n    最終 (deviceDict, _) = getDevicePaths();\n    文字列?p;\n    for (deviceDict.keys の var キー) {\n      if (compareAcpiPaths(キー, パス)) {\n        p = キー;\n        壊す;\n      }\n    }\n\n    if (p == null) {\n      Log(\"=> 見つかりません!\");\n      return (matchedPCIPath、adrOverflow);\n    }\n    matchedPCIPath = deviceDict[p]![",
+  "@ssdtMsg890": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg891": "];\n    Log(\"=> 一致した PCI パス: {arg0}\");\n    if (deviceDict[p]?[\"adr_overflow\"] == true) {\n      Final overFlow = getAllMatches(deviceDict, deviceDict[p]?[\"path\"]);\n      List<dynamic> devs = [];\n      for (オーバーフローの変数 d) {\n        最終的な devInfo = d.{arg1};\n        if (devInfo[\"dev_overflow\"] != null) {\n          devs.addAll(devInfo[\"dev_overflow\"]);\n        }\n      }\n      if (devs.isNotEmpty) {\n        Log.warning(\"デバイス パスにアドレス _ADR オーバーフローがあります!\");\n        Log.warning(\"次のデバイスは属性の挿入に影響を与える可能性があります:\");\n        最終的な uniqueSorted = devs.toSet().toList()..sort();\n        for (uniqueSorted の var d) {\n          Log.warning(\"=> {arg2}\");\n          if (compareAcpiPaths(d, path)) {\n            adrオーバーフロー = true;\n          }\n        }\n      }\n    }\n    return (matchedPCIPath、adrOverflow);\n  }\n\n  bool CompareAcpiPaths(String path, List<String> pathList) {\n    最終パスチェック = sanitizeAcpiPath(パス);\n    if (pathCheck == null) {\n      false を返します。\n    }\n    if (pathList.length != pathCheck.length) {\n      false を返します。\n    }\n    for (var i = 0; i < pathList.length; i++) {\n      if (pathList[i] != pathCheck[i]) {\n        false を返します。\n      }\n    }\n    true を返します。\n  }\n\n  Future<void> makePlist({\n    Map<文字列、動的>?アクピ、\n    リスト<マップ<文字列、動的>>?パッチ、\n    リスト<マップ<文字列、動的>>?ドロップ、\n    ブール置換 = false、\n    List<PlistType> ターゲット = const [PlistType.openCore, PlistType.clover],\n  }) 非同期 {\n    for (ターゲット内の変数ターゲット) {\n      _makeSinglePlist(\n        ターゲット、\n        acpi: acpi、\n        パッチ: パッチ、\n        ドロップ: ドロップ、\n        置き換える: 置き換える、\n      );\n    }\n    if (_lastACPIMatchMode != config.acpiMatchMode) {\n      _lastACPIMatchMode = config.acpiMatchMode;\n    }\n  }\n\n  void beginPlistBatch() {\n    if (_plistBatchDepth == 0) {\n      _batchedPlists.clear();\n    }\n    _plistBatchDepth++;\n  }\n\n  Future<void> endPlistBatch({bool save = true}) async {\n    if (_plistBatchDepth == 0) 戻り値;\n\n    _plistBatchDepth--;\n    if (_plistBatchDepth > 0) が戻る;\n\n    {を試してください\n      if (保存) {\n        _saveBatchedPlists();\n      }\n    最後に {\n      _batchedPlists.clear();\n    }\n  }\n\n  void _saveBatchedPlists() {\n    最終パーサー = PlistParser();\n    for (_batchedPlists.entries の最後のエントリ) {\n      最終的な plist = エントリ.値;\n      if (plist.isEmpty) 続行;\n\n      最終的な成功 = parser.savePlist(entry.key, plist);\n      ログ(成功?",
+  "@ssdtMsg891": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg892": "];\n    if (sortedOrder は! リスト ||sortedOrder.length < 2) return;\n\n    最終パス =sortedOrder\n        .map((エントリ) => エントリ?.toString())\n        .whereType<String>()\n        .toList();\n    最終順序 = _dependencySortedPaths(パス);\n    if (order.isEmpty) が戻る;\n\n    最終ランク = {for (var i = 0; i < order.length; i++) order[i]: i};\n    最終インデックス =sortedOrder.asMap().entries.toList();\n    Indexed.sort((a, b) {\n      最終 aRank = ランク[a.value?.toString()];\n      最終 bRank = ランク[b.value?.toString()];\n      if (aRank == null && bRank == null) return a.key.compareTo(b.key);\n      if (aRank == null) は 1 を返します。\n      (bRank == null) の場合は -1 を返します。\n      最終結果 = aRank.compareTo(bRank);\n      結果を返します != 0 ?結果 : a.key.compareTo(b.key);\n    });\n\n    for (var i = 0; i < Indexed.length; i++) {\n      sortedOrder[i] = インデックス[i].value;\n    }\n  }\n\n  List<String> _dependencySortedPaths(List<String> パス) {\n    最終の uniquePaths = <String>[];\n    最後に見た = <String>{};\n    for (パス内の最後のパス) {\n      if (seen.add(パス)) uniquePaths.add(パス);\n    }\n\n    最終的に利用可能な = uniquePaths.toSet();\n    最終的に並べ替えられた = <String>[];\n    最終訪問 = <String>{};\n    最終訪問 = <String>{};\n\n    void visit(文字列パス) {\n      if (visited.contains(path)) が戻る;\n      if (visiting.contains(path)) が戻る;\n      visit.add(パス);\n      for (ssdtDependency[path] の最後の依存関係 ?? const <String>[]) {\n        if (available.contains(dependency)) visit(dependency);\n      }\n      visit.remove(パス);\n      訪問済み.追加(パス);\n      ソート済み.追加(パス);\n    }\n\n    for (uniquePaths の最終パス) {\n      訪問(パス);\n    }\n    並べ替えて返します。\n  }\n\n  void _processSectionWrapper<T>({\n    必須 Map<String, Dynamic> plist、\n    必須の PlistType タイプ、\n    必須 List<String> keyPath、\n    必須の動的アイテム、\n    必須 T Function(T item) buildEntry、\n    必須 bool Function(T 存在, T 項目)等しいEntry,\n    必要なブール置換、\n    必須文字列関数(T項目) logCallback、\n  }) {\n    最終正規化 = _normalizeItems<T>(項目);\n\n    _processSection<T>(\n      plist: pリスト、\n      キーパス: キーパス、\n      rawItems: 正規化された、\n      buildEntry: buildEntry、\n      等しいエントリ: 等しいエントリ、\n      置き換える: 置き換える、\n      タイプ: タイプ、\n      logCallback: logCallback、\n    );\n  }\n\n  Object _getOrInitAtPath(Map<String, 動的> ルート, List<動的> パス) {\n    Map<String, Dynamic> current = root;\n    for (int i = 0; i < path.length - 1; i++) {\n      電流 =\n          current.putIfAbsent(path[i], () => <文字列, 動的>{})\n              Map<String, 動的> として;\n    }\n\n    // すでに存在する場合は直接戻ります\n    var 既存 = 現在の[パス.ラスト];\n    if (既存は Map<String, Dynamic>) {\n      既存のものを返します。\n    }\n    if (既存は List<dynamic>) {\n      既存のものを返します。\n    }\n\n    // キー名が「Map」で終わる場合は Map として使用され、それ以外の場合は List として使用されます\n    if (path.last.toLowerCase().contains(\"map\")) {\n      return current.putIfAbsent(path.last, () => <文字列, 動的>{})\n          Map<String, 動的> として;\n    } それ以外の場合は {\n      return current.putIfAbsent(path.last, () => <dynamic>[]) as List<dynamic>;\n    }\n  }\n\n  bool _isValidItem(オブジェクト?アイテム) {\n    リターンスイッチ(アイテム) {\n      文字列 s => s.isNotEmpty、\n      マップ m => m.isNotEmpty、\n      リスト l => l.isNotEmpty、\n      null => false、\n      _ => true、\n    };\n  }\n\n  文字列 _plistName(PlistType タイプ) =>\n      type == PlistType.clover ? \"パッチ_Clover.plist\" : \"パッチ_OC.plist\";\n\n  /// plist で指定されたパスを処理します\n  /// [plist] plist データ\n  /// plist 内の [keyPath] パス\n  /// [rawItems] 追加するパッチアイテム\n  /// [buildEntry] T を plist に書き込まれるエントリに変換します\n  /// [equalsEntry] は、既存のエントリが新しいエントリと等しいかどうかを判断するために使用されます。\n  /// [replace] 置換するかどうか\n  /// [タイプ] plist タイプ\n  /// [logCallback] ログコールバック\n  Map<String, 動的> _processSection<T>({\n    必須 Map<String, Dynamic> plist、\n    必須 List<String> keyPath、\n    リスト<T?>が必要ですか?生のアイテム、\n    必須 T Function(T item) buildEntry、\n    必須 bool Function(T 存在, T 項目)等しいEntry,\n    必要なブール置換、\n    PlistType タイプ = PlistType.openCore、\n    文字列関数(T項目)?ログコールバック、\n  }) {\n    // keyPath が [\"\"] の場合、[\"ACPI\", ...keyPath] の代わりに plist 自体に挿入することを意味します\n    最終的な有効パス = (keyPath.length == 1 && keyPath.first.isEmpty)\n        ?[「ACPI」]\n        : [\"ACPI\", ...キーパス];\n\n    最後のセクション = activePath.isEmpty\n        ?プリスト\n        : _getOrInitAtPath(plist, 有効パス);\n\n    最終的な validItems = (rawItems ?? [])\n        .whereType<T>()\n        .where(_isValidItem)\n        .toList();\n\n    if (セクションは List<dynamic>) {\n      for (validItems の最後の項目) {\n        最終エントリ = buildEntry(item);\n        最後のコメント = logCallback?.call(item);\n\n        文字列パッチタイプ =",
+  "ssdtMsg893": ";\n        }\n\n        // 一致するものを検索\n        最終インデックス = Section.indexWhere((e) =>等しいEntry(e, エントリ));\n\n        if (インデックス != -1) {\n          // すでに存在します\n          if (置換) {\n            // 元の場所に置き換えて更新します\n            セクション[インデックス] = エントリ;\n            ログ（",
+  "ssdtMsg894": ");\n          }\n        } それ以外の場合は {\n          //存在しない場合は追加する\n          ログ(",
+  "ssdtMsg895": ");\n          セクション.追加(エントリ);\n        }\n      }\n    } else if (セクションは Map<String, Dynamic>) {\n      for (validItems の最後の項目) {\n        最終エントリ = buildEntry(item);\n        if (エントリは Map<String, Dynamic>) {\n          for (entry.entries の最終 kv) {\n            最終キー = kv.key;\n            最終的な新しい値 = kv.value;\n            Final oldValue = セクション[キー];\n            if (oldValue != null) {\n              //キーはすでに存在します → 値を更新します\n              if (置き換え || oldValue != newValue) {\n                セクション[キー] = 新しい値;\n                if (_lastACPIMatchMode != config.acpiMatchMode) {\n                  ログ(",
+  "ssdtMsg896": ");\n                }\n              }\n            } それ以外の場合は {\n              //キーが存在しない → 追加\n              セクション[キー] = 新しい値;\n              if (_lastACPIMatchMode != config.acpiMatchMode) {\n                ログ(",
+  "ssdtMsg897": "、\n      );\n    }\n\n    plist を返します。\n  }\n\n  /// データのバイト配列を取得します\n  /// [データ] は String、List、Uint8List をサポートします\n  /// [padTo] を指定した長さまでパディングします（不足部分は 0 で埋められます）\n  List<int> getData(動的データ, {int PadTo = 0}) {\n    if (データ == null) を返す [];\n\n    遅い List<int> byteData;\n\n    if (データは文字列) {\n      byteData = data.codeUnits;\n    } else if (データは Uint8List) {\n      byteData = data.toList();\n    } else if (データはリストです) {\n      // List 要素がすべて int であるかどうかを確認します\n      if (data.every((e) => e は int)) {\n        byteData = List<int>.from(data);\n      } それ以外の場合は {\n        バイトデータ = []; // それ以外の場合は空を返します\n      }\n    } それ以外の場合は {\n      throwArgumentError(",
+  "ssdtMsg898": ");\n    }\n\n    //padTo の長さに合わせてパディングします\n    if (padTo > byteData.length) {\n      byteData = [...byteData, ...List.filled(padTo - byteData.length, 0)];\n    }\n\n    バイトデータを返します。\n  }\n\n  /// テーブルIDを取得\n  /// [テーブル] テーブル辞書\n  /// [idName] ID名\n  /// [mode] マッチングモード\n  List<int> _getTableId(\n    マップ<動的、動的>?テーブル、\n    文字列IDName、{\n    ACPIマッチモード?モード、\n  }) {\n    モード ??= config.acpiMatchMode; // acpiMatchMode がデフォルトで使用されます\n\n    if (テーブル == null) {\n      モード = ACPIMatchMode.leastStrict;\n    }\n\n    // ゼロバイト配列のサイズを定義します\n    int byteLength = idName == \"id\" ? 8:4;\n    List<int> zero = util.getHexBytes(\"00\" * byteLength);\n\n    動的な rawValue;\n\n    スイッチ (モード) {\n      ケースACPIMatchMode.tableIDsAndLength:\n        rawValue = テーブル?[idName];\n        壊す;\n      case ACPIMatchMode.tableIDsAndLengthAndNormalizeHeaders:\n        rawValue = table?[\"{arg0}_ascii\"] ??テーブル?[idName] ??ゼロ;\n        壊す;\n      デフォルト: // minimumStrict / lengthOnly\n        ゼロを返します。\n    }\n\n    if (rawValue が文字列) {\n      rawValue.codeUnits を返します。\n    else if (rawValue が List<int>) {\n      rawValue を返します。\n    } それ以外の場合は {\n      ゼロを返します。\n    }\n  }\n\n  /// テーブルの長さを取得する\n  /// [テーブル] テーブル辞書\n  /// [mode] マッチングモード\n  int _getTableLength(Map<動的, 動的>? テーブル, {ACPIMatchMode? モード}) {\n    モード ??= config.acpiMatchMode;\n    if (テーブル == null || モード == ACPIMatchMode.leastStrict) {\n      //テーブルが見つからないか、長さが0です\n      0を返します。\n    }\n    // モードが 0 でない場合は、テーブルの長さを返します\n    テーブルを返す[\"長さ\"] ?? 0;\n  }\n\n  /// クローバーパッチパッチ\n  /// [パッチ] パッチ辞書\n  Map<String, 動的> getCloverPatch(Map<String, 動的> パッチ) {\n    戻り値 {\n      \"コメント\": パッチ[\"コメント\"],\n      \"無効\": patch.containsKey(\"無効\") ?パッチ[\"無効\"] : false、\n      \"検索\": getData(util.getHexBytes(patch[\"Find\"])),\n      \"置換\": getData(util.getHexBytes(patch[\"置換\"])),\n    };\n  }\n\n  Map<String, 動的> getCloverDrop(Map<String, 動的> ドロップ) {\n    最終テーブル = ドロップ[",
+  "@ssdtMsg898": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg899": "]??長さ;\n    if (長さ > 0) {\n      t[\"長さ\"] = 長さ;\n    }\n    t を返します。\n  }\n\n  /// クローバーの癖\n  /// [癖] 癖辞書\n  Map<String, Dynamic> getCloverQuirks(Map<String, Dynamic> quirks) {\n    return {\"FixHeaders\": quirks[\"FixHeaders\"] ??間違い};\n  }\n\n  /// OpenCore パッチ パッチ\n  /// [パッチ] パッチ辞書\n  Map<String, 動的> getOpenCorePatch(Map<String, 動的> パッチ) {\n    var table = patch[\"テーブル\"] ?? d.getDsdt();\n    if (table == null || table.isEmpty) {\n      テーブル = {};\n    }\n    戻り値 {\n      \"ベース\": パッチ[\"ベース\"] ?? 「」、\n      \"BaseSkip\": パッチ[\"BaseSkip\"] ?? 0、\n      \"コメント\": パッチ[\"コメント\"],\n      \"カウント\": パッチ[\"カウント\"] ?? 0、\n      \"有効\": patch.containsKey(\"有効\") ?パッチ[\"有効\"] : true、\n      \"検索\": getData(util.getHexBytes(patch[\"Find\"])),\n      \"制限\": パッチ[\"制限\"] ?? 0、\n      「マスク」: getData(パッチ[",
+  "ssdtMsg900": "）、\n        パッドTo: 4、\n      ）、\n    };\n  }\n\n  /// OpenCore ドロップパッチ\n  /// [ドロップ] 辞書をドロップ\n  Map<String, 動的> getOpenCoreDrop(Map<String, 動的> ドロップ) {\n    var table = ドロップ[\"テーブル\"] ?? d.getDsdt();\n    if (table == null || table.isEmpty) {\n      テーブル = {};\n    }\n    戻り値 {\n      \"すべて\": ドロップ[\"すべて\"] ??偽り、\n      \"コメント\": ドロップ[\"コメント\"] ?? 「」、\n      \"有効\": ドロップ[\"有効\"] ??本当です、\n      \"OemTableId\": getData(\n        ドロップ[\"テーブルID\"] ?? _getTableId(テーブル,",
+  "ssdtMsg901": "LPC(B)/SBRG を見つけています…",
+  "ssdtMsg902": "=> {arg0} で {arg1} が見つかりました",
+  "@ssdtMsg902": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg903": "=> {arg0} で {arg1} が見つかりました",
+  "@ssdtMsg903": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg904": "=> {arg0} で {arg1} が見つかりました",
+  "@ssdtMsg904": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg905": "=> LPC(B) が見つかりませんでした!作戦終了！",
+  "ssdtMsg906": "有効な DSDT が見つかりません!最初に DSDT ファイルまたは DSDT を含むファイル ディレクトリを選択してください。",
+  "ssdtMsg907": "指定された DSDT パス: {arg0}",
+  "@ssdtMsg907": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg908": "指定された DSDT パスは無効です: {arg0}",
+  "@ssdtMsg908": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg909": "IASL ツールの準備に失敗しました。まず、組み込みの iasl ツールを更新するか、使用してください。",
+  "ssdtMsg910": "ディレクトリ {arg0} から有効な ACPI テーブルを収集しています...",
+  "@ssdtMsg910": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg911": "有効な .aml ファイルが見つかりません!\\n",
+  "ssdtMsg912": "有効な DSDT が見つかりません!最初に DSDT ファイルまたは DSDT を含むファイル ディレクトリを選択してください。",
+  "ssdtMsg913": "DSDT 署名を持ついくつかのファイルが検証されました。",
+  "ssdtMsg914": "現在複数の DSDT ファイルが検出されており、一度に処理できるのは 1 つだけです。 DSDT ファイルを 1 つ保持し、他のファイルを削除して再試行してください。\\n",
+  "ssdtMsg915": "事前に作成されたパッチを適用する必要があるかどうかを確認するために、{arg0} を逆コンパイルしようとしています...",
+  "@ssdtMsg915": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg916": "{arg0} を読み込んでいます...",
+  "@ssdtMsg916": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg917": "DSDT ファイルが無効です!有効な DSDT ファイルを再選択してください。",
+  "ssdtMsg918": "処理が完了しました!\\n",
+  "ssdtMsg919": "渡されたファイルまたはフォルダは存在しません!\\n",
+  "ssdtMsg920": "問題のある DSDT ファイルを処理しています...",
+  "ssdtMsg921": "利用可能な既成パッチを確認してください…",
+  "ssdtMsg922": "{arg0} ファイルをメモリにロードしています...",
+  "@ssdtMsg922": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg923": "パッチを 1 つずつ処理しています...\\n",
+  "ssdtMsg924": "=> 位置決め、適用中…",
+  "ssdtMsg925": "=> 前の質問の DSDT ファイルは正常に逆コンパイルされました。",
+  "ssdtMsg926": "=> 修正されたファイルにパッチが適用され、ファイルは結果フォルダに保存されます:\\n {arg0}",
+  "@ssdtMsg926": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg927": "{arg0} 逆コンパイルに失敗しました!\\n",
+  "@ssdtMsg927": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg928": "有効な ACPI テーブルを {arg0} にロードしています...",
+  "@ssdtMsg928": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg929": "すべての有効な ACPI テーブルの逆コンパイルが完了しました。",
+  "ssdtMsg930": "=> デバイス {arg0} のスコープが見つかりません",
+  "@ssdtMsg930": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg931": "=> {arg0} が見つかりません",
+  "@ssdtMsg931": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg932": "{arg0} ({arg1}) デバイスを見つけています...",
+  "@ssdtMsg932": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg933": "=> {arg0} デバイスをターゲットにできません",
+  "@ssdtMsg933": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg934": "=> {arg0} が見つかりました",
+  "@ssdtMsg934": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg935": "=> 認証を求めています _STA…",
+  "ssdtMsg936": "=> _STA は XSTA に名前が変更されました!他のチェックはスキップしてください…",
+  "ssdtMsg937": "=> DSDT での _STA から XSTA へのデバイスの名前変更を無効にし、再起動後に再試行してください。\\n",
+  "ssdtMsg938": "=> {arg0} 変数 {arg1}",
+  "@ssdtMsg938": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg939": "=> _STA メソッド/名前が見つかりません",
+  "ssdtMsg940": "=> インデックス {arg0} で _STA メソッドが見つかりました!",
+  "@ssdtMsg940": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg941": "=> _STA から XSTA への名前変更の生成",
+  "ssdtMsg942": "IntObj 型の処理中にエラーが発生しました: {arg0}",
+  "@ssdtMsg942": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg943": "MethodObj タイプの処理中にエラーが発生しました: {arg0}",
+  "@ssdtMsg943": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg944": "ACPI デバイス情報を収集しています...",
+  "ssdtMsg945": "ACPI デバイス パスを収集しています...",
+  "ssdtMsg946": "孤立したデバイスを再チェックしています...",
+  "ssdtMsg947": "IRQ 情報が見つかりません!",
+  "ssdtMsg948": "現在のオプションまたはカスタム IRQ は空です。 IRQ パッチを生成できません!",
+  "ssdtMsg949": "現在のカスタム IRQ: {arg0}",
+  "@ssdtMsg949": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg950": "=> IRQ 情報が見つかりません!",
+  "ssdtMsg951": "カスタム IRQ リストの形式が間違っています! ！ ！デバイスはスペースで区切って、IRQ はカンマで区切ってください。 ！ ！",
+  "ssdtMsg952": "=> 例: RTC:0 IPIC:2 TMR:8,11 \\n",
+  "ssdtMsg953": "=> _HID が見つかりました: {arg0}",
+  "@ssdtMsg953": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg954": "=> _HID 解析エラー: {arg0}",
+  "@ssdtMsg954": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg955": "有効なデバイスが見つからないため、HPET 操作をスキップします。",
+  "ssdtMsg956": "有効な IRQ が指定されていないか、IRQ が空です。操作は中止されました!",
+  "ssdtMsg957": "PNP0103 (HPET) デバイスを見つけています…",
+  "ssdtMsg958": "=> {arg0} に配置",
+  "@ssdtMsg958": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg959": "HPET の _CRS メソッド/名前を見つけています...",
+  "ssdtMsg960": "=> {arg0}._CRS が見つかりません!作戦終了！",
+  "@ssdtMsg960": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg961": "=> {arg0}._CRS が見つかりません!",
+  "@ssdtMsg961": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg962": "=> _CRS は XCRS という名前になったようです。",
+  "ssdtMsg963": "=> DSDT でのデバイスの _CRS から XCRS への名前変更を無効にし、再起動後に再試行してください。\\n",
+  "ssdtMsg964": "=> {arg0}._CRS にあります",
+  "@ssdtMsg964": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg965": "=> インデックスで見つかりました: {arg0}",
+  "@ssdtMsg965": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg966": "=> タイプ: {arg0}",
+  "@ssdtMsg966": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg967": "=> Memory32Fixed をチェック中…",
+  "ssdtMsg968": "=> メモリアクセスタイプを決定できません!",
+  "ssdtMsg969": "=> Base または Length を整数に変換できません!",
+  "ssdtMsg970": "=> {arg0} {arg1} を取得 => {arg2}",
+  "@ssdtMsg970": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg971": "=> 見つかりません!",
+  "ssdtMsg972": "=> デフォルト値 {arg0} を使用 => {arg1}",
+  "@ssdtMsg972": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg973": "=> 見つかりません!",
+  "ssdtMsg974": "IRQ パッチを作成しています...",
+  "ssdtMsg975": "IRQをチェック中…",
+  "ssdtMsg976": "IRQ が空です!スキップ...\\n",
+  "ssdtMsg977": "=> パッチするものは何もありません。",
+  "ssdtMsg978": "一致するものが見つかりませんでした。",
+  "ssdtMsg979": "{arg0} の IRQ パッチ末尾 ({arg1}) がありません!スキップされました…",
+  "@ssdtMsg979": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg980": "以下は一意ではない可能性があり、デフォルトでは無効になっています。 \\n",
+  "ssdtMsg981": "プリコンパイルされた {arg0}.dsl を作成しています...",
+  "@ssdtMsg981": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg982": "偽の HPET デバイスを作成しています...",
+  "ssdtMsg983": "=> コア表示 ACPI パスが見つかりました: {arg0}",
+  "@ssdtMsg983": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg984": "=> デバイス (PNLF) は {arg0} にマウントされます",
+  "@ssdtMsg984": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg985": "=> 法的検証の ACPI パスが見つかりません",
+  "ssdtMsg986": "=> ルート レベルに戻り、デバイス (PNLF) を挿入します。",
+  "ssdtMsg987": "渡された ACPI テーブルに有効な iGPU パスが見つかりません!\\n",
+  "ssdtMsg988": "使用する iGPU ACPI パスを入力してください。各パス要素の文字制限は、スペースで区切られた 4 文字の英数字 (文字またはアンダースコアで始まる) です。例: SB.PCI0.GFX0\\n",
+  "ssdtMsg989": "指定された iGPU パスに従って、手動で {arg0} に設定されました \\n",
+  "@ssdtMsg989": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg990": "ネイティブ PNLF デバイスの ACPI テーブルをチェックしています...",
+  "ssdtMsg991": "=> ネイティブ PNLF デバイスが {arg0} で見つかりました: {arg1}",
+  "@ssdtMsg991": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg992": "=> ネイティブ PNLF の名前を XNLF に変更する必要があります。名前変更パッチが生成されています...",
+  "ssdtMsg993": "=> ネイティブ PNLF デバイスが見つかりません!",
+  "ssdtMsg994": "=> PNLF から XNLF への名前変更パッチを生成する必要はありません。",
+  "ssdtMsg995": "{arg0} で名前 (NBCF、0x00) が検出されました。パッチを生成しています...",
+  "@ssdtMsg995": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg996": "{arg0} で名前 (NBCF、ゼロ) が検出され、パッチを生成しています...",
+  "@ssdtMsg996": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg997": "注: iGPU パスは {arg0} と推測されます\\n 使用する前に確認してください。",
+  "@ssdtMsg997": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg998": "注: iGPU パスは手動で {arg0} に設定されています。使用する前にパスが正しいか必ず確認してください。",
+  "@ssdtMsg998": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg999": "注: NBCF パッチが生成されており (BrightnessKeys.kext ドライバーに応じて)、デフォルトで有効になっています。使用中に問題が発生した場合は、このパッチを無効にしてください。",
+  "ssdtMsg1000": "PNP0C09(EC) デバイスを見つけています...",
+  "ssdtMsg1001": "CPU 命名スキームを決定しています...",
+  "ssdtMsg1002": "{arg0} をチェックしています…",
+  "@ssdtMsg1002": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1003": "=> プロセッサが見つかりました: {arg0}",
+  "@ssdtMsg1003": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1004": "{arg0}.dsl を作成しています...",
+  "@ssdtMsg1004": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1005": "=> プロセッサ オブジェクトが見つかりません...",
+  "ssdtMsg1006": "=> ACPI0007 デバイスが見つかりません…",
+  "ssdtMsg1007": "=> {arg0} ACPI0007 デバイスが見つかりました",
+  "@ssdtMsg1007": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1008": "=> {arg0} で親デバイスが見つかりました。処理中...",
+  "@ssdtMsg1008": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1009": "=> {arg0} をチェック中…",
+  "@ssdtMsg1009": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1010": "=> 見つかりません!飛び越える…",
+  "ssdtMsg1011": "=> 見つかりません!飛び越える…",
+  "ssdtMsg1012": "{arg0} 個の有効なプロセッサ デバイスを処理しています...",
+  "@ssdtMsg1012": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1013": "有効なプロセッサ デバイスが見つかりません!",
+  "ssdtMsg1014": "LPC 名の取得に失敗しました...",
+  "ssdtMsg1015": "プリコンパイルされた {arg0}.dsl を作成しています...",
+  "@ssdtMsg1015": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1016": "=> RTC を偽造する必要があります!",
+  "ssdtMsg1017": "=> _CRS をチェック中…",
+  "ssdtMsg1018": "=> _CRS はバッファであり、RTC 範囲をチェックしています...",
+  "ssdtMsg1019": "、0x00000000)\n{\n    /*\n     * この情報を既存の SSDT ブリッジに追加する場合は、ここからコピーを開始してください。\n     */\n'';\n\n    for (externalRefs の最終 acpi) {\n      ssdt += ' 外部 ({arg0}, DeviceObj)\\n';\n    }\n    ssdt += '\\n';\n\n    /// 閉じ括弧\n    /// [input] 入力文字列\n    /// [深さ] 深さ\n    /// [iterations] 反復回数\n    /// [パッド] パディング文字列\n    String closeBrackets(String input, int Depth, int iterations, String Pad) {\n      while (反復 > 0) {\n        入力 += '{arg1}}\\n';\n        反復--;\n        深さ - ;\n      }\n      入力を返します。\n    }\n\n    List<String> lastPath = [];\n    弦？ acpi文字列;\n    最終ブリッジ名 = <String, List<String>>{};\n    最終 acpiPaths = <String, String>{};\n\n    for (bridgeList..sort() の最後の要素) {\n      最終的な計算 = element.split(' ');\n      最終的な acpi = comp.first;\n      int マッチ = 0;\n      for (int i = 0; i < comp.length && i < lastPath.length; ++i) {\n        if (comp[i] != lastPath[i]) ブレーク;\n        マッチ++;\n      }\n\n      if (lastPath.isNotEmpty) {\n        ssdt = closeBrackets(\n          SSD、\n          lastPath.length、\n          lastPath.length - 一致、\n          パッド、\n        );\n      }\n\n      lastPath = comp;\n\n      if (acpi != acpiString) {\n        acpiString = acpi;\n        ssdt += ' スコープ ({arg2})\\n {\\n';\n      }\n\n      最終的なcurrDepth = comp.length;\n      if (currDepth == 0) 続行;\n\n      最終的なparentPath = comp.sublist(0, currDepth - 1).join(' ');\n      BridgeNames.putIfAbsent(parentPath, () => []);\n\n      最終的なparentAcpi = acpiPaths[parentPath] ?? acpi;\n      最終的なbaseName = pathDict[bridgeMatch[要素]];\n      最終的な一意 = getUniqueDevice(\n        親Acpi、\n        ベース名 ?? 「BRG0」、\n        開始番号: -1、\n        usedNames: ブリッジ名[親パス]!,\n      );\n      最終的な名前 = unique.name;\n      BridgeNames[親パス]!.add(名前);\n      acpiPaths[要素] = '{arg3}.{arg4}';\n\n      文字列 p = パッド * currDepth;\n      if (bridgeMatch.containsKey(element)) {\n        最終ベース = pathDict[bridgeMatch[要素]];\n        if (base != null &&base.isNotEmpty &&base != 名前) {\n          ssdt +=\n              '{arg5}// ユーザー指定の名前 \\'{arg6}\\' が指定され、一意になるように増分されます\\n';\n        else if (base != null &&base.isNotEmpty) {\n          ssdt += '{arg7}// ユーザー指定の名前 \\'{arg8}\\' が指定されました\\n';\n        } それ以外の場合は {\n          ssdt +=\n              '{arg9}// 必要に応じて次のデバイス名をカスタマイズします。 GFX0\\n';\n        }\n      }\n\n      ssdt += ' デバイス ({arg10})\\n{arg11}{\\n';\n      p += パッド;\n\n      if (bridgeMatch.containsKey(element)) {\n        ssdt += '{arg12}// ターゲット デバイス パス:\\n{arg13}// {arg14}\\n';\n      }\n\n      最終 adrInt = int.parse(comp.last.replaceFirst('0x', ''));\n      最終 adr = スイッチ (adrInt) {\n        0 => 'ゼロ'、\n        1 => '1'、\n        _ =>\n          adrInt > 0xFFFF\n              ? '0x{arg15}'\n              : '0x{arg16}',\n      };\n\n      ssdt += '{arg17} 名前 (_ADR, {arg18})\\n';\n    }\n\n    if (lastPath.isNotEmpty) {\n      最終的な深さ = lastPath.length;\n      ssdt = closeBrackets(ssdt, 深さ, 深さ, パッド);\n    }\n\n    ssdt += ''\n}\n'';\n\n    writeSSDT(ssdtName, ssdt);\n    最終acpi = {",
+  "@ssdtMsg1019": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      },
+      "arg5": {
+        "type": "String"
+      },
+      "arg6": {
+        "type": "String"
+      },
+      "arg7": {
+        "type": "String"
+      },
+      "arg8": {
+        "type": "String"
+      },
+      "arg9": {
+        "type": "String"
+      },
+      "arg10": {
+        "type": "String"
+      },
+      "arg11": {
+        "type": "String"
+      },
+      "arg12": {
+        "type": "String"
+      },
+      "arg13": {
+        "type": "String"
+      },
+      "arg14": {
+        "type": "String"
+      },
+      "arg15": {
+        "type": "String"
+      },
+      "arg16": {
+        "type": "String"
+      },
+      "arg17": {
+        "type": "String"
+      },
+      "arg18": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1020": "、\n    };\n    makePlist(acpi:acpi);\n  }\n\n  Future<void> ssdtALS0({bool prebuilt = false}) async =>\n      プレビルド？ await _ssdtALS0Prebuilt() : await _ssdtALS0();\n\n  ///光センサー (ノートブック用)\n  Future<void> _ssdtALS0() 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    ログ（",
+  "ssdtMsg1021": ");\n      // 現在のテーブルで環境光センサー デバイスを検索します。\n      var als = d.getDevicePathsWithHid(hid:",
+  "ssdtMsg1022": ");\n        }\n        戻る;\n      }\n    }\n\n    /// ALS デバイスが見つかりませんでした\n    ログ(",
+  "ssdtMsg1023": "、\n    };\n    writeSSDT(ssdtName, ssdt);\n    makePlist(acpi:acpi);\n  }\n\n  Future<void> ssdtXOSI({bool prebuilt = false, String? targetString}) async =>\n      事前に構築された\n      ? await _ssdtXOSIPPrebuilt()\n      : await _ssdtXOSI(targetString: targetString);\n\n  /// XOSI スキーム\n  /// [targetString] ターゲット文字列\n  Future<void> _ssdtXOSI({String? targetString}) 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    文字列?最高のOsi;\n    osiStrings.forEach((キー, 値) {\n      var dsdtTable = d.getDsdt()!['テーブル'];\n      if (dsdtTable.contains(value)) {\n        最高のオシ = キー;\n      }\n    });\n    最終文字列 ssdtName =",
+  "ssdtMsg1024": ");\n      }\n      //デフォルトの項目を自動的に選択します\n      if (highestOsi != null &&mostOsi!.isNotEmpty) {\n        targetString = 最高オシ;\n      } それ以外の場合は {\n        targetString = osiStrings.keys.first;\n      }\n      ログ(",
+  "ssdtMsg1025": "';\n      if (x == targetString || i == osiStrings.length - 1) {\n        // 最後の項目 - 停止\n        ssdt +=",
+  "ssdtMsg1026": ";\n        壊す;\n      }\n      //カンマと改行を追加\n      ssdt +=",
+  "ssdtMsg1027": "、\n    };\n    makePlist(acpi: acpi、パッチ: パッチ、replace: true);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// 指定された ACPI テーブルをロードします\n  /// [tableSignature] テーブル署名\n  /// [tablePath] テーブルパス\n  Future<Map<String, Dynamic>?>loadTable(\n    文字列テーブル署名、{\n    文字列？テーブルパス、\n  }) 非同期 {\n    if (!checkIasl()) は null を返します。\n    ログ（",
+  "ssdtMsg1028": ");\n    Map<文字列、動的>?テーブル;\n    // ACPI テーブルのパスが渡されない場合は、ロードされた ACPI テーブルから検索します\n    if (tablePath == null || tablePath.isEmpty) {\n      最終テーブルリスト = d.acpiTables.values\n          .where(\n            (t) =>\n                t['signature']?.toUpperCase() == tableSignature.toUpperCase(),\n          )\n          .toList();\n      if (tableList.isNotEmpty) テーブル = tableList.first;\n    } それ以外の場合は {\n      //渡されたACPIテーブルパスからテーブルをロードします\n      // パスが有効であることを確認します\n      tablePath = await util.checkPath(\n        ファイルパス: テーブルパス、\n        onError: (e) => Log.error(e),\n      );\n      if (tablePath.isNotEmpty) {\n        //テーブルをロードする\n        最終結果 = await d.loadTable(tablePath);\n        最終テーブルリスト = result.{arg0}.values\n            .where(\n              (t) =>\n                  t['signature']?.toUpperCase() == tableSignature.toUpperCase(),\n            )\n            .toList();\n        if (tableList.isNotEmpty) テーブル = tableList.first;\n      }\n    }\n\n    if (table == null || table.isEmpty) {\n      ログ.警告(\n        config.acpiDirectory != null && config.acpiDirectory!.isNotEmpty\n            ?",
+  "@ssdtMsg1028": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1029": "、\n      );\n      null を返します。\n    }\n\n    テーブルを返します。\n  }\n\n  /// FACP 行からキーワードを含む最初のフィールド値を検索します\n  String findFacpField(List<dynamic> 行, String key) {\n    for (var 行数) {\n      if (line.contains(key)) {\n        最後の部分 = line.split(",
+  "ssdtMsg1030": ";\n  }\n\n  /// SSDT テーブルの署名を検証する\n  /// [tableSignature] テーブル署名\n  /// [tablePath] テーブルパス\n  Future<(bool, Map)> validateTableSignature(\n    文字列テーブル署名、{\n    文字列？テーブルパス、\n  }) 非同期 {\n    Final targetTable = awaitloadTable(tableSignature, tablePath: tablePath);\n    if (targetTable == null) return (false, {});\n    ログ（",
+  "ssdtMsg1031": ");\n    }\n    return (gotSig, targetTable);\n  }\n\n  /// SSDT-FACP\n  /// [facpPath] FACP テーブルのパス\n  Future<void> ssdtFACP({String? facpPath}) async {\n    Final (有効, テーブル) = await validateTableSignature(\n      「FACP」、\n      テーブルパス: facpPath、\n    );\n    if (!valid) が返る;\n    Final String valueToCauseReset = 'リセットを引き起こす値';\n    ログ（",
+  "ssdtMsg1032": ");\n\n    // リセット レジスタ アドレスを抽出します (通常は最初の 2 行)\n    文字列アドレス値 =",
+  "ssdtMsg1033": ":アドレスを置き換える、\n      }、\n    ];\n\n    makePlist(パッチ: パッチ、置換: true);\n  }\n\n  /// SSDT-APIC\n  /// [apicPath] APIC テーブルのパス\n  Future<void> ssdtAPIC({String? apicPath}) async {\n    if (!await ensureDSDT()) が戻る;\n    Final (有効, テーブル) = await validateTableSignature(\n      「APIC」、\n      テーブルパス: apicPath、\n    );\n    if (!valid) が返る;\n\n    ログ（",
+  "ssdtMsg1034": ": テーブル['署名'] ?? 「APIC」、\n      }、\n    ];\n\n    makePlist(acpi:acpi,drops:drops);\n  }\n\n  /// SSDT-DMAR\n  /// [dmarPath] DMAR テーブルのパス\n  Future<void> ssdtDMAR({String? dmarPath}) async {\n    Final (有効, テーブル) = await validateTableSignature(\n      「DMAR」、\n      テーブルパス: dmarPath、\n    );\n    if (!valid) が返る;\n    ブール予約 = false;\n    int 領域カウント = 0;\n    List<String> newDMAR = [];\n    List<String> 行 = table['lines'] ?? [];\n    ログ（",
+  "ssdtMsg1035": ")){\n        予約済み = false;\n      }\n      if (!reserved) {\n        // 確実に",
+  "ssdtMsg1036": "内の数値はすべて 0 です\n        if (line.contains(",
+  "ssdtMsg1037": ".contains(char)) {\n                // 残りの内容をそのまま変数に直接格納します。\n                newVal.write(value.substring(i));\n                壊す;\n              else if (char !=",
+  "ssdtMsg1038": ") {\n                // ゼロ以外、スペース以外の値がすべて 0 に設定されていることを確認します。\n                文字 =",
+  "ssdtMsg1039": ": テーブル['署名'] ?? 「DMR」、\n      }、\n    ];\n    makePlist(acpi:acpi,drops:drops);\n  }\n\n  Future<void> ssdtIMEI({bool prebuilt = false, String? fakeid}) async =>\n      事前に構築された\n      ? await _ssdtIMEIPPrebuilt(fakeid: fakeid)\n      : await _ssdtIMEI(fakeid: fakeid);\n\n  /// SSDT-IMEI\n  /// 偽造 IMEI デバイスをブリッジするために使用され、Ivy Bridge 6 シリーズ マザーボードおよび Sandy Bridge 7 シリーズ マザーボードに適しています\n  /// 6 シリーズ マザーボードでは偽 ID が 3A1E である必要があり、7 シリーズ マザーボードでは偽 ID が 3A1C である必要があります。\n  /// [fakeid] 偽のデバイス ID\n  Future<void> _ssdtIMEI({String? fakeid}) 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    if (fakeid == null) {\n      ログ.警告(",
+  "ssdtMsg1040": "; //XSTA\n\n    /// 各 UNC がネイティブに存在するかどうかを記録します _STA\n    Final Map<String, bool> hasStaMap = {};\n\n    for (devices 内の var device) {\n      最終的なデバイスパス = デバイス.ファースト;\n      Final devName = devicePath.split('.').last;\n\n      最終的な staMethod = d.getMethodPaths(obj:",
+  "ssdtMsg1041": ");\n      if (methodPath.isEmpty) {\n        // DTGPメソッドが存在するかどうかを調べる\n        ログ(",
+  "ssdtMsg1042": ");\n\n      /// デバイス ID に基づいて DMA デバイスを検索: PNP0200\n      ログ(",
+  "ssdtMsg1043": "、\n    };\n    await makePlist(acpi: acpi, replace: true);\n  }\n\n  /// システムステータスのサポートを確認します (_S0、_S3、_S4、_S5)\n  /// 戻り値：（サポート対象システムステータスリスト、サポート対象外システムステータスリスト）\n  Future<(List?, List?)> checkSystemState({String? facpPath}) async {\n    if (!await ensureDSDT()) return (null, null);\n    ブール？ aoacState = await checkAOAC(facpPath: facpPath);\n    Final List<String> systemStatesCheck = [",
+  "ssdtMsg1044": ");\n    //サポートシステムのステータス\n    ログ(",
+  "ssdtMsg1045": ");\n    // サポートされていないシステム ステータス\n    最終 systemStatesNotSupported = systemStatesCheck\n        .where((要素) => !systemStatesFound.contains(要素))\n        .toList();\n    if (systemStatesNotSupported.isNotEmpty) {\n      ログ.警告(",
+  "ssdtMsg1046": ");\n    }\n    //非 AOAC マシン\n    if (false == aoacState) {\n      if (systemStatesNotSupported.isEmpty) {\n        ログ(",
+  "ssdtMsg1047": ");\n      }\n    else if (true == aoacState) {\n      // AOAC マシン\n      ログ.警告(",
+  "ssdtMsg1048": "、テーブル: テーブル);\n      // ほとんどは Name _S3 です\n      if (nameS3.isNotEmpty && nameS3[0].isNotEmpty) {\n        最終ターゲット = nameS3[0].first;\n        ログ（",
+  "ssdtMsg1049": ");\n      if (devicePath.isEmpty) {\n        /// デバイス ID に基づいて LID デバイスを検索: PNP0C0D\n        ログ(",
+  "ssdtMsg1050": ");\n        }\n      }\n      if (!foundMethodLID) {\n        // _LID メソッドが存在するかどうかのチェックを開始します\n        最終メソッドLID = d.getMethodPaths(obj:",
+  "ssdtMsg1051": ");\n          // ZTTSメソッドが存在するかどうかを確認する\n          最終 ztts = d.getMethodInfo(obj:",
+  "ssdtMsg1052": ");\n      if (devicePath.isEmpty) {\n        /// デバイス ID に基づいて PWRB デバイスを検索: PNP0C0C\n        ログ(",
+  "ssdtMsg1053": ");\n      if (devicePath.isEmpty) {\n        /// デバイス ID に基づいて SLPB デバイスを検索: PNP0C0E\n        ログ(",
+  "ssdtMsg1054": ");\n          // PNP0C0E デバイスが存在するかどうかのチェックを開始 _STA メソッド\n          最終的な staMethod = d.getMethodPaths(obj:",
+  "ssdtMsg1055": ";\n\n    /// デバイス ID: PNP0C01 MEM2/RMEM/MEM/AMDN の共通デバイスを検索します\n    List<String> posiaDevices = [",
+  "ssdtMsg1056": "、\n    };\n    await makePlist(acpi: acpi, replace: true);\n  }\n\n  Future<void> ssdtGPRW({bool prebuilt = true}) async =>\n      プレビルド？ await _ssdtGPRWPrebuilt() : await _ssdtGPRW();\n\n  Future<void> _ssdtGPRW() 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    // GPRWメソッドが存在するかどうかを確認する\n    ログ(l10nGlobal.ssdtMsg855);\n    var gprw = d.getMethodPaths(obj: 'GPRW');\n    if (gprw.isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg856);\n      // XPRWメソッドが存在するかどうかを確認する\n      ログ(l10nGlobal.ssdtMsg857);\n      var xprw = d.getMethodPaths(obj: 'XPRW');\n      if (xprw.isNotEmpty) {\n        Log.warning(l10nGlobal.ssdtMsg858);\n        戻る;\n      } それ以外の場合は {\n        Log.warning(l10nGlobal.ssdtMsg859);\n      }\n    }\n    if (gprw.isNotEmpty) {\n      Log(l10nGlobal.ssdtMsg860(arg0: gprw[0][0].toString()));\n      _ssdtGPRWPrebuilt();\n    }\n  }\n\n  /// SSDT-GPRW\n  Future<void> _ssdtGPRWPrebuilt() 非同期 {\n    if (!checkIasl()) が戻る;\n    最終文字列 ssdtName =",
+  "ssdtMsg1057": "、\n      }、\n    ];\n    makePlist(acpi: acpi、パッチ: パッチ、replace: true);\n  }\n\n  Future<void> ssdtUPRW({bool prebuilt = true}) async =>\n      プレビルド？ await _ssdtUPRWPrebuilt() : await _ssdtUPRW();\n\n  Future<void> _ssdtUPRW() 非同期 {\n    if (!await ensureDSDT()) が戻る;\n    // UPRWメソッドが存在するかどうかを確認する\n    ログ(l10nGlobal.ssdtMsg861);\n    var uprw = d.getMethodPaths(obj: 'UPRW');\n    if (uprw.isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg862);\n      // XPRWメソッドが存在するかどうかを確認する\n      ログ(l10nGlobal.ssdtMsg863);\n      var xprw = d.getMethodPaths(obj: 'XPRW');\n      if (xprw.isNotEmpty) {\n        Log.warning(l10nGlobal.ssdtMsg864);\n        戻る;\n      } それ以外の場合は {\n        Log.warning(l10nGlobal.ssdtMsg865);\n      }\n    }\n    if (uprw.isNotEmpty) {\n      Log(l10nGlobal.ssdtMsg866(arg0: uprw[0][0].toString()));\n      _ssdtUPRWPrebuilt();\n    }\n  }\n\n  ///SSDT-UPRW\n  Future<void> _ssdtUPRWPrebuilt() 非同期 {\n    if (!checkIasl()) が戻る;\n    最終文字列 ssdtName =",
+  "ssdtMsg1058": ");\n    if (gpi0s.isEmpty || gpi0s[0].isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg867);\n      戻る;\n    }\n    Log(l10nGlobal.ssdtMsg868(arg0: gpi0s[0].first.toString()));\n\n    // GPI0 が存在するかどうかを確認する _STA メソッド\n    ログ(",
+  "ssdtMsg1059": ")){\n        /// データテーブルをチェックせずに続行します\n        続けます。\n      }\n\n      ログ(",
+  "ssdtMsg1060": ");\n        戻る;\n      } それ以外の場合は {\n        // プロセッサ オブジェクトが見つからない場合は、ACPI0007 デバイスのチェックを続行します\n        ログ(",
+  "ssdtMsg1061": ");\n        見つかった = true;\n        // procs[0][0].split(を分析します",
+  "ssdtMsg1062": ") セグメンテーション後に PLTF デバイスが存在するかどうかを判断します\n        if (!procs[0][0].split(",
+  "ssdtMsg1063": ";\n\n        // プロセッサ オブジェクトをループし、SSDT に追加します\n        for (var i = 0; i < procList.length; i++) {\n          var procUid = procList[i];\n          var proc = procUid[",
+  "ssdtMsg1064": ");\n    }\n  }\n\n  /// SSDT-CPUR プリコンパイル済みファイル\n  Future<void> _ssdtCPURPrebuilt() async {\n    if (!checkIasl()) が戻る;\n    最終文字列 ssdtName =",
+  "ssdtMsg1065": "、\n    };\n    makePlist(acpi: acpi、replace: true);\n  }\n\n  /// SSDT-EC 関連のプリコンパイル済みファイルを生成する\n  /// [isLaptop] ラップトップかどうか (デスクトップ バージョンとラップトップ バージョンのどちらを使用するかを決定します)\n  /// [injectUSBPower] USB 電源属性を注入するかどうか (USBX を含めるかどうかを決定します)\n  Future<void> _ssdtECPrebuilt({\n    bool isLaptop = false、\n    bool injectUSBPower = false、\n  }) 非同期 {\n    // ツールが利用可能かどうかを確認する\n    if (!checkIasl()) が戻る;\n    // パラメータに基づいてファイル名と内容を決定します\n    遅い文字列ファイル名;\n    遅い文字列 ssdtContent;\n    遅い文字列コメント。\n\n    if (injectUSBPower) {\n      // USB 電源属性を挿入する場合: USBX ロゴが含まれます\n      if (ラップトップです) {\n        ファイル名 =",
+  "ssdtMsg1066": ";\n      }\n    } それ以外の場合は {\n      // USB 電源属性が注入されていない場合: USBX ロゴは含まれません\n      if (ラップトップです) {\n        ファイル名 =",
+  "ssdtMsg1067": "、\n    };\n    makePlist(acpi: acpi、replace: true);\n  }\n\n  /// SSDT-AWAC\n  /// SSDT-AWAC プリコンパイル済みファイルを生成する\n  Future<void> _ssdtAWACPrebuilt() 非同期 {\n    if (!checkIasl()) が戻る;\n    最終文字列 ssdtName =",
+  "ssdtMsg1068": "、\n    };\n    makePlist(acpi: acpi、replace: true);\n  }\n\n  /// 偽造有線ネットワーク カード。有線ネットワーク カードのないノートブックに適しています\n  Future<void> ssdtRMNE() 非同期 {\n    if (!checkIasl()) が戻る;\n    最終文字列 ssdtName =",
+  "ssdtMsg1069": "、\n    };\n    makePlist(acpi: acpi、replace: true);\n  }\n\n  Future<void> ssdtPCIDISABLE({\n    文字列？ pciパス、\n    文字列?disableメソッド、\n    文字列？タイプ、\n  }) async => await _ssdtPCIDISABLE(\n    pciパス: pciパス、\n    無効メソッド: 無効メソッド ?? 「オフ」、\n    タイプ: タイプ?? 「GPU」、\n  );\n\n  ///PCI デバイスをブロック/\n  /// [pciPath] デバイスパス\n  /// [disableMethod] メソッドを無効にする (サポート",
+  "ssdtMsg1070": ")\n  /// [type] デバイスの種類\n  将来<void> _ssdtPCIDISABLE({\n    文字列？ pciパス、\n    必須文字列 disableMethod、\n    必須の文字列型、\n  }) 非同期 {\n    if (!checkIasl()) が戻る;\n\n    if (pciPath == null || !util.checkACPIPath(acpiPath: pciPath)) {\n      Log.warning(l10nGlobal.ssdtMsg870);\n      戻る;\n    }\n\n    boolsureDsdtOrACPI = d.acpiTables.isNotEmpty;\n    bool foundMethod = false;\n    ブール必要ブリッジ = false;\n    ブール adrOverflow = false;\n\n    if (sureDsdtOrACPI) {\n      if (disableMethod == 'OFF') {\n        Log(l10nGlobal.ssdtMsg871(arg0: pciPath.toString()));\n        foundMethod = _hasMethodInTables(pciPath, ['_ON', '_OFF']);\n        if (!foundMethod) {\n          Log.warning(l10nGlobal.ssdtMsg872(arg0: pciPath.toString()));\n          戻る;\n        }\n      } else if (disableMethod == 'PS3') {\n        Log(l10nGlobal.ssdtMsg873(arg0: pciPath.toString()));\n        foundMethod = _hasMethodInTables(pciPath, ['_PS3,_DSM']);\n        if (!foundMethod) {\n          Log.warning(l10nGlobal.ssdtMsg874(arg0: pciPath.toString()));\n          戻る;\n        }\n      else if (disableMethod == 'IONName') {\n        Log(l10nGlobal.ssdtMsg875(arg0: pciPath.toString()));\n        // グラフィックス カード デバイスが存在するかどうかを確認します\n        最終 (pPath、オーバーフロー) = acpiDevicePath(sanitizeAcpiPath(pciPath));\n        if (pPath != null && pPath.isNotEmpty) {\n          adrOverflow = オーバーフロー;\n          // pciPath が存在するかどうかを確認します。メソッド: _PRT\n          foundMethod = _hasMethodInTables(pciPath, ['_PRT']);\n          if (!foundMethod) {\n            Log(l10nGlobal.ssdtMsg876(arg0: pciPath.toString()));\n            needBridge = false;\n          } それ以外の場合は {\n            ログ.警告(",
+  "ssdtMsg1071": ";\n    Log(l10nGlobal.ssdtMsg877(arg0: ssdtName.toString()));\n    Log(l10nGlobal.ssdtMsg878(arg0: type.toString(), arg1: pciPath.toString()));\n    Log(l10nGlobal.ssdtMsg879(arg0: disableMethod.toString()));\n\n    // 絶対パスであることを確認してください\n    if (!pciPath.startsWith('\\\\')) {\n      pciPath = '\\\\{arg0}';\n      Log(l10nGlobal.ssdtMsg880(arg0: pciPath.toString()));\n    }\n\n    // SSDT ソース コードを生成する\n    Final ssdt = switch (disableMethod) {\n      m.contains('OFF') => _buildSsdtOFF(pciPath, type) の場合の文字列 m、\n      m.contains('PS3') => _buildSsdtPS3(pciPath, type) の場合、文字列 m、\n      文字列 m when m.contains('IONName') => _buildSsdtIONName(\n        pciパス、\n        タイプ、\n        ニードブリッジ: ニードブリッジ、\n      ）、\n      _ => ''、\n    };\n\n    if (ssdt.isEmpty) {\n      Log.warning(l10nGlobal.ssdtMsg881(arg0: disableMethod.toString()));\n      戻る;\n    }\n\n    最終acpi = {",
+  "@ssdtMsg1071": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1072": "、\n    };\n\n    makePlist(acpi: acpi、replace: true);\n    writeSSDT(ssdtName, ssdt);\n  }\n\n  /// OFFメソッド\n  文字列 _buildSsdtOFF(文字列 pciPath、文字列型) =>\n      「」\n/* RehabMan の SSDT-DDGPU.dsl に基づいています */\n定義ブロック(",
+  "ssdtMsg1073": "、0x00000000)\n    {\n        外部 ({arg0}、DeviceObj)\n    {引数1}\n    }\n  ''l10nGlobal.ssdtMsg886\\\\', '');\n    最終的な foundSet = <String>{};\n    for (sortedNicely(d.acpiTables.keys.toList()) の最終テーブル名) {\n      最終テーブル = d.acpiTables[テーブル名];\n\n      for (メソッド内の最終メソッド) {\n        最終パス = d.getMethodPaths(obj: メソッド, テーブル: テーブル);\n        最終的な hasMethod = paths.any(\n          (e) =>\n              e[0].replaceAll('.{arg2}', '').replaceAll('\\\\', 'l10nGlobal.ssdtMsg887(arg0: tableName.toString(), arg1: pciPath.toString(), arg2: method.toString()), ');\n      Log.warning('いくつかのメソッドが見つかりません: {arg3}.ssdtMsg888(arg0: ssdtName.toString(), arg1: ssdtName.toString(), arg2: tableName.toString())0')} {arg4} が見つかりました",
+  "@ssdtMsg1073": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1074": "プリコンパイルされた {arg0}.dsl を作成しています...",
+  "@ssdtMsg1074": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1075": "メッセージが保存される診断ボールトです。\n        * Itl10nGlobal.ssdtMsg889(arg0: ssdtName.toString(), arg1: gpuPath.toString())_PRT']);\n        if (!foundMethod) {\n          Log('=> {arg0} に対応する _PRT メソッドが DSDT または SSDT で見つかりませんでした!l10nGlobal.ssdtMsg890(arg0: gpuPath.toString(), arg1: gpuPath.toString(), arg2: gpuPath.toString(), arg3: gpuPath.toString(), arg4: gpuPath.toString()、arg5: deviceId.toString()、arg6: ssdtName.toString()、arg7: gpuPath.toString()、arg8: deviceId.toString()、arg9: fakeModel.toString()、arg10: dsmMethod.toString()、arg11: dsmBlock.toString(), arg12: ssdtName.toString())pathl10nGlobal.ssdtMsg891(arg0: matchedPCIPath.toString(), arg1: 2.toString(), arg2: d.toString()) ファイルの保存に成功しました: {arg1}' : '保存に失敗しました: {arg2}');\n      ログ（''）;\n    }\n  }\n\n  void _makeSinglePlist(\n    PlistType タイプ、{\n    Map<文字列、動的>?アクピ、\n    リスト<マップ<文字列、動的>>?パッチ、\n    リスト<マップ<文字列、動的>>?ドロップ、\n    ブール置換 = false、\n  }) {\n    最終的な plistPath = path.join(\n      config.outputDirectory!、\n      出力フォルダー、\n      _plistName(タイプ)、\n    );\n    最終パーサー = PlistParser();\n    最終的な isBatching = _plistBatchDepth > 0;\n    最終用途BatchedPlist =\n        isBatching && _batchedPlists.containsKey(plistPath);\n    最終結果 = usesBatchedPlist\n        ?PlistParseResult(\n            ステータス: PlistParseStatus.success、\n            データ: _batchedPlists[plistPath]、\n          )\n        : parser.loadPlist(plistPath);\n\n    if (result.status == PlistParseStatus.parseError) {\n      ログ(結果.メッセージ);\n      戻る;\n    }\n    if (!usesBatchedPlist) {\n      ログ(\n        result.status == PlistParseStatus.success\n            ? 「ファイルの読み取り: {arg3}」\n            : 'ファイルの作成: {arg4}',\n      );\n    }\n\n    var plist = 結果.データ ?? {};\n    if (isBatching) {\n      _batchedPlists[plistPath] = plist;\n    }\n    if (type == PlistType.openCore) {\n      _prepareOpenCore(\n        プリスト、\n        アクピ、\n        パッチ、\n        ドロップ、\n        {",
+  "@ssdtMsg1075": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      },
+      "arg3": {
+        "type": "String"
+      },
+      "arg4": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1076": ":\n              config.acpiMatchMode ==\n              ACPIMatchMode.tableIDsAndLengthAndNormalizeHeaders、\n        }、\n        交換して、\n        タイプ、\n      );\n    }\n\n    if (!isBatching && plist.isNotEmpty) {\n      最終成功 = parser.savePlist(plistPath, plist);\n      Log(success? 'ファイルの保存に成功しました: {arg0}' : '保存に失敗しました: {arg1}');\n      ログ（''）;\n    }\n  }\n\n  void _prepareOpenCore(\n    Map<String, Dynamic> plist、\n    Map<文字列、動的>?アクピ、\n    リスト<マップ<文字列、動的>>?パッチ、\n    リスト<マップ<文字列、動的>>?ドロップ、\n    Map<文字列、動的>?癖、\n    ブール置換、\n    PlistType タイプ、\n  ) {\n    最終的なensurePath = util.ensurePath;\n\n    ensurePath(plist, [",
+  "@ssdtMsg1076": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1077": "]、\n      アイテム: 癖?? {}、\n      buildEntry: getCloverQuirks、\n      等しいエントリ: (e, q) => e == q,\n      置き換える: 置き換える、\n      logCallback: (i) => i.toString(),\n    );\n    _sortCloverAcpiSortedOrderByDependency(plist);\n  }\n\n  List<T?> _normalizeItems<T>(動的入力) {\n    if (input == null) return [];\n\n    if (入力はリスト) {\n      return input.cast<T?>();\n    } それ以外の場合は {\n      return [Tとして入力?];\n    }\n  }\n\n  void _sortOpenCoreAcpiAddByDependency(Map<String, Dynamic> plist) {\n    最終的な追加 = plist['ACPI']?['追加'];\n    if (add is! List || add.length < 2) return;\n\n    最終パス = 追加\n        .whereType<Map>()\n        .map((エントリ) => エントリ['パス']?.toString())\n        .whereType<String>()\n        .toList();\n    最終順序 = _dependencySortedPaths(パス);\n    if (order.isEmpty) が戻る;\n\n    最終ランク = {for (var i = 0; i < order.length; i++) order[i]: i};\n    最終的なインデックス付き = add.asMap().entries.toList();\n    Indexed.sort((a, b) {\n      最終的な aPath = a.value は Map ですか? a.value['Path']?.toString() : null;\n      最終的な bPath = b.value はマップですか? b.value['Path']?.toString() : null;\n      最終 aRank = ランク[aPath];\n      最終 bRank = ランク[bPath];\n      if (aRank == null && bRank == null) return a.key.compareTo(b.key);\n      if (aRank == null) は 1 を返します。\n      (bRank == null) の場合は -1 を返します。\n      最終結果 = aRank.compareTo(bRank);\n      結果を返します != 0 ?結果 : a.key.compareTo(b.key);\n    });\n\n    for (var i = 0; i < Indexed.length; i++) {\n      add[i] = インデックス付き[i].value;\n    }\n  }\n\n  void _sortCloverAcpiSortedOrderByDependency(Map<String, Dynamic> plist) {\n    最終sortedOrder = plist['ACPI']?['SortedOrderl10nGlobal.ssdtMsg892';\n        if (項目は Map<String, 動的> &&\n            (item.containsKey('Find') || item.containsKey('Signature'))) {\n          patchType = 'パッチ l10nGlobal.ssdtMsg893=> {arg0} を更新",
+  "@ssdtMsg1077": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1078": "{arg0} へ');\n          } それ以外の場合は {\n            Log('=> {arg1}",
+  "@ssdtMsg1078": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1079": "{arg0} にはすでに存在します。スキップ...l10nGlobal.ssdtMsg894=> {arg1} を追加",
+  "@ssdtMsg1079": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1080": "{arg0}l10nGlobal.ssdtMsg895=> キーを更新",
+  "@ssdtMsg1080": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1081": "値は",
+  "ssdtMsg1082": "{arg0} 内');\n                }\n              } それ以外の場合は {\n                if (_lastACPIMatchMode != config.acpiMatchMode) {\n                  Log('=> キー",
+  "@ssdtMsg1082": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1083": "の値はすでに最新です。スキップ {arg0}l10nGlobal.ssdtMsg896=> キーを追加",
+  "@ssdtMsg1083": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1084": "価値",
+  "ssdtMsg1085": "{arg0} へ');\n              }\n            }\n          }\n        }\n      }\n    } それ以外の場合は {\n      throwStateError(\n        'パス ${[",
+  "@ssdtMsg1085": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1086": ")} はリストでもマップでもありませんが、{arg0}l10nGlobal.ssdtMsg897Data は String、List<int>、または Uint8Listl10nGlobal.ssdtMsg898(arg0: idName.toString())Table'] である必要があります。 d.getDsdt();\n    int 長 = _getTableLength(テーブル);\n    Map<String, 動的> t = {",
+  "@ssdtMsg1086": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1087": "]?? _getTableId(テーブル, '署名'),\n        パッドTo: 4、\n      ）、\n    };\n  }\n\n  /// OpenCore の癖\n  /// [癖] 癖辞書\n  Map<String, Dynamic> getOpenCoreQuirks(Map<String, Dynamic> quirks) {\n    戻り値 {",
+  "ssdtMsg1088": "サウンドカードの修復によく使用される IRQ 競合を排除します。",
+  "ssdtMsg1089": "• HPET (高精度イベント タイマー) は、システム タイミングに使用されるハードウェア モジュールです。\n• macOS では、一部のマザーボード HPET デバイスが IRQ (割り込み要求) の競合を引き起こす可能性があり、オーディオ デバイスの通常の動作に影響を及ぼし、システムが不安定になったり、起動できなくなったりすることがあります。\n• このパッチは、HPET 関連の ACPI デバイス定義を調整して IRQ の競合を回避し、macOS が HPET タイマーを正しく使用できるようにし、サウンド カードの問題を修正し、システムの安定性を向上させます。",
+  "ssdtMsg1090": "EC の偽造と USB 電源属性の注入 (Intel 第 6 世代以降のデスクトップ コンピュータに適用)",
+  "ssdtMsg1091": "• Intel第6世代以降のデスクトップコンピュータに適用可能\n• このパッチは、システムの元の EC デバイスを無効にし、仮想 EC デバイスを作成して macOS に互換性のある EC が存在すると思わせるようにし、EC デバイスの欠落によって引き起こされる起動の問題を解決します。 \n• 潜在的な問題を修正するために必要な USB 電源プロパティを追加しました。マージと同等: SSDT-EC-DESKTOP.aml + SSDT-USBX.aml",
+  "ssdtMsg1092": "EC を偽造するだけで、既存の EC には影響せず、USB 電源属性も同時に注入します (Intel 第 6 世代以降のノートブックに適用)",
+  "ssdtMsg1093": "• Intel 第 6 世代以降のノートブックに適用\n• ノートブックに適しており、既存の EC を削除または変更するのではなく、元の EC デバイスの損傷を回避し、ノートブックの電源管理やキーボード バックライトなどの機能異常を防ぐために、新しい仮想 EC を別途作成します。\n• 潜在的な問題を修正するために必要な USB 電源プロパティを追加しました。マージと同等: SSDT-EC-LAPTOP.aml + SSDT-USBX.aml",
+  "ssdtMsg1094": "偽造 EC (Intel 第 5 世代以下のデスクトップ コンピューターに適用)",
+  "ssdtMsg1095": "• Intel 第 5 世代以下のデスクトップに適用可能\n• このパッチは、システムの元の EC デバイスを無効にし、仮想 EC デバイスを作成して macOS に互換性のある EC が存在すると思わせるようにし、EC デバイスの欠落によって引き起こされる起動の問題を解決します。",
+  "ssdtMsg1096": "偽造 EC のみ、既存の EC には影響しません (Intel 第 5 世代以下のノートブックに適用)",
+  "ssdtMsg1097": "• Intel 第 5 世代以下のノートブックに適用可能\n• 既存の EC を削除または変更するのではなく、元の EC デバイスの損傷を回避し、ノートブックの電源管理やキーボードのバックライトなどの機能異常を防ぐために、新しい仮想 EC を別途作成します。",
+  "ssdtMsg1098": "USB 電源属性の修正 (Intel 第 6 世代以降のプラットフォームに適用)",
+  "ssdtMsg1099": "• Intel Skylake 第 6 世代以降、サーバー Haswell-E 第 4 世代以降、AMD Ryzen およびその他のプラットフォームに適用可能\n• Intel Skylake 以降のプロセッサでは、USB デバイスに適切に電力が供給され認識されるように、macOS には特定の USB 電源プロパティが必要です。\n• このパッチは、macOS 要件に準拠するように USB ポートの電源管理を修正し、USB デバイスの異常認識、電力供給不足、ホットプラグできないなどの問題を解決します。\n• ノートブックの場合: SSDT-EC-LAPTOP.aml + SSDT-USBX.aml 2 つの組み合わせは SSDT-EC-USBX-LAPTOP.aml と同等です。\n• デスクトップの場合: SSDT-EC-DESKTOP.aml + SSDT-USBX.aml 2 つの組み合わせは SSDT-EC-USBX-DESKTOP.aml と同等です。",
+  "ssdtMsg1100": "CPUコアの識別により、周波数調整と省エネ補正が可能",
+  "ssdtMsg1101": "• SSDT-PLUG は、Intel Haswell 第 4 世代～第 11 世代、サーバー Haswell-E 第 4 世代以降のプラットフォームに適しています (SSDT-PLUG をカスタマイズすると、ツールが自動的に検出して生成します)。\n• SSDT-PLUG-ALT は、Intel Alder Lake 第 12 世代以降および AMD Ryzen プラットフォームに適しています (SSDT-PLUG をカスタマイズすると、ツールが自動的に検出して生成し、名前を SSDT-PLUG-ALT に変更します)。\n• macOS は、CPU 電源管理プラグイン (PluginType) に依存して CPU 周波数を調整し、エネルギー効率とバッテリー寿命を向上させます。\n• このパッチは CPU 定義を変更し、macOS が Apple デバイスに必要なプラグイン タイプ = 1 のプロセッサであると認識するようにします。これにより、CPU 周波数管理が正しく読み込まれ、パフォーマンスと消費電力の制御が向上します。",
+  "ssdtMsg1102": "NVRAM サポートを有効にする (通常は Intel ネイティブ 300 シリーズ マザーボードの場合)",
+  "ssdtMsg1103": "• Intel Coffee Lake第8世代～第9世代プラットフォームに適用\n• ネイティブ 300 シリーズ マザーボード (Z370、B360 など) は、macOS で NVRAM を正しく使用しない可能性があり、その結果、一部の機能 (iMessage、ボリューム メモリ、ブート パラメータなど) が保存されません。\n• このパッチはマザーボードの PMC (電源管理コントローラー) を有効にし、追加の EmuVariableUEFI ドライバーを必要とせずに macOS がネイティブ NVRAM を通常どおり使用できるようにします。",
+  "ssdtMsg1104": "バックライトをサポートするために PNLF デバイスを追加します (ノートブックおよびオールインワンのみ)",
+  "ssdtMsg1105": "• macOS では、ノートブックの画面の明るさを正しく制御するには、PNLF デバイス (パネルの明るさ) が必要です。\n• このパッチは ACPI に PNLF デバイスを作成し、macOS が画面の明るさを調整し、システム環境設定で明るさの制御オプションを表示できるようにします。\n• ノートブックや一部のオールインワンコンピュータに適しており、輝度調整ができない問題を解決します。\n• UID = 14、適用対象: Intel 第 1 世代 Arrandale、第 2 世代 Sandy Bridge、第 3 世代 Ivy Bridge\n  注: UID: 14 を使用する一部のマシンでは、最大輝度の制限やその他の問題が発生します。これらの問題を解決するには、iGPU (統合グラフィックス カード) の正しいデバイス パスを設定する必要があり、場合によっては IGPU レジスタ情報を補足する必要があります。\n• UID = 15、適用対象: Intel 第 4 世代 Haswell、第 5 世代 Broadwell\n• UID = 16、適用対象: Intel 第 6 世代 Skylake、第 7 世代 Kaby Lake、一部の第 4 世代 Haswell\n• UID = 17、次の用途に適しています: カスタムの明るさ。通常、一部の非標準デバイスまたは特殊なニーズのある Hackintosh 設定に使用されます。\n• UID = 18、次の用途に適しています: カスタムの明るさ。通常、一部の非標準デバイスまたは特殊なニーズのある Hackintosh 設定に使用されます。\n• UID = 19、適用対象: Intel 第 8 世代 CoffeeLake 以降、第 10 世代未満、および AMD ノートブック\n• UID = 99、適用対象: その他 (カスタム applbkl-name / applbkl-data デバイス プロパティが必要)、まったく機能しない可能性があります。",
+  "ssdtMsg1106": "画面のバックライト調整に必要なセンサーのサポートを提供します (ノートブックおよびオールインワン コンピューターにのみ適用可能)",
+  "ssdtMsg1107": "• Apple のネイティブ センサー (周囲光センサー、ALS) 機能をシミュレートして有効にし、画面の明るさを自動的に調整するために使用されます。\n• お使いのデバイス (一部のハイエンドノートブックなど) に実際に ALS があり、問題がある場合は、SSDT-ALS0 を追加して自動輝度調整機能を修正してみてください。そうでない場合は、SSDT-ALS0 を追加することはお勧めできません。\n• 適用対象: オールインワン PC (AIO) およびラップトップのみ",
+  "ssdtMsg1108": "macOS は Windows に偽装し、ブロックされたデバイス (I2C タッチパッドなど) のロックを解除します",
+  "ssdtMsg1109": "• _OSI (オペレーティング システム インターフェイス) は、オペレーティング システムがサポートする機能をレポートできるようにする ACPI のメソッドです。\n• 一部のマザーボード ファームウェアは、_OSI 戻り値に基づいて特定のデバイスを有効にするかどうかを決定する場合がありますが、この値は macOS によって認識されず、機能が失われる可能性があります。\n• このパッチは、ファームウェアに macOS も Windows であると認識させ、I2C タッチパッド、バッテリー管理などの隠れた機能を有効にします。",
+  "ssdtMsg1110": "USBポートのリセットと修正",
+  "ssdtMsg1111": "• 一部の OEM は ACPI 仕様に違反しており、macOS の起動時に問題が発生します。この問題を解決するには、RHUB デバイスをシャットダウンし、macOS に強制的にポートを手動で再構築させる必要があります。\n• このパッチは、macOS の起動時に USB コントローラ (EHC1、EHC2、その他の USB デバイスのシールドと名前変更を含む) をリセットするため、すべての USB ポートが正しく識別され、USB マッピング (UTBMap.kext など) とともに使用されて、USB デバイスが適切に動作するようになります。\n• 通常、デスクトップ 400 シリーズ マザーボード (Asus など) およびモバイル IceLake プラットフォーム (Dell、Lenovo など) に適しています。",
+  "ssdtMsg1112": "欠落している PCI デバイス パスのブリッジを作成する",
+  "ssdtMsg1113": "• 一部のマザーボードまたはデバイスの PCI デバイス パスが macOS で正しく認識されず、グラフィックス カード、サウンド カード、ワイヤレス ネットワーク カードなどのデバイスが正しく動作しなくなる可能性があります。\n• このパッチは、これらのデバイスに正しい PCI ブリッジを作成し、macOS がこれらの PCI デバイスを正しく認識して使用できるようにします。",
+  "ssdtMsg1114": "DMAR 予約メモリ領域を削除し、システム起動の問題とネットワーク カードの互換性の問題を修正します。",
+  "ssdtMsg1115": "• DMAR (DMA Remapping Table) は、IOMMU (Input-Output Memory Management Unit) をサポートする Intel VT-d 仮想化テクノロジの一部です。\n• このパッチは、問題の原因となっている DMAR テーブルの予約メモリ領域を削除するため、macOS が DMAR を誤って読み取り、システムの起動に失敗することを防ぎます。\n• VT-d 互換性のサポートを提供し、VT-d が macOS Big Sur 以降、特に DriverKit によって駆動されるハードウェアで適切に動作するようにします。\n• macOS は VT-d をサポートしていますが、一部のマザーボードまたは BIOS が提供する DMAR テーブルとの互換性の問題があり、これにより macOS が ACPI DMAR テーブル (AppleACPICPU、IOPCI、AppleVTD 関連のログの場所でスタックする) を解析する際にカーネルのクラッシュ、起動ラグ、システムの不安定性などの問題が発生する可能性があります。\n• サポートされるハードウェア範囲: I225 ネットワーク カード、Aquantia ネットワーク カード、一部の WiFi デバイスなど。\n• パッチを適用したテーブルをロードする前に、元の DMAR テーブルをファームウェアで削除する必要があります。\n• 適用可能な CPU: VT-d テクノロジーをサポートする任意のプロセッサ。",
+  "ssdtMsg1116": "APIC テーブルを修正して CPU カーネル パニック問題を解決します (HEDT サーバー プラットフォームに該当)",
+  "ssdtMsg1117": "• APIC テーブルのプロセッサ ID を修復または書き換えて、macOS が CPU コアの数と数を正しく識別し、カーネル パニックやコア識別エラーを回避できるようにします。\n• パッチを適用したテーブルをロードする前に、元の APIC テーブルをファームウェアで削除する必要があります。\n• X58、X79、X99、X299 およびその他の Intel サーバー (HEDT) プラットフォームに適用できます。",
+  "ssdtMsg1118": "システムバス SMBus サポートを追加",
+  "ssdtMsg1119": "• macOS では、次のような特定のサービスを適切に実行するために SMBus (システム管理バス) デバイスが必要です。\n  I2C タッチパッド、バッテリー管理、光感知による自動輝度調整、一部の Wi-Fi/Bluetooth デバイス\n• SSDT-SBUS-MCHC は、SBUS (システム管理バス) および MCHC (メモリ コントローラー) デバイスを ACPI に追加することで、macOS にこれがネイティブ Apple デバイスであると認識させ、関連機能が適切に動作するようにします。\n• デバイスの I2C タッチパッド、バッテリー情報、自動輝度調整が使用できない場合は、このパッチを有効にしてみてください。",
+  "ssdtMsg1120": "コア グラフィックス アクセラレーションの失敗の問題を修正しました (通常は Ivy Bridge と Sandy Bridge に適用されます)。",
+  "ssdtMsg1121": "• Intel Management Engine (略して IMEI) は、管理エンジンへの接続に使用されるハードウェア インターフェイスです。これは、古いプラットフォーム (Sandy/Ivy) および一部のマザーボードに MEI/IMEI/HECI デバイスがない場合にのみ必要です。\n• Intel 第 3 世代 Ivy Bridge プロセッサーと 6 シリーズ マザーボードが混在している場合に適用されます (例: i3 3225 プロセッサー、H61 マザーボード)、コア グラフィックス アクセラレーションの問題\n• Intel 第 2 世代 Sandy Bridge プロセッサーと 7 シリーズ マザーボードが混在している場合に適用されます (例: i5 2500k プロセッサー、B75 マザーボード)、コア グラフィックス アクセラレーションの問題\n• 7 シリーズ マザーボードと組み合わせた Intel 第 3 世代 Ivy Bridge プロセッサ、および 6 シリーズ マザーボードと組み合わせた Intel 第 2 世代 Sandy Bridge プロセッサには、この SSDT は必要ありません。\n• Intel 第 4 世代 Haswell 以降のプラットフォームでは通常、MEI/IMEI/HECI デバイスを正しく実装できるため、この SSDT は必要ありません。",
+  "ssdtMsg1122": "シャットダウンして再起動するか、電源が供給されずにシャットダウンする問題を修正",
+  "ssdtMsg1123": "• 一部のマザーボードでは、macOS のシャットダウン (S5) 時に USB コントローラーの電源が完全にオフにならず、正常にシャットダウンできない場合がある問題を修正しました (シャットダウンが再起動になるか、電源なしでシャットダウンされる)。\n• ACPI 名前変更パッチが必要: _PTS -> ZPTS",
+  "ssdtMsg1124": "現在のシステムステータスを確認します。主に、S3 スリープがサポートされているかどうかを確認します (カスタマイズされていない SSDT)。",
+  "ssdtMsg1125": "• 現在のマシンが AOAC マシン (カスタマイズされていない SSDT) であるかどうかを確認します。\n• 現在の BIOS 設定でシステム ステータスを確認します。主に、S3 スリープがサポートされているかどうかを確認します (カスタマイズされていない SSDT)。\n• 注: S3 スリープと互換性があるのは、非 AOAC マシンのみです。 AOAC マシンは S3 スリープと競合し、S3 スリープをサポートしません。\n• チェックの結果、非 AOAC マシン (AOAC マシンは S3 スリープをサポートしていません。以下は読まないでください) のシステム ステータスが S3 スリープをサポートしていないことが示された場合は、次の状況が考えられます。\n  1. マザーボードのファームウェアは S3 スリープをサポートしていますが、BIOS 設定で S3 スリープが有効になっていません。有効にすると、S3 スリープをサポートできるようになります。\n  2. マザーボードのファームウェアは S3 を物理的に去勢しませんが、DSDT は _S3 メソッドを定義しません。 _S3 メソッドを完了すると、S3 のスリープ問題が解決される可能性があります。\n  3. マザーボードのファームウェアは S3 を物理的に去勢しており、S3 スリープをまったくサポートしていません。 _S3 メソッドが完了しても、S3 スリープ問題は修復できません。",
+  "ssdtMsg1126": "AOAC マシン (カスタマイズされていない SSDT) であるかどうかを確認します。",
+  "ssdtMsg1127": "• FACP.aml に基づいて AOAC マシン (カスタマイズされていない SSDT) であるかどうかを確認します。\n• 注: S3 スリープと互換性があるのは、非 AOAC マシンのみです。 AOAC マシンは S3 スリープと競合し、S3 スリープをサポートしません。 AOAC マシンはノートブックでは一般的です。\n• AOAC マシンが S3 スリープに入ると、スリープ後に復帰できず、クラッシュ状態になっているように見える場合があり、強制的にシャットダウンすることしかできません。 S3 スリープを無効にすることをお勧めします。\n• AOAC マシンでは、次の解決策を検討することをお勧めします。\n  1. BIOS のロックを解除し、AOAC を無効にします (通常は実行が困難ですが、最も安定しています)\n  2. S3 スリープを無効にする (BIOS で S3 スリープを無効にする、または S3 スリープを無効にする場合は SSDT-S3-DISABLE)\n  3. 独立したグラフィック電源をオフにします。\n  4.NVMeFix.kextを使用してSSDのAPSTを有効にします\n  5. ASPM を有効にする (BIOS 詳細オプションで ASPM が有効になり、SSDT パッチで L1 が有効になります)",
+  "ssdtMsg1128": "USBコントローラーによるスリープからの復帰の問題を修正",
+  "ssdtMsg1129": "• インスタント ウェイクアップの問題を解決するには、GPRW の名前を XPRW に変更します (注: USB キーボードでデバイスをウェイクアップできなくなる可能性があります。電源キーを使用してウェイクアップできます)。\n• ほとんどのプラットフォームは GPRW 方式を使用し、UPRW 方式を提供および使用しているプラットフォームはほとんどないため、SSDT-GPRW がより一般的に使用されます。\n• Skylake 以降のプラットフォームで利用可能",
+  "ssdtMsg1130": "USBコントローラーによるスリープからの復帰の問題を修正",
+  "ssdtMsg1131": "• インスタント ウェイクアップの問題を解決するには、GPRW の名前を XPRW に変更します (注: USB キーボードでデバイスをウェイクアップできなくなる可能性があります。電源キーを使用してウェイクアップできます)。\n• ほとんどのプラットフォームは GPRW 方式を使用し、UPRW 方式を提供および使用するプラットフォームはほとんどないため、SSDT-UPRW はほとんど使用されません。\n• Skylake 以降のプラットフォームで利用可能",
+  "ssdtMsg1132": "スリープ ボタンのスリープ問題を修正 (ノートブックに適用)",
+  "ssdtMsg1133": "• 一部のコンピュータがスリープ ボタン SLPB (PNP0C0E) を使用してスリープに入ると、ACPI が誤ったパラメータを送信し、macOS がシャットダウンであると誤って認識します。これにより、直接再起動、スリープ後のクラッシュ、またはスリープは成功したがシステム ステータスが破損する可能性があります。\n• スリープ ボタンを押したときに「蓋が閉じている」ふりをして、危険な PNP0C0E スリープを安全で安定した PNP0C0D スリープに強制します。\n• 通常はラップトップに適しています",
+  "ssdtMsg1134": "ウェイクアップ後に画面をオンにするために任意のキーを押す必要がある問題を修正しました",
+  "ssdtMsg1135": "• 一部のマシンがウェイクアップ後に画面をオンにするために任意のキーを押す必要がある問題を修正しました。",
+  "ssdtMsg1136": "起動後の電源ボタンの異常な呼吸ライトの問題を修正 (Lenovo ノートブックに適用)",
+  "ssdtMsg1137": "• 一部の Lenovo ノートブックで起動後、A 面の呼吸ライトと電源ボタンの呼吸ライトが通常に戻らない問題を修正しました。\n• 一部の Lenovo ノートブックでウェイクアップ後に F4 マイク インジケーター ライトのステータスが異常になる問題を修正しました。\n• 主に Lenovo シリーズのノートブックに適用されますが、他のブランドのノートブックには通常適用されません。",
+  "ssdtMsg1138": "システム S3 スリープ状態を無効にする (S3 スリープ ウェイクアップ クラッシュ、再起動、またはシャットダウンの問題を修正)",
+  "ssdtMsg1139": "• macOS システムがウェイクアップしたときのシステムのクラッシュ、再起動、またはシャットダウンを避けるために、macOS システムでのみ S3 スリープ状態を無効にしてください。\n• 無効にすると、macOS のみが S3 スリープをサポートしなくなります (スリープ ボタンをクリックするか、モニターが省電力モードになり、画面がオフになりますが、ホストは引き続き動作し、ファンの動作は停止しません)。\n• macOS で S3 スリープ状態を無効にした後は、macOS のシステム設定を変更する必要はなくなり、省エネモードをオフにする必要もありません (その前に、システム設定を変更する必要がある場合があります -> 非アクティブ時にディスプレイをオフにする -> 決してしない)\n• 該当するシナリオ: スリープの問題が修復されていない場合、macOS システム設定で省エネモードがオンになります (「非アクティブ時にディスプレイをオフにする -> 10 分間」)。システムがスリープ状態に入った後、macOS システムが復帰すると、システムがクラッシュ、再起動、またはシャットダウンする可能性があります。現時点では、S3 スリープ状態を無効にして問題を解決できます。\n• ACPI 名前変更パッチが必要: _S3 -> XS3",
+  "ssdtMsg1140": "一部のハードウェアが使用できない問題を修正するために、ホット リスタートがコールド リスタートに変更されました。",
+  "ssdtMsg1141": "• ホット リスタートがコールド リスタートに変更されました。これにより、一部のプラットフォームで Windows から macOS に再起動した後に一部のハードウェアが使用できなくなる問題が修正されます。 (例: サウンドカード、WiFi、Bluetooth)\n• 注: SSDT-FACP.aml は生成されません。 ACPI-Patch のみが生成されます。",
+  "ssdtMsg1142": "偽造グラフィックカード",
+  "ssdtMsg1143": "• AMD グラフィックス カードにのみ適用され、SSDT-GPU-SPOOF は macOS によって読み取られるデバイス ID を変更し、macOS にグラフィックス カードがサポートされているモデルであると誤って認識させ、アクセラレーション機能を有効にします。\n• 偽造が必要な一般的なグラフィックス カード モデル:\n  • AMD Radeon RX 550 Lexa コア\n  • AMD Radeon RX 6650XT、RX 6950XTなど。",
+  "ssdtMsg1144": "サポートされていないグラフィックス カード、NVMe ソリッド ステート ドライブなどの PCI デバイスをシールドします。",
+  "ssdtMsg1145": "• サポートされていないグラフィックス カード、NVMe ソリッド ステート ドライブ、ワイヤレス ネットワーク カードなどを含む、サポートされていない PCIe デバイスをブロックするには、3 つの一般的な方法 (OFF、PS3、および IOName をすべてブロック可能) があります。方法の優先順位: OFF > PS3 > IOName\n• SSDT-GPU-DISABLE-OFF (ノートブックに適用されます。デスクトップには一般に OFF 方法がありません) 独立したグラフィックス カードを ACPI レベルで無効にすることで、macOS システムは独立したグラフィックス カードを完全に検出できなくなり、独立したグラフィックス カードが電源オフ状態になり、消費電力が節約され、温度が下がります。\n• SSDT-GPU-DISABLE-PS3 (ノートブックに適用されます。デスクトップでは一般に PS3 方式は提供されません) ACPI レベルで独立したグラフィックス カードを無効にすることで、macOS システムの独立したグラフィックスは S3 スリープ状態で電力供給を停止することができ、それによって電力消費を節約し、温度を下げることができます。\n• SSDT-GPU-DISABLE-IOName (すべてのプラットフォームに適用) グラフィックス カードのデバイス ID を変更します。 macOS システムは引き続きグラフィック カードを検出しますが、対応するグラフィック カード ドライバーはロードされません。グラフィックス カードは非駆動状態にあるため、一定の電力消費があります。\n• ノートブックの元の ACPI テーブルに OFF メソッドと PS3 メソッドが含まれていない場合、対応する SSDT-GPU-DISABLE-OFF メソッドと SSDT-GPU-DISABLE-PS3 メソッドのシールドは失敗します。次善の策として IOName メソッドを使用して PCI デバイスをシールドすることをお勧めします。",
+  "ssdtMsg1146": "偽造された有線ネットワーク カード機器 (有線ネットワーク カードを搭載していないノートブックに該当)",
+  "ssdtMsg1147": "• Hackintosh システム用の NullEthernet 偽仮想ネットワーク カードを提供し、iMessage、Facetime、iCloud およびその他の Apple サービスの内蔵ネットワーク機器への依存を解決します。",
+  "ssdtMsg1148": "ノートブックの I2C タッチパッドの問題を修正 (ノートブックに適用)",
+  "ssdtMsg1149": "• ACPI ハードウェア ノードのマウントを修復し、デバイスが macOS システムで有効になっていることを確認し、一部の I2C タッチパッドが正常に認識されない問題を修正します。\n• SSDT-GPI0 は、ハードウェア デバイスをマウントするドライバーの問題を解決します。 SSDT-XOSI は主に、BIOS/ACPI 初期化ロジックとオペレーティング システム認識の間の非互換性の問題を解決するために使用されます (タッチパッドの問題を解決できる場合もあります)。",
+  "ssdtMsg1150": "B850、B650、B550、A520 チップセットの CPU 名前変更 (Ryzen プラットフォームのみ)",
+  "ssdtMsg1151": "• B850、B650、B550、および A520 チップセットの CPU 名前変更に適用して、AMD プラットフォームが CPU を認識できないことによって引き起こされるクラッシュ問題を修正します (事前に作成された SSDT パッチを使用する場合にのみ推奨)\n• SSDT パッチをカスタマイズする場合は、カスタマイズされた SSDT-PLUG を使用することをお勧めします。 (AMD Ryzen プラットフォームは、SSDT をカスタマイズするとその名前が自動的に SSDT-PLUG-ALT に変更されます)",
+  "ssdtMsg1152": "電源管理の修正 (Intel 第 12 世代以降、一部の AMD Ryzen およびその他のプラットフォームに適用)",
+  "ssdtMsg1153": "• macOS は、CPU 電源管理プラグイン (PluginType) に依存して CPU 周波数を調整し、エネルギー効率とバッテリー寿命を向上させます。\n• このパッチは CPU 定義を変更し、macOS が Apple デバイスに必要なプラグイン タイプ = 1 のプロセッサであると認識するようにします。これにより、CPU 周波数管理が正しく読み込まれ、パフォーマンスと消費電力の制御が向上します。\n• Intel Alder Lake 第 12 世代以降および一部の AMD Ryzen プラットフォームに適用可能",
+  "ssdtMsg1154": "AWAC (モダンタイマー) を無効にする (Intel Coffee Lake 第 8 世代以降で利用可能)",
+  "ssdtMsg1155": "• 従来の RTC を有効またはスプーフィングしている間は、AWAC (モダン タイマー) を無効にします。\n• Intel Coffee Lake 第 8 世代以降と互換性があります。",
+  "ssdtMsg1156": "すべてのネイティブ X99 (C612) マザーボードおよびほとんどのネイティブ X79 (C602) マザーボードで必要",
+  "ssdtMsg1157": "• この SSDT は、すべての X99 マザーボードとほとんどの X79 マザーボードに適用できます。その主な機能は、ACPI で未使用のデバイスを無効にして、IOPCIFamily がカーネル パニックを引き起こすのを防ぐことです。\n• 適用可能なマザーボード: すべてのネイティブ X99 (C612) マザーボードおよびほとんどのネイティブ X79 (C602) マザーボード。",
+  "ssdtMsg1158": "レガシー RTC タイマーを有効または偽装し、RTC 範囲を修正します (すべてのネイティブ X99 (C612) および X299 マザーボードに適用されます)",
+  "ssdtMsg1159": "• 従来の RTC タイマーを有効または偽装し、RTC 範囲を修正します。\n• 不正な起動時間、RTC 関連のエラー、スリープ ウェイクアップの問題などを解決します。\n• このSSDTは、すべてのX99(C612)マザーボードおよびX299マザーボードに適用できます。",
+  "ssdtMsg1160": "DTGP サポートを追加",
+  "ssdtMsg1161": "• ハードウェア デバイス属性を挿入して、グラフィック カード、サウンド カード、Thunderbolt カードなどの一部の ACPI 問題を修正します (DTGP メソッドがサポートされていない場合、これらの属性の挿入は失敗するか機能しない可能性があります)。",
+  "ssdtMsg1162": "標準 DMA コントローラの偽造",
+  "ssdtMsg1163": "• 標準の DMA コントローラ (ダイレクト メモリ アクセス コントローラ) を模倣し、ACPI リソース テーブルを完成させ、macOS が LPC バス デバイスと DMA 機能を適切に認識できるようにする仮想デバイス コントローラ (PNP0200)。\n• 通常、HEDT/サーバー プラットフォームには必要ありません。\n• 不足している部品を追加します。これは単なる完璧な解決策であり、必須ではありません。",
+  "ssdtMsg1164": "標準 PWRB コントローラの偽造",
+  "ssdtMsg1165": "• 標準の電源ボタン (PNP0C0C) デバイスを偽造して、macOS がシステムの電源ボタンを正常に認識し、スリープとウェイクアップをサポートできるようにします。\n• 一部の BIOS/マザーボードの ACPI ツリーには PNP0C0C がなく、macOS は電源ボタンを正しく処理できません。その結果、スリープできなくなったり、ウェイクアップできなくなったり、メニュー バーの電源ボタンが使用できなくなったりする可能性があります。\n• 不足している部品を追加します。これは単なる完璧な解決策であり、必須ではありません。",
+  "ssdtMsg1166": "標準 SLPB コントローラの偽造",
+  "ssdtMsg1167": "• 標準のスリープ ボタン (PNP0C0E) デバイスを偽造して、macOS がシステムのスリープ ボタンを正しく識別し、スリープおよびウェイク機能を実装できるようにします。\n• 一部の BIOS/マザーボードの ACPI ツリーには PNP0C0E がなく、macOS がスリープ ボタンを正しく処理できないため、スリープできなかったり、ウェイクアップできなかったり、メニュー バーのスリープ ボタンが使用できなくなったりする可能性があります。\n• この部品は PNP0C0E スリープ補正メソッドに必要です。\n• 不足している部品を追加します。これは単なる完璧な解決策であり、必須ではありません。",
+  "ssdtMsg1168": "IGPUを模倣するにはMEM2デバイスが必要です",
+  "ssdtMsg1169": "• IGPU に必要な MEM2 ACPI デバイスを追加し、IGPU 関連の問題を修正します\n• ドライバーの初期化エラーを回避するために、コア ディスプレイ メモリ マッピングを補足します。\n• 適用範囲: Haswell ～ Kaby Lake、コアグラフィックスシステムのみ。通常、この SSDT を必要としないのはディスクリート グラフィックスだけです。",
+  "ssdtMsg1170": "リモート情報の取得に失敗しました: {arg0}",
+  "@ssdtMsg1170": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1171": "ローカルにキャッシュされたリモート ツールが使用されますが、無効になる可能性があるため、使用には注意してください。",
+  "ssdtMsg1172": "検証エラー: {arg0}",
+  "@ssdtMsg1172": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1173": "検証情報に {arg0} が含まれていません",
+  "@ssdtMsg1173": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1174": "タスク {arg0} はすでに実行されており、完了を待っています...",
+  "@ssdtMsg1174": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1175": "組み込みツール {arg0} を確認します...",
+  "@ssdtMsg1175": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1176": "組み込みツール {arg0} の検証に合格しました。",
+  "@ssdtMsg1176": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1177": "組み込みツール {arg0} が無効です。もう一度コピーしてください",
+  "@ssdtMsg1177": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1178": "リモート ツール {arg0} を確認します...",
+  "@ssdtMsg1178": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1179": "組み込みモードに切り替えられ、リモート タスク {arg0} が放棄されました",
+  "@ssdtMsg1179": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1180": "リモート ツール {arg0} が検証に合格しました",
+  "@ssdtMsg1180": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1181": "リモート ツール {arg0} の検証ステータスが不明です。使用には注意してください。",
+  "@ssdtMsg1181": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1182": "リモート ツール {arg0} は、ファイルが存在しないか無効であることを確認できませんでした。再度ダウンロードしてください。",
+  "@ssdtMsg1182": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1183": "ダウンロード/抽出に失敗しました: {arg0}",
+  "@ssdtMsg1183": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1184": "解凍を開始します: {arg0}",
+  "@ssdtMsg1184": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1185": "ZIP ファイルが存在しません: {arg0}",
+  "@ssdtMsg1185": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1186": "{arg0} ダウンロードの進行状況:",
+  "@ssdtMsg1186": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1187": "{arg0}% |速度: {arg1} |残り: {arg2}",
+  "@ssdtMsg1187": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1188": "組み込みツールをコピーできませんでした: {arg0} から {arg1}",
+  "@ssdtMsg1188": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1189": "アセットのコピーに失敗しました ({arg0} → {arg1}): {arg2}",
+  "@ssdtMsg1189": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1190": "サポートされていないプラットフォーム: {arg0}",
+  "@ssdtMsg1190": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1191": "タスク {arg0} はすでに実行されており、完了を待っています...",
+  "@ssdtMsg1191": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1192": "{arg0} の実行に失敗しました: {arg1}",
+  "@ssdtMsg1192": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1193": "ネットワークリンクがタイムアウトしました!後でもう一度試してください: {arg0}",
+  "@ssdtMsg1193": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1194": "例外が発生しました: {arg0}",
+  "@ssdtMsg1194": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1195": "{arg0}ツール {arg1} の準備ができました!\\n",
+  "@ssdtMsg1195": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1196": "{arg0}ツール {arg1} の準備ができていません。 {arg2}! \\n",
+  "@ssdtMsg1196": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      },
+      "arg1": {
+        "type": "String"
+      },
+      "arg2": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1197": "iasl ツールの初期化に失敗しました",
+  "ssdtMsg1198": "iasl ツールの初期化に失敗しました: {arg0}",
+  "@ssdtMsg1198": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1199": "ネットワーク接続例外: {arg0}",
+  "@ssdtMsg1199": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1200": "内蔵",
+  "ssdtMsg1201": "リモート",
+  "ssdtMsg1202": "ツールの整合性を確認してください",
+  "ssdtMsg1203": "内蔵モードに切り替えることをお勧めします",
+  "ssdtMsg1204": "ホームディレクトリを取得できません",
+  "ssdtMsg1205": "サポートされていないオペレーティング システム: {arg0}",
+  "@ssdtMsg1205": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1206": "ソースディレクトリが存在しません",
+  "ssdtMsg1207": "デスクトップディレクトリを取得できません",
+  "ssdtMsg1208": "ファイル システム エラー: {arg0}",
+  "@ssdtMsg1208": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1209": "パスエラーの処理: {arg0}",
+  "@ssdtMsg1209": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1210": "更新を確認しています。お待ちください...",
+  "ssdtMsg1211": "アップデートを確認しました。後でもう一度お試しください",
+  "ssdtMsg1212": "現在、{arg0} が最新バージョンです",
+  "@ssdtMsg1212": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1213": "新しいバージョンが見つかりました: {arg0}",
+  "@ssdtMsg1213": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "ssdtMsg1214": "アップデートの確認に失敗しました。後でもう一度お試しください",
+  "ssdtMsg1215": "リリース バージョン リストを取得できませんでした。後でもう一度お試しください。",
+  "ssdtMsg1216": "リリース バージョン リストが空です",
+  "ssdtMsg1217": "エラーが発生しました: {arg0}",
+  "@ssdtMsg1217": {
+    "placeholders": {
+      "arg0": {
+        "type": "String"
+      }
+    }
+  },
+  "platformName1000": "ジェネレーション 0-Penryn-775 プラットフォーム",
+  "platformName1001": "ジェネレーション 0-ペンリン-ノートブック",
+  "platformName1002": "世代 0-Penryn-mini ホスト",
+  "platformName1003": "第 10 世代 - Cascade Lake - X&W-X599 プラットフォーム",
+  "platformName1004": "第 10 世代 - Comet Lake - 1200 プラットフォーム",
+  "platformName1005": "第 10 世代 - Comet Lake - ラップトップ",
+  "platformName1006": "10代目-Comet Lake-ミニホスト",
+  "platformName1007": "第 10 世代 - Ice Lake - ラップトップ",
+  "platformName1008": "第10世代 - Ice Lake - ミニホスト",
+  "platformName1009": "第 11 世代 - Rocket Lake - 1200 プラットフォーム",
+  "platformName1010": "第 11 世代 - Rocket Lake - ラップトップ",
+  "platformName1011": "11代目 - Tiger Lake - ミニホスト",
+  "platformName1012": "第12世代-Alder Lake-1700プラットフォーム",
+  "platformName1013": "12代目-アルダーレイク-ノート",
+  "platformName1014": "12代目-Alder Lake-ミニホスト",
+  "platformName1015": "第 13 世代 - Raptor Lake-1700 プラットフォーム",
+  "platformName1016": "13代目-Raptor Lake-ノート",
+  "platformName1017": "13代目-Raptor Lake-ミニホスト",
+  "platformName1018": "第 14 世代 - Raptor Lake-1700 プラットフォーム",
+  "platformName1019": "14代目-Raptor Lake-ノートブック",
+  "platformName1020": "第14世代 - Raptor Lake - ミニホスト",
+  "platformName1021": "第 15 世代 - Arrow Lake - 1851 プラットフォーム",
+  "platformName1022": "15代目-アローレイク-手帳",
+  "platformName1023": "15代目 - Arrow Lake - ミニホスト",
+  "platformName1024": "第 1 世代 - アランデール - ノートブック",
+  "platformName1025": "第 1 世代 - アランデール - ミニ ホスト",
+  "platformName1026": "第 1 世代 - Lynnfield-1156 プラットフォーム",
+  "platformName1027": "第 1 世代 - Nehalem&Westmere - X58 プラットフォーム",
+  "platformName1028": "第 2 世代 - Sandy Bridge - 1155 プラットフォーム",
+  "platformName1029": "第2世代-Sandy Bridge-E-X79プラットフォーム",
+  "platformName1030": "2代目-Sandy Bridge-ノート",
+  "platformName1031": "2代目-Sandy Bridge-ミニホスト",
+  "platformName1032": "第 3 世代 - Ivy Bridge - 1155 プラットフォーム",
+  "platformName1033": "第 3 世代 - Ivy Bridge - E-X79 プラットフォーム",
+  "platformName1034": "3代目-Ivy Bridge-ノートブック",
+  "platformName1035": "第 3 世代 - Ivy Bridge - ミニホスト",
+  "platformName1036": "第4世代Haswell-1150プラットフォーム",
+  "platformName1037": "第4世代Haswell-E-X99プラットフォーム",
+  "platformName1038": "第 4 世代 - Haswell - ラップトップ",
+  "platformName1039": "第4世代-Haswell-miniホスト",
+  "platformName1040": "第 5 世代 - Broadwell-1150 プラットフォーム",
+  "platformName1041": "第 5 世代 - Broadwell-E-X99 プラットフォーム",
+  "platformName1042": "第5世代-Broadwell-ノートブック",
+  "platformName1043": "第 5 世代 - Broadwell - ミニ ホスト",
+  "platformName1044": "第6世代-Skylake-1151プラットフォーム",
+  "platformName1045": "第6世代-Skylake-X&W-X299プラットフォーム",
+  "platformName1046": "第6世代-Skylake-ノートブック",
+  "platformName1047": "第6世代-Skylake-miniホスト",
+  "platformName1048": "第 7 世代 - Kaby Lake - 1151 プラットフォーム",
+  "platformName1049": "第 7 世代 - Kaby Lake - ノートブック",
+  "platformName1050": "第7世代 - Kaby Lake - ミニホスト",
+  "platformName1051": "第8世代-Coffee Lake-1151プラットフォーム",
+  "platformName1052": "第 8 世代-Coffee Lake-ノートブック",
+  "platformName1053": "8代目-Coffee Lake-ミニホスト",
+  "platformName1054": "第9世代-Coffee Lake-1151プラットフォーム",
+  "platformName1055": "第9世代-Coffee Lake-ノートブック",
+  "platformName1056": "9代目-Coffee Lake-ミニホスト",
+  "platformName1057": "ブルドーザー(15時間)とジャガー(16時間)",
+  "platformName1058": "ブルドーザー (15 時間) およびジャガー (16 時間) - ノートブック",
+  "platformName1059": "ブルドーザー (15 時間) およびジャガー (16 時間) - ミニ ホスト",
+  "platformName1060": "Ryzen と Threadripper (17 時間と 19 時間)",
+  "platformName1061": "Ryzen および Threadripper (17 時間および 19 時間) - ハイエンド サーバー",
+  "platformName1062": "Ryzen ノートブック",
+  "platformName1063": "Ryzen-miniホスト",
+  "platformName1064": "サーバ",
+  "platformName1065": "ノート",
+  "platformName1066": "ミニホスト"
+}
