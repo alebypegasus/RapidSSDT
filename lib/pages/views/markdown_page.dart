@@ -3,6 +3,7 @@
 //
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 import 'package:rapidssdt/pages/views/markdown_viewer.dart';
 
 class MarkdownPage extends StatelessWidget {
@@ -19,21 +20,39 @@ class MarkdownPage extends StatelessWidget {
     this.showAppBar = false,
   });
 
+  Future<String> _loadLocalizedMarkdown(BuildContext context) async {
+    final locale = Localizations.localeOf(context);
+    final langCode = locale.languageCode;
+
+    if (mdPath.contains('assets/guide/guide')) {
+      final localizedPath = 'assets/guide/guide_$langCode.md';
+      try {
+        return await rootBundle.loadString(localizedPath);
+      } catch (_) {
+        // Fallback para arquivo padrão
+      }
+    }
+    return await rootBundle.loadString(mdPath);
+  }
+
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Scaffold(
       appBar: showAppBar
           ? AppBar(centerTitle: true, title: Text(title ?? ''))
           : null,
       body: FutureBuilder<String>(
-        future: rootBundle.loadString(mdPath),
+        future: _loadLocalizedMarkdown(context),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasError) {
             return Center(
-              child: Text('加载失败：${snapshot.error}',
-                  style: const TextStyle(color: Colors.red)),
+              child: Text(
+                'Failed to load document: ${snapshot.error}',
+                style: const TextStyle(color: Colors.red),
+              ),
             );
           } else {
             return MarkdownViewer(data: snapshot.data!);

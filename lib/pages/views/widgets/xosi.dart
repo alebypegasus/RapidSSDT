@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:rapidssdt/utils/ssdttool/config.dart';
 import 'package:rapidssdt/widgets/custom_dropdown_button.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 class XOSIPatchOptions extends StatefulWidget {
   const XOSIPatchOptions({super.key, this.onChanged});
@@ -15,7 +16,6 @@ class XOSIPatchOptions extends StatefulWidget {
 
 class _XOSIPatchOptionsState extends State<XOSIPatchOptions> {
   String? targetString;
-  final String placeholder = '选择XOSI的目标系统';
   String? selectedOSIValue;
   @override
   void initState() {
@@ -27,6 +27,9 @@ class _XOSIPatchOptionsState extends State<XOSIPatchOptions> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final String placeholder = l10n?.selectXosiTarget ?? '选择XOSI的目标系统';
+
     return Container(
       constraints: BoxConstraints(minHeight: 60, minWidth: double.infinity),
       padding: EdgeInsets.all(12),
@@ -38,14 +41,14 @@ class _XOSIPatchOptionsState extends State<XOSIPatchOptions> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('不选择则会根据DSDT自动探测OSID版本', style: TextStyle(fontSize: 11)),
+            Text(l10n?.autoDetectOsid ?? '不选择则会根据DSDT自动探测OSID版本', style: const TextStyle(fontSize: 11)),
             Row(
               mainAxisSize: MainAxisSize.min,
               spacing: 5,
               children: [
-                const Text(
-                  'OSID选择:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.osidSelection ?? 'OSID选择:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 Flexible(
                   child: SingleChildScrollView(

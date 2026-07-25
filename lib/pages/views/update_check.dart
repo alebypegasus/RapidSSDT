@@ -10,6 +10,7 @@ import 'package:rapidssdt/utils/update/repo_context.dart';
 import 'package:rapidssdt/utils/update/repo_sevice.dart';
 import 'package:rapidssdt/widgets/inkwell_widget.dart';
 import 'package:rapidssdt/widgets/link_button.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 class UpdateDialog extends StatelessWidget {
   const UpdateDialog._(this._ctx);
@@ -47,6 +48,7 @@ class UpdateDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     final release = _ctx.release;
     final asset = release.assetForCurrentPlatform();
+    final l10n = AppLocalizations.of(context);
 
     return Dialog(
       insetPadding: const EdgeInsets.symmetric(horizontal: 24, vertical: 24),
@@ -59,13 +61,13 @@ class UpdateDialog extends StatelessWidget {
             children: [
               Center(
                 child: Text(
-                  '${_ctx.repoConfig.repo}发现新版本',
+                  '${_ctx.repoConfig.repo} ${l10n?.newVersionFound ?? "发现新版本"}',
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ),
               const SizedBox(height: 6),
-              Text('版本号：${release.tag}'),
-              Text('发布时间：${release.publishedAt}'),
+              Text('${l10n?.versionNumber ?? "版本号："}${release.tag}'),
+              Text('${l10n?.releaseTime ?? "发布时间："}${release.publishedAt}'),
               const Divider(height: 24),
               Expanded(child: MarkdownViewer(data: release.body)),
               const SizedBox(height: 12),
@@ -75,12 +77,12 @@ class UpdateDialog extends StatelessWidget {
                 children: [
                   CustomLinkButton(
                     url: _ctx.repoConfig.releasesUrl,
-                    buttonText: '访问 GitHub',
+                    buttonText: l10n?.visitGithub ?? '访问 GitHub',
                   ),
                   if (asset != null)
                     CustomLinkButton(
                       url: asset.downloadUrl,
-                      buttonText: '立即下载',
+                      buttonText: l10n?.downloadNow ?? '立即下载',
                     ),
                   InkWellWidget(
                     width: 60,
@@ -88,7 +90,7 @@ class UpdateDialog extends StatelessWidget {
                     radius: 6,
                     backgroundColor: Colors.transparent,
                     onTap: () => Navigator.of(context).pop(),
-                    child: const Text('关闭'),
+                    child: Text(l10n?.close ?? '关闭'),
                   ),
                 ],
               ),

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:rapidssdt/pages/views/widgets/path_textfield.dart';
 import 'package:rapidssdt/widgets/copyable_text.dart';
 import 'package:rapidssdt/widgets/inkwell_widget.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 class PCIBridgePatchOptions extends StatefulWidget {
   const PCIBridgePatchOptions({super.key, required this.onChanged});
@@ -27,6 +28,7 @@ class _PCIBridgePatchOptionsState extends State<PCIBridgePatchOptions> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Container(
       constraints: BoxConstraints(minHeight: 60, minWidth: double.infinity),
       padding: EdgeInsets.all(15),
@@ -40,8 +42,8 @@ class _PCIBridgePatchOptionsState extends State<PCIBridgePatchOptions> {
           spacing: 10,
           children: [
             Text(
-              '符合要求的设备路径应具有以下格式之一:',
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+              l10n?.validDevicePathFormat ?? '符合要求的设备路径应具有以下格式之一:',
+              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
             ),
             CopyableText(
               title: 'macOS:',
@@ -59,9 +61,9 @@ class _PCIBridgePatchOptionsState extends State<PCIBridgePatchOptions> {
               mainAxisSize: MainAxisSize.min,
               spacing: 15,
               children: [
-                const Text(
-                  'PCI桥接路径:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.pciBridgePath ?? 'PCI桥接路径:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 Flexible(
                   child: IntrinsicWidth(
@@ -93,13 +95,13 @@ class _PCIBridgePatchOptionsState extends State<PCIBridgePatchOptions> {
                     });
                   },
                   child: Text(
-                    '添加',
-                    style: TextStyle(color: Colors.white, fontSize: 11),
+                    l10n?.add ?? '添加',
+                    style: const TextStyle(color: Colors.white, fontSize: 11),
                   ),
                 ),
               ],
             ),
-            Text('已添加PCI列表:', style: TextStyle(fontSize: 11)),
+            Text(l10n?.addedPciList ?? '已添加PCI列表:', style: const TextStyle(fontSize: 11)),
             Wrap(
               spacing: 6,
               runSpacing: 6,
@@ -107,7 +109,7 @@ class _PCIBridgePatchOptionsState extends State<PCIBridgePatchOptions> {
                 ...pciBridges.map((bridge) {
                   return Chip(
                     label: Text(bridge, style: TextStyle(fontSize: 11)),
-                    deleteButtonTooltipMessage: '删除',
+                    deleteButtonTooltipMessage: l10n?.delete ?? '删除',
                     onDeleted: () {
                       setState(() {
                         pciBridges.remove(bridge);

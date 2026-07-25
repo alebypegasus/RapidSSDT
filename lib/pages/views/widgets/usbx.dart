@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:rapidssdt/utils/ssdttool/config.dart';
 import 'package:rapidssdt/widgets/checkboxlist/smart_checkbox_list.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 class USBXPatchOptions extends StatefulWidget {
   const USBXPatchOptions({super.key, this.onChanged});
@@ -33,18 +34,20 @@ class _USBXPatchOptionsState extends State<USBXPatchOptions> {
   }
 
   @override
-  Widget build(BuildContext context) => Container(
-    constraints: const BoxConstraints(minHeight: 40, minWidth: double.infinity),
-    padding: const EdgeInsets.all(12),
-    decoration: BoxDecoration(
-      border: Border.all(color: Colors.grey),
-      borderRadius: BorderRadius.circular(6),
-    ),
-    child: SingleChildScrollView(
-      child: SmartCheckBoxList(
-        isMultipleSelection: true,
-        title: 'USBX 补丁:',
-        choices: _defaultProps.entries
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    return Container(
+      constraints: const BoxConstraints(minHeight: 40, minWidth: double.infinity),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        border: Border.all(color: Colors.grey),
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: SingleChildScrollView(
+        child: SmartCheckBoxList(
+          isMultipleSelection: true,
+          title: l10n?.usbxPatch ?? 'USBX 补丁:',
+          choices: _defaultProps.entries
             .map((e) => '${e.key}$_split${e.value}')
             .toList(),
         selectedChoices: _current.entries
@@ -57,4 +60,5 @@ class _USBXPatchOptionsState extends State<USBXPatchOptions> {
       ),
     ),
   );
+}
 }

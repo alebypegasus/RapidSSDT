@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:rapidssdt/utils/ssdttool/util.dart';
 import 'package:rapidssdt/widgets/custom_textfield.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 enum PathType {
   acpi,
@@ -35,22 +36,24 @@ class _PathTextFieldState extends State<PathTextField> {
   late final TextEditingController _controller;
   final FocusNode _focusNode = FocusNode();
 
-  String get _defaultHintText {
+  String _getDefaultHintText(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     switch (widget.pathType) {
       case PathType.acpi:
-        return '填写ACPI路径';
+        return l10n?.fillAcpiPath ?? '填写ACPI路径';
       case PathType.pci:
-        return '填写PCI路径';
+        return l10n?.fillPciPath ?? '填写PCI路径';
     }
   }
 
   // 根据路径类型获取默认错误文本
-  String get _defaultErrorText {
+  String _getDefaultErrorText(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     switch (widget.pathType) {
       case PathType.acpi:
-        return '无效ACPI路径';
+        return l10n?.invalidAcpiPath ?? '无效ACPI路径';
       case PathType.pci:
-        return '无效PCI路径';
+        return l10n?.invalidPciPath ?? '无效PCI路径';
     }
   }
 
@@ -75,8 +78,8 @@ class _PathTextFieldState extends State<PathTextField> {
     return CustomTextField(
       controller: _controller,
       focusNode: _focusNode,
-      hintText: widget.hintText ?? _defaultHintText,
-      errorText: widget.errorText ?? _defaultErrorText,
+      hintText: widget.hintText ?? _getDefaultHintText(context),
+      errorText: widget.errorText ?? _getDefaultErrorText(context),
       // 输入过滤（禁止汉字）
       inputFormatters: [
         FilteringTextInputFormatter.deny(

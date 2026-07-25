@@ -3,29 +3,31 @@
 //
 import 'package:flutter/material.dart';
 
-class ButtonSegmentWidget extends StatefulWidget {
+class ButtonSegmentWidget<T> extends StatefulWidget {
   const ButtonSegmentWidget({
     super.key,
-    required this.labels,
+    required this.values,
+    required this.labelBuilder,
     this.onSelectionChanged,
     this.initialSelection,
   });
 
-  final List<String> labels;
-  final ValueChanged<Set<String>>? onSelectionChanged;
-  final Set<String>? initialSelection;
+  final List<T> values;
+  final String Function(T) labelBuilder;
+  final ValueChanged<Set<T>>? onSelectionChanged;
+  final Set<T>? initialSelection;
 
   @override
-  State<ButtonSegmentWidget> createState() => _ButtonSegmentWidgetState();
+  State<ButtonSegmentWidget<T>> createState() => _ButtonSegmentWidgetState<T>();
 }
 
-class _ButtonSegmentWidgetState extends State<ButtonSegmentWidget> {
-  late Set<String> selected;
+class _ButtonSegmentWidgetState<T> extends State<ButtonSegmentWidget<T>> {
+  late Set<T> selected;
 
   @override
   void initState() {
     super.initState();
-    selected = widget.initialSelection ?? {widget.labels.first};
+    selected = widget.initialSelection ?? {widget.values.first};
   }
 
   @override
@@ -34,10 +36,11 @@ class _ButtonSegmentWidgetState extends State<ButtonSegmentWidget> {
     final isDarkMode = theme.brightness == Brightness.dark;
     final themeColor = theme.colorScheme.primary;
 
-    final segments = widget.labels.map((text) {
-      final isSelected = selected.contains(text);
-      return ButtonSegment<String>(
-        value: text,
+    final segments = widget.values.map((val) {
+      final isSelected = selected.contains(val);
+      final text = widget.labelBuilder(val);
+      return ButtonSegment<T>(
+        value: val,
         label: Text(
           text,
           style: TextStyle(
@@ -52,7 +55,7 @@ class _ButtonSegmentWidgetState extends State<ButtonSegmentWidget> {
 
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
-      child: SegmentedButton<String>(
+      child: SegmentedButton<T>(
         segments: segments,
         selected: selected,
         showSelectedIcon: false,

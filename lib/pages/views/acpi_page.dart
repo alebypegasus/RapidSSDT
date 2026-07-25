@@ -26,13 +26,138 @@ import 'package:rapidssdt/widgets/choose_file.dart';
 import 'package:rapidssdt/widgets/inkwell_widget.dart';
 import 'package:rapidssdt/pages/viewmodel/patch_viewmodel.dart';
 
+import 'package:rapidssdt/l10n/language_provider.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
+
 class AcpiPage extends StatefulWidget {
-  const AcpiPage({super.key});
+  final LanguageProvider? languageProvider;
+  const AcpiPage({super.key, this.languageProvider});
   @override
   State<AcpiPage> createState() => _AcpiPageState();
 }
 
 class _AcpiPageState extends State<AcpiPage> {
+  String _getCategoryName(String key, AppLocalizations? l10n) {
+    switch (key) {
+      case 'corePatches': return l10n?.corePatches ?? '核心补丁';
+      case 'functionPatches': return l10n?.functionPatches ?? '功能补丁';
+      case 'devicePatches': return l10n?.devicePatches ?? '设备补丁';
+      case 'specialPatches': return l10n?.specialPatches ?? '专用补丁';
+      case 'sleepPatches': return l10n?.sleepPatches ?? '睡眠补丁';
+      case 'auxiliaryPatches': return l10n?.auxiliaryPatches ?? '辅助补丁';
+      case 'prebuiltPatches': return l10n?.prebuiltPatches ?? '预制补丁';
+      default: return key;
+    }
+  }
+
+  String _getCategoryRemark(String key, AppLocalizations? l10n) {
+    switch (key) {
+      case 'corePatches': return l10n?.corePatchesRemark ?? '系统正常启动和电源管理必需的基础补丁';
+      case 'functionPatches': return l10n?.functionPatchesRemark ?? '提供额外功能或修复特性问题的补丁';
+      case 'devicePatches': return l10n?.devicePatchesRemark ?? '针对显卡硬件的补丁';
+      case 'specialPatches': return l10n?.specialPatchesRemark ?? '仅在特定主板或架构需要的补丁';
+      case 'sleepPatches': return l10n?.sleepPatchesRemark ?? '非必需，用于修复睡眠问题';
+      case 'auxiliaryPatches': return l10n?.auxiliaryPatchesRemark ?? '非必需，但可以补全ACPI结构或增强兼容性';
+      default: return key;
+    }
+  }
+
+  String _getRemark(String name, String defaultRemark, AppLocalizations? l10n) {
+    if (l10n == null) return defaultRemark;
+    switch(name) {
+      case 'SSDT-HPET': return l10n.remark_ssdtHPET ?? defaultRemark;
+      case 'SSDT-EC-USBX-DESKTOP': return l10n.remark_ssdtECUSBXDesktop ?? defaultRemark;
+      case 'SSDT-EC-USBX-LAPTOP': return l10n.remark_ssdtECUSBXLaptop ?? defaultRemark;
+      case 'SSDT-EC-DESKTOP': return l10n.remark_ssdtECDesktop ?? defaultRemark;
+      case 'SSDT-EC-LAPTOP': return l10n.remark_ssdtECLaptop ?? defaultRemark;
+      case 'SSDT-USBX': return l10n.remark_ssdtUSBX ?? defaultRemark;
+      case 'SSDT-PLUG': return l10n.remark_ssdtPLUG ?? defaultRemark;
+      case 'SSDT-PMC': return l10n.remark_ssdtPMC ?? defaultRemark;
+      case 'SSDT-PNLF': return l10n.remark_ssdtPNLF ?? defaultRemark;
+      case 'SSDT-ALS0': return l10n.remark_ssdtALS0 ?? defaultRemark;
+      case 'SSDT-XOSI': return l10n.remark_ssdtXOSI ?? defaultRemark;
+      case 'SSDT-RHUB': return l10n.remark_ssdtRHUB ?? defaultRemark;
+      case 'SSDT-Bridge': return l10n.remark_ssdtBridge ?? defaultRemark;
+      case 'SSDT-DMAR': return l10n.remark_ssdtDMAR ?? defaultRemark;
+      case 'SSDT-APIC': return l10n.remark_ssdtAPIC ?? defaultRemark;
+      case 'SSDT-SBUS-MCHC': return l10n.remark_ssdtSBUSMCHC ?? defaultRemark;
+      case 'SSDT-IMEI': return l10n.remark_ssdtIMEI ?? defaultRemark;
+      case 'SSDT-FixShutdown': return l10n.remark_ssdtFixShutdown ?? defaultRemark;
+      case 'Check-System-State': return l10n.remark_checkSystemState ?? defaultRemark;
+      case 'Check-AOAC': return l10n.remark_checkAOAC ?? defaultRemark;
+      case 'SSDT-GPRW': return l10n.remark_ssdtGPRW ?? defaultRemark;
+      case 'SSDT-UPRW': return l10n.remark_ssdtUPRW ?? defaultRemark;
+      case 'SSDT-LID': return l10n.remark_ssdtLID ?? defaultRemark;
+      case 'SSDT-WakeScreen': return l10n.remark_ssdtWakeScreen ?? defaultRemark;
+      case 'SSDT-LED': return l10n.remark_ssdtLED ?? defaultRemark;
+      case 'SSDT-S3-DISABLE': return l10n.remark_ssdtS3Disable ?? defaultRemark;
+      case 'SSDT-FACP': return l10n.remark_ssdtFACP ?? defaultRemark;
+      case 'SSDT-GPU-SPOOF': return l10n.remark_ssdtGPUSPOOF ?? defaultRemark;
+      case 'SSDT-PCI-DISABLE': return l10n.remark_ssdtPCIDISABLE ?? defaultRemark;
+      case 'SSDT-RMNE': return l10n.remark_ssdtRMNE ?? defaultRemark;
+      case 'SSDT-GPI0': return l10n.remark_ssdtGPI0 ?? defaultRemark;
+      case 'SSDT-CPUR': return l10n.remark_ssdtCPUR ?? defaultRemark;
+      case 'SSDT-PLUG-ALT': return l10n.remark_ssdtPLUGALT ?? defaultRemark;
+      case 'SSDT-AWAC': return l10n.remark_ssdtAWAC ?? defaultRemark;
+      case 'SSDT-UNC': return l10n.remark_ssdtUNC ?? defaultRemark;
+      case 'SSDT-RTC0-RANGE': return l10n.remark_ssdtRTC0RANGE ?? defaultRemark;
+      case 'SSDT-DTGP': return l10n.remark_ssdtDTGP ?? defaultRemark;
+      case 'SSDT-DMAC': return l10n.remark_ssdtDMAC ?? defaultRemark;
+      case 'SSDT-PWRB': return l10n.remark_ssdtPWRB ?? defaultRemark;
+      case 'SSDT-SLPB': return l10n.remark_ssdtSLPB ?? defaultRemark;
+      case 'SSDT-MEM2': return l10n.remark_ssdtMEM2 ?? defaultRemark;
+      default: return defaultRemark;
+    }
+  }
+
+  String _getNote(String name, String defaultNote, AppLocalizations? l10n) {
+    if (l10n == null) return defaultNote;
+    switch(name) {
+      case 'SSDT-HPET': return l10n.note_ssdtHPET ?? defaultNote;
+      case 'SSDT-EC-USBX-DESKTOP': return l10n.note_ssdtECUSBXDesktop ?? defaultNote;
+      case 'SSDT-EC-USBX-LAPTOP': return l10n.note_ssdtECUSBXLaptop ?? defaultNote;
+      case 'SSDT-EC-DESKTOP': return l10n.note_ssdtECDesktop ?? defaultNote;
+      case 'SSDT-EC-LAPTOP': return l10n.note_ssdtECLaptop ?? defaultNote;
+      case 'SSDT-USBX': return l10n.note_ssdtUSBX ?? defaultNote;
+      case 'SSDT-PLUG': return l10n.note_ssdtPLUG ?? defaultNote;
+      case 'SSDT-PMC': return l10n.note_ssdtPMC ?? defaultNote;
+      case 'SSDT-PNLF': return l10n.note_ssdtPNLF ?? defaultNote;
+      case 'SSDT-ALS0': return l10n.note_ssdtALS0 ?? defaultNote;
+      case 'SSDT-XOSI': return l10n.note_ssdtXOSI ?? defaultNote;
+      case 'SSDT-RHUB': return l10n.note_ssdtRHUB ?? defaultNote;
+      case 'SSDT-Bridge': return l10n.note_ssdtBridge ?? defaultNote;
+      case 'SSDT-DMAR': return l10n.note_ssdtDMAR ?? defaultNote;
+      case 'SSDT-APIC': return l10n.note_ssdtAPIC ?? defaultNote;
+      case 'SSDT-SBUS-MCHC': return l10n.note_ssdtSBUSMCHC ?? defaultNote;
+      case 'SSDT-IMEI': return l10n.note_ssdtIMEI ?? defaultNote;
+      case 'SSDT-FixShutdown': return l10n.note_ssdtFixShutdown ?? defaultNote;
+      case 'Check-System-State': return l10n.note_checkSystemState ?? defaultNote;
+      case 'Check-AOAC': return l10n.note_checkAOAC ?? defaultNote;
+      case 'SSDT-GPRW': return l10n.note_ssdtGPRW ?? defaultNote;
+      case 'SSDT-UPRW': return l10n.note_ssdtUPRW ?? defaultNote;
+      case 'SSDT-LID': return l10n.note_ssdtLID ?? defaultNote;
+      case 'SSDT-WakeScreen': return l10n.note_ssdtWakeScreen ?? defaultNote;
+      case 'SSDT-LED': return l10n.note_ssdtLED ?? defaultNote;
+      case 'SSDT-S3-DISABLE': return l10n.note_ssdtS3Disable ?? defaultNote;
+      case 'SSDT-FACP': return l10n.note_ssdtFACP ?? defaultNote;
+      case 'SSDT-GPU-SPOOF': return l10n.note_ssdtGPUSPOOF ?? defaultNote;
+      case 'SSDT-PCI-DISABLE': return l10n.note_ssdtPCIDISABLE ?? defaultNote;
+      case 'SSDT-RMNE': return l10n.note_ssdtRMNE ?? defaultNote;
+      case 'SSDT-GPI0': return l10n.note_ssdtGPI0 ?? defaultNote;
+      case 'SSDT-CPUR': return l10n.note_ssdtCPUR ?? defaultNote;
+      case 'SSDT-PLUG-ALT': return l10n.note_ssdtPLUGALT ?? defaultNote;
+      case 'SSDT-AWAC': return l10n.note_ssdtAWAC ?? defaultNote;
+      case 'SSDT-UNC': return l10n.note_ssdtUNC ?? defaultNote;
+      case 'SSDT-RTC0-RANGE': return l10n.note_ssdtRTC0RANGE ?? defaultNote;
+      case 'SSDT-DTGP': return l10n.note_ssdtDTGP ?? defaultNote;
+      case 'SSDT-DMAC': return l10n.note_ssdtDMAC ?? defaultNote;
+      case 'SSDT-PWRB': return l10n.note_ssdtPWRB ?? defaultNote;
+      case 'SSDT-SLPB': return l10n.note_ssdtSLPB ?? defaultNote;
+      case 'SSDT-MEM2': return l10n.note_ssdtMEM2 ?? defaultNote;
+      default: return defaultNote;
+    }
+  }
+
   late PatchViewModel patchViewModel = PatchViewModelProvider.of(context);
 
   @override
@@ -48,6 +173,8 @@ class _AcpiPageState extends State<AcpiPage> {
   Widget _buildPatchOption(String action) {
     final config = patchViewModel.patchConfigs[action];
     if (config == null) return const SizedBox.shrink();
+
+    final l10n = AppLocalizations.of(context);
 
     Widget buildWithConfig(Widget Function(dynamic data) builder) {
       return ValueListenableBuilder<dynamic>(
@@ -92,8 +219,8 @@ class _AcpiPageState extends State<AcpiPage> {
 
       ACPITable.ssdtDMAR.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: '选择DMAR',
-          hintText: '请选择需要定制的DMAR表',
+          buttonText: l10n?.selectDmar ?? '选择DMAR',
+          hintText: l10n?.hintDmar ?? '请选择需要定制的DMAR表',
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -105,8 +232,8 @@ class _AcpiPageState extends State<AcpiPage> {
 
       ACPITable.ssdtAPIC.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: '选择APIC',
-          hintText: '请选择需要定制的APIC表',
+          buttonText: l10n?.selectApic ?? '选择APIC',
+          hintText: l10n?.hintApic ?? '请选择需要定制的APIC表',
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -121,8 +248,8 @@ class _AcpiPageState extends State<AcpiPage> {
       ),
       ACPITable.checkAOAC.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: '选择FACP',
-          hintText: '请选择FACP表',
+          buttonText: l10n?.selectFacp ?? '选择FACP',
+          hintText: l10n?.hintFacp ?? '请选择FACP表',
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -133,8 +260,8 @@ class _AcpiPageState extends State<AcpiPage> {
       ),
       ACPITable.ssdtFACP.name: () => buildWithConfig(
         (data) => TableSelectionWidget(
-          buttonText: '选择FACP',
-          hintText: '请选择FACP表',
+          buttonText: l10n?.selectFacp ?? '选择FACP',
+          hintText: l10n?.hintFacp ?? '请选择FACP表',
           initialPath: data,
           onChanged: (value) => patchViewModel.updatePatchConfigPath(
             action,
@@ -178,12 +305,13 @@ class _AcpiPageState extends State<AcpiPage> {
 
   // 日志面板
   Widget _buildLogPanel() {
+    final l10n = AppLocalizations.of(context);
     return ConstrainedBox(
       constraints: const BoxConstraints(maxHeight: 600),
       child: Column(
         spacing: 10,
         children: [
-          const Text('日志', style: TextStyle(fontSize: 11)),
+          Text(l10n?.log ?? '日志', style: const TextStyle(fontSize: 11)),
           Flexible(
             flex: 2,
             child: LogWidget(showChannelTag: false, allChannel: true),
@@ -197,9 +325,9 @@ class _AcpiPageState extends State<AcpiPage> {
                 children: [
                   InkWellWidget.common(
                     onTap: Log.clearAll,
-                    child: const Text(
-                      '清除日志',
-                      style: TextStyle(fontSize: 11, color: Colors.white),
+                    child: Text(
+                      l10n?.clearLog ?? '清除日志',
+                      style: const TextStyle(fontSize: 11, color: Colors.white),
                     ),
                   ),
                   InkWellWidget.common(
@@ -210,9 +338,9 @@ class _AcpiPageState extends State<AcpiPage> {
                         onError: (error) => Log.error(error),
                       );
                     },
-                    child: const Text(
-                      '导出日志',
-                      style: TextStyle(fontSize: 11, color: Colors.white),
+                    child: Text(
+                      l10n?.exportLog ?? '导出日志',
+                      style: const TextStyle(fontSize: 11, color: Colors.white),
                     ),
                   ),
                   InkWellWidget.common(
@@ -221,9 +349,9 @@ class _AcpiPageState extends State<AcpiPage> {
                       prebuilt: state.selectedCategory == '预制补丁',
                       onError: (error) => Log.warning(error),
                     ),
-                    child: const Text(
-                      '执行补丁',
-                      style: TextStyle(fontSize: 11, color: Colors.white),
+                    child: Text(
+                      l10n?.executePatch ?? '执行补丁',
+                      style: const TextStyle(fontSize: 11, color: Colors.white),
                     ),
                   ),
                 ],
@@ -328,11 +456,11 @@ class _AcpiPageState extends State<AcpiPage> {
       builder: (context, state, _) {
         return ListView(
           children: patchViewModel.patchCategories.map((category) {
-            final catName = category.name;
+            final catNameKey = category.name;
             return _buildListTile(
-              title: catName,
-              onTap: () => patchViewModel.resetPatchStates(catName: catName),
-              isSelected: state.selectedCategory == catName,
+              title: _getCategoryName(catNameKey, AppLocalizations.of(context)),
+              onTap: () => patchViewModel.resetPatchStates(catName: catNameKey),
+              isSelected: state.selectedCategory == catNameKey,
               isDark: isDark,
             );
           }).toList(),
@@ -358,8 +486,9 @@ class _AcpiPageState extends State<AcpiPage> {
         return ListView(
           children: actions.map((action) {
             final actionName = action['name'] as String;
-            final actionRemark = action['remark'] as String;
-            final prebuilt = selectedCat == '预制补丁';
+            final defaultRemark = action['remark'] as String? ?? '';
+            final actionRemark = _getRemark(actionName, defaultRemark, AppLocalizations.of(context));
+            final prebuilt = selectedCat == 'prebuiltPatches';
             return _buildListTile(
               title: actionName,
               subtitle: actionRemark,
@@ -394,7 +523,13 @@ class _AcpiPageState extends State<AcpiPage> {
             ),
             child: SingleChildScrollView(
               child: SelectableText.rich(
-                TextSpan(text: patchViewModel.getActionNote()),
+                TextSpan(
+                  text: _getNote(
+                    state.selectedAction.name, 
+                    patchViewModel.getActionNote(), 
+                    AppLocalizations.of(context)
+                  )
+                ),
                 style: const TextStyle(fontSize: 11),
               ),
             ),
@@ -406,15 +541,16 @@ class _AcpiPageState extends State<AcpiPage> {
 
   // ACPI提取+输出目录
   Widget _buildAcpiExtractRow() {
+    final l10n = AppLocalizations.of(context);
     return Row(
       mainAxisSize: MainAxisSize.min,
       spacing: 10,
       children: [
         // 提取ACPI按钮
         InkWellWidget.common(
-          child: const Text(
-            '提取ACPI',
-            style: TextStyle(color: Colors.white, fontSize: 11),
+          child: Text(
+            l10n?.dumpAcpi ?? '提取ACPI',
+            style: const TextStyle(color: Colors.white, fontSize: 11),
           ),
           onTap: () async {
             await patchViewModel.dumpTablesAndLoadPatches(
@@ -426,11 +562,11 @@ class _AcpiPageState extends State<AcpiPage> {
                   builder: (context) {
                     String password = '';
                     return AlertDialog(
-                      title: const Text('需要管理员权限'),
+                      title: const Text('Admin Privileges Required'),
                       content: TextField(
                         obscureText: true,
                         decoration: const InputDecoration(
-                          labelText: '请输入电脑开机密码',
+                          labelText: 'Enter system password',
                         ),
                         onChanged: (v) => password = v,
                         onSubmitted: (value) => Navigator.pop(context, value),
@@ -438,11 +574,11 @@ class _AcpiPageState extends State<AcpiPage> {
                       actions: [
                         TextButton(
                           onPressed: () => Navigator.pop(context, null),
-                          child: const Text('取消'),
+                          child: const Text('Cancel'),
                         ),
                         TextButton(
                           onPressed: () => Navigator.pop(context, password),
-                          child: const Text('确定'),
+                          child: const Text('OK'),
                         ),
                       ],
                     );
@@ -464,7 +600,7 @@ class _AcpiPageState extends State<AcpiPage> {
                 initialPath: state.outputDir,
                 hintText: state.outputDir,
                 buttons: [
-                  ChooseFileButton(text: '输出目录', mode: OpenMode.directory),
+                  ChooseFileButton(text: l10n?.selectOutputPath ?? '输出目录', mode: OpenMode.directory),
                 ],
               );
             },
@@ -476,6 +612,7 @@ class _AcpiPageState extends State<AcpiPage> {
 
   // DSDT/ACPI选择器
   Widget _buildDsdtAcpiPicker() {
+    final l10n = AppLocalizations.of(context);
     return ValueListenableBuilder<PatchState>(
       valueListenable: patchViewModel.state,
       builder: (context, state, _) {
@@ -485,14 +622,14 @@ class _AcpiPageState extends State<AcpiPage> {
             onError: (msg) => Log.error(msg),
           ),
           initialPath: state.tablePath,
-          hintText: '请选择DSDT文件或ACPIs目录',
+          hintText: l10n?.selectAcpisFolder ?? '请选择DSDT文件或ACPIs目录',
           buttons: [
             ChooseFileButton(
-              text: '选择DSDT',
+              text: 'DSDT',
               mode: OpenMode.file,
               allowedExtensions: ['aml', 'dat'],
             ),
-            ChooseFileButton(text: '选择ACPIs', mode: OpenMode.directory),
+            ChooseFileButton(text: l10n?.selectAcpisFolder ?? '选择ACPIs', mode: OpenMode.directory),
           ],
         );
       },
@@ -500,24 +637,25 @@ class _AcpiPageState extends State<AcpiPage> {
   }
 
   Widget _buildConfigSection() {
+    final l10n = AppLocalizations.of(context);
     return Row(
       spacing: 10,
       children: [
         InkWellWidget.common(
-          child: const Text(
-            '合并config',
-            style: TextStyle(fontSize: 11, color: Colors.white),
+          child: Text(
+            l10n?.mergeConfig ?? '合并config',
+            style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
           onTap: () async =>
               await patchViewModel.mergePlist(onError: (msg) => Log.error(msg)),
         ),
         Flexible(
           child: _buildFilePicker(
-            buttonText: '选择config',
+            buttonText: l10n?.selectConfig ?? '选择config',
             mode: OpenMode.file,
             getPath: () => patchViewModel.state.value.configPath,
             setPath: (newPath) => patchViewModel.updateConfigPath(newPath),
-            hint: '请选择config.plist文件',
+            hint: l10n?.hintConfig ?? '请选择config.plist文件',
             extensions: ['plist'],
             onChanged: (newPath) {
               patchViewModel.getPlistType(
@@ -601,6 +739,7 @@ class _AcpiPageState extends State<AcpiPage> {
 
   // 选项面板
   Widget _buildOptionPanel() {
+    final l10n = AppLocalizations.of(context);
     return Row(
       mainAxisSize: MainAxisSize.min,
       spacing: 15,
@@ -608,35 +747,38 @@ class _AcpiPageState extends State<AcpiPage> {
         InkWellWidget.common(
           backgroundColor: Colors.brown,
           onTap: () => showOptionsDialog(child: _buildHeaderOptions()),
-          child: const Text(
-            '偏好设置',
-            style: TextStyle(fontSize: 11, color: Colors.white),
+          child: Text(
+            l10n?.customAcpiOptions ?? '偏好设置',
+            style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
         InkWellWidget.common(
           backgroundColor: Colors.pink,
-          onTap: () => showOptionsDialog(child: SsdtPlatformWidget()),
-          child: const Text(
-            '平台补丁',
-            style: TextStyle(fontSize: 11, color: Colors.white),
+          onTap: () => showOptionsDialog(child: const SsdtPlatformWidget()),
+          child: Text(
+            l10n?.platformPreset ?? '平台补丁',
+            style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
         InkWellWidget.common(
           backgroundColor: Colors.deepPurple,
           onTap: () => showOptionsDialog(
-            child: MarkdownPage(mdPath: 'assets/guide/guide.md'),
+            child: const MarkdownPage(mdPath: 'assets/guide/guide.md'),
           ),
-          child: const Text(
-            '补丁指南',
-            style: TextStyle(fontSize: 11, color: Colors.white),
+          child: Text(
+            l10n?.guide ?? '补丁指南',
+            style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
         InkWellWidget.common(
           backgroundColor: Colors.indigo,
-          onTap: () => showOptionsDialog(heightScale: 0.72, child: AboutPage()),
-          child: const Text(
-            '关于应用',
-            style: TextStyle(fontSize: 11, color: Colors.white),
+          onTap: () => showOptionsDialog(
+            heightScale: 0.72,
+            child: AboutPage(languageProvider: widget.languageProvider),
+          ),
+          child: Text(
+            l10n?.about ?? '关于应用',
+            style: const TextStyle(fontSize: 11, color: Colors.white),
           ),
         ),
       ],
@@ -661,12 +803,13 @@ class _AcpiPageState extends State<AcpiPage> {
 
   // 选中操作提示
   Widget _buildSelectedActionTip() {
+    final l10n = AppLocalizations.of(context);
     return ValueListenableBuilder<PatchState>(
       valueListenable: patchViewModel.state,
       builder: (context, state, _) {
         if (state.selectedAction.isEmpty) return const SizedBox.shrink();
         return Text(
-          '选择补丁: ${state.selectedAction.name}',
+          '${l10n?.selectPatch ?? "选择补丁"}: ${state.selectedAction.name}',
           style: const TextStyle(fontSize: 11),
         );
       },

@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:rapidssdt/pages/views/widgets/path_textfield.dart';
 import 'package:rapidssdt/widgets/radio_option_group.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 class PciDisable extends StatefulWidget {
   const PciDisable({super.key, this.onChanged});
@@ -31,6 +32,7 @@ class _PciDisableState extends State<PciDisable> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     return Container(
       constraints: BoxConstraints(minHeight: 60, minWidth: double.infinity),
       padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
@@ -47,9 +49,9 @@ class _PciDisableState extends State<PciDisable> {
               mainAxisSize: MainAxisSize.min,
               spacing: 5,
               children: [
-                const Text(
-                  '设备ACPI路径:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.deviceAcpiPath ?? '设备ACPI路径:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
 
                 Flexible(
@@ -68,9 +70,9 @@ class _PciDisableState extends State<PciDisable> {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 2,
               children: [
-                const Text(
-                  '禁用方式:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.disableMethod ?? '禁用方式:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 Flexible(
                   child: SingleChildScrollView(
@@ -83,10 +85,10 @@ class _PciDisableState extends State<PciDisable> {
                         selectedDisableMethod = val;
                         _notifyChange();
                       },
-                      options: const [
-                        RadioOptionData(value: 'OFF', label: 'OFF方法'),
-                        RadioOptionData(value: 'PS3', label: 'PS3方法'),
-                        RadioOptionData(value: 'IOName', label: 'IOName方法')
+                      options: [
+                        RadioOptionData(value: 'OFF', label: l10n?.methodOFF ?? 'OFF方法'),
+                        RadioOptionData(value: 'PS3', label: l10n?.methodPS3 ?? 'PS3方法'),
+                        RadioOptionData(value: 'IOName', label: l10n?.methodIOName ?? 'IOName方法')
                       ],
                     ),
                   ),
@@ -97,9 +99,9 @@ class _PciDisableState extends State<PciDisable> {
               crossAxisAlignment: CrossAxisAlignment.center,
               spacing: 2,
               children: [
-                const Text(
-                  '设备类型:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.deviceType ?? '设备类型:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 Flexible(
                   child: SingleChildScrollView(
@@ -112,10 +114,10 @@ class _PciDisableState extends State<PciDisable> {
                         pciType = val;
                         _notifyChange();
                       },
-                      options: const [
-                        RadioOptionData(value: 'GPU', label: 'GPU显卡'),
-                        RadioOptionData(value: 'NVMe', label: 'NVMe固态硬盘'),
-                        RadioOptionData(value: 'PCIe', label: '其他PCIe'),
+                      options: [
+                        RadioOptionData(value: 'GPU', label: l10n?.gpuGraphic ?? 'GPU显卡'),
+                        RadioOptionData(value: 'NVMe', label: l10n?.nvmeSsd ?? 'NVMe固态硬盘'),
+                        RadioOptionData(value: 'PCIe', label: l10n?.otherPcie ?? '其他PCIe'),
                       ],
                     ),
                   ),

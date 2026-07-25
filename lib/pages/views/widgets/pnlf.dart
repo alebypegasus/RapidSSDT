@@ -8,6 +8,7 @@ import 'package:rapidssdt/utils/ssdttool/config.dart';
 import 'package:rapidssdt/widgets/custom_dropdown_button.dart';
 import 'package:rapidssdt/widgets/custom_textfield.dart';
 import 'package:rapidssdt/widgets/tip_switch.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 class PNLFPatchOptions extends StatefulWidget {
   const PNLFPatchOptions({super.key, this.onChanged});
@@ -25,8 +26,6 @@ class _PNLFPatchOptionsState extends State<PNLFPatchOptions> {
   int? selectedUID; // 初始 UID 值
   String manualIGPUPath = '';
   bool getIGPU = false; // 是否补充IGPU寄存器信息
-  final String placeholder = '为PNLF选择UID';
-  
   @override
   void initState() {
     super.initState();
@@ -45,6 +44,8 @@ class _PNLFPatchOptionsState extends State<PNLFPatchOptions> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final String placeholder = l10n?.selectPnlfUid ?? '为PNLF选择UID';
     return Container(
       constraints: BoxConstraints(minHeight: 60, minWidth: double.infinity),
       padding: EdgeInsets.all(12),
@@ -60,15 +61,15 @@ class _PNLFPatchOptionsState extends State<PNLFPatchOptions> {
               mainAxisSize: MainAxisSize.min,
               spacing: 5,
               children: [
-                const Text(
-                  '设备ACPI路径:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.deviceAcpiPath ?? '设备ACPI路径:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 Flexible(
                   child: PathTextField(
                     pathType: PathType.acpi,
                     initialPath: '',
-                    hintText: '当选择UID=14时,建议补充IGPU ACPI路径',
+                    hintText: l10n?.suggestIgpuPath ?? '当选择UID=14时,建议补充IGPU ACPI路径',
                     onChanged: (value, _) {
                       manualIGPUPath = value;
                       widget.onChanged?.call((selectedUID, value, getIGPU));
@@ -81,9 +82,9 @@ class _PNLFPatchOptionsState extends State<PNLFPatchOptions> {
               mainAxisSize: MainAxisSize.min,
               spacing: 15,
               children: [
-                const Text(
-                  'UID类型:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.uidType ?? 'UID类型:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 CustomTextField(
                   controller: _controllerUID,
@@ -92,8 +93,8 @@ class _PNLFPatchOptionsState extends State<PNLFPatchOptions> {
                     FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
                     LengthLimitingTextInputFormatter(3),
                   ],
-                  hintText: '必填项',
-                  errorText: 'UID值无效',
+                  hintText: l10n?.requiredField ?? '必填项',
+                  errorText: l10n?.invalidUid ?? 'UID值无效',
                   validator: (value) {
                     return value.isEmpty ||
                         int.tryParse(value) != null &&
@@ -145,8 +146,8 @@ class _PNLFPatchOptionsState extends State<PNLFPatchOptions> {
             SizedBox(height: 15),
             TipSwitch(
               checked: getIGPU,
-              title: '是否补充IGPU寄存器信息',
-              tip: '当选择UID=14时,建议开启。如果不开启,可能会遇到最大亮度受限或其他问题',
+              title: l10n?.supplementIgpuRegisters ?? '是否补充IGPU寄存器信息',
+              tip: l10n?.suggestIgpuRegisters ?? '当选择UID=14时,建议开启。如果不开启,可能会遇到最大亮度受限或其他问题',
               onChanged: (v) {
                 getIGPU = v;
                 widget.onChanged?.call((selectedUID, manualIGPUPath, v));

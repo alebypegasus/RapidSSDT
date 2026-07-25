@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 import 'package:rapidssdt/widgets/custom_textfield.dart';
 import 'package:rapidssdt/widgets/checkboxlist/smart_checkbox_list.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 
 typedef OptionChanged = void Function(String value);
 
@@ -29,11 +30,7 @@ class _HPETPatchOptionsState extends State<HPETPatchOptions> {
   final FocusNode _focusNodeHept = FocusNode();
   late final VoidCallback _listener;
   String selectedValue = 'C';
-  Map<String, String> hpetChoices = {
-    "C: 仅来自 * 设备冲突IRQ（0,2,8,11）": "C",
-    "L: 仅来自 * 设备使用的IRQ": "L",
-    "O: 来自所有设备冲突IRQ（0,2,8,11）": "O",
-  };
+  late Map<String, String> hpetChoices;
   static final RegExp _irqRegExp = RegExp(
     r'^\s*'
     r'(?:'
@@ -50,6 +47,7 @@ class _HPETPatchOptionsState extends State<HPETPatchOptions> {
   @override
   void initState() {
     super.initState();
+    hpetChoices = {};
     WidgetsBinding.instance.addPostFrameCallback((_) {
       widget.onOptionChanged(selectedValue);
     });
@@ -76,6 +74,13 @@ class _HPETPatchOptionsState extends State<HPETPatchOptions> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    hpetChoices = {
+      l10n?.hpetChoiceC ?? "C: 仅来自 * 设备冲突IRQ（0,2,8,11）": "C",
+      l10n?.hpetChoiceL ?? "L: 仅来自 * 设备使用的IRQ": "L",
+      l10n?.hpetChoiceO ?? "O: 来自所有设备冲突IRQ（0,2,8,11）": "O",
+    };
+
     final isDarkMode = Theme.of(context).brightness == Brightness.dark;
     return Container(
       constraints: const BoxConstraints(
@@ -98,9 +103,9 @@ class _HPETPatchOptionsState extends State<HPETPatchOptions> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      const Text(
-                        '当前 Legacy IRQs:',
-                        style: TextStyle(
+                      Text(
+                        l10n?.currentLegacyIrqs ?? '当前 Legacy IRQs:',
+                        style: const TextStyle(
                           fontSize: 11,
                           fontWeight: FontWeight.w600,
                         ),
@@ -145,7 +150,7 @@ class _HPETPatchOptionsState extends State<HPETPatchOptions> {
             ),
             const SizedBox(height: 5),
             Text(
-              '自定义IRQs,设备之间用空格分隔，IRQ之间用逗号分隔,例如: RTC:0 IPIC:2 TMR:8,11',
+              l10n?.customIrqsDesc ?? '自定义IRQs,设备之间用空格分隔，IRQ之间用逗号分隔,例如: RTC:0 IPIC:2 TMR:8,11',
               maxLines: 3,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
@@ -155,16 +160,16 @@ class _HPETPatchOptionsState extends State<HPETPatchOptions> {
             ),
             Row(
               children: [
-                const Text(
-                  '自定义IRQs:',
-                  style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                Text(
+                  l10n?.customIrqs ?? '自定义IRQs:',
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600),
                 ),
                 const SizedBox(width: 5),
                 CustomTextField(
                   controller: _customController,
                   focusNode: _focusNodeHept,
-                  hintText: '示例: RTC:0 IPIC:2 TMR:8,11',
-                  errorText: '自定义 IRQ 列表格式错误',
+                  hintText: l10n?.customIrqsExample ?? '示例: RTC:0 IPIC:2 TMR:8,11',
+                  errorText: l10n?.customIrqFormatError ?? '自定义 IRQ 列表格式错误',
                   validator: (value) {
                     return value.isEmpty || _irqRegExp.hasMatch(value);
                   },

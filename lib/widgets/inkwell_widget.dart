@@ -106,9 +106,9 @@ class InkWellWidget extends StatelessWidget {
     return InkWellWidget(
       backgroundColor: backgroundColor,
       radius: radius ?? 6,
-      width: width ?? 68,
+      width: width,
       height: height ?? 28,
-      padding: padding,
+      padding: padding ?? (width == null ? const EdgeInsets.symmetric(horizontal: 12) : EdgeInsets.zero),
       margin: margin,
       alignment: alignment,
       boxShadow: boxShadow,

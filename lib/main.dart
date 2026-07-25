@@ -3,6 +3,9 @@
 //
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
+import 'package:rapidssdt/l10n/language_provider.dart';
 import 'package:rapidssdt/pages/provider/patch_viewmodel_provider.dart';
 import 'package:rapidssdt/pages/viewmodel/patch_viewmodel.dart';
 import 'package:rapidssdt/utils/log/log.dart';
@@ -26,7 +29,7 @@ void main() async {
     await windowManager.ensureInitialized();
     WindowOptions windowOptions = WindowOptions(
       title: '${Constant.appName}-v$appVersion(${Constant.copyright})',
-      minimumSize: Size(800, 600),
+      minimumSize: const Size(800, 600),
       center: false,
       skipTaskbar: false,
       titleBarStyle: TitleBarStyle.normal,
@@ -37,7 +40,6 @@ void main() async {
       await windowManager.focus();
       await windowManager.setPreventClose(false);
     });
-    
   }
 
   runApp(const MyApp());
@@ -52,25 +54,43 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   final PatchViewModel patchViewModel = PatchViewModel();
+  final LanguageProvider languageProvider = LanguageProvider();
+
   @override
   Widget build(BuildContext context) {
     final primaryColor = Theme.of(context).primaryColorDark;
-    return PatchViewModelProvider(
-      patchViewModel: patchViewModel,
-      child: MaterialApp(
-        title: Constant.appName,
-        debugShowCheckedModeBanner: false,
-        theme: ThemeUtil.appTheme(primary: primaryColor),
-        darkTheme: ThemeUtil.appTheme(isDarkMode: true, primary: primaryColor),
-        themeMode: ThemeMode.system,
-        home: AcpiPage(),
-      ),
+    return ListenableBuilder(
+      listenable: languageProvider,
+      builder: (context, child) {
+        return PatchViewModelProvider(
+          patchViewModel: patchViewModel,
+          child: MaterialApp(
+            title: Constant.appName,
+            debugShowCheckedModeBanner: false,
+            theme: ThemeUtil.appTheme(primary: primaryColor),
+            darkTheme: ThemeUtil.appTheme(isDarkMode: true, primary: primaryColor),
+            themeMode: ThemeMode.system,
+            locale: languageProvider.locale,
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizations.supportedLocales,
+            home: AcpiPage(languageProvider: languageProvider),
+          ),
+        );
+      },
     );
   }
+
   @override
   void dispose() {
     patchViewModel.dispose();
+    languageProvider.dispose();
     Log.shutdownAll();
     super.dispose();
   }
 }
+

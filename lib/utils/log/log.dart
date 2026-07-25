@@ -7,6 +7,8 @@ import 'dart:io';
 import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
+import 'package:rapidssdt/l10n/language_provider.dart';
+import 'package:rapidssdt/utils/log/log_translations.dart';
 
 /// 日志级别
 enum LogLevel { debug, info, warning, error }
@@ -120,7 +122,7 @@ class Log {
     LogConfig? config,
   }) {
     return Log.width(
-      message: message,
+      message: message != null ? _translate(message) : null,
       channel: channel,
       level: level,
       config: config,
@@ -289,14 +291,35 @@ class Log {
     _processQueue();
   }
 
+  static String _translate(String msg) {
+    final lang = LanguageProvider.currentLangCode;
+    if (lang == 'zh') return msg;
+
+    Map<String, String>? map;
+    if (lang == 'pt') {
+      map = LogTranslations.pt;
+    } else {
+      map = LogTranslations.en;
+    }
+
+    if (map != null) {
+      map.forEach((k, v) {
+        if (msg.contains(k)) {
+          msg = msg.replaceAll(k, v);
+        }
+      });
+    }
+    return msg;
+  }
+
   static Future<void> info(String msg, {String? channel}) =>
-      Log.width(channel: channel).add(msg, level: LogLevel.info);
+      Log.width(channel: channel).add(_translate(msg), level: LogLevel.info);
   static Future<void> debug(String msg, {String? channel}) =>
-      Log.width(channel: channel).add(msg, level: LogLevel.debug);
+      Log.width(channel: channel).add(_translate(msg), level: LogLevel.debug);
   static Future<void> warning(String msg, {String? channel}) =>
-      Log.width(channel: channel).add(msg, level: LogLevel.warning);
+      Log.width(channel: channel).add(_translate(msg), level: LogLevel.warning);
   static Future<void> error(String msg, {String? channel}) =>
-      Log.width(channel: channel).add(msg, level: LogLevel.error);
+      Log.width(channel: channel).add(_translate(msg), level: LogLevel.error);
 
   /// 清除指定日志通道的日志
   static Future<void> clear({String? channel}) async {

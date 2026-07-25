@@ -14,6 +14,7 @@ import 'package:rapidssdt/widgets/button_segment_widget.dart';
 import 'package:rapidssdt/widgets/checkboxlist/checkbox_title.dart';
 import 'package:rapidssdt/widgets/custom_dropdown_button.dart';
 import 'package:rapidssdt/widgets/inkwell_widget.dart';
+import 'package:rapidssdt/l10n/app_localizations.dart';
 import 'package:rapidssdt/utils/constant.dart';
 
 class SsdtPlatformWidget extends StatefulWidget {
@@ -81,13 +82,14 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
 
   // 执行 SSDT 补丁
   Future<void> _runSelectedSsdt({required bool prebuilt}) async {
+    final l10n = AppLocalizations.of(context);
     if (patchViewModel.isRunningPatches) {
-      Log.error('正在生成SSDT，请勿重复操作!');
+      Log.error(l10n?.generatingSsdt ?? '正在生成SSDT，请勿重复操作!');
       return;
     }
 
     if (selectedSsdtNotifier.value.isEmpty) {
-      Log('未选择任何 SSDT');
+      Log(l10n?.noSsdtSelected ?? '未选择任何 SSDT');
       return;
     }
 
@@ -95,9 +97,9 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
       e.prebuilt = prebuilt;
       return e.toMap();
     }).toList();
-    Log('当前平台信息: ${selectedComboBoxValue.value}');
+    Log('${l10n?.platformInfo ?? "平台信息:"} ${selectedComboBoxValue.value}');
     Log(
-      '${prebuilt ? "预制" : "定制"} SSDT 列表: ${ssdts.map((e) => e.name).toList()}',
+      '${prebuilt ? (l10n?.prebuiltSsdt ?? "预制SSDT") : (l10n?.customSsdt ?? "定制SSDT")} 列表: ${ssdts.map((e) => e.name).toList()}',
     );
     Log("");
     String outputFolder =
@@ -112,6 +114,7 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
     final platformList =
         SsdtPlatform.platform_mapping[cpuType]?[platformType]?['platform']?.keys
             .toList() ??
@@ -129,23 +132,33 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
         spacing: 8,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _buildSegmentRow(
-            label: 'CPU类型:',
+          _buildSegmentRow<String>(
+            label: l10n?.cpuType ?? 'CPU类型:',
             options: SsdtPlatform.platform_mapping.keys.toList(),
+            labelBuilder: (cpu) => cpu,
             onChanged: (cpu) {
               setState(() {
-                cpuType = cpu.first.toString();
+                cpuType = cpu.first;
                 _resolvePlatformSSDT();
               });
             },
           ),
-          _buildSegmentRow(
-            label: '平台类型:',
+          _buildSegmentRow<String>(
+            label: l10n?.platformType ?? '平台类型:',
             options:
                 SsdtPlatform.platform_mapping[cpuType]?.keys.toList() ?? [],
+            labelBuilder: (platform) {
+              switch (platform) {
+                case '台式机': return l10n?.platformDesktop ?? '台式机';
+                case '笔记本': return l10n?.platformLaptop ?? '笔记本';
+                case '迷你主机': return l10n?.platformNuc ?? '迷你主机';
+                case '服务器': return l10n?.platformServer ?? '服务器';
+                default: return platform;
+              }
+            },
             onChanged: (platform) {
               setState(() {
-                platformType = platform.first.toString();
+                platformType = platform.first;
                 _resolvePlatformSSDT();
               });
             },
@@ -206,10 +219,11 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
   }
 
   /// 构建 CPU / 平台 Segment 行
-  Widget _buildSegmentRow({
+  Widget _buildSegmentRow<T>({
     required String label,
-    required List<String> options,
-    required ValueChanged<Set<Object>> onChanged,
+    required List<T> options,
+    required String Function(T) labelBuilder,
+    required ValueChanged<Set<T>> onChanged,
   }) {
     return Row(
       spacing: 10,
@@ -218,7 +232,11 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
           label,
           style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
         ),
-        ButtonSegmentWidget(labels: options, onSelectionChanged: onChanged),
+        ButtonSegmentWidget<T>(
+          values: options, 
+          labelBuilder: labelBuilder, 
+          onSelectionChanged: onChanged,
+        ),
       ],
     );
   }
@@ -229,13 +247,14 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
     List<DropdownOption> options,
     List<SsdtItem> ssdtItems,
   ) {
+    final l10n = AppLocalizations.of(context);
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
         children: [
-          const Text(
-            '平台信息:',
-            style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+          Text(
+            l10n?.platformInfo ?? '平台信息:',
+            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
           ),
           CustomDropdownButton(
             value: value,
@@ -253,7 +272,7 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
             builder: (_, state, _) {
               final allSelected = state.length == ssdtItems.length;
               return CheckboxTile(
-                label: '勾选所有',
+                label: l10n?.checkAll ?? '勾选所有',
                 selected: allSelected,
                 onChanged: (value) => _resolveSSDTState(ssdtItems, all: value),
               );
@@ -293,6 +312,7 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
   }
 
   Widget _buildLegendRow() {
+    final l10n = AppLocalizations.of(context);
     Widget buildLegend(String text, Color color) {
       return Row(
         children: [
@@ -310,11 +330,11 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          buildLegend('核心(官方推荐)', Constant.ssdtBasicColor),
+          buildLegend(l10n?.coreOfficialRec ?? '核心(官方推荐)', Constant.ssdtBasicColor),
           const SizedBox(width: 8),
-          buildLegend('推荐(功能修复)', Constant.ssdtRecommendColor),
+          buildLegend(l10n?.recommendedFixes ?? '推荐(功能修复)', Constant.ssdtRecommendColor),
           const SizedBox(width: 8),
-          buildLegend('可选(功能完善)', Constant.ssdtOptionalColor),
+          buildLegend(l10n?.optionalEnhancements ?? '可选(功能完善)', Constant.ssdtOptionalColor),
         ],
       ),
     );
@@ -322,22 +342,23 @@ class _SsdtPlatformState extends State<SsdtPlatformWidget> {
 
   /// 定制 / 预制 SSDT
   Widget _buildActionRow() {
+    final l10n = AppLocalizations.of(context);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           InkWellWidget.common(
-            child: const Text(
-              "定制SSDT",
-              style: TextStyle(fontSize: 11, color: Colors.white),
+            child: Text(
+              l10n?.customSsdt ?? "定制SSDT",
+              style: const TextStyle(fontSize: 11, color: Colors.white),
             ),
             onTap: () async => await _runSelectedSsdt(prebuilt: false),
           ),
           const SizedBox(width: 10),
           InkWellWidget.common(
-            child: const Text(
-              "预制SSDT",
-              style: TextStyle(fontSize: 11, color: Colors.white),
+            child: Text(
+              l10n?.prebuiltSsdt ?? "预制SSDT",
+              style: const TextStyle(fontSize: 11, color: Colors.white),
             ),
             onTap: () async => await _runSelectedSsdt(prebuilt: true),
           ),

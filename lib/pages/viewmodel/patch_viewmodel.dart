@@ -14,7 +14,7 @@ import 'package:rapidssdt/utils/ssdttool/table.dart';
 class PatchViewModel extends ChangeNotifier {
   // 状态管理
   final ValueNotifier<PatchState> _state = ValueNotifier(
-    PatchState(selectedCategory: '核心补丁', selectedHpet: 'C'),
+    PatchState(selectedCategory: 'corePatches', selectedHpet: 'C'),
   );
   late Map<String, PatchConfig> _patchConfigs;
   ValueNotifier<PatchState> get state => _state;
@@ -275,7 +275,7 @@ class PatchViewModel extends ChangeNotifier {
 
   /// 重置补丁状态（切换分类/页面时调用）
   void resetPatchStates({String? catName}) {
-    _updateState(selectedCategory: catName ?? '核心补丁', selectedAction: {});
+    _updateState(selectedCategory: catName ?? 'corePatches', selectedAction: {});
 
     // 重置所有配置可见性
     for (final config in _patchConfigs.values) {
