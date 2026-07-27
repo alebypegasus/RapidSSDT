@@ -4,7 +4,6 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:xml/xml.dart';
-import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 enum PlistParseStatus { success, fileNotFound, parseError }
 
@@ -28,17 +27,17 @@ class PlistParser {
         return PlistParseResult(
           status: PlistParseStatus.fileNotFound,
           data: {},
-          message: l10nGlobal.msg_727bef((filePath).toString()),
+          message: "文件不存在: $filePath",
         );
       }
       final content = file.readAsStringSync();
       return _parsePlist(content);
     } catch (e) {
-      onError?.call(l10nGlobal.msg_d8f004((filePath).toString(), (e).toString()));
+      onError?.call("加载 $filePath 文件时出错: $e");
       return PlistParseResult(
         status: PlistParseStatus.parseError,
         data: {},
-        message: l10nGlobal.msg_d8f004((filePath).toString(), (e).toString()),
+        message: "加载 $filePath 文件时出错: $e",
       );
     }
   }
@@ -78,7 +77,7 @@ class PlistParser {
       File(path).writeAsStringSync(xmlString);
       return true;
     } catch (e) {
-      onError?.call(l10nGlobal.msg_5dd48b((e).toString()));
+      onError?.call("写入文件失败! 失败原因: $e");
       return false;
     }
   }
@@ -92,16 +91,16 @@ class PlistParser {
       final document = XmlDocument.parse(content);
       final dictElement = document.findAllElements('dict').firstOrNull;
       if (dictElement == null) {
-        throw ArgumentError(l10nGlobal.msg_31baad);
+        throw ArgumentError('未找到根字典元素');
       }
       final data = _parseDict(dictElement);
       return PlistParseResult(status: PlistParseStatus.success, data: data);
     } catch (e) {
-      onError?.call(l10nGlobal.msg_e1ecd0((e).toString()));
+      onError?.call('解析plist失败! 失败原因: $e');
       return PlistParseResult(
         status: PlistParseStatus.parseError,
         data: {},
-        message: l10nGlobal.msg_f05a9c((e).toString()),
+        message: "解析文件内容时出错: $e",
       );
     }
   }

@@ -7,7 +7,6 @@ import 'dart:io';
 import 'dart:math';
 import 'dart:typed_data';
 import 'package:archive/archive.dart';
-import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 /// 取消令牌
 class DownloadCancelToken {
@@ -105,8 +104,8 @@ class HttpClientManager {
           .timeout(
             connectTimeout,
             onTimeout: () {
-              onError?.call(l10nGlobal.msg_4e5e3e);
-              throw TimeoutException(l10nGlobal.msg_4e5e3e);
+              onError?.call('连接服务器超时');
+              throw TimeoutException('连接服务器超时');
             },
           );
 
@@ -114,28 +113,28 @@ class HttpClientManager {
       headers?.forEach((key, value) => request?.headers.add(key, value));
 
       if (cancelToken?.isCancelled ?? false) {
-        onError?.call(l10nGlobal.msg_4f9c16);
+        onError?.call('下载已取消');
         request.abort();
         return null;
       }
 
       cancelToken?.onCancel.then((_) {
-        onError?.call(l10nGlobal.msg_4f9c16);
+        onError?.call('下载已取消');
         request?.abort();
       });
 
       final response = await request.close().timeout(
         responseTimeout,
         onTimeout: () {
-          onError?.call(l10nGlobal.msg_b2fa7b);
-          throw TimeoutException(l10nGlobal.msg_b2fa7b);
+          onError?.call('读取响应超时');
+          throw TimeoutException('读取响应超时');
         },
       );
 
       if (response.statusCode < 200 || response.statusCode >= 300) {
-        onError?.call(l10nGlobal.msg_4f6934((response.statusCode).toString()));
+        onError?.call('获取服务器信息发生异常! 状态码: ${response.statusCode}');
         throw HttpException(
-          l10nGlobal.msg_4f8409((response.statusCode).toString()),
+          '请求失败，状态码: ${response.statusCode}',
           uri: Uri.parse(url),
         );
       }
@@ -206,7 +205,7 @@ class HttpClientManager {
       idleTimer?.cancel();
       idleTimer = Timer(Duration(seconds: timeoutInSeconds), () {
         cancelToken?.cancel();
-        onError?.call(TimeoutException(l10nGlobal.msg_03d86d((timeoutInSeconds).toString())));
+        onError?.call(TimeoutException('下载超时,$timeoutInSeconds秒无进度,任务取消'));
       });
     }
 

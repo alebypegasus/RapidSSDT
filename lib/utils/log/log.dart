@@ -9,7 +9,6 @@ import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:rapidssdt/l10n/language_provider.dart';
 import 'package:rapidssdt/utils/log/log_translations.dart';
-import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 /// 日志级别
 enum LogLevel { debug, info, warning, error }
@@ -159,7 +158,7 @@ class Log {
   }) async {
     final log = _channels[channel ?? defaultChannel];
     if (log == null) {
-      onError?.call(l10nGlobal.msg_7ca0c6((channel ?? defaultChannel).toString()));
+      onError?.call('日志通道不存在: ${channel ?? defaultChannel}');
       return;
     }
 
@@ -168,12 +167,12 @@ class Log {
       try {
         final fileName = logFile.uri.pathSegments.last;
         await logFile.copy('$targetDirectory$separator$fileName');
-        onSuccess?.call(l10nGlobal.msg_7d9632((targetDirectory).toString(), (separator).toString(), (fileName).toString()));
+        onSuccess?.call('导出成功! 文件路径: $targetDirectory$separator$fileName');
       } catch (e) {
-        onError?.call(l10nGlobal.msg_06576e((e).toString()));
+        onError?.call('导出失败! 错误信息: $e');
       }
     } else {
-      onError?.call(l10nGlobal.msg_312576((logFile.path).toString()));
+      onError?.call('文件不存在! 导出失败! 文件路径: ${logFile.path}');
     }
   }
 
@@ -184,7 +183,7 @@ class Log {
       if (!await _logFile.exists()) await _logFile.create(recursive: true);
       await _rotateLogIfNeeded();
     } catch (e) {
-      throw Exception(l10nGlobal.msg_41eede((e).toString()));
+      throw Exception('日志文件初始化失败: $e');
     }
   }
 

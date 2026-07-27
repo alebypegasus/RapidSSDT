@@ -66,6 +66,7 @@ class DashboardView extends StatelessWidget {
                   await patchViewModel.dumpTablesAndLoadPatches(
                     onError: (msg) => Log.error(msg),
                     onRequestSudoPassword: () async {
+                      String password = '';
                       return await AppDialog.show<String>(
                         context: context,
                         icon: const Icon(CupertinoIcons.lock),

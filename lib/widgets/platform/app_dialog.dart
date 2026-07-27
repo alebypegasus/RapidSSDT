@@ -19,8 +19,8 @@ class AppDialog {
             appIcon: icon ?? const Icon(Icons.info),
             title: title,
             message: content,
-            primaryButton: primaryButton,
-            secondaryButton: secondaryButton,
+            primaryButton: primaryButton as PushButton,
+            secondaryButton: secondaryButton as PushButton?,
           );
         },
       );
