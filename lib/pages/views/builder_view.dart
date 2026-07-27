@@ -8,6 +8,7 @@ import 'package:rapidssdt/pages/viewmodel/patch_viewmodel.dart';
 import 'package:rapidssdt/utils/log/log.dart';
 import 'package:rapidssdt/utils/ssdttool/table.dart';
 import 'package:rapidssdt/widgets/choose_file.dart';
+import 'package:rapidssdt/widgets/platform/app_scaffold.dart';
 
 import 'widgets/gpu_spoof.dart';
 import 'widgets/hpet.dart';
@@ -136,14 +137,10 @@ class BuilderView extends StatelessWidget {
     final l10n = AppLocalizations.of(context);
     final patchViewModel = PatchViewModelProvider.of(context);
 
-    return MacosScaffold(
-      toolBar: const ToolBar(
-        title: Text('SSDT Builder'),
-        titleWidth: 200.0,
-      ),
-      children: [
-        ContentArea(
-          builder: (context, scrollController) {
+    return AppScaffold(
+      title: 'SSDT Builder',
+      child: Builder(
+        builder: (context) {
             return Padding(
               padding: const EdgeInsets.all(12.0),
               child: Row(
@@ -166,14 +163,13 @@ class BuilderView extends StatelessWidget {
                 ],
               ),
             );
-          },
-        ),
-      ],
+        },
+      ),
     );
   }
 
   Widget _buildCategoryList(BuildContext context, PatchViewModel patchViewModel, AppLocalizations? l10n) {
-    final isDark = MacosTheme.of(context).brightness == Brightness.dark;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return ValueListenableBuilder<PatchState>(
       valueListenable: patchViewModel.state,
       builder: (context, state, _) {
@@ -194,7 +190,7 @@ class BuilderView extends StatelessWidget {
   }
 
   Widget _buildActionList(BuildContext context, PatchViewModel patchViewModel, AppLocalizations? l10n) {
-    final isDark = MacosTheme.of(context).brightness == Brightness.dark;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return ValueListenableBuilder<PatchState>(
       valueListenable: patchViewModel.state,
       builder: (context, state, _) {
@@ -236,7 +232,7 @@ class BuilderView extends StatelessWidget {
     required bool isSelected,
     required bool isDark,
   }) {
-    final primaryColor = MacosTheme.of(context).primaryColor;
+    final primaryColor = Theme.of(context).primaryColor;
     return GestureDetector(
       onTap: onTap,
       child: Container(
@@ -267,7 +263,7 @@ class BuilderView extends StatelessWidget {
                   subtitle,
                   style: TextStyle(
                     fontSize: 12,
-                    color: isSelected ? primaryColor?.withOpacity(0.8) : MacosColors.systemGrayColor,
+                    color: isSelected ? primaryColor.withOpacity(0.8) : Theme.of(context).hintColor,
                   ),
                 ),
               ],
@@ -306,7 +302,7 @@ class BuilderView extends StatelessWidget {
         ),
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          border: Border.all(color: MacosTheme.of(context).dividerColor ?? MacosColors.systemGrayColor),
+          border: Border.all(color: Theme.of(context).dividerColor),
           borderRadius: BorderRadius.circular(6),
         ),
         child: SingleChildScrollView(

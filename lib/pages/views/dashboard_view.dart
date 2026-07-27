@@ -10,6 +10,9 @@ import 'package:rapidssdt/widgets/choose_file.dart';
 import 'package:rapidssdt/l10n/language_provider.dart';
 import 'package:rapidssdt/l10n/app_localizations.dart';
 import 'package:rapidssdt/l10n/l10n_helper.dart';
+import 'package:rapidssdt/widgets/platform/app_scaffold.dart';
+import 'package:rapidssdt/widgets/platform/app_button.dart';
+import 'package:rapidssdt/widgets/platform/app_dialog.dart';
 
 class DashboardView extends StatelessWidget {
   final LanguageProvider? languageProvider;
@@ -21,14 +24,10 @@ class DashboardView extends StatelessWidget {
     final patchViewModel = PatchViewModelProvider.of(context);
     final l10n = AppLocalizations.of(context);
 
-    return MacosScaffold(
-      toolBar: const ToolBar(
-        title: Text('Dashboard'),
-        titleWidth: 200.0,
-      ),
-      children: [
-        ContentArea(
-          builder: (context, scrollController) {
+    return AppScaffold(
+      title: 'Dashboard',
+      child: Builder(
+        builder: (context) {
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -42,9 +41,8 @@ class DashboardView extends StatelessWidget {
                 ],
               ),
             );
-          },
-        ),
-      ],
+        },
+      ),
     );
   }
 
@@ -52,7 +50,7 @@ class DashboardView extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        border: Border.all(color: MacosTheme.of(context).dividerColor ?? MacosColors.systemGrayColor),
+        border: Border.all(color: Theme.of(context).dividerColor),
         borderRadius: BorderRadius.circular(8),
       ),
       child: Column(
@@ -62,33 +60,28 @@ class DashboardView extends StatelessWidget {
           Row(
             spacing: 10,
             children: [
-              PushButton(
+              AppButton(
                 controlSize: ControlSize.large,
                 onPressed: () async {
                   await patchViewModel.dumpTablesAndLoadPatches(
                     onError: (msg) => Log.error(msg),
                     onRequestSudoPassword: () async {
-                      return await showMacosAlertDialog<String>(
+                      return await AppDialog.show<String>(
                         context: context,
-                        builder: (context) {
-                          String password = '';
-                          return MacosAlertDialog(
-                            appIcon: const MacosIcon(CupertinoIcons.lock),
-                            title: const Text('Admin Privileges Required'),
-                            message: const Text('Please enter your system password to continue.'),
-                            primaryButton: PushButton(
-                              controlSize: ControlSize.large,
-                              onPressed: () => Navigator.pop(context, password),
-                              child: const Text('OK'),
-                            ),
-                            secondaryButton: PushButton(
-                              controlSize: ControlSize.large,
-                              secondary: true,
-                              onPressed: () => Navigator.pop(context, null),
-                              child: const Text('Cancel'),
-                            ),
-                          );
-                        },
+                        icon: const Icon(CupertinoIcons.lock),
+                        title: const Text('Admin Privileges Required'),
+                        content: const Text('Please enter your system password to continue.'),
+                        primaryButton: AppButton(
+                          controlSize: ControlSize.large,
+                          onPressed: () => Navigator.pop(context, password),
+                          child: const Text('OK'),
+                        ),
+                        secondaryButton: AppButton(
+                          controlSize: ControlSize.large,
+                          secondary: true,
+                          onPressed: () => Navigator.pop(context, null),
+                          child: const Text('Cancel'),
+                        ),
                       );
                     },
                   );
@@ -138,7 +131,7 @@ class DashboardView extends StatelessWidget {
           Row(
             spacing: 10,
             children: [
-              PushButton(
+              AppButton(
                 controlSize: ControlSize.large,
                 onPressed: () async => await patchViewModel.mergePlist(onError: (msg) => Log.error(msg)),
                 child: Text(l10n?.mergeConfig ?? l10nGlobal.ssdtMsg595),
@@ -217,13 +210,13 @@ class DashboardView extends StatelessWidget {
                 return Row(
                   spacing: 10,
                   children: [
-                    PushButton(
+                    AppButton(
                       controlSize: ControlSize.regular,
                       secondary: true,
                       onPressed: Log.clearAll,
                       child: Text(l10n?.clearLog ?? l10nGlobal.ssdtMsg586),
                     ),
-                    PushButton(
+                    AppButton(
                       controlSize: ControlSize.regular,
                       secondary: true,
                       onPressed: () async {
@@ -235,7 +228,7 @@ class DashboardView extends StatelessWidget {
                       },
                       child: Text(l10n?.exportLog ?? l10nGlobal.ssdtMsg587),
                     ),
-                    PushButton(
+                    AppButton(
                       controlSize: ControlSize.regular,
                       onPressed: () => patchViewModel.runPatch(
                         state.selectedAction,
@@ -253,7 +246,7 @@ class DashboardView extends StatelessWidget {
         Expanded(
           child: Container(
             decoration: BoxDecoration(
-              border: Border.all(color: MacosTheme.of(context).dividerColor ?? MacosColors.systemGrayColor),
+              border: Border.all(color: Theme.of(context).dividerColor),
               borderRadius: BorderRadius.circular(8),
             ),
             child: const LogWidget(showChannelTag: false, allChannel: true),

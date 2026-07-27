@@ -10,6 +10,7 @@ import 'package:rapidssdt/utils/ssdttool/ssdt.dart';
 import 'package:rapidssdt/utils/ssdttool/config.dart';
 import 'package:rapidssdt/utils/ssdttool/parser.dart';
 import 'table.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 class PatchContext {
   dynamic data;
@@ -317,14 +318,14 @@ class ACPIToolManager {
         }
         await executor(context: ctx, action: action);
       } catch (e) {
-        onError?.call('执行失败: $action, 错误: $e');
+        onError?.call(l10nGlobal.msg_4cb65e((action).toString(), (e).toString()));
       } finally {
         if (generateSleepHook && dependencySsdtName != null) {
           await _rebuildSleepHookFromOutput(outputFolder);
         }
       }
     } else {
-      onError?.call('不支持的补丁操作: $action');
+      onError?.call(l10nGlobal.msg_593b54((action).toString()));
     }
   }
 
@@ -642,7 +643,7 @@ class ACPIToolManager {
   String? getPlistType(String plistPath, {Function(String)? onError}) {
     final result = _merge.getPlistInfo(plistPath);
     if (result.$3 != null) {
-      onError?.call('获取 plist 类型失败: ${result.$3}');
+      onError?.call(l10nGlobal.msg_82140c((result.$3).toString()));
     }
     return result.$1.value;
   }

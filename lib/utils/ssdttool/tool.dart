@@ -12,6 +12,7 @@ import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:rapidssdt/utils/ssdttool/permissions.dart';
 import 'package:rapidssdt/utils/validate/file_integrity.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 /// ================== 平台相关工具下载地址表 ==================
 const Map<String, Map<String, String>> _urls = {
@@ -375,7 +376,7 @@ class ACPITool {
     if (!filePath.toLowerCase().endsWith('.zip')) return;
     Log(': ${path.basename(filePath)}');
     final zipFile = File(filePath);
-    if (!await zipFile.exists()) throw Exception('ZIP 文件不存在: $filePath');
+    if (!await zipFile.exists()) throw Exception(l10nGlobal.msg_8e338e((filePath).toString()));
 
     final archive = ZipDecoder().decodeBytes(await zipFile.readAsBytes());
     for (final archiveFile in archive) {
@@ -411,8 +412,8 @@ class ACPITool {
           return;
         }
         Log(
-          '${path.basename(url)} 下载进度: '
-          '${percent.toStringAsFixed(2)}% | 速度: $speed | 剩余: $remaining',
+          l10nGlobal.msg_7e553a((path.basename(url)).toString())
+          l10nGlobal.msg_b8b5bb((percent.toStringAsFixed(2)).toString(), (speed).toString(), (remaining).toString()),
         );
       },
 
@@ -494,7 +495,7 @@ class ACPITool {
     final String baseDir = switch (Platform.operatingSystem) {
       'windows' => File(Platform.resolvedExecutable).parent.path,
       'macos' || 'linux' => (await getApplicationSupportDirectory()).path,
-      _ => throw UnsupportedError('不支持的平台: ${Platform.operatingSystem}'),
+      _ => throw UnsupportedError(l10nGlobal.msg_c1c9b9((Platform.operatingSystem).toString())),
     };
     final subDir = local ? "local" : "remote";
     final toolDir = path.join(baseDir, subDir);
@@ -553,13 +554,13 @@ class ACPITool {
   }
 
   void _logToolStatus(String toolPath, bool isLocal) {
-    final toolType = isLocal ? "内置" : "远程";
+    final toolType = isLocal ? l10nGlobal.msg_89e180 : l10nGlobal.msg_a7d309;
     final toolName = path.basename(toolPath);
     if (toolPath.isNotEmpty) {
       Log('$toolType $toolName !\n');
     } else {
       Log.error(
-        '$toolType工具$toolName未就绪！${isLocal ? "请检查工具完整性" : "建议切换到内置模式"}! \n',
+        l10nGlobal.msg_843a3a((toolType).toString(), (toolName).toString(), (isLocal ? "请检查工具完整性" : "建议切换到内置模式").toString()),
       );
     }
   }

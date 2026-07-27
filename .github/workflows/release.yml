@@ -122,7 +122,7 @@ jobs:
         id: generate_body
         run: |
           cat <<EOF > release_body.md
-          ## RapidSSDT Release \${{ env.TAG_NAME }}
+          ## RapidSSDT Release ${TAG_NAME}
           
           ### 🇺🇸 English
           **Multilanguage Support & Updates**

@@ -19,13 +19,16 @@ import 'package:rapidssdt/utils/theme_util.dart';
 import 'package:window_manager/window_manager.dart';
 import 'package:macos_ui/macos_ui.dart';
 import 'package:macos_window_utils/macos_window_utils.dart';
+import 'package:rapidssdt/widgets/platform/platform_utils.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   //Sputil初始化
   await SpUtil.getInstance();
   LanguageProvider.init();
-  await MacosWindowUtilsConfig().apply();
+  if (PlatformUtils.isMacOS) {
+    await MacosWindowUtilsConfig().apply();
+  }
 
   ///获取AppVersion
   final appVersion = await AppInfo.version;
@@ -68,9 +71,19 @@ class _MyAppState extends State<MyApp> {
     return ListenableBuilder(
       listenable: Listenable.merge([languageProvider, themeProvider]),
       builder: (context, child) {
+        Widget homeWidget = Builder(
+          builder: (ctx) {
+            GlobalLocalizations.init(ctx);
+            return HomePage(
+              languageProvider: languageProvider,
+              themeProvider: themeProvider,
+            );
+          }
+        );
+
         return PatchViewModelProvider(
           patchViewModel: patchViewModel,
-          child: MacosApp(
+          child: PlatformUtils.isMacOS ? MacosApp(
             title: Constant.appName,
             debugShowCheckedModeBanner: false,
             theme: MacosThemeData.light().copyWith(
@@ -89,19 +102,31 @@ class _MyAppState extends State<MyApp> {
             ],
             supportedLocales: AppLocalizations.supportedLocales,
             localeResolutionCallback: (locale, supportedLocales) {
-              // Force exact locale from provider — prevents Flutter from auto-resolving
-              // pt → pt_BR (which triggers a Flutter TextPainter rendering bug on macOS)
               return languageProvider.locale;
             },
-            home: Builder(
-              builder: (ctx) {
-                GlobalLocalizations.init(ctx);
-                return HomePage(
-                  languageProvider: languageProvider,
-                  themeProvider: themeProvider,
-                );
-              }
+            home: homeWidget,
+          ) : MaterialApp(
+            title: Constant.appName,
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData.light(useMaterial3: true).copyWith(
+              primaryColor: primaryColor,
             ),
+            darkTheme: ThemeData.dark(useMaterial3: true).copyWith(
+              primaryColor: primaryColor,
+            ),
+            themeMode: themeProvider.themeMode,
+            locale: languageProvider.locale,
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizations.supportedLocales,
+            localeResolutionCallback: (locale, supportedLocales) {
+              return languageProvider.locale;
+            },
+            home: homeWidget,
           ),
         );
       },

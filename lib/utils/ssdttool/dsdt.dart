@@ -10,6 +10,7 @@ import 'package:rapidssdt/utils/ssdttool/tool.dart';
 import 'package:rapidssdt/utils/ssdttool/util.dart';
 import 'package:path/path.dart' as path;
 import 'run.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 class DSDT {
   final ACPITool acpiTool;
@@ -414,7 +415,7 @@ class DSDT {
         }
       } else {
         Log.warning("Path: $tablePath");
-        throw FileSystemException("无效路径", tablePath);
+        throw FileSystemException(l10nGlobal.msg_ba2eff, tablePath);
       }
 
       if (validFiles.isEmpty && exclude.isEmpty) {
@@ -468,7 +469,7 @@ class DSDT {
       }
 
       if (targetFiles.isEmpty && exclude.isEmpty) {
-        throw FileSystemException("没有找到有效的 .aml 或 .dat 文件", tablePath);
+        throw FileSystemException(l10nGlobal.msg_c0b9cd, tablePath);
       }
 
       /// 切换到临时目录,减少目录太深的问题
@@ -892,7 +893,7 @@ class DSDT {
     // 如果未提供table，则获取 DSDT 或唯一表
     table ??= getDsdt();
     if (table == null) {
-      throw Exception("未提供有效 ACPI 表!");
+      throw Exception(l10nGlobal.msg_df08de);
     }
 
     int startIndex = index;
@@ -901,7 +902,7 @@ class DSDT {
     int lastIndex = result.$2;
 
     if (lastIndex == -1) {
-      throw Exception("未找到从 $index 这个位置开始的十六进制数据!");
+      throw Exception(l10nGlobal.msg_e52732((index).toString()));
     }
     String firstLine = line;
 
@@ -916,20 +917,20 @@ class DSDT {
       String newLine = newResult.$1;
       lastIndex = newResult.$2;
       if (lastIndex == -1) {
-        throw Exception("未没找到要定位的十六进制数据!");
+        throw Exception(l10nGlobal.msg_00533e);
       }
       line += newLine;
     }
 
     if (!line.contains(currentHex)) {
-      throw Exception("未在索引 $startIndex-$lastIndex 范围内找到 $currentHex !");
+      throw Exception(l10nGlobal.msg_06ae9e((startIndex).toString(), (lastIndex).toString(), (currentHex).toString()));
     }
 
     String padl = "";
     String padr = "";
     List<String> parts = line.split(currentHex);
     if (instance >= parts.length - 1) {
-      throw Exception("实例 $instance 超出范围!");
+      throw Exception(l10nGlobal.msg_7b5f2c((instance).toString()));
     }
 
     String linel = parts.sublist(0, instance + 1).join(currentHex);
@@ -951,7 +952,7 @@ class DSDT {
           liner = nextResult.$1;
           lastIndex = nextResult.$3;
           if (lastIndex == -1) {
-            throw Exception("未没找到要定位的十六进制数据!");
+            throw Exception(l10nGlobal.msg_00533e);
           }
         }
         padr += liner.substring(0, 2);
@@ -969,7 +970,7 @@ class DSDT {
           startIndex = prevResult.$2;
           var endIndex = prevResult.$3;
           if (endIndex == -1) {
-            throw Exception("未没找到要定位的十六进制数据!");
+            throw Exception(l10nGlobal.msg_00533e);
           }
         }
         padl = linel.substring(linel.length - 2) + padl;
@@ -1042,7 +1043,7 @@ class DSDT {
     }
     // 三个方向都无法获取唯一 Pad，则抛出异常
     if (leftPad == null && rightPad == null && midPad == null) {
-      throw Exception("未找到唯一的填充标识!");
+      throw Exception(l10nGlobal.msg_b93ead);
     }
 
     // 三个方向中至少有一个成功获取的 Pad
@@ -1177,7 +1178,7 @@ class DSDT {
         // 若 scope 中没有 ADR、HID 等线索，也可能不是目标实例，但为了兼容性,仍返回
         if (!joined.contains(deviceName.toLowerCase())) {
           Log.warning(
-            "=> 提取的 Scope 似乎不包含设备名 $deviceName（devicePath=$devicePath），但仍返回内容。",
+            l10nGlobal.msg_96cd4e((deviceName).toString(), (devicePath).toString()),
           );
         }
       }
@@ -1389,232 +1390,33 @@ class DSDT {
               p[0].startsWith("_SB.") ||
               p[0].startsWith("_SB_.") ||
               p[0].startsWith("_PR.") ||
-              p[0].startsWith("_PR_.")) {
-            // 如果路径已是全限定路径，则停止向上拼接
-            break;
-          }
-        }
-
-        path = path.reversed.toList();
-        // 标准化路径格式，如果以 "\" 开头重复了就去掉
-        if (path.isNotEmpty && path[0] == "\\") path.removeAt(0);
-
-        // 处理 ACPI 中的 ^（caret）向上跳级表示法
-        if (path.any((x) => x.contains("^"))) {
+              p[0].startsWith("_PR_.l10nGlobal.msg_ac6603\l10nGlobal.msg_25137a\\l10nGlobal.msg_f6291a^"))) {
           List<String> newPath = [];
           for (var x in path) {
-            int caretCount = x.split("^").length - 1;
-            if (caretCount > 0) {
-              // 从路径中移除对应级数的上层路径
-              final start = (newPath.length - caretCount).clamp(
-                0,
-                newPath.length,
-              );
-              newPath.removeRange(start, newPath.length);
-            }
-            // 添加去掉 ^ 后的路径元素
-            newPath.add(x.replaceAll("^", ""));
-          }
-          path = newPath;
-        }
-
-        if (path.isEmpty) continue;
-        // 构造最终路径字符串
-        String pathStr = path.join(".");
-        pathStr = pathStr[0] != "\\" ? "\\$pathStr" : pathStr;
-        // 添加到最终结果中：[路径字符串, 行号, 类型]
-        pathList.add([pathStr, i, match.group(1)]);
-      }
-    }
-
-    // 按路径字符串排序后返回
-    pathList.sort((a, b) => a[0].compareTo(b[0]));
-    return pathList;
-  }
-
-  /// 获取 Device 类型的路径
-  /// [obj] Device 名称
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getDevicePaths({
-    String obj = "HPET",
+            int caretCount = x.split("^l10nGlobal.msg_4682d2^", "l10nGlobal.msg_e10841.");
+        pathStr = pathStr[0] != "\\" ? "\\$pathStrl10nGlobal.msg_267f8cHPET",
     Map<String, dynamic>? table,
   }) {
-    return getPathOfType(objType: "Device", obj: obj, table: table);
-  }
-
-  /// 获取 Method 类型的路径
-  /// [obj] Method 名称
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getMethodPaths({
-    String obj = "_STA",
+    return getPathOfType(objType: "Devicel10nGlobal.msg_08c0cf_STA",
     Map<String, dynamic>? table,
   }) {
-    return getPathOfType(objType: "Method", obj: obj, table: table);
-  }
-
-  /// 获取 Name 类型的路径
-  /// [obj] Name 名称
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getNamePaths({
-    String obj = "CPU0",
+    return getPathOfType(objType: "Methodl10nGlobal.msg_9fbcdaCPU0",
     Map<String, dynamic>? table,
   }) {
-    return getPathOfType(objType: "Name", obj: obj, table: table);
-  }
-
-  /// 获取 Processor 类型的路径
-  /// [objType] 对象类型
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getProcessorPaths({
-    String objType = "Processor",
+    return getPathOfType(objType: "Namel10nGlobal.msg_719421Processor",
     Map<String, dynamic>? table,
   }) {
-    return getPathOfType(objType: objType, obj: "", table: table);
-  }
-
-  /// 获取 Method 类型信息
-  /// [obj] Method 名称
-  /// [table] ACPI 表 （可选）
-  List<dynamic> getMethodInfo({
-    String obj = "_STA",
-    String objType = "Method",
-    Map<String, dynamic>? table,
-  }) {
-    table ??= getDsdt();
-    if (table == null) return [];
-
-    List<dynamic> infos = [];
-
-    // 标准化方法名
-    obj = obj
-        .split(".")
+    return getPathOfType(objType: objType, obj: "l10nGlobal.msg_43291e_STA",
+    String objType = "Methodl10nGlobal.msg_0f06fa.")
         .map((x) => x.replaceAll(RegExp(r"_$"), "").toUpperCase())
-        .join(".");
-
-    objType = objType.toLowerCase();
-
-    // 遍历所有 scope 行
-    for (var scope in table['scopes'] ?? []) {
-      if (scope.length < 2) continue;
-
-      String rawLine = scope[0].toString().trim();
-      final lineNum = scope[1];
-
-      // “Method” 开头才处理
-      if (!rawLine.startsWith("Method")) continue;
-
-      // 去掉注释： 双斜线 // ... 之后全部删除
-      rawLine = rawLine.replaceAll(RegExp(r'//.*$'), "").trim();
-
-      // 匹配方法定义
-      final match = RegExp(
-        r'Method\s*\(\s*([A-Za-z0-9_\.\\]+)\s*,\s*(\d+)\s*,\s*([A-Za-z]+)\s*\)',
-        caseSensitive: false,
-      ).firstMatch(rawLine);
-
-      if (match == null) continue;
-
-      String fullName = match.group(1)!.trim(); // \_SB.PCI0._PTS
-      int argCount = int.parse(match.group(2)!);
-      String flag = match.group(3)!.trim();
-
-      // 最后一级方法名，例如 _PTS
-      String methodName = fullName
-          .split(".")
+        .join(".l10nGlobal.msg_c2dd20Methodl10nGlobal.msg_a2883dl10nGlobal.msg_e25c8f.")
           .last
-          .replaceAll("\\", "")
-          .toUpperCase();
-
-      // 不匹配跳过
-      if (methodName != obj) continue;
-
-      // 最终方法定义（去注释、去前后空格）
-      final cleanDefinition = "Method ($fullName, $argCount, $flag)";
-
-      // 返回结构: [定义, 行号, 方法名, 参数数量, 属性]
-      infos.addAll([cleanDefinition, lineNum, methodName, argCount, flag]);
-    }
-
-    return infos;
-  }
-
-  /// 获取指定类型和名称的路径（如查找某个 Device 类型下名为 HPET 的路径）
-  /// [objType] 对象类型
-  /// [obj] 对象名称
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getPathOfType({
-    String objType = "Device",
-    String obj = "HPET",
-    Map<String, dynamic>? table,
-  }) {
-    // 如果未传入表，则尝试获取 DSDT 或唯一表
-    table ??= getDsdt();
-    if (table == null) return [];
-
-    List<List<dynamic>> paths = [];
-
-    // 移除末尾下划线并统一大小写（将对象名标准化）
-    obj = obj
-        .split(".")
+          .replaceAll("\\", "l10nGlobal.msg_4b92a6Method ($fullName, $argCount, $flag)l10nGlobal.msg_46edcfDevice",
+    String obj = "HPETl10nGlobal.msg_332fdc.")
         .map((x) => x.replaceAll(RegExp(r"_$"), "").toUpperCase())
-        .join(".");
-
-    objType = objType.isNotEmpty ? objType.toLowerCase() : objType;
-
-    // 遍历所有路径
-    for (var path in table['paths'] ?? []) {
-      // 对路径中的设备名做同样的标准化处理：去除末尾下划线并转大写
-      String pathCheck = path[0]
-          .split(".")
+        .join(".l10nGlobal.msg_b57b0e.")
           .map((x) => x.replaceAll(RegExp(r"_$"), "").toUpperCase())
-          .join(".");
-
-      // 类型不匹配或设备名不匹配则跳过
-      if ((objType.isNotEmpty && objType != path[2].toLowerCase()) ||
-          !pathCheck.endsWith(obj)) {
-        // 不匹配则跳过
-        continue;
-      }
-      // 匹配成功，添加到结果列表
-      paths.add(path);
-    }
-
-    // 对路径进行排序后返回
-    paths.sort((a, b) => a.toString().compareTo(b.toString()));
-    return paths;
-  }
-
-  /// 提取 idTypes 中的字符串类型并返回
-  /// [idTypes] ID 类型列表
-  List<String> _extractIdTypes(Object? idTypes) {
-    final result = <String>[];
-
-    if (idTypes is List) {
-      result.addAll(idTypes.whereType<String>().map((e) => e.toUpperCase()));
-    } else if (idTypes is String) {
-      result.add(idTypes.toUpperCase());
-    } else if (idTypes is Record) {
-      final fields = idTypes
-          .toString()
-          .replaceAll('(', '')
-          .replaceAll(')', '')
-          .split(',')
-          .map((e) => e.trim())
-          .where((e) => e.isNotEmpty)
-          .toList();
-
-      result.addAll(fields.map((e) => e.toUpperCase()));
-    }
-
-    return result;
-  }
-
-  /// 获取包含指定 ID 的设备路径列表
-  /// [id] ID 字符串
-  /// [idTypes] ID 类型列表
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getDevicePathsWithId({
-    String id = "PNP0A03",
+          .join(".l10nGlobal.msg_a17685PNP0A03",
     Object? idTypes = const ("_HID", "_CID"),
     Map<String, dynamic>? table,
   }) {
@@ -1649,28 +1451,10 @@ class DSDT {
 
     List<List<dynamic>> devices = [];
     for (final p in paths) {
-      if (devs.contains(p[0]) && p[2] == "Device") {
-        devices.add(p as List);
-      }
-    }
-    return devices;
-  }
-
-  /// 获取包含指定 CID 的设备路径
-  /// [cid] CID 字符串
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getDevicePathsWithCid({
-    String cid = "PNP0A03",
+      if (devs.contains(p[0]) && p[2] == "Devicel10nGlobal.msg_0bbc8bPNP0A03",
     Map<String, dynamic>? table,
   }) {
-    return getDevicePathsWithId(id: cid, idTypes: ("_CID",), table: table);
-  }
-
-  /// 获取包含指定 HID 的设备路径列表
-  /// [hid] HID 字符串
-  /// [table] ACPI 表 （可选）
-  List<List<dynamic>> getDevicePathsWithHid({
-    String hid = "ACPI000E",
+    return getDevicePathsWithId(id: cid, idTypes: ("_CIDl10nGlobal.msg_1cfdd8ACPI000E",
     Map<String, dynamic>? table,
   }) {
     return getDevicePathsWithId(id: hid, idTypes: ("_HID",), table: table);

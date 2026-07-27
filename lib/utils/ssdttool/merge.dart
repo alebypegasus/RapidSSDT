@@ -8,6 +8,7 @@ import 'package:rapidssdt/utils/ssdttool/parser.dart';
 import 'package:path/path.dart' as path;
 import 'package:rapidssdt/utils/ssdttool/util.dart';
 import 'config.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 class PatchMerge {
   String? patchedPath;
@@ -85,7 +86,7 @@ class PatchMerge {
       // 检查是否存在至少一个目标plist文件
       if (!(pathInfoList[0].$2 || pathInfoList[1].$2)) {
         Log.warning(
-          "在修补ACPI路径: $folderPath 下未找到 patches_OC.plist 和 patches_Clover.plist 文件!请先制作需要的ACPI补丁后再尝试！",
+          l10nGlobal.msg_53d160((folderPath).toString()),
         );
         return null;
       }
@@ -386,7 +387,7 @@ class PatchMerge {
     if (sBroken.isNotEmpty) {
       errorsFound = true;
       Log.error(
-        '\n注意: 已找到 ${sBroken.length} 个格式错误的 SSDT 表,请修复 ${path.basename(configPath!)}！',
+        l10nGlobal.msg_a2bd26((sBroken.length).toString(), (path.basename(configPath!)).toString()),
       );
     }
   }
@@ -438,7 +439,7 @@ class PatchMerge {
     if (pBroken.isNotEmpty) {
       errorsFound = true;
       Log.error(
-        '\n注意: 已找到 ${pBroken.length} 个格式错误的 Patch 补丁,请修复 ${path.basename(configPath!)}！',
+        l10nGlobal.msg_3228ab((pBroken.length).toString(), (path.basename(configPath!)).toString()),
       );
     }
   }
@@ -509,7 +510,7 @@ class PatchMerge {
     if (dBroken.isNotEmpty) {
       errorsFound = true;
       Log.error(
-        '\n注意: ${dBroken.length} 个格式错误的 Drop 补丁,请修复 ${path.basename(configPath!)}！',
+        l10nGlobal.msg_0c2635((dBroken.length).toString(), (path.basename(configPath!)).toString()),
       );
     }
   }

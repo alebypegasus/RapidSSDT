@@ -4,6 +4,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:flutter/foundation.dart';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 
 /// 执行权限位
 class ExecBits {
@@ -112,7 +113,7 @@ class ExecutablePermissionManager {
     final file = File(absPath);
 
     if (!await file.exists()) {
-      _log('文件不存在: $absPath', onError);
+      _log(l10nGlobal.msg_e8419d((absPath).toString()), onError);
       return;
     }
 
@@ -120,7 +121,7 @@ class ExecutablePermissionManager {
     try {
       stat = await file.stat();
     } catch (e) {
-      _log('stat 失败: $e', onError);
+      _log(l10nGlobal.msg_79216b((e).toString()), onError);
       return;
     }
 
@@ -135,7 +136,7 @@ class ExecutablePermissionManager {
         _permissionLost(stat.mode, execBits);
 
     if (!needProcess) {
-      _log('未变化，跳过: $absPath', onLog);
+      _log(l10nGlobal.msg_066ffb((absPath).toString()), onLog);
       return;
     }
 
@@ -151,20 +152,20 @@ class ExecutablePermissionManager {
     final result = await Process.run('chmod', [chmodArg, absPath]);
 
     if (result.exitCode != 0) {
-      _log('chmod 失败(${result.exitCode}): ${result.stderr}', onError);
+      _log(l10nGlobal.msg_236810((result.exitCode).toString(), (result.stderr).toString()), onError);
       return;
     }
 
     final newStat = await file.stat();
 
     if (_permissionLost(newStat.mode, execBits)) {
-      _log('chmod 后权限仍不满足: $absPath', onError);
+      _log(l10nGlobal.msg_eacb78((absPath).toString()), onError);
       return;
     }
 
     _processed[absPath] = _FileFingerprint.fromStat(newStat);
 
-    _log('已设置可执行权限: $absPath', onLog);
+    _log(l10nGlobal.msg_3bb9c9((absPath).toString()), onLog);
   }
 
   bool _permissionLost(int mode, int execBits) {

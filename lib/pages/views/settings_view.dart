@@ -10,6 +10,8 @@ import 'package:rapidssdt/pages/views/acpi_options.dart';
 import 'package:rapidssdt/utils/log/log.dart';
 import 'package:rapidssdt/utils/ssdttool/config.dart';
 import 'package:rapidssdt/theme/theme_provider.dart';
+import 'package:rapidssdt/widgets/platform/app_scaffold.dart';
+import 'package:rapidssdt/widgets/platform/app_dropdown.dart';
 
 class SettingsView extends StatelessWidget {
   final LanguageProvider? languageProvider;
@@ -22,14 +24,10 @@ class SettingsView extends StatelessWidget {
     final patchViewModel = PatchViewModelProvider.of(context);
     final l10n = AppLocalizations.of(context);
 
-    return MacosScaffold(
-      toolBar: ToolBar(
-        title: Text(l10n?.preferences ?? l10nGlobal.ssdtMsg557),
-        titleWidth: 200.0,
-      ),
-      children: [
-        ContentArea(
-          builder: (context, scrollController) {
+    return AppScaffold(
+      title: l10n?.preferences ?? l10nGlobal.ssdtMsg557,
+      child: Builder(
+        builder: (context) {
             return Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
@@ -38,7 +36,7 @@ class SettingsView extends StatelessWidget {
                   Container(
                     padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
-                      border: Border.all(color: MacosTheme.of(context).dividerColor ?? MacosColors.systemGrayColor),
+                      border: Border.all(color: Theme.of(context).dividerColor),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Column(
@@ -46,37 +44,37 @@ class SettingsView extends StatelessWidget {
                       children: [
                         Text(
                           'Appearance & Language',
-                          style: MacosTheme.of(context).typography.headline,
+                          style: Theme.of(context).textTheme.headlineSmall,
                         ),
                         const SizedBox(height: 16),
                         Row(
                           children: [
                             const Text('Theme: '),
                             const SizedBox(width: 8),
-                            MacosPopupButton<ThemeMode>(
+                            AppDropdown<ThemeMode>(
                               value: themeProvider?.themeMode ?? ThemeMode.system,
                               onChanged: (ThemeMode? newValue) {
                                 if (newValue != null) themeProvider?.setThemeMode(newValue);
                               },
                               items: const [
-                                MacosPopupMenuItem(value: ThemeMode.system, child: Text('System')),
-                                MacosPopupMenuItem(value: ThemeMode.light, child: Text('Light')),
-                                MacosPopupMenuItem(value: ThemeMode.dark, child: Text('Dark')),
+                                AppDropdownMenuItem(value: ThemeMode.system, child: Text('System')),
+                                AppDropdownMenuItem(value: ThemeMode.light, child: Text('Light')),
+                                AppDropdownMenuItem(value: ThemeMode.dark, child: Text('Dark')),
                               ],
                             ),
                             const SizedBox(width: 32),
                             const Text('Language: '),
                             const SizedBox(width: 8),
-                            MacosPopupButton<String>(
+                            AppDropdown<String>(
                               value: languageProvider?.locale.languageCode ?? 'en',
                               onChanged: (String? newValue) {
                                 if (newValue != null) languageProvider?.changeLanguage(Locale(newValue));
                               },
                               items: const [
-                                MacosPopupMenuItem(value: 'en', child: Text('English')),
-                                MacosPopupMenuItem(value: 'pt', child: Text('Português')),
-                                MacosPopupMenuItem(value: 'zh', child: Text('中文')),
-                                MacosPopupMenuItem(value: 'ja', child: Text('日本語')),
+                                AppDropdownMenuItem(value: 'en', child: Text('English')),
+                                AppDropdownMenuItem(value: 'pt', child: Text('Português')),
+                                AppDropdownMenuItem(value: 'zh', child: Text('中文')),
+                                AppDropdownMenuItem(value: 'ja', child: Text('日本語')),
                               ],
                             ),
                           ],
@@ -103,9 +101,8 @@ class SettingsView extends StatelessWidget {
                 ],
               ),
             );
-          },
-        ),
-      ],
+        },
+      ),
     );
   }
 }

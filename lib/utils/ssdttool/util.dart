@@ -3,6 +3,7 @@
 //
 import 'dart:io';
 import 'dart:typed_data';
+import 'package:rapidssdt/l10n/l10n_helper.dart';
 import 'package:path/path.dart' as path;
 
 class Util {
@@ -11,13 +12,13 @@ class Util {
     final homeDir =
         Platform.environment['HOME'] ?? Platform.environment['USERPROFILE'];
     if (homeDir == null) {
-      throw UnsupportedError('无法获取主目录');
+      throw UnsupportedError(l10nGlobal.msg_88991e);
     }
     const desktopFolder = 'Desktop';
     if (Platform.isWindows || Platform.isMacOS || Platform.isLinux) {
       return path.join(homeDir, desktopFolder);
     }
-    throw UnsupportedError('不支持的操作系统: ${Platform.operatingSystem}');
+    throw UnsupportedError(l10nGlobal.msg_161425((Platform.operatingSystem).toString()));
   }
 
   Future<bool> _isDirectory(String filePath) async {
@@ -50,7 +51,7 @@ class Util {
     final source = Directory(sourceDir);
     final target = Directory(targetDir);
 
-    if (!await source.exists()) throw Exception('源目录不存在');
+    if (!await source.exists()) throw Exception(l10nGlobal.msg_e038f0);
     if (!await target.exists()) await target.create(recursive: true);
 
     await for (final entity in source.list(recursive: true)) {
@@ -73,7 +74,7 @@ class Util {
   }) async {
     try {
       String baseDir = getDesktopDirectory();
-      if (baseDir.isEmpty) throw Exception('无法获取桌面目录');
+      if (baseDir.isEmpty) throw Exception(l10nGlobal.msg_2f6144);
 
       if (filePath == null || filePath.isEmpty) {
         return baseDir;
@@ -91,9 +92,9 @@ class Util {
 
       return targetPath;
     } on FileSystemException catch (e) {
-      onError?.call('文件系统错误: ${e.message}');
+      onError?.call(l10nGlobal.msg_57fdb0((e.message).toString()));
     } catch (e) {
-      onError?.call('处理路径错误: $e');
+      onError?.call(l10nGlobal.msg_6a16c5((e).toString()));
     }
     return '';
   }
