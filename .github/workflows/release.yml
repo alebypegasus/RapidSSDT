@@ -1,0 +1,149 @@
+name: Auto-Release Build
+
+on:
+  push:
+    tags:
+      - 'v*' # Aciona em tags como v2.0.0
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Tag da versão para lançar (ex: v2.0.0)'
+        required: true
+        default: 'v2.0.0'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: Build ${{ matrix.target }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-latest
+            target: macos
+            artifact_name: rapidssdt-macos
+          - os: windows-latest
+            target: windows
+            artifact_name: rapidssdt-windows
+          - os: ubuntu-latest
+            target: linux
+            artifact_name: rapidssdt-linux
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Linux Dependencies
+        if: matrix.target == 'linux'
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ninja-build libgtk-3-dev libbz2-dev
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Enable Desktop Support
+        run: |
+          flutter config --enable-macos-desktop
+          flutter config --enable-windows-desktop
+          flutter config --enable-linux-desktop
+
+      - name: Install Dependencies
+        run: flutter pub get
+
+      - name: Build Application
+        run: flutter build ${{ matrix.target }} --release --no-tree-shake-icons
+
+      - name: Archive macOS App
+        if: matrix.target == 'macos'
+        run: |
+          cd build/macos/Build/Products/Release/
+          zip -r rapidssdt-macos.zip rapidssdt.app
+
+      - name: Archive Windows App
+        if: matrix.target == 'windows'
+        run: |
+          Compress-Archive -Path build\windows\x64\runner\Release\* -DestinationPath rapidssdt-windows.zip
+
+      - name: Archive Linux App
+        if: matrix.target == 'linux'
+        run: |
+          cd build/linux/x64/release/bundle/
+          zip -r ../../../../../rapidssdt-linux.zip .
+
+      - name: Upload macOS Artifact
+        if: matrix.target == 'macos'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapidssdt-macos
+          path: build/macos/Build/Products/Release/rapidssdt-macos.zip
+
+      - name: Upload Windows Artifact
+        if: matrix.target == 'windows'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapidssdt-windows
+          path: rapidssdt-windows.zip
+
+      - name: Upload Linux Artifact
+        if: matrix.target == 'linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: rapidssdt-linux
+          path: rapidssdt-linux.zip
+
+  release:
+    name: Create Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: true
+
+      - name: Set Tag Name
+        id: set_tag
+        run: |
+          if [ "${{ github.event_name }}" == "workflow_dispatch" ]; then
+            echo "TAG_NAME=${{ github.event.inputs.version }}" >> $GITHUB_ENV
+          else
+            echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+          fi
+
+      - name: Generate Release Body
+        id: generate_body
+        run: |
+          cat <<EOF > release_body.md
+          ## RapidSSDT Release \${{ env.TAG_NAME }}
+          
+          ### 🌍 Atualização Multilíngue (Multilanguage Support)
+          Esta versão traz suporte a múltiplos idiomas e otimizações gerais para o sistema.
+          
+          ### 📝 Changelog (Lista de Alterações)
+          Veja as modificações incluídas neste release abaixo, geradas automaticamente com base nos commits.
+          
+          ### 💻 Requisitos Mínimos do Sistema
+          - **Windows**: Windows 10 ou superior (64-bit)
+          - **macOS**: macOS 10.15 (Catalina) ou superior
+          - **Linux**: Ubuntu 20.04 LTS ou distribuição equivalente
+          EOF
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2.2.1
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: "RapidSSDT ${{ env.TAG_NAME }}"
+          body_path: release_body.md
+          generate_release_notes: true
+          files: |
+            artifacts/rapidssdt-macos.zip
+            artifacts/rapidssdt-windows.zip
+            artifacts/rapidssdt-linux.zip

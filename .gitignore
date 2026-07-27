@@ -43,3 +43,22 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Personal & IDE Files
+.idea/
+.vscode/
+*.DS_Store
+*.pyc
+
+# Local Python Scripts and Reports
+*.py
+*.json
+!pubspec.lock
+!package.json
+!tsconfig.json
+
+# If you specifically want to ignore certain local scripts:
+# cjk_strings_report.json
+# auto_localize.py
+# find_cjk_strings.py
+
