@@ -124,16 +124,34 @@ jobs:
           cat <<EOF > release_body.md
           ## RapidSSDT Release \${{ env.TAG_NAME }}
           
-          ### 🌍 Atualização Multilíngue (Multilanguage Support)
+          ### 🇺🇸 English
+          **Multilanguage Support & Updates**
+          This version brings support for multiple languages and general system optimizations.
+          *Minimum Requirements*: Windows 10+ (64-bit) | macOS 10.15+ | Ubuntu 20.04+
+          
+          ### 🇧🇷 Português (Brasil)
+          **Suporte Multilíngue e Atualizações**
           Esta versão traz suporte a múltiplos idiomas e otimizações gerais para o sistema.
+          *Requisitos Mínimos*: Windows 10+ (64-bit) | macOS 10.15+ | Ubuntu 20.04+
           
-          ### 📝 Changelog (Lista de Alterações)
-          Veja as modificações incluídas neste release abaixo, geradas automaticamente com base nos commits.
+          ### 🇪🇸 Español
+          **Soporte Multilingüe y Actualizaciones**
+          Esta versión trae soporte para múltiples idiomas y optimizaciones generales del sistema.
+          *Requisitos Mínimos*: Windows 10+ (64-bit) | macOS 10.15+ | Ubuntu 20.04+
           
-          ### 💻 Requisitos Mínimos do Sistema
-          - **Windows**: Windows 10 ou superior (64-bit)
-          - **macOS**: macOS 10.15 (Catalina) ou superior
-          - **Linux**: Ubuntu 20.04 LTS ou distribuição equivalente
+          ### 🇯🇵 日本語
+          **多言語サポートとアップデート**
+          このバージョンでは、多言語サポートとシステム全体の最適化が行われています。
+          *最小要件*: Windows 10+ (64-bit) | macOS 10.15+ | Ubuntu 20.04+
+          
+          ### 🇨🇳 中文
+          **多语言支持和更新**
+          此版本带来了对多种语言的支持和一般系统优化。
+          *最低要求*: Windows 10+ (64-bit) | macOS 10.15+ | Ubuntu 20.04+
+          
+          ---
+          ### 📝 Changelog
+          *The changelog below is automatically generated from commits.*
           EOF
 
       - name: Create GitHub Release
